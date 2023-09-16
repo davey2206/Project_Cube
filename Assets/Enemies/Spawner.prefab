@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5080162499824948123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6987644083134770014}
+  - component: {fileID: 4951849495950789798}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6987644083134770014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080162499824948123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4951849495950789798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080162499824948123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ccbfc26d441c75429ee3a8c8ea83cfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Waves:
+  - enemyLists:
+    - Enemy: {fileID: 6850550415252187460, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 0
+    - Enemy: {fileID: 6850550415252187460, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 5
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 10
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 15
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 20
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 22
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 24
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 35
+    - Enemy: {fileID: 8740877786885965067, guid: 955207136d5caef4fa943b5aad856b28,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 35
+    - Enemy: {fileID: 8740877786885965067, guid: 955207136d5caef4fa943b5aad856b28,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 40
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 45
+    - Enemy: {fileID: 8740877786885965067, guid: 955207136d5caef4fa943b5aad856b28,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 45
+    - Enemy: {fileID: 8740877786885965067, guid: 955207136d5caef4fa943b5aad856b28,
+        type: 3}
+      NumberOfSpawns: 35
+      TimeOfSpawn: 55
