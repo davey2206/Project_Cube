@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5800842195896414297}
   - component: {fileID: 2970143529961371124}
   - component: {fileID: 8678746552419001533}
+  - component: {fileID: -6544997043375988145}
   m_Layer: 0
   m_Name: abilities
   m_TagString: Untagged
@@ -76,3 +77,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Wave: {fileID: -5375693356085605229, guid: 609f869c7b1db054d91035615e36dab5, type: 3}
+--- !u!114 &-6544997043375988145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917464684567858733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e59dad988d7bfe47b454bec830f69fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  Wave: {fileID: 7975322736320850929, guid: f09dcd865ad562849a100e6452c65c28, type: 3}
