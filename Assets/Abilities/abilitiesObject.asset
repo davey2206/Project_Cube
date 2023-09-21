@@ -15,13 +15,13 @@ MonoBehaviour:
   abilities:
   - Name: Explosive Death
     Description:
-    - Enemies have a 25% change to explode into 4 bullets that deal 50% damage
-    - Enemies have a 30% change to explode into 4 bullets that deal 100% damage
-    - Enemies have a 35% change to explode into 6 bullets that deal 100% damage
-    - Enemies have a 40% change to explode into 6 bullets that deal 150% damage
-    - Enemies have a 50% change to explode into 8 bullets that deal 150% damage
-    Level: 4
-    Active: 1
+    - Enemies have a 25% change to explode into 4 bullets that deal 25% damage
+    - Enemies have a 30% change to explode into 4 bullets that deal 50% damage
+    - Enemies have a 35% change to explode into 6 bullets that deal 75% damage
+    - Enemies have a 40% change to explode into 6 bullets that deal 100% damage
+    - Enemies have a 50% change to explode into 8 bullets that deal 100% damage
+    Level: 0
+    Active: 0
     abilityType: 0
     Ability:
       m_PersistentCalls:
@@ -47,8 +47,8 @@ MonoBehaviour:
     - Fire a shockwave every 6 seconds that stun enemies for 1.25 seconds
     - Fire a shockwave every 5 seconds that stun enemies for 1.5 seconds that deals
       25% damage
-    Level: 4
-    Active: 1
+    Level: 0
+    Active: 0
     abilityType: 3
     Ability:
       m_PersistentCalls:
@@ -73,8 +73,8 @@ MonoBehaviour:
     - When you get hit fire a wave that damages enemies hit for 150% damage
     - When you get hit fire a wave that damages enemies hit for 200% damage
     - When you get hit fire a wave that damages enemies hit for 250% damage
-    Level: 2
-    Active: 1
+    Level: 0
+    Active: 0
     abilityType: 2
     Ability:
       m_PersistentCalls:
@@ -99,8 +99,8 @@ MonoBehaviour:
     - On enemy hit fire a medium size wave that deal 50% damage to enemies hit
     - On enemy hit fire a big wave that deal 50% damage to enemies hit
     - On enemy hit fire a big wave that deal 75% damage to enemies hit
-    Level: 5
-    Active: 1
+    Level: 0
+    Active: 0
     abilityType: 1
     Ability:
       m_PersistentCalls:

@@ -10,6 +10,7 @@ public class Leveling : MonoBehaviour
     [SerializeField] int xp;
     [SerializeField] public AnimationCurve xpNeededPerLevel;
     [SerializeField] abilitiesObject abilities;
+    [SerializeField] abilitiesObject extraAbilities;
 
     //UI
     [SerializeField] GameObject buttons;
@@ -64,7 +65,9 @@ public class Leveling : MonoBehaviour
             }
             else
             {
-
+                abilityToUse = extraAbilities.abilities[Random.Range(0, extraAbilities.abilities.Count)];
+                Names[i].text = abilityToUse.Name;
+                Descriptions[i].text = abilityToUse.Description[0];
             }
             
         }

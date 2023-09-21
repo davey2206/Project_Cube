@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         Health = playerStats.maxHealth;
+        playerStats.BonusAttack = 0;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -50,6 +51,16 @@ public class Player : MonoBehaviour
             {
                 abilitie.Ability.Invoke(abilitie.Level, transform.position);
             }
+        }
+    }
+
+    public void Heal(float heal)
+    {
+        Health = Health + heal;
+
+        if (Health > playerStats.maxHealth)
+        {
+            Health = playerStats.maxHealth;
         }
     }
 }

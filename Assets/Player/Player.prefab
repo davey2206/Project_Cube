@@ -294,25 +294,26 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 5
-      inSlope: 1.2922066
-      outSlope: 1.2922066
+      inSlope: 3.8737035
+      outSlope: 3.8737035
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.09552845
+      outWeight: 0.09146342
     - serializedVersion: 3
       time: 100
       value: 1000
-      inSlope: 25.809652
-      outSlope: 25.809652
+      inSlope: 28.494108
+      outSlope: 28.494108
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.028455276
+      inWeight: 0.026422806
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
+  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
   buttons: {fileID: 0}
   Names:
   - {fileID: 0}

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class ExplosiveDeath : MonoBehaviour
 {
@@ -16,23 +15,23 @@ public class ExplosiveDeath : MonoBehaviour
         {
             case 1:
                 ChangeToExplode = 25;
-                spawnBullets(4, pos, baseAttack * 0.5f);
+                spawnBullets(4, pos, baseAttack * 0.25f);
                 break;
             case 2:
                 ChangeToExplode = 30;
-                spawnBullets(4, pos, baseAttack * 1f);
+                spawnBullets(4, pos, baseAttack * 0.5f);
                 break;
             case 3:
                 ChangeToExplode = 35;
-                spawnBullets(6, pos, baseAttack * 1f);
+                spawnBullets(6, pos, baseAttack * 0.75f);
                 break;
             case 4:
                 ChangeToExplode = 40;
-                spawnBullets(6, pos, baseAttack * 1.5f);
+                spawnBullets(6, pos, baseAttack * 1f);
                 break;
             case 5:
                 ChangeToExplode = 50;
-                spawnBullets(8, pos, baseAttack * 1.5f);
+                spawnBullets(8, pos, baseAttack * 1f);
                 break;
         }
     }

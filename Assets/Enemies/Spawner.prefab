@@ -98,3 +98,68 @@ MonoBehaviour:
         type: 3}
       NumberOfSpawns: 35
       TimeOfSpawn: 55
+  - enemyLists:
+    - Enemy: {fileID: 8740877786885965067, guid: 5c18051d991493c4b8070e314c85a952,
+        type: 3}
+      NumberOfSpawns: 20
+      TimeOfSpawn: 2.5
+    - Enemy: {fileID: 8740877786885965067, guid: 955207136d5caef4fa943b5aad856b28,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 2.5
+    - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 5
+    - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 10
+    - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 10
+    - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
+        type: 3}
+      NumberOfSpawns: 15
+      TimeOfSpawn: 15
+    - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
+        type: 3}
+      NumberOfSpawns: 25
+      TimeOfSpawn: 20
+    - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 20
+    - Enemy: {fileID: 7578997280505162376, guid: 88b7a4eca4c41ec4d916377263cf14c9,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 25
+    - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
+        type: 3}
+      NumberOfSpawns: 15
+      TimeOfSpawn: 20
+    - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
+        type: 3}
+      NumberOfSpawns: 25
+      TimeOfSpawn: 30
+    - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
+        type: 3}
+      NumberOfSpawns: 30
+      TimeOfSpawn: 35
+    - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
+        type: 3}
+      NumberOfSpawns: 20
+      TimeOfSpawn: 45
+    - Enemy: {fileID: 7578997280505162376, guid: 88b7a4eca4c41ec4d916377263cf14c9,
+        type: 3}
+      NumberOfSpawns: 5
+      TimeOfSpawn: 45
+    - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
+        type: 3}
+      NumberOfSpawns: 30
+      TimeOfSpawn: 50
+    - Enemy: {fileID: 7578997280505162376, guid: 88b7a4eca4c41ec4d916377263cf14c9,
+        type: 3}
+      NumberOfSpawns: 10
+      TimeOfSpawn: 55

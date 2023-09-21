@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class Enemy : MonoBehaviour
 {
@@ -31,6 +30,10 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         float size = Health / maxHealth;
+        if (size < 0)
+        {
+            size = 0;
+        }
         HealthBar.localScale = Vector3.SmoothDamp(HealthBar.localScale, new Vector3(size, size, size), ref Velocity, 20 * Time.deltaTime);
         if (!isDead && !Stunned)
         {
@@ -39,7 +42,7 @@ public class Enemy : MonoBehaviour
         }
         if (isDead)
         {
-            transform.localScale = Vector3.SmoothDamp(transform.localScale, new Vector3(0.01f, 0.01f, 0.01f), ref Velocity, 20 * Time.deltaTime);
+            transform.localScale = Vector3.SmoothDamp(transform.localScale, Vector3.zero, ref Velocity, 20 * Time.deltaTime);
         }
 
         CheckIfStunned();
@@ -62,7 +65,6 @@ public class Enemy : MonoBehaviour
             Instantiate(DieEffect, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
             ActivateAbilities();
             Destroy(gameObject, 0.5f);
-
         }
     }
 

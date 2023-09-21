@@ -977,6 +977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfAbility: {fileID: 1705600134}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
+  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
   buttons: {fileID: 1709159050}
 --- !u!1 &1144132484
 GameObject:
@@ -1126,6 +1127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfAbility: {fileID: 1721217409}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
+  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
   buttons: {fileID: 1709159050}
 --- !u!1 &1207581774
 GameObject:
@@ -2004,6 +2006,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfAbility: {fileID: 1972495005}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
+  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
   buttons: {fileID: 1709159050}
 --- !u!1 &1972495003
 GameObject:

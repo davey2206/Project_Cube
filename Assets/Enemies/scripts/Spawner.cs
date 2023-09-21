@@ -16,6 +16,7 @@ public class Spawner : MonoBehaviour
         int i = 0;
         while (true) 
         {
+            Debug.Log(i);
             foreach (var enemy in Waves[i].enemyLists)
             {
                 StartCoroutine(SpawnEnemy(enemy.TimeOfSpawn, enemy.Enemy, enemy.NumberOfSpawns));
@@ -24,6 +25,10 @@ public class Spawner : MonoBehaviour
             if (i < (Waves.Count - 1))
             {
                 i++;
+            }
+            else
+            {
+                break;
             }
         }
     }
