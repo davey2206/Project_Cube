@@ -22,6 +22,7 @@ MonoBehaviour:
     - Enemies have a 50% change to explode into 8 bullets that deal 100% damage
     Level: 0
     Active: 0
+    Unlocked: 1
     abilityType: 0
     Ability:
       m_PersistentCalls:
@@ -49,6 +50,7 @@ MonoBehaviour:
       25% damage
     Level: 0
     Active: 0
+    Unlocked: 1
     abilityType: 3
     Ability:
       m_PersistentCalls:
@@ -75,6 +77,7 @@ MonoBehaviour:
     - When you get hit fire a wave that damages enemies hit for 250% damage
     Level: 0
     Active: 0
+    Unlocked: 1
     abilityType: 2
     Ability:
       m_PersistentCalls:
@@ -99,8 +102,9 @@ MonoBehaviour:
     - On enemy hit fire a medium size wave that deal 50% damage to enemies hit
     - On enemy hit fire a big wave that deal 50% damage to enemies hit
     - On enemy hit fire a big wave that deal 75% damage to enemies hit
-    Level: 0
-    Active: 0
+    Level: 5
+    Active: 1
+    Unlocked: 1
     abilityType: 1
     Ability:
       m_PersistentCalls:
@@ -108,6 +112,38 @@ MonoBehaviour:
         - m_Target: {fileID: -6544997043375988145, guid: 27c868777a45d334dbecd254425e249d,
             type: 3}
           m_TargetAssemblyTypeName: ExplosiveClick, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: Basic Turret
+    Description:
+    - On enemy death there is a 10% change to spawn a turret that wil attack the
+      closest enemy for 25% damege for 5 seconds.
+    - On enemy death there is a 10% change to spawn a turret that wil attack the
+      closest enemy for 50% damege for 5 seconds
+    - On enemy death there is a 10% change to spawn a turret that wil attack the
+      closest enemy for 50% damege for 8 seconds
+    - On enemy death there is a 10% change to spawn a turret that wil attack the
+      closest enemy for 75% damege for 8 seconds
+    - On enemy death there is a 10% change to spawn a turret that wil attack the
+      closest enemy for 75% damege for 10 seconds
+    Level: 1
+    Active: 1
+    Unlocked: 1
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1979200394482973018, guid: 27c868777a45d334dbecd254425e249d,
+            type: 3}
+          m_TargetAssemblyTypeName: TurretSpawn, Assembly-CSharp
           m_MethodName: Ability
           m_Mode: 0
           m_Arguments:

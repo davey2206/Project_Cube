@@ -46,7 +46,7 @@ public class Leveling : MonoBehaviour
 
         foreach (var ability in abilities.abilities)
         {
-            if (ability.Level < 5)
+            if (ability.Level < 5 && ability.Unlocked)
             {
                 abilitiesThatCanLevel.Add(ability);
             }

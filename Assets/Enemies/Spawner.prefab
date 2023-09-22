@@ -109,7 +109,7 @@ MonoBehaviour:
       TimeOfSpawn: 2.5
     - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
         type: 3}
-      NumberOfSpawns: 10
+      NumberOfSpawns: 5
       TimeOfSpawn: 5
     - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
         type: 3}
@@ -121,11 +121,11 @@ MonoBehaviour:
       TimeOfSpawn: 10
     - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
         type: 3}
-      NumberOfSpawns: 15
+      NumberOfSpawns: 5
       TimeOfSpawn: 15
     - Enemy: {fileID: 7578997280505162376, guid: 9a67103164f618449ba4d051189cf386,
         type: 3}
-      NumberOfSpawns: 25
+      NumberOfSpawns: 20
       TimeOfSpawn: 20
     - Enemy: {fileID: 7578997280505162376, guid: 83b2dfd86ca60cf4dbc2b90c7f49f726,
         type: 3}

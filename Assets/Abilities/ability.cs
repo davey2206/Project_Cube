@@ -16,6 +16,7 @@ public class ability
     [Range(0,5)]
     public int Level;
     public bool Active;
+    public bool Unlocked;
 
     [Header("Ability")]
     public AbilityTypes abilityType;
