@@ -1,11 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
-using static UnityEngine.Rendering.DebugUI.Table;
 
-public class Turret : MonoBehaviour
+public class MiniGunTurret : MonoBehaviour
 {
     [SerializeField] Transform Head;
     [SerializeField] BulletMovement bullet;
@@ -17,13 +14,31 @@ public class Turret : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
-            if (target != null)
+            yield return new WaitForSeconds(2f);
+            int y = 0;
+            GetComponent<Animator>().SetTrigger("Fire");
+            yield return new WaitForSeconds(0.2f);
+            for (int i = 0; i < 15; i++)
             {
-                var b = Instantiate(bullet, Head.transform.position, Quaternion.identity);
-                b.transform.LookAt(target);
-                b.SetAttack(attack);
+                if (target != null)
+                {
+                    var b = Instantiate(bullet, Head.GetChild(y).transform.position, Quaternion.identity);
+
+                    float accuracy = (Vector3.Distance(transform.position, target.position) / 5) + 1;
+                    Vector3 pos = target.position;
+                    pos += transform.forward * Random.Range(-accuracy, accuracy);
+
+                    b.transform.LookAt(pos);
+                    b.SetAttack(attack);
+                    yield return new WaitForSeconds(0.1f);
+                    y++;
+                    if (y == 4)
+                    {
+                        y = 0;
+                    }
+                }
             }
+            
         }
     }
 
@@ -37,10 +52,6 @@ public class Turret : MonoBehaviour
                 enemies.Add(enemy.transform);
             }
             target = GetClosestEnemy(enemies);
-        }
-        else
-        {
-            Head.LookAt(target);
         }
     }
 
