@@ -9,11 +9,12 @@ public class LevelAbility : MonoBehaviour
     [SerializeField] abilitiesObject abilities;
     [SerializeField] abilitiesObject extraAbilities;
     [SerializeField] GameObject buttons;
+    [SerializeField] Leveling leveling;
     public void LevelAbilityClick()
     {
         Time.timeScale = 1;
         buttons.SetActive(false);
-
+        leveling.resetXp();
         if (CheckAbility())
         {
             foreach (var ability in abilities.abilities)

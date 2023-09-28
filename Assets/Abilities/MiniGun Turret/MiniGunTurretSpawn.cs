@@ -33,7 +33,7 @@ public class MiniGunTurretSpawn : MonoBehaviour
 
     public void SpawnTurret(Vector3 pos, float lifespan, float attack)
     {
-        if (Random.Range(0, 101) < 10)
+        if (Random.Range(0, 101) < 10 + playerStats.Luck)
         {
             MiniGunTurret turret = Instantiate(Turret, pos, Quaternion.identity);
             turret.Stats(lifespan, attack);

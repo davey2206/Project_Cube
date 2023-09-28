@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Leveling : MonoBehaviour
 {
@@ -16,7 +17,11 @@ public class Leveling : MonoBehaviour
     [SerializeField] GameObject buttons;
     [SerializeField] List<TextMeshProUGUI> Names;
     [SerializeField] List<TextMeshProUGUI> Descriptions;
+    [SerializeField] Slider xpBar;
 
+    float Velocity;
+    int excesXP = 0;
+    bool IsLeveling;
     private void Awake()
     {
         foreach (var ability in abilities.abilities)
@@ -26,22 +31,29 @@ public class Leveling : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        xpBar.maxValue = (int)xpNeededPerLevel.Evaluate(Level);
+        float currentXp = Mathf.SmoothDamp(xpBar.value, xp, ref Velocity, 25 * Time.deltaTime);
+        xpBar.value = currentXp;
+    }
+
     public void addXp(int amount)
     {
         xp = xp + amount;
 
-        if (xp >= (int)xpNeededPerLevel.Evaluate(Level))
+        if (xp >= (int)xpNeededPerLevel.Evaluate(Level) && !IsLeveling)
         {
-            int excesXP = xp - (int)xpNeededPerLevel.Evaluate(Level);
+            IsLeveling = true;
+            excesXP = 0;
+            excesXP = xp - (int)xpNeededPerLevel.Evaluate(Level);
             LevelUp();
-            xp = 0 + excesXP;
         }
     }
 
     public void LevelUp()
     {
         StartCoroutine(TimeStop());
-        Level++;
         List<ability> abilitiesThatCanLevel = new List<ability>();
 
         foreach (var ability in abilities.abilities)
@@ -76,8 +88,14 @@ public class Leveling : MonoBehaviour
     IEnumerator TimeStop()
     {
         yield return new WaitForSeconds(0.5f);
-
         buttons.SetActive(true);
         Time.timeScale = 0;
+    }
+
+    public void resetXp()
+    {
+        Level++;
+        xp = 0 + excesXP;
+        IsLeveling = false;
     }
 }

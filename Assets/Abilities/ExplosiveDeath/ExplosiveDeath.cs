@@ -38,7 +38,7 @@ public class ExplosiveDeath : MonoBehaviour
 
     void spawnBullets(int numberOfBullets, Vector3 pos, float attack)
     {
-        if (Random.Range(0, 101) <= ChangeToExplode)
+        if (Random.Range(0, 101) <= ChangeToExplode + playerStats.Luck)
         {
             float dir = 360 / numberOfBullets;
             float rot = 0;

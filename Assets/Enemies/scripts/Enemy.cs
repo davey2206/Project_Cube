@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] float Speed;
     [SerializeField] float Health;
     [SerializeField] Transform HealthBar;
     [SerializeField] GameObject DieEffect;
     [SerializeField] abilitiesObject abilities;
+
+    [Header("Drops")]
+    [SerializeField] PlayerStats playerStats;
     [SerializeField] int xpDrop;
+    [SerializeField] GameObject xpEffect;
+    [SerializeField] int coinDrop;
+    [Range(0,100)]
+    [SerializeField] int dropRate;
+    [SerializeField] GameObject coinEffect;
+
     Leveling leveling;
 
     bool Stunned;
@@ -35,14 +46,11 @@ public class Enemy : MonoBehaviour
             size = 0;
         }
         HealthBar.localScale = Vector3.SmoothDamp(HealthBar.localScale, new Vector3(size, size, size), ref Velocity, 20 * Time.deltaTime);
+
         if (!isDead && !Stunned)
         {
             var step = Speed * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, step);
-        }
-        if (isDead)
-        {
-            transform.localScale = Vector3.SmoothDamp(transform.localScale, Vector3.zero, ref Velocity, 20 * Time.deltaTime);
         }
 
         CheckIfStunned();
@@ -58,13 +66,7 @@ public class Enemy : MonoBehaviour
         Health = Health - damage;
         if (Health <= 0)
         {
-
-            leveling.addXp(GetXpDrop());
-            isDead = true;
-            GetComponent<BoxCollider>().enabled = false;
-            Instantiate(DieEffect, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
-            ActivateAbilities();
-            Destroy(gameObject, 0.5f);
+            Die();
         }
     }
 
@@ -131,8 +133,34 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public int GetXpDrop()
+    public void Die()
     {
-        return xpDrop;
+        GetComponent<Animator>().SetTrigger("Die");
+        StartCoroutine(XpDrop());
+        StartCoroutine(CoinDrop());
+        isDead = true;
+        GetComponent<BoxCollider>().enabled = false;
+        Instantiate(DieEffect, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
+        ActivateAbilities();
+        Destroy(gameObject, 0.5f);
+    }
+
+    public IEnumerator XpDrop()
+    {
+        var Effect = Instantiate(xpEffect, transform.position, Quaternion.identity);
+        Effect.GetComponent<VisualEffect>().SetInt("Number", xpDrop);
+        yield return new WaitForSeconds(0.4f);
+        leveling.addXp(xpDrop);
+    }
+
+    public IEnumerator CoinDrop()
+    {
+        if (Random.Range(0,101) < dropRate)
+        {
+            var Effect = Instantiate(coinEffect, transform.position, Quaternion.identity);
+            Effect.GetComponent<VisualEffect>().SetInt("Number", coinDrop);
+            yield return new WaitForSeconds(0.4f);
+            playerStats.Coins += coinDrop;
+        }
     }
 }

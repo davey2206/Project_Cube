@@ -20,7 +20,7 @@ public class BarbedWireWave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = Vector3.SmoothDamp(transform.localScale, new Vector3(5,5,5), ref Velocity, 20 * Time.deltaTime);
+        transform.localScale = Vector3.SmoothDamp(transform.localScale, new Vector3(8,8,8), ref Velocity, 20 * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -29,7 +29,9 @@ public class PlayerAttack : MonoBehaviour
                 {
                     Enemy enemy = hit.transform.GetComponent<Enemy>();
                     enemy.TakeDamage(playerStats.GetAttack());
-                    ActivateAbilitiesOnClick(hit.transform.position);
+
+                    Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
+                    ActivateAbilitiesOnClick(pos);
                 }
             }
         }

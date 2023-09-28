@@ -12,35 +12,38 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject PlayerDieEffect;
     [SerializeField] abilitiesObject abilities;
 
-    
     Vector3 Velocity;
     private void Start()
     {
-        Health = playerStats.maxHealth;
-        playerStats.BonusAttack = 0;
+        ResetPlayer();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Enemy"))
+        if (other.transform.CompareTag("EnemyHitBox"))
         {
-            Health--;
-            ActivateAbilitiesOnHit();
-            if (Health <= 0)
-            {
-                Instantiate(PlayerDieEffect, new Vector3(0,5,0), Quaternion.identity);
-                GetComponent<BoxCollider>().enabled= false;
-                GetComponent<Animator>().SetTrigger("Die");
-            }
-            other.gameObject.GetComponent<Enemy>().HitPlayer();
+            TakeDamage();
+            other.gameObject.transform.parent.GetComponent<Enemy>().HitPlayer();
         }
     }
-
 
     private void Update()
     {
         float size = Health / playerStats.maxHealth;
         HealthBar.localScale = Vector3.SmoothDamp(HealthBar.localScale, new Vector3(size, size, size), ref Velocity, 20 * Time.deltaTime);
+    }
+
+    public void TakeDamage()
+    {
+        Health--;
+        ActivateAbilitiesOnHit();
+        if (Health <= 0)
+        {
+            playerStats.AddCoins();
+            Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
+            GetComponent<BoxCollider>().enabled = false;
+            GetComponent<Animator>().SetTrigger("Die");
+        }
     }
 
     public void ActivateAbilitiesOnHit()
@@ -62,5 +65,11 @@ public class Player : MonoBehaviour
         {
             Health = playerStats.maxHealth;
         }
+    }
+
+    public void ResetPlayer()
+    {
+        Health = playerStats.maxHealth;
+        playerStats.ResetStats();
     }
 }
