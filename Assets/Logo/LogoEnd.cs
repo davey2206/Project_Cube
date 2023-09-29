@@ -14,6 +14,7 @@ public class LogoEnd : MonoBehaviour
     IEnumerator changeScene()
     {
         yield return new WaitForSeconds(2f);
+        Cursor.visible = true;
         SceneManager.LoadScene(1);
     }
 }
