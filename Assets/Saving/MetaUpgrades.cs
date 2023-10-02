@@ -24,7 +24,9 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveAttackBonusUnlocks(0);
         MetaProgression.SaveLuckBonus(0);
         MetaProgression.SaveLuckBonusUnlocks(0);
-        MetaProgression.SaveCoins(0);
+        MetaProgression.SaveAttackSpeedBonus(0);
+        MetaProgression.SaveAttackSpeedBonusUnlocks(0);
+        MetaProgression.SaveCoins(2000);
 
         SetCoinText();
     }
@@ -32,7 +34,7 @@ public class MetaUpgrades : MonoBehaviour
     public void Upgrade(GameObject Upgrade)
     {
         Upgrade u = Upgrade.GetComponent<Upgrade>();
-        string upgrade = Upgrade.GetComponent<TextMeshProUGUI>().text;
+        string upgrade = u.UpgradeName;
         int maxUpgrades = u.getMaxUpgrades();
         int Cost = u.getCost();
 

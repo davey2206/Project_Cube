@@ -260,6 +260,8 @@ MonoBehaviour:
   PlayerDieEffect: {fileID: 6201523421047463331, guid: b29b81637d5197649a2968766e7b62c3,
     type: 3}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
+  gameEnd: {fileID: 0}
+  gameStartText: {fileID: 0}
 --- !u!114 &-302407786340333470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +276,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
+  AttackVFX: {fileID: 2186641806915604303, guid: 217915aa625393a45b554b7edab1002a,
+    type: 3}
 --- !u!114 &5465920128977967381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,3 +327,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  xpBar: {fileID: 0}

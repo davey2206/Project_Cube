@@ -11,7 +11,7 @@ public class Upgrade : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI costText;
     [SerializeField] TextMeshProUGUI UnlockText;
-    [SerializeField] string UpgradeName;
+    [SerializeField] public string UpgradeName;
 
     public int getMaxUpgrades()
     {

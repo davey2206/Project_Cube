@@ -8,6 +8,7 @@ public class PlayerStats : ScriptableObject
     public float maxHealth;
     public float BaseAttack;
     public float BonusAttack;
+    public float AttackSpeed;
     public int Coins;
     public float Luck;
 
@@ -27,11 +28,17 @@ public class PlayerStats : ScriptableObject
     {
         BonusAttack = MetaProgression.GetAttackBonus();
         Luck = MetaProgression.GetLuckBonus();
+        AttackSpeed = 3 + MetaProgression.GetAttackSpeedBonus();
         Coins = 0;
     }
 
     public void AddCoins()
     {
         MetaProgression.SaveCoins(MetaProgression.GetCoins() + Coins);
+    }
+
+    public float GetAttackSpeed()
+    {
+        return 1 / (AttackSpeed);
     }
 }

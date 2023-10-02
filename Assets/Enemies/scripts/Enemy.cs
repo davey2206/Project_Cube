@@ -87,6 +87,8 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator CheckOverlap()
     {
+        int NumberOfTimes = 0;
+        int maxPost = 1;
         int counter = 2;
         while (counter >= 2)
         {
@@ -109,18 +111,25 @@ public class Enemy : MonoBehaviour
                 switch (Random.Range(1, 5))
                 {
                     case 1:
-                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + Random.Range(1f, 5f));
+                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + Random.Range(1f, maxPost));
                         break;
                     case 2:
-                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - Random.Range(1f, 5f));
+                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - Random.Range(1f, maxPost));
                         break;
                     case 3:
-                        transform.position = new Vector3(posRightTop.x + Random.Range(1f, 5f), 0, Random.Range(posRightTop.z, -posRightTop.z));
+                        transform.position = new Vector3(posRightTop.x + Random.Range(1f, maxPost), 0, Random.Range(posRightTop.z, -posRightTop.z));
                         break;
                     case 4:
-                        transform.position = new Vector3(-posRightTop.x - Random.Range(1f, 5f), 0, Random.Range(posRightTop.x, -posRightTop.x));
+                        transform.position = new Vector3(-posRightTop.x - Random.Range(1f, maxPost), 0, Random.Range(posRightTop.x, -posRightTop.x));
                         break;
                 }
+            }
+
+            NumberOfTimes++;
+            if (NumberOfTimes == 10)
+            {
+                maxPost++;
+                NumberOfTimes = 0;
             }
         }
     }

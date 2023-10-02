@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
 
-    int currentWave = 0;
+    int currentWave = 26;
     int spawnPoints;
     bool lastWaveDone = false;
     bool Done = false;
@@ -56,14 +56,9 @@ public class Spawner : MonoBehaviour
             Vector3 pos = new Vector3();
             int y = 0;
 
-            while (spawnPoints != 0)
+            while (spawnPoints > 0)
             {
                 Enemy enemy = enemiesThatCanSpawn[Random.Range(0, enemiesThatCanSpawn.Count)];
-
-                while (enemy.Cost > spawnPoints)
-                {
-                    enemy = enemiesThatCanSpawn[Random.Range(0, enemiesThatCanSpawn.Count)];
-                }
 
                 y++;
                 switch (y)

@@ -15,5 +15,6 @@ MonoBehaviour:
   maxHealth: 10
   BaseAttack: 1
   BonusAttack: 0
-  Coins: 5
+  AttackSpeed: 3
+  Coins: 0
   Luck: 0
