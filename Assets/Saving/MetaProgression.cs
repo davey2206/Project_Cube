@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MetaProgression : MonoBehaviour
 {
+    public static int GetIntStat(string name) { return PlayerPrefs.GetInt(name); }
+    public static void SaveIntStat(string name, int amount) { PlayerPrefs.SetInt(name, amount); }
+
     public static void SaveAttackBonus(int attack) { PlayerPrefs.SetInt("Attack", attack); }
     public static void SaveAttackBonusUnlocks(int unlocks) { PlayerPrefs.SetInt("AttackUnlocks", unlocks); }
     public static int GetAttackBonus() { return PlayerPrefs.GetInt("Attack"); }

@@ -9,6 +9,7 @@ public class MetaUpgrades : MonoBehaviour
 
     private void Start()
     {
+        MetaProgression.SaveCoins(2000);
         SetCoinText();
     }
 
@@ -25,6 +26,25 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveLuckBonusUnlocks(0);
         MetaProgression.SaveCoins(0);
 
+        SetCoinText();
+    }
+
+    public void Upgrade(GameObject Upgrade)
+    {
+        Upgrade u = Upgrade.GetComponent<Upgrade>();
+        string upgrade = Upgrade.GetComponent<TextMeshProUGUI>().text;
+        int maxUpgrades = u.getMaxUpgrades();
+        int Cost = u.getCost();
+
+        if (MetaProgression.GetCoins() >= Cost)
+        {
+            if (MetaProgression.GetIntStat(upgrade + "Unlocks") < maxUpgrades)
+            {
+                MetaProgression.SaveIntStat(upgrade + "Unlocks", MetaProgression.GetIntStat(upgrade + "Unlocks") + 1);
+                MetaProgression.SaveCoins(MetaProgression.GetCoins() - Cost);
+                MetaProgression.SaveIntStat(upgrade, MetaProgression.GetIntStat(upgrade) + u.getUpgradeAmount());
+            }
+        }
         SetCoinText();
     }
 }
