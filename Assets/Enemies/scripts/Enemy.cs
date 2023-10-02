@@ -5,6 +5,10 @@ using UnityEngine.VFX;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Spawner")]
+    [SerializeField] public Vector2 difficultyRange;
+    [SerializeField] public int Cost;
+
     [Header("Stats")]
     [SerializeField] float Speed;
     [SerializeField] float Health;
@@ -33,7 +37,7 @@ public class Enemy : MonoBehaviour
     {
         maxHealth = Health;
         isDead = false;
-        CheckOverlap();
+        StartCoroutine(CheckOverlap());
 
         leveling = GameObject.Find("Player").GetComponent<Leveling>();
     }
@@ -81,39 +85,43 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void CheckOverlap()
+    public IEnumerator CheckOverlap()
     {
-        int counter = 0;
-        Physics.SyncTransforms();
-        Vector3 posRightTop = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 0));
-        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, (transform.localScale * 1.2f), Quaternion.identity);
-
-        foreach (var hit in hitColliders)
+        int counter = 2;
+        while (counter >= 2)
         {
-            if (hit.CompareTag("Enemy"))
-            {
-                counter++;
-            }
-        }
+            counter = 0;
+            yield return new WaitForFixedUpdate();
 
-        if (counter >= 2)
-        {
-            switch (Random.Range(1,5))
+            Vector3 posRightTop = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 0));
+            Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, (transform.localScale * 1.2f), Quaternion.identity);
+
+            foreach (var hit in hitColliders)
             {
-                case 1:
-                    transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + Random.Range(1f, 5f));
-                    break;
-                case 2:
-                    transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - Random.Range(1f, 5f));
-                    break;
-                case 3:
-                    transform.position = new Vector3(posRightTop.x + Random.Range(1f, 5f), 0, Random.Range(posRightTop.z, -posRightTop.z));
-                    break;
-                case 4:
-                    transform.position = new Vector3(-posRightTop.x - Random.Range(1f, 5f), 0, Random.Range(posRightTop.x, -posRightTop.x));
-                    break;
+                if (hit.CompareTag("Enemy"))
+                {
+                    counter++;
+                }
             }
-            CheckOverlap();
+
+            if (counter >= 2)
+            {
+                switch (Random.Range(1, 5))
+                {
+                    case 1:
+                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + Random.Range(1f, 5f));
+                        break;
+                    case 2:
+                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - Random.Range(1f, 5f));
+                        break;
+                    case 3:
+                        transform.position = new Vector3(posRightTop.x + Random.Range(1f, 5f), 0, Random.Range(posRightTop.z, -posRightTop.z));
+                        break;
+                    case 4:
+                        transform.position = new Vector3(-posRightTop.x - Random.Range(1f, 5f), 0, Random.Range(posRightTop.x, -posRightTop.x));
+                        break;
+                }
+            }
         }
     }
 

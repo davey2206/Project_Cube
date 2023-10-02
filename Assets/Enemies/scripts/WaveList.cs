@@ -6,5 +6,8 @@ using UnityEngine;
 [Serializable]
 public class WaveList
 {
-    public List<EnemyList> enemyLists;
+    public int difficulty;
+    public int spawnPoints;
+    [Range(0, 15)]
+    public float waveLength;
 }

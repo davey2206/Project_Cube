@@ -70,13 +70,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
+      propertyPath: Cost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
       propertyPath: Speed
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: Health
-      value: 1
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
@@ -87,6 +92,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dropRate
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
+      propertyPath: difficultyRange.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
+      propertyPath: difficultyRange.y
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6850550415252187460, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}

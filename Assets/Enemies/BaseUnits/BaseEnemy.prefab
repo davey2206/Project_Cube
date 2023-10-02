@@ -235,6 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225eb2f90a3869c4bb87ea1216383497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyRange: {x: 1, y: 2}
+  Cost: 1
   Speed: 1
   Health: 1
   HealthBar: {fileID: 6092161750793933159}

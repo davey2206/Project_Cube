@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.VFX;
@@ -11,6 +12,10 @@ public class Player : MonoBehaviour
     [SerializeField] Transform HealthBar;
     [SerializeField] GameObject PlayerDieEffect;
     [SerializeField] abilitiesObject abilities;
+
+    [Header("UI")]
+    [SerializeField] GameObject gameEnd;
+    [SerializeField] TextMeshProUGUI gameStartText;
 
     Vector3 Velocity;
     private void Start()
@@ -43,6 +48,7 @@ public class Player : MonoBehaviour
             Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<Animator>().SetTrigger("Die");
+            StartCoroutine(EndGame());
         }
     }
 
@@ -71,5 +77,13 @@ public class Player : MonoBehaviour
     {
         Health = playerStats.maxHealth;
         playerStats.ResetStats();
+    }
+
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(3f);
+        gameEnd.SetActive(true);
+        gameStartText.text = "Game Over";
+        Time.timeScale = 0f;
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/PlayerStats")]
 public class PlayerStats : ScriptableObject
 {
-    [SerializeField] MetaStats metaStats;
     public float maxHealth;
     public float BaseAttack;
     public float BonusAttack;
@@ -14,7 +13,7 @@ public class PlayerStats : ScriptableObject
 
     public float GetAttack()
     {
-        float attack = BaseAttack + (BaseAttack * BonusAttack);
+        float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
 
         return attack;
     }
@@ -26,13 +25,13 @@ public class PlayerStats : ScriptableObject
 
     public void ResetStats()
     {
-        BonusAttack = metaStats.BonusAttack;
-        Luck = metaStats.Luck;
+        BonusAttack = MetaProgression.GetAttackBonus();
+        Luck = MetaProgression.GetLuckBonus();
         Coins = 0;
     }
 
     public void AddCoins()
     {
-        metaStats.Coins += Coins;
+        MetaProgression.SaveCoins(MetaProgression.GetCoins() + Coins);
     }
 }
