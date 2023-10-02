@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c0f10ca6a22204b8348e01466c82c2, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  metaStats: {fileID: 11400000, guid: 7b58d677ace33d1429dc9ddbac1b9dec, type: 2}
   maxHealth: 10
   BaseAttack: 1
   BonusAttack: 0
-  Coins: 0
+  Coins: 5
   Luck: 0
