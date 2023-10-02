@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
 
-    int currentWave = 26;
+    int currentWave = 0;
     int spawnPoints;
     bool lastWaveDone = false;
     bool Done = false;
