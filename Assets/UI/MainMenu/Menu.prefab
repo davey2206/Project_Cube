@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxUpgrades: 5
-  Cost: f4010000e8030000dc050000d0070000b80b0000
+  Cost: 3200000064000000f4010000e8030000d0070000
   upgradeAmount: 1
   costText: {fileID: 2321966874758341907}
   UnlockText: {fileID: 488988087611892445}

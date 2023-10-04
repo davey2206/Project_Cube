@@ -7,6 +7,10 @@ public class MetaProgression : MonoBehaviour
     //all
     public static int GetIntStat(string name) { return PlayerPrefs.GetInt(name); }
     public static void SaveIntStat(string name, int amount) { PlayerPrefs.SetInt(name, amount); }
+    public static string GetStringStat(string name) { return PlayerPrefs.GetString(name); }
+    public static void SaveStringStat(string name, string amount) { PlayerPrefs.SetString(name, amount); }
+    public static float GetFloatStat(string name) { return PlayerPrefs.GetFloat(name); }
+    public static void SaveFloatStat(string name, float amount) { PlayerPrefs.SetFloat(name, amount); }
 
 
     //coins

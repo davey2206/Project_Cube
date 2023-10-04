@@ -9,7 +9,6 @@ public class MetaUpgrades : MonoBehaviour
 
     private void Start()
     {
-        MetaProgression.SaveCoins(2000);
         SetCoinText();
     }
 
@@ -26,7 +25,7 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveLuckBonusUnlocks(0);
         MetaProgression.SaveAttackSpeedBonus(0);
         MetaProgression.SaveAttackSpeedBonusUnlocks(0);
-        MetaProgression.SaveCoins(2000);
+        MetaProgression.SaveCoins(0);
 
         SetCoinText();
     }
