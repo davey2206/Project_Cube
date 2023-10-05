@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6544997043375988145}
   - component: {fileID: 1979200394482973018}
   - component: {fileID: -3279743987430769385}
+  - component: {fileID: -3674748097384289601}
   m_Layer: 0
   m_Name: abilities
   m_TagString: Untagged
@@ -121,3 +122,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Turret: {fileID: 6105523945092628275, guid: ec8dfc3f258ca804aa0fb969abd83f73, type: 3}
+--- !u!114 &-3674748097384289601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917464684567858733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee654f913705aa742833d96fe2698bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strikeSpawner: {fileID: 1936518618833116971, guid: c009e5f7cad99104d8168167d8b1685a,
+    type: 3}

@@ -64,16 +64,16 @@ public class Spawner : MonoBehaviour
                 switch (y)
                 {
                     case 1:
-                        pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + 1);
+                        pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + 1.5f);
                         break;
                     case 2:
-                        pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - 1);
+                        pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - 1.5f);
                         break;
                     case 3:
-                        pos = new Vector3(posRightTop.x + 1, 0, Random.Range(posRightTop.z, -posRightTop.z));
+                        pos = new Vector3(posRightTop.x + 1.5f, 0, Random.Range(posRightTop.z, -posRightTop.z));
                         break;
                     case 4:
-                        pos = new Vector3(-posRightTop.x - 1, 0, Random.Range(posRightTop.x, -posRightTop.x));
+                        pos = new Vector3(-posRightTop.x - 1.5f, 0, Random.Range(posRightTop.x, -posRightTop.x));
                         break;
                 }
 

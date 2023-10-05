@@ -20,8 +20,8 @@ MonoBehaviour:
     - Enemies have a 35% change to explode into 6 bullets that deal 75% damage
     - Enemies have a 40% change to explode into 6 bullets that deal 100% damage
     - Enemies have a 50% change to explode into 8 bullets that deal 100% damage
-    Level: 5
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -48,7 +48,7 @@ MonoBehaviour:
     - Fire a shockwave every 6 seconds that stun enemies for 1.25 seconds
     - Fire a shockwave every 5 seconds that stun enemies for 1.5 seconds that deals
       25% damage
-    Level: 1
+    Level: 2
     Active: 1
     Unlocked: 1
     abilityType: 3
@@ -75,8 +75,8 @@ MonoBehaviour:
     - When you get hit fire a wave that damages enemies hit for 150% damage
     - When you get hit fire a wave that damages enemies hit for 200% damage
     - When you get hit fire a wave that damages enemies hit for 250% damage
-    Level: 0
-    Active: 0
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 2
     Ability:
@@ -102,8 +102,8 @@ MonoBehaviour:
     - On enemy hit fire a medium size wave that deal 50% damage to enemies hit
     - On enemy hit fire a big wave that deal 50% damage to enemies hit
     - On enemy hit fire a big wave that deal 75% damage to enemies hit
-    Level: 1
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 1
     Ability:
@@ -134,8 +134,8 @@ MonoBehaviour:
       closest enemy for 75% damege for 8 seconds
     - On enemy death there is a 10% change to spawn a turret that wil attack the
       closest enemy for 75% damege for 10 seconds
-    Level: 5
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -166,8 +166,8 @@ MonoBehaviour:
       the closest enemy with a burst of bullets for 30% damege each for 12 seconds
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
       the closest enemy with a burst of bullets for 30% damege each for 15 seconds
-    Level: 5
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -176,6 +176,33 @@ MonoBehaviour:
         - m_Target: {fileID: -3279743987430769385, guid: 27c868777a45d334dbecd254425e249d,
             type: 3}
           m_TargetAssemblyTypeName: MiniGunTurretSpawn, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: Artillery Strike
+    Description:
+    - launch 1 Strike that deals 75% damage to a random area
+    - launch 2 Strike that deals 75% damage to a random area
+    - launch 3 Strike that deals 100% damage to a random area
+    - launch 4 Strike that deals 100% damage to a random area
+    - launch 5 Strike that deals 150% damage to a random area
+    Level: 5
+    Active: 1
+    Unlocked: 1
+    abilityType: 3
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -3674748097384289601, guid: 27c868777a45d334dbecd254425e249d,
+            type: 3}
+          m_TargetAssemblyTypeName: ArtilleryStrike, Assembly-CSharp
           m_MethodName: Ability
           m_Mode: 0
           m_Arguments:
