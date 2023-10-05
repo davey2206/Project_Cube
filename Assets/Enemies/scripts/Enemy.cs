@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] int dropRate;
     [SerializeField] GameObject coinEffect;
 
+    [Header("UI")]
+    [SerializeField] DamageNumbers damageNumbers;
+
     Leveling leveling;
 
     bool Stunned;
@@ -68,6 +71,13 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Health = Health - damage;
+
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
+
+        DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
+        numbers.ShowDamage(damage);
+
+
         if (Health <= 0)
         {
             Die();

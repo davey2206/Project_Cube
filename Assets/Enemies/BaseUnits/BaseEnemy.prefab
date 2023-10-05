@@ -251,6 +251,8 @@ MonoBehaviour:
   dropRate: 0
   coinEffect: {fileID: 2962067442543321795, guid: 34855f16e514c0c45bd029033845d7df,
     type: 3}
+  damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
+    type: 3}
 --- !u!54 &8254933028711076052
 Rigidbody:
   m_ObjectHideFlags: 0

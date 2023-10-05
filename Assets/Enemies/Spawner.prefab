@@ -108,36 +108,9 @@ MonoBehaviour:
   - difficulty: 9
     spawnPoints: 50
     waveLength: 10
-  - difficulty: 11
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 11
-    spawnPoints: 25
-    waveLength: 5
-  - difficulty: 11
-    spawnPoints: 25
-    waveLength: 5
-  - difficulty: 11
-    spawnPoints: 25
-    waveLength: 5
-  - difficulty: 12
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 13
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 14
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 15
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 15
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 15
+  - difficulty: 10
     spawnPoints: 100
-    waveLength: 15
+    waveLength: 5
   enemies:
   - {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d, type: 3}
   - {fileID: 7114713656120535486, guid: 5c18051d991493c4b8070e314c85a952, type: 3}
@@ -147,13 +120,6 @@ MonoBehaviour:
   - {fileID: 8277437486846101053, guid: 88b7a4eca4c41ec4d916377263cf14c9, type: 3}
   - {fileID: 5274900260722448093, guid: 96885fc838428b244b4846d372e51cb9, type: 3}
   - {fileID: 4204673097409270202, guid: 91b34cd0aa641fe4d81372db6c2aca2c, type: 3}
-  - {fileID: 7114713656120535486, guid: b3b493dc9755b5249bf0db4124539dc2, type: 3}
-  - {fileID: 7114713656120535486, guid: 34d3e601ee7948b439bf1deea785fca6, type: 3}
-  - {fileID: 8277437486846101053, guid: 041eeb9c2bb372d4d940f81e782a29d3, type: 3}
-  - {fileID: 8277437486846101053, guid: 45e6e5583fd37754c9a7364b651edd87, type: 3}
-  - {fileID: 8277437486846101053, guid: 7f786f172efaa9f408883d4ccd380702, type: 3}
-  - {fileID: 5274900260722448093, guid: 856bab469707fdf45899ceed99d63904, type: 3}
-  - {fileID: 4204673097409270202, guid: aaaf99a2b6cc09346966e4116135fe56, type: 3}
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   gameEnd: {fileID: 0}
   gameStartText: {fileID: 0}
