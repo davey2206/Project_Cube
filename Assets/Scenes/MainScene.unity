@@ -702,8 +702,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -859,7 +859,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c27aa1a7bec4fb9449214d8f361fc5fe, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 125
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1596,11 +1596,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1515916906}
     m_Modifications:
+    - target: {fileID: 1396075736368853118, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3220639262095758738, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
       propertyPath: leveling
       value: 
       objectReference: {fileID: 61571712}
+    - target: {fileID: 3378743346986152870, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3664275860001445146, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
       propertyPath: leveling
@@ -1706,10 +1716,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4990808840553541894, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5310256464362424969, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5953333772508877650, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
       propertyPath: m_Name
       value: LevelUpbuttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773363260322440493, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605761867488121278, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8629837681002533559, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
@@ -1733,6 +1763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coins
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883201412086571321, guid: c5cefb3f033d1c84b8959fbd56eb8fce,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7318235359151732344, guid: c5cefb3f033d1c84b8959fbd56eb8fce,
         type: 3}
