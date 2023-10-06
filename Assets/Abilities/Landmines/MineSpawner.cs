@@ -7,11 +7,11 @@ public class MineSpawner : MonoBehaviour
     [SerializeField] PlayerStats playerStats;
     [SerializeField] GameObject Mine;
 
-    public IEnumerator spawnSrikes(float attack, int numberOfStrikes)
+    public IEnumerator spawnSrikes(float attack, int numberOfMines)
     {
         while (true)
         {
-            for (int i = 0; i < numberOfStrikes; i++)
+            for (int i = 0; i < numberOfMines; i++)
             {
                 float baseAttack = playerStats.GetAttack();
 

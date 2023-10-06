@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -3279743987430769385}
   - component: {fileID: -3674748097384289601}
   - component: {fileID: -145427954597040406}
+  - component: {fileID: 7499869435078318781}
   m_Layer: 0
   m_Name: abilities
   m_TagString: Untagged
@@ -150,4 +151,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mineSpawner: {fileID: 139522198074567043, guid: 1c726496bc09ba74a807c2bb5a71f754,
+    type: 3}
+--- !u!114 &7499869435078318781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917464684567858733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d662c7b694e94ee47a06362f8dfc64fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletStormSpawner: {fileID: -899421453724956551, guid: 004d9bd280b27b54bb0846c4082c291d,
     type: 3}
