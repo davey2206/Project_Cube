@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] TextMeshProUGUI gameStartText;
 
     Vector3 Velocity;
-    private void Start()
+    private void Awake()
     {
         ResetPlayer();
     }
@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
         ActivateAbilitiesOnHit();
         if (Health <= 0)
         {
+            playerStats.alive = false;
             playerStats.AddCoins();
             Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
             GetComponent<BoxCollider>().enabled = false;

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1161483297934774819}
   - component: {fileID: 4505340724178684767}
-  - component: {fileID: 954465302782055104}
   - component: {fileID: 7905035854830421037}
+  - component: {fileID: -4058340172582843007}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -56,18 +56,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &954465302782055104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3518012940223051391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250480231d181834990f4cbc77e14bd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7905035854830421037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +71,18 @@ MonoBehaviour:
   vfx: {fileID: 6056945354907615221}
   Duration: 1
   color: {r: 1, g: 1, b: 1, a: 0}
+--- !u!114 &-4058340172582843007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518012940223051391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250480231d181834990f4cbc77e14bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4416285771527238055
 PrefabInstance:
   m_ObjectHideFlags: 0

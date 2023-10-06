@@ -18,7 +18,7 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator Attack()
     {
-        while (true)
+        while (playerStats.alive)
         {
             yield return new WaitForSeconds(playerStats.GetAttackSpeed());
 

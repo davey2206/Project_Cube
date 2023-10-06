@@ -2,20 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosiveClickWave : MonoBehaviour
+public class WaveAttacks : MonoBehaviour
 {
-    Vector3 Velocity;
-    float Size;
-    float attack;
+    [SerializeField] float Size;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Destroy(gameObject, 0.5f);
-    }
-    public void SetStats(float atk, float size)
+    Vector3 Velocity;
+    float attack;
+    float stun = 0;
+
+    public void SetStats(float atk)
     {
         attack = atk;
+    }
+
+    public void SetStats(float s, float atk)
+    {
+        attack = atk;
+        stun = s;
+    }
+
+    public void SetStats(float atk, float size, bool resize)
+    {
+        attack = atk;
+        Size = size;
+    }
+
+    public void SetStats(float s, float atk, float size, bool resize)
+    {
+        attack = atk;
+        stun = s;
         Size = size;
     }
 
@@ -30,6 +45,7 @@ public class ExplosiveClickWave : MonoBehaviour
         if (other.transform.CompareTag("Enemy"))
         {
             other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
+            other.gameObject.GetComponent<Enemy>().Stun(stun);
         }
     }
 }

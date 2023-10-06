@@ -48,8 +48,8 @@ MonoBehaviour:
     - Fire a shockwave every 6 seconds that stun enemies for 1.25 seconds
     - Fire a shockwave every 5 seconds that stun enemies for 1.5 seconds that deals
       25% damage
-    Level: 2
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 3
     Ability:
@@ -193,8 +193,8 @@ MonoBehaviour:
     - launch 3 Strike that deals 100% damage to a random area
     - launch 4 Strike that deals 100% damage to a random area
     - launch 5 Strike that deals 150% damage to a random area
-    Level: 5
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 3
     Ability:
@@ -203,6 +203,33 @@ MonoBehaviour:
         - m_Target: {fileID: -3674748097384289601, guid: 27c868777a45d334dbecd254425e249d,
             type: 3}
           m_TargetAssemblyTypeName: ArtilleryStrike, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Name: Landmines
+    Description:
+    - Every 10 seconds plant 3 landminse around you that deal 50% damage
+    - Every 10 seconds plant 4 landminse around you that deal 50% damage
+    - Every 10 seconds plant 5 landminse around you that deal 75% damage
+    - Every 10 seconds plant 6 landminse around you that deal 75% damage
+    - Every 10 seconds plant 7 landminse around you that deal 100% damage
+    Level: 5
+    Active: 1
+    Unlocked: 1
+    abilityType: 3
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -145427954597040406, guid: 27c868777a45d334dbecd254425e249d,
+            type: 3}
+          m_TargetAssemblyTypeName: Landmines, Assembly-CSharp
           m_MethodName: Ability
           m_Mode: 0
           m_Arguments:

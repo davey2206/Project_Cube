@@ -174,10 +174,13 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator XpDrop()
     {
-        var Effect = Instantiate(xpEffect, transform.position, Quaternion.identity);
-        Effect.GetComponent<VisualEffect>().SetInt("Number", xpDrop);
-        yield return new WaitForSeconds(0.4f);
-        leveling.addXp(xpDrop);
+        if (playerStats.alive)
+        {
+            var Effect = Instantiate(xpEffect, transform.position, Quaternion.identity);
+            Effect.GetComponent<VisualEffect>().SetInt("Number", xpDrop);
+            yield return new WaitForSeconds(0.4f);
+            leveling.addXp(xpDrop);
+        }
     }
 
     public IEnumerator CoinDrop()

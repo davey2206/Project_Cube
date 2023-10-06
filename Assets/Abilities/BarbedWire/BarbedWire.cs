@@ -5,12 +5,12 @@ using UnityEngine;
 public class BarbedWire : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
-    [SerializeField] BarbedWireWave Wave;
+    [SerializeField] WaveAttacks Wave;
 
     public void Ability(int level, Vector3 pos)
     {
         float baseAttack = playerStats.GetAttack();
-        BarbedWireWave wave;
+        WaveAttacks wave;
 
         switch (level)
         {

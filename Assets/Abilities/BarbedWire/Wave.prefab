@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1161483297934774819}
   - component: {fileID: 4505340724178684767}
   - component: {fileID: 7905035854830421037}
-  - component: {fileID: -5375693356085605229}
+  - component: {fileID: -2639533794987724408}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
@@ -71,7 +71,7 @@ MonoBehaviour:
   vfx: {fileID: 6056945354907615221}
   Duration: 0.5
   color: {r: 0, g: 0.83116007, b: 1, a: 0}
---- !u!114 &-5375693356085605229
+--- !u!114 &-2639533794987724408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,9 +80,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3518012940223051391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f10d9beb810d9844c9b59bd180ab88f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f69928d32d567c489356689942348f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Size: 10
 --- !u!1001 &4416285771527238055
 PrefabInstance:
   m_ObjectHideFlags: 0

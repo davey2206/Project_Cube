@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/PlayerStats")]
 public class PlayerStats : ScriptableObject
 {
+    public bool alive;
     public float maxHealth;
     public float BaseAttack;
     public float BonusAttack;
@@ -26,6 +28,7 @@ public class PlayerStats : ScriptableObject
 
     public void ResetStats()
     {
+        alive = true;
         BonusAttack = MetaProgression.GetAttackBonus();
         Luck = MetaProgression.GetLuckBonus();
         AttackSpeed = 3 + MetaProgression.GetAttackSpeedBonus();

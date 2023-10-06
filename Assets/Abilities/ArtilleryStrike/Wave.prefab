@@ -11,14 +11,14 @@ GameObject:
   - component: {fileID: 1161483297934774819}
   - component: {fileID: 4505340724178684767}
   - component: {fileID: 7905035854830421037}
-  - component: {fileID: 8511063103279682723}
+  - component: {fileID: 7511549145159947273}
   m_Layer: 0
   m_Name: Wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1161483297934774819
 Transform:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   vfx: {fileID: 6056945354907615221}
   Duration: 0.5
   color: {r: 1, g: 0.15699181, b: 0, a: 0}
---- !u!114 &8511063103279682723
+--- !u!114 &7511549145159947273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,9 +80,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3518012940223051391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b87bd2d34c1c0914bab2000f09c27647, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f69928d32d567c489356689942348f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Size: 8
 --- !u!1001 &4416285771527238055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -174,6 +175,11 @@ PrefabInstance:
     - target: {fileID: 7586132389936909906, guid: ba3ef95c4e355c647b7e8bb3888a2286,
         type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Overridden
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947138524783094918, guid: ba3ef95c4e355c647b7e8bb3888a2286,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
