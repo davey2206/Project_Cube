@@ -157,15 +157,15 @@ MonoBehaviour:
   - Name: Minigun Turret
     Description:
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 10% damege each for 10 seconds.
+      the closest enemy with a burst of bullets for 10% damage each for 10 seconds.
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 20% damege each for 10 seconds
+      the closest enemy with a burst of bullets for 20% damage each for 10 seconds
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 20% damege each for 12 seconds
+      the closest enemy with a burst of bullets for 20% damage each for 12 seconds
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 30% damege each for 12 seconds
+      the closest enemy with a burst of bullets for 30% damage each for 12 seconds
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 30% damege each for 15 seconds
+      the closest enemy with a burst of bullets for 30% damage each for 15 seconds
     Level: 0
     Active: 0
     Unlocked: 1
