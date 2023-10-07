@@ -164,6 +164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710652753828362986, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 710652753828362986, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -176,6 +181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 710652753828362986, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 710652753828362986, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -184,6 +194,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1339711512077113395, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339711512077113395, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -196,6 +211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339711512077113395, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 1339711512077113395, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -220,6 +240,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2321966874758341907, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321966874758341907, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -232,6 +257,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2321966874758341907, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 2321966874758341907, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -267,6 +297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5853798639788687615, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853798639788687615, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -279,6 +314,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5853798639788687615, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 5853798639788687615, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -398,6 +438,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7094430174600688686, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094430174600688686, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -410,6 +455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094430174600688686, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 7094430174600688686, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -459,6 +509,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014183625790978661, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014183625790978661, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -471,6 +526,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014183625790978661, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9014183625790978661, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -485,6 +545,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 9035091668483296538, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
+      propertyPath: m_fontSize
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035091668483296538, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
       propertyPath: m_fontColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -497,6 +562,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9035091668483296538, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 9035091668483296538, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
