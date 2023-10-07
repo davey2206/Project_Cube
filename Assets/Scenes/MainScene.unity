@@ -1601,6 +1601,11 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1990608152661085821, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.98039216
+      objectReference: {fileID: 0}
     - target: {fileID: 3220639262095758738, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
       propertyPath: leveling
@@ -1730,6 +1735,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelUpbuttons
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953333772508877650, guid: b4d4d99fdeb139941a3d8927c7350011,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6773363260322440493, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
