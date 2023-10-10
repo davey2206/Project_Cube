@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 2763120746391460792}
   - component: {fileID: -302407786340333470}
   - component: {fileID: 5465920128977967381}
+  - component: {fileID: 8287059764716141754}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -262,8 +263,6 @@ MonoBehaviour:
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   gameEnd: {fileID: 0}
   gameStartText: {fileID: 0}
-  mainMet: {fileID: 2439675053569230669}
-  subMet: {fileID: 8274493921202171089}
 --- !u!114 &-302407786340333470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,3 +328,22 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   xpBar: {fileID: 0}
+--- !u!114 &8287059764716141754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4896740422742789855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d39e33c67cb7b084d84c66bc07bd4362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  player: {fileID: 2763120746391460792}
+  mainMet: {fileID: 2439675053569230669}
+  subMet: {fileID: 8274493921202171089}
+  strike: {fileID: 6108100398174320582, guid: b2da8d12db02a6a448e4bbc70e902e0d, type: 3}
+  ShockWave: {fileID: -4058340172582843007, guid: 684a194905dce00468dd7b144b2c90cb,
+    type: 3}

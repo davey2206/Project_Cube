@@ -5810,7 +5810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxUpgrades: 5
+  maxUpgrades: 10
   Cost: 320000006400000096000000c8000000fa0000002c01000090010000f4010000e8030000d0070000
   upgradeAmount: 1
   costText: {fileID: 5824512861225255797}

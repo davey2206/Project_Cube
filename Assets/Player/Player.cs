@@ -17,11 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
 
-    [SerializeField] Renderer mainMet;
-    [SerializeField] Renderer subMet;
-
     Vector3 Velocity;
-    bool onCooldown;
+
     private void Awake()
     {
         ResetPlayer();
@@ -40,8 +37,6 @@ public class Player : MonoBehaviour
     {
         float size = Health / playerStats.maxHealth;
         HealthBar.localScale = Vector3.SmoothDamp(HealthBar.localScale, new Vector3(size, size, size), ref Velocity, 20 * Time.deltaTime);
-
-        ChangeForm();
     }
 
     public void TakeDamage()
@@ -94,41 +89,5 @@ public class Player : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void ChangeForm()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !onCooldown)
-        {
-            mainMet.material.color = Color.white;
-            subMet.material.color = new Color(1f,1f,1f,0.5f);
-            StartCoroutine(ActiveCooldown());
-        }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && !onCooldown)
-        {
-            mainMet.material.color = new Color(0.169284f, 1f,0f,1f);
-            subMet.material.color = new Color(0.169284f, 1f, 0f, 0.5f);
-            StartCoroutine(ActiveCooldown());
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3) && !onCooldown)
-        {
-            mainMet.material.color = new Color(1f, 1f, 0f, 1f);
-            subMet.material.color = new Color(1f, 1f, 0f, 0.5f);
-            StartCoroutine(ActiveCooldown());
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha4) && !onCooldown)
-        {
-            mainMet.material.color = new Color(0f, 1f, 1f, 1f);
-            subMet.material.color = new Color(0f, 1f, 1f, 0.5f);
-            StartCoroutine(ActiveCooldown());
-        }
-    }
-
-    IEnumerator ActiveCooldown()
-    {
-        onCooldown = true;
-        yield return new WaitForSeconds(15);
-        onCooldown = false;
-    }
 }

@@ -17,7 +17,7 @@ public class BulletStormSpawner : MonoBehaviour
             for (int i = 0; i < numberOfBullets; i++)
             {
                 float baseAttack = playerStats.GetYellowAttack();
-                var b = Instantiate(Bullet, Vector3.zero, Quaternion.Euler(0, rot, 0));
+                var b = Instantiate(Bullet, Vector3.zero, Quaternion.Euler(0, rot + Random.Range(-5f, 5f), 0));
                 b.SetAttack(baseAttack * attack);
                 rot = rot + dir;
                 yield return new WaitForSeconds(0.01f);

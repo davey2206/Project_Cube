@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR;
 
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/PlayerStats")]
 public class PlayerStats : ScriptableObject
@@ -18,6 +19,10 @@ public class PlayerStats : ScriptableObject
     public float BlueDamage;
     public float GreenDamage;
 
+    public float YellowDamageBonus;
+    public float BlueDamageBonus;
+    public float GreenDamageBonus;
+
     public float GetAttack()
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
@@ -29,7 +34,7 @@ public class PlayerStats : ScriptableObject
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
 
-        attack = attack + (attack * (YellowDamage / 100));
+        attack = attack + (attack * ((YellowDamage + YellowDamageBonus) / 100));
 
         return attack;
     }
@@ -38,7 +43,7 @@ public class PlayerStats : ScriptableObject
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
 
-        attack = attack + (attack * (BlueDamage / 100));
+        attack = attack + (attack * ((BlueDamage + BlueDamageBonus) / 100));
 
         return attack;
     }
@@ -47,7 +52,7 @@ public class PlayerStats : ScriptableObject
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
 
-        attack = attack + (attack * (GreenDamage / 100));
+        attack = attack + (attack * ((GreenDamage + GreenDamageBonus) / 100));
 
         return attack;
     }
