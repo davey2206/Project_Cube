@@ -37,4 +37,25 @@ public class MetaProgression : MonoBehaviour
     public static void SaveAttackSpeedBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("AttackSpeedUnlocks", Unlocks); }
     public static int GetAttackSpeedBonus() { return PlayerPrefs.GetInt("AttackSpeed"); }
     public static int GetAttackSpeedBonusUnlocks() { return PlayerPrefs.GetInt("AttackSpeedUnlocks"); }
+
+
+    //YellowDamage
+    public static void SaveYellowDamageBonus(int YellowDamage) { PlayerPrefs.SetInt("YellowDamage", YellowDamage); }
+    public static void SaveYellowDamageBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("YellowDamageUnlocks", Unlocks); }
+    public static int GetYellowDamageBonus() { return PlayerPrefs.GetInt("YellowDamage"); }
+    public static int GetYellowDamageBonusUnlocks() { return PlayerPrefs.GetInt("YellowDamageUnlocks"); }
+
+
+    //GreenDamage
+    public static void SaveGreenDamageBonus(int GreenDamage) { PlayerPrefs.SetInt("GreenDamage", GreenDamage); }
+    public static void SaveGreenDamageBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("GreenDamageUnlocks", Unlocks); }
+    public static int GetGreenDamageBonus() { return PlayerPrefs.GetInt("GreenDamage"); }
+    public static int GetGreenDamageBonusUnlocks() { return PlayerPrefs.GetInt("GreenDamageUnlocks"); }
+
+
+    //BlueDamage
+    public static void SaveBlueDamageBonus(int BlueDamage) { PlayerPrefs.SetInt("BlueDamage", BlueDamage); }
+    public static void SaveBlueDamageBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("BlueDamageUnlocks", Unlocks); }
+    public static int GetBlueDamageBonus() { return PlayerPrefs.GetInt("BlueDamage"); }
+    public static int GetBlueDamageBonusUnlocks() { return PlayerPrefs.GetInt("BlueDamageUnlocks"); }
 }

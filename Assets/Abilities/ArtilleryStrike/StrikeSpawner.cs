@@ -13,7 +13,7 @@ public class StrikeSpawner : MonoBehaviour
         {
             for (int i = 0; i < numberOfStrikes; i++)
             {
-                float baseAttack = playerStats.GetAttack();
+                float baseAttack = playerStats.GetYellowAttack();
 
                 Vector3 pos = new Vector3(Random.Range(-15f, 15f), 0, Random.Range(-8f, 8f));
 

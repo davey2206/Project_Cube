@@ -9,7 +9,7 @@ public class ExplosiveClick : MonoBehaviour
 
     public void Ability(int level, Vector3 pos)
     {
-        float baseAttack = playerStats.GetAttack();
+        float baseAttack = playerStats.GetBlueAttack();
         WaveAttacks wave;
 
         switch (level)

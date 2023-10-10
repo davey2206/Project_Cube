@@ -262,6 +262,8 @@ MonoBehaviour:
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   gameEnd: {fileID: 0}
   gameStartText: {fileID: 0}
+  mainMet: {fileID: 2439675053569230669}
+  subMet: {fileID: 8274493921202171089}
 --- !u!114 &-302407786340333470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
-  abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   AttackVFX: {fileID: 2186641806915604303, guid: 217915aa625393a45b554b7edab1002a,
     type: 3}
 --- !u!114 &5465920128977967381

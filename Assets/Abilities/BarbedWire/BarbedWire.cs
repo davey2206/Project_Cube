@@ -9,7 +9,7 @@ public class BarbedWire : MonoBehaviour
 
     public void Ability(int level, Vector3 pos)
     {
-        float baseAttack = playerStats.GetAttack();
+        float baseAttack = playerStats.GetGreenAttack();
         WaveAttacks wave;
 
         switch (level)

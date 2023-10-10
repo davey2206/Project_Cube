@@ -13,7 +13,7 @@ public class MineSpawner : MonoBehaviour
         {
             for (int i = 0; i < numberOfMines; i++)
             {
-                float baseAttack = playerStats.GetAttack();
+                float baseAttack = playerStats.GetGreenAttack();
 
                 Vector3 pos = new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
 

@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vfx: {fileID: 6056945354907615221}
   Duration: 0.5
-  color: {r: 0, g: 0.83116007, b: 1, a: 0}
+  color: {r: 0.16928399, g: 1, b: 0, a: 0}
 --- !u!114 &-2639533794987724408
 MonoBehaviour:
   m_ObjectHideFlags: 0
