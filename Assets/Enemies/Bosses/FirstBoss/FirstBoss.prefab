@@ -473,6 +473,11 @@ MonoBehaviour:
   ArmL: {fileID: 8402715466728215641}
   ArmR: {fileID: 6509679645001651}
   animator: {fileID: 3254733599386723632}
+  animations:
+  - {fileID: 7400000, guid: fc41b3dc06fa52f4da884356db557b25, type: 2}
+  - {fileID: 7400000, guid: 3447566855dad004e8cbfa269377dc93, type: 2}
+  - {fileID: 7400000, guid: 42be74cd191e88543a93e375396d594e, type: 2}
+  - {fileID: 7400000, guid: 93da1d5fc6e47374789555fc219665e1, type: 2}
   spawnersFase1:
   - {fileID: 3167582126322379839}
   - {fileID: 2451971095730732805}
@@ -482,9 +487,6 @@ MonoBehaviour:
   spawnersFase3: []
   BossEnemy: {fileID: 3352287954256755614, guid: 597e4af92d08d5c4d9841830520aa947,
     type: 3}
-  attack1: 0
-  attack2: 0
-  attack3: 0
 --- !u!1 &6279465473618545762
 GameObject:
   m_ObjectHideFlags: 0

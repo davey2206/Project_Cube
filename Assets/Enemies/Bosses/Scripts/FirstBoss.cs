@@ -8,7 +8,7 @@ public class FirstBoss : MonoBehaviour
     [SerializeField] GameObject ArmL;
     [SerializeField] GameObject ArmR;
     [SerializeField] Animator animator;
-    [SerializeField] List<Animation> animations;
+    [SerializeField] List<AnimationClip> animations;
 
     [Header("Attacks")]
     [SerializeField] List<Transform> spawnersFase1;
@@ -16,10 +16,37 @@ public class FirstBoss : MonoBehaviour
     [SerializeField] List<Transform> spawnersFase3;
     [SerializeField] GameObject BossEnemy;
 
+    float WaitTime;
+
     private IEnumerator Start()
     {
+        animator.Play(animations[3].name);
         yield return new WaitForSeconds(2f);
         animator.Play(animations[0].name);
+
+        WaitTime = animations[0].length;
+        while (true)
+        {
+            yield return new WaitForSeconds(WaitTime + 1f);
+
+            if (ArmL.activeInHierarchy)
+            {
+                animator.Play(animations[0].name);
+                WaitTime = animations[0].length;
+            }
+
+            if (!ArmL.activeInHierarchy && ArmR.activeInHierarchy)
+            {
+                animator.Play(animations[1].name);
+                WaitTime = animations[1].length;
+            }
+
+            if (!ArmL.activeInHierarchy && !ArmR.activeInHierarchy)
+            {
+                animator.Play(animations[2].name);
+                WaitTime = animations[2].length;
+            }
+        }
     }
 
     public void Attack1()
