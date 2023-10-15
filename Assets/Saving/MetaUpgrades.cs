@@ -6,10 +6,11 @@ using TMPro;
 public class MetaUpgrades : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI coins;
-
     private void Start()
     {
         SetCoinText();
+        GameObject.Find("MainCube").GetComponent<MainCubeAnimations>().BackMenu();
+
     }
 
     private void SetCoinText()
@@ -27,8 +28,11 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveAttackSpeedBonusUnlocks(0);
         MetaProgression.SaveCoins(0);
         MetaProgression.SaveYellowDamageBonus(0);
+        MetaProgression.SaveYellowDamageBonusUnlocks(0);
         MetaProgression.SaveGreenDamageBonus(0);
+        MetaProgression.SaveGreenDamageBonusUnlocks(0);
         MetaProgression.SaveBlueDamageBonus(0);
+        MetaProgression.SaveBlueDamageBonusUnlocks(0);
         SetCoinText();
     }
 

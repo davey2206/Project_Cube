@@ -1,3 +1,4 @@
+using SimpleAudioManager;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,16 @@ public class Spawner : MonoBehaviour
     [SerializeField] List<WaveList> Waves;
     [SerializeField] List<Enemy> enemies;
     [SerializeField] PlayerStats playerStats;
+    [SerializeField] List<GameObject> Bosses;
 
     [Header("UI")]
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
 
+    int CurrentBoss;
+    int round;
+
+    Manager audioManager;
     int currentWave = 0;
     int spawnPoints;
     bool lastWaveDone = false;
@@ -21,24 +27,34 @@ public class Spawner : MonoBehaviour
     private void Start()
     {
         StartCoroutine(SpawnEnemy());
+        audioManager = GameObject.Find("SimpleAudioManager").GetComponent<Manager>();
     }
 
     private void Update()
     {
         if (lastWaveDone && !Done)
         {
-            if (GameObject.FindGameObjectsWithTag("Enemy").Count() == 0)
+            if (GameObject.FindGameObjectsWithTag("Enemy").Count() == 0 && GameObject.FindGameObjectsWithTag("Boss").Count() == 0)
             {
-                Done = true;
-                playerStats.AddCoins();
-                gameEnd.SetActive(true);
-                gameStartText.text = "Victory";
+                StartCoroutine(EndGame());
             }
         }
     }
 
+    IEnumerator EndGame()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0f;
+        Done = true;
+        playerStats.AddCoins();
+        gameEnd.SetActive(true);
+        gameStartText.text = "Victory";
+        audioManager.PlaySong(2);
+    }
+
     IEnumerator SpawnEnemy()
     {
+        yield return new WaitForSeconds(1f);
         while (currentWave < Waves.Count)
         {
             spawnPoints = Waves[currentWave].spawnPoints;
@@ -89,6 +105,9 @@ public class Spawner : MonoBehaviour
             currentWave++;
         }
 
+        yield return new WaitForSeconds(5f);
+
+        Instantiate(Bosses[0]);
         lastWaveDone = true;
     }
 }

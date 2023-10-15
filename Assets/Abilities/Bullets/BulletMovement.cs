@@ -25,6 +25,12 @@ public class BulletMovement : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
             Destroy(gameObject);
         }
+
+        if (other.transform.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack);
+            Destroy(gameObject);
+        }
     }
 
     public void SetAttack(float atk)

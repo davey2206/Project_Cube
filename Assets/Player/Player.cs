@@ -1,9 +1,8 @@
+using SimpleAudioManager;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.VFX;
 
 public class Player : MonoBehaviour
 {
@@ -17,11 +16,13 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
 
+    Manager audioManager;
     Vector3 Velocity;
 
     private void Awake()
     {
         ResetPlayer();
+        audioManager = GameObject.Find("SimpleAudioManager").GetComponent<Manager>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -83,7 +84,8 @@ public class Player : MonoBehaviour
 
     IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.3f);
+        audioManager.PlaySong(3);
         gameEnd.SetActive(true);
         gameStartText.text = "Game Over";
         Time.timeScale = 0f;

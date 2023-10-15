@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
 
 public class FormChange : MonoBehaviour
@@ -13,6 +16,10 @@ public class FormChange : MonoBehaviour
     [Header("Abilties")]
     [SerializeField] GameObject strike;
     [SerializeField] Wave ShockWave;
+
+    [Header("UI")]
+    [SerializeField] TextMeshProUGUI cooldown;
+    [SerializeField] List<Image> images;
 
     bool onCooldown;
     bool BonusAttack;
@@ -180,7 +187,24 @@ public class FormChange : MonoBehaviour
     IEnumerator ActiveCooldown()
     {
         onCooldown = true;
-        yield return new WaitForSeconds(15);
+        int y = 15;
+
+        foreach (var image in images)
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
+        }
+
+        for (int i = 0; i < 15; i++)
+        {
+            cooldown.text = y.ToString();
+            y--;
+            yield return new WaitForSeconds(1);
+        }
+        cooldown.text = "";
+        foreach (var image in images)
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
+        }
         onCooldown = false;
     }
 }

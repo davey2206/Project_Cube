@@ -9,7 +9,7 @@ public class LandmineTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.CompareTag("Enemy"))
+        if (other.transform.CompareTag("Enemy") || other.transform.CompareTag("Boss"))
         {
             Destroy(gameObject, 0.5f);
             wave.SetActive(true);

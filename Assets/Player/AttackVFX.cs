@@ -42,5 +42,14 @@ public class AttackVFX : MonoBehaviour
             Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
             ActivateAbilitiesOnClick(pos);
         }
+
+        if (other.transform.CompareTag("Boss"))
+        {
+            DamageBoss enemy = other.transform.GetComponent<DamageBoss>();
+            enemy.TakeDamage(playerStats.GetAttack());
+
+            Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
+            ActivateAbilitiesOnClick(pos);
+        }
     }
 }

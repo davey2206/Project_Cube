@@ -51,6 +51,12 @@ public class MiniGunTurret : MonoBehaviour
             {
                 enemies.Add(enemy.transform);
             }
+
+            foreach (var enemy in GameObject.FindGameObjectsWithTag("Boss"))
+            {
+                enemies.Add(enemy.transform);
+            }
+
             target = GetClosestEnemy(enemies);
         }
     }

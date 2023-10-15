@@ -237,6 +237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   difficultyRange: {x: 1, y: 2}
   Cost: 1
+  checkOverlap: 1
   Speed: 1
   Health: 1
   HealthBar: {fileID: 6092161750793933159}

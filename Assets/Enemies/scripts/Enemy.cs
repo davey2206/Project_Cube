@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     [Header("Spawner")]
     [SerializeField] public Vector2 difficultyRange;
     [SerializeField] public int Cost;
+    [SerializeField] bool checkOverlap;
 
     [Header("Stats")]
     [SerializeField] float Speed;
@@ -40,7 +41,10 @@ public class Enemy : MonoBehaviour
     {
         maxHealth = Health;
         isDead = false;
-        StartCoroutine(CheckOverlap());
+        if (checkOverlap)
+        {
+            StartCoroutine(CheckOverlap());
+        }
 
         leveling = GameObject.Find("Player").GetComponent<Leveling>();
     }

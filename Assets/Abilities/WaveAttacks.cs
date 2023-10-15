@@ -47,5 +47,10 @@ public class WaveAttacks : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
             other.gameObject.GetComponent<Enemy>().Stun(stun);
         }
+
+        if (other.transform.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack);
+        }
     }
 }

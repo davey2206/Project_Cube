@@ -30,5 +30,10 @@ public class Wave : MonoBehaviour
             other.gameObject.GetComponent<Enemy>().Stun(stunTime);
             other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
         }
+
+        if (other.transform.CompareTag("Boss"))
+        {
+            other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack);
+        }
     }
 }
