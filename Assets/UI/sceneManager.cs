@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
+    [SerializeField] GameObject cam;
+
     string MainScene;
     string MenuScene;
 
-    AsyncOperation async;
     Manager audioManager;
     MainCubeAnimations cubeAnimator;
 
@@ -20,9 +21,19 @@ public class sceneManager : MonoBehaviour
         MenuScene = SceneUtility.GetScenePathByBuildIndex(2);
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
-        async = SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(MainScene, LoadSceneMode.Additive);
+
+        yield return new WaitForSeconds(1f);
+        SceneManager.UnloadSceneAsync(MenuScene);
+        SceneManager.UnloadSceneAsync(MainScene);
+
+        yield return new WaitForSeconds(1f);
+        Destroy(cam);
+        PlayMusic(0);
+        SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
     }
 
     private void Update()
@@ -51,7 +62,7 @@ public class sceneManager : MonoBehaviour
         Time.timeScale = 1f;
         MenuScene = SceneUtility.GetScenePathByBuildIndex(2);
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-        async = SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
 
         PlayMusic(0);
     }
@@ -60,11 +71,12 @@ public class sceneManager : MonoBehaviour
     {
         MainScene = SceneUtility.GetScenePathByBuildIndex(3);
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-        async = SceneManager.LoadSceneAsync(MainScene, LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(MainScene, LoadSceneMode.Additive);
 
-        PlayMusic(1);
         yield return new WaitForSeconds(0.5f);
-        
+        Debug.Log("test");
+        PlayMusic(1);
+
         cubeAnimator = GameObject.Find("MainCube").GetComponent<MainCubeAnimations>();
         cubeAnimator.Main();
     }

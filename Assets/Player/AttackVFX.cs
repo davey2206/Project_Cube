@@ -9,9 +9,11 @@ public class AttackVFX : MonoBehaviour
     [SerializeField] abilitiesObject abilities;
 
     Camera cam;
+    bool FirstEnemyHit;
     private void Start()
     {
         cam = Camera.main;
+        FirstEnemyHit = false;
     }
 
     Vector3 Velocity;
@@ -39,8 +41,12 @@ public class AttackVFX : MonoBehaviour
             Enemy enemy = other.transform.GetComponent<Enemy>();
             enemy.TakeDamage(playerStats.GetAttack());
 
-            Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
-            ActivateAbilitiesOnClick(pos);
+            if (!FirstEnemyHit)
+            {
+                Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
+                ActivateAbilitiesOnClick(pos);
+                FirstEnemyHit = true;
+            }
         }
 
         if (other.transform.CompareTag("Boss"))
@@ -48,8 +54,12 @@ public class AttackVFX : MonoBehaviour
             DamageBoss enemy = other.transform.GetComponent<DamageBoss>();
             enemy.TakeDamage(playerStats.GetAttack());
 
-            Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
-            ActivateAbilitiesOnClick(pos);
+            if (!FirstEnemyHit)
+            {
+                Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
+                ActivateAbilitiesOnClick(pos);
+                FirstEnemyHit = true;
+            }
         }
     }
 }
