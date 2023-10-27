@@ -7,9 +7,11 @@ public class LevelAbility : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI nameOfAbility;
     [SerializeField] abilitiesObject abilities;
-    [SerializeField] abilitiesObject extraAbilities;
+    [SerializeField] List<abilitiesObject> extraAbilities;
     [SerializeField] GameObject buttons;
     [SerializeField] Leveling leveling;
+
+    public RarityTypes rarity;
     public void LevelAbilityClick()
     {
         Time.timeScale = 1;
@@ -44,12 +46,53 @@ public class LevelAbility : MonoBehaviour
         }
         else
         {
-            foreach (var ability in extraAbilities.abilities)
+            switch (rarity)
             {
-                if (ability.Name == nameOfAbility.text)
-                {
-                    ability.Ability.Invoke(1, Vector3.zero);
-                }
+                case RarityTypes.Common:
+                    foreach (var ability in extraAbilities[0].abilities)
+                    {
+                        if (ability.Name == nameOfAbility.text)
+                        {
+                            ability.Ability.Invoke(1, Vector3.zero);
+                        }
+                    }
+                    break;
+                case RarityTypes.Uncommon:
+                    foreach (var ability in extraAbilities[1].abilities)
+                    {
+                        if (ability.Name == nameOfAbility.text)
+                        {
+                            ability.Ability.Invoke(1, Vector3.zero);
+                        }
+                    }
+                    break;
+                case RarityTypes.Rare:
+                    foreach (var ability in extraAbilities[2].abilities)
+                    {
+                        if (ability.Name == nameOfAbility.text)
+                        {
+                            ability.Ability.Invoke(1, Vector3.zero);
+                        }
+                    }
+                    break;
+                case RarityTypes.Epic:
+                    foreach (var ability in extraAbilities[3].abilities)
+                    {
+                        if (ability.Name == nameOfAbility.text)
+                        {
+                            ability.Ability.Invoke(1, Vector3.zero);
+                        }
+                    }
+                    break;
+                case RarityTypes.Legendary:
+                    foreach (var ability in extraAbilities[4].abilities)
+                    {
+                        if (ability.Name == nameOfAbility.text)
+                        {
+                            ability.Ability.Invoke(1, Vector3.zero);
+                        }
+                    }
+                    break;
             }
         }
     }

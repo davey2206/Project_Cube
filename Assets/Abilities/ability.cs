@@ -13,6 +13,7 @@ public class ability
     public string Name;
     [TextArea]
     public List<string> Description;
+    public RarityTypes rarity;
 
     [Header("Level")]
     [Range(0,5)]

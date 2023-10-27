@@ -17,6 +17,7 @@ MonoBehaviour:
     Name: Attack Boost
     Description:
     - Gain 2% more damage
+    rarity: 1
     Level: 0
     Active: 0
     Unlocked: 0
@@ -41,6 +42,7 @@ MonoBehaviour:
     Name: Heal
     Description:
     - Heal for 2 health
+    rarity: 1
     Level: 0
     Active: 0
     Unlocked: 0

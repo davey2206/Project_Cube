@@ -283,9 +283,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfAbility: {fileID: 5592687906222574231}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
-  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  extraAbilities:
+  - {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  - {fileID: 11400000, guid: 70afee5a59b1750479e150c56e12749b, type: 2}
+  - {fileID: 11400000, guid: 514ea2a9863c35945874dac7e1eb8480, type: 2}
+  - {fileID: 11400000, guid: 40cd89c26e527be4aa39d157e598c64a, type: 2}
+  - {fileID: 11400000, guid: 3e43d179228856e48b49ec53dd3656a1, type: 2}
   buttons: {fileID: 5953333772508877650}
   leveling: {fileID: 0}
+  rarity: 0
 --- !u!1 &1007289468596880005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,9 +1187,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfAbility: {fileID: 977078063388689926}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
-  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  extraAbilities:
+  - {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  - {fileID: 11400000, guid: 70afee5a59b1750479e150c56e12749b, type: 2}
+  - {fileID: 11400000, guid: 514ea2a9863c35945874dac7e1eb8480, type: 2}
+  - {fileID: 11400000, guid: 40cd89c26e527be4aa39d157e598c64a, type: 2}
+  - {fileID: 11400000, guid: 3e43d179228856e48b49ec53dd3656a1, type: 2}
   buttons: {fileID: 5953333772508877650}
   leveling: {fileID: 0}
+  rarity: 0
 --- !u!1 &5419585444529107563
 GameObject:
   m_ObjectHideFlags: 0
@@ -2437,9 +2449,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfAbility: {fileID: 7514520426516497637}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
-  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  extraAbilities:
+  - {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  - {fileID: 11400000, guid: 70afee5a59b1750479e150c56e12749b, type: 2}
+  - {fileID: 11400000, guid: 514ea2a9863c35945874dac7e1eb8480, type: 2}
+  - {fileID: 11400000, guid: 40cd89c26e527be4aa39d157e598c64a, type: 2}
+  - {fileID: 11400000, guid: 3e43d179228856e48b49ec53dd3656a1, type: 2}
   buttons: {fileID: 5953333772508877650}
   leveling: {fileID: 0}
+  rarity: 0
 --- !u!1 &8741125447437794172
 GameObject:
   m_ObjectHideFlags: 0
