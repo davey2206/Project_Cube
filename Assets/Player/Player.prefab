@@ -347,3 +347,10 @@ MonoBehaviour:
   strike: {fileID: 6108100398174320582, guid: b2da8d12db02a6a448e4bbc70e902e0d, type: 3}
   ShockWave: {fileID: -4058340172582843007, guid: 684a194905dce00468dd7b144b2c90cb,
     type: 3}
+  cooldown: {fileID: 0}
+  images:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  screenShake: {fileID: 11400000, guid: 40d0396c30f2ef64eb79e9ba4a5a77f2, type: 2}

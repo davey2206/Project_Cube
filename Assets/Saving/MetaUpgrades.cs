@@ -10,7 +10,6 @@ public class MetaUpgrades : MonoBehaviour
     {
         SetCoinText();
         GameObject.Find("MainCube").GetComponent<MainCubeAnimations>().BackMenu();
-
     }
 
     private void SetCoinText()
@@ -50,6 +49,29 @@ public class MetaUpgrades : MonoBehaviour
                 MetaProgression.SaveIntStat(upgrade + "Unlocks", MetaProgression.GetIntStat(upgrade + "Unlocks") + 1);
                 MetaProgression.SaveCoins(MetaProgression.GetCoins() - Cost);
                 MetaProgression.SaveIntStat(upgrade, MetaProgression.GetIntStat(upgrade) + u.getUpgradeAmount());
+            }
+        }
+        SetCoinText();
+    }
+
+    public void MultiUpgrade(GameObject Upgrade)
+    {
+        MultiUpgrade u = Upgrade.GetComponent<MultiUpgrade>();
+        List<string> upgrades = u.UpgradeName;
+        int maxUpgrades = u.getMaxUpgrades();
+        int Cost = u.getCost();
+
+        if (MetaProgression.GetCoins() >= Cost)
+        {
+            if (MetaProgression.GetIntStat(upgrades[0] + "Unlocks") < maxUpgrades)
+            {
+                foreach (var upgrade in upgrades)
+                {
+                    MetaProgression.SaveIntStat(upgrade + "Unlocks", MetaProgression.GetIntStat(upgrade + "Unlocks") + 1);
+                    MetaProgression.SaveIntStat(upgrade, MetaProgression.GetIntStat(upgrade) + u.getUpgradeAmount());
+                }
+
+                MetaProgression.SaveCoins(MetaProgression.GetCoins() - Cost);
             }
         }
         SetCoinText();

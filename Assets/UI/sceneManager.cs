@@ -74,7 +74,6 @@ public class sceneManager : MonoBehaviour
         SceneManager.LoadSceneAsync(MainScene, LoadSceneMode.Additive);
 
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("test");
         PlayMusic(1);
 
         cubeAnimator = GameObject.Find("MainCube").GetComponent<MainCubeAnimations>();

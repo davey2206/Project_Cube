@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements.Experimental;
 
 public class FormChange : MonoBehaviour
 {
@@ -20,6 +18,7 @@ public class FormChange : MonoBehaviour
     [Header("UI")]
     [SerializeField] TextMeshProUGUI cooldown;
     [SerializeField] List<Image> images;
+    [SerializeField] ScreenShakeObject screenShake;
 
     bool onCooldown;
     bool BonusAttack;
@@ -69,6 +68,7 @@ public class FormChange : MonoBehaviour
 
     public void White()
     {
+        StartCoroutine(ShakeDelay(0.25f));
         DisableAffect();
         playerStats.YellowDamageBonus = 0;
         playerStats.GreenDamageBonus = 0;
@@ -80,6 +80,7 @@ public class FormChange : MonoBehaviour
 
     public void Yellow()
     {
+        StartCoroutine(ShakeDelay(0.5f));
         DisableAffect();
         playerStats.YellowDamageBonus = 10;
         playerStats.GreenDamageBonus = 0;
@@ -115,14 +116,14 @@ public class FormChange : MonoBehaviour
     {
         DisableAffect();
         playerStats.YellowDamageBonus = 0;
-        playerStats.GreenDamageBonus = 10;
+        playerStats.GreenDamageBonus = 25;
         playerStats.BlueDamageBonus = 0;
 
         playerStats.BonusAttack -= 5;
         playerStats.AttackSpeed -= 0.5f;
 
         Healing = true;
-        player.Heal(2f);
+        player.Heal(3f);
         healing = StartCoroutine(Heal());
     }
 
@@ -180,7 +181,7 @@ public class FormChange : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1);
-            player.Heal(0.1f);
+            player.Heal(0.3f);
         }
     }
 
@@ -206,5 +207,12 @@ public class FormChange : MonoBehaviour
             image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
         }
         onCooldown = false;
+    }
+
+    IEnumerator ShakeDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        screenShake.Amplitude = 1f;
+        screenShake.SpeedOfDecay = 0.25f;
     }
 }
