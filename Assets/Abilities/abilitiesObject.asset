@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: abilitiesObject
   m_EditorClassIdentifier: 
   abilities:
-  - Name: Explosive Death
+  - Icon: {fileID: -2122009659, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Explosive Death
     Description:
-    - Enemies have a 25% change to explode into 4 bullets that deal 25% damage
-    - Enemies have a 30% change to explode into 4 bullets that deal 50% damage
-    - Enemies have a 35% change to explode into 6 bullets that deal 75% damage
-    - Enemies have a 40% change to explode into 6 bullets that deal 100% damage
-    - Enemies have a 50% change to explode into 8 bullets that deal 100% damage
+    - Enemies have a 25% change to explode into 4 bullets that deal <color="yellow">
+      25% damage </color>
+    - change increased to 30% and now deals <color="yellow"> 50% damage </color>
+    - change increased to 35% and now deals <color="yellow"> 75% damage </color>
+      and Fires 2 more bullets
+    - change increased to 40% and now deals <color="yellow"> 100% damage </color>
+    - change increased to 50% and Fires 2 more bullets
     Level: 0
     Active: 0
     Unlocked: 1
@@ -40,14 +43,14 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: 'Shockwave '
+  - Icon: {fileID: 581293186, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: 'Shockwave '
     Description:
     - Fire a shockwave every 10 seconds that stun enemies for 0.5 seconds
-    - Fire a shockwave every 8 seconds that stun enemies for 0.75 seconds
-    - Fire a shockwave every 7 seconds that stun enemies for 1 seconds
-    - Fire a shockwave every 6 seconds that stun enemies for 1.25 seconds
-    - Fire a shockwave every 5 seconds that stun enemies for 1.5 seconds that deals
-      25% damage
+    - Fires 2 seconds faster and stuns for 0.75 seconds
+    - Fires 1 seconds faster and stuns for 1 seconds
+    - Fires 1 seconds faster and stuns for 1.25 seconds
+    - Fires 1 seconds faster and stuns for 1.5 seconds and now deals 25% damage
     Level: 0
     Active: 0
     Unlocked: 1
@@ -68,15 +71,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Barbed Wire
+  - Icon: {fileID: -1922271150, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Barbed Wire
     Description:
-    - When you get hit fire a wave that damages enemies hit for 100% damage
-    - When you get hit fire a wave that damages enemies hit for 125% damage
-    - When you get hit fire a wave that damages enemies hit for 150% damage
-    - When you get hit fire a wave that damages enemies hit for 200% damage
-    - When you get hit fire a wave that damages enemies hit for 250% damage
-    Level: 0
-    Active: 0
+    - When you get hit fire a wave that damages enemies hit for <color="green"> 100%
+      damage </color>
+    - now deals <color="green"> 125% damage </color>
+    - now deals <color="green"> 150% damage </color>
+    - now deals <color="green"> 200% damage </color>
+    - now deals <color="green"> 250% damage </color>
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 2
     Ability:
@@ -95,15 +100,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Explosive Click
+  - Icon: {fileID: -1626981962, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Explosive Click
     Description:
-    - On enemy hit fire a small wave that deal 25% damage to enemies hit
-    - On enemy hit fire a medium size wave that deal 25% damage to enemies hit
-    - On enemy hit fire a medium size wave that deal 50% damage to enemies hit
-    - On enemy hit fire a big wave that deal 50% damage to enemies hit
-    - On enemy hit fire a big wave that deal 75% damage to enemies hit
-    Level: 0
-    Active: 0
+    - On enemy hit fire a small wave that deal <color=#00ffffff>25% damage </color>
+      to enemies hit
+    - now fires a medium size wave
+    - now deals <color=#00ffffff>50% damage </color>
+    - 'now fires a big wave '
+    - now deals <color=#00ffffff>75% damage </color>
+    Level: 2
+    Active: 1
     Unlocked: 1
     abilityType: 1
     Ability:
@@ -122,20 +129,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Basic Turret
+  - Icon: {fileID: -843875499, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Basic Turret
     Description:
     - On enemy death there is a 10% change to spawn a turret that wil attack the
       closest enemy for 25% damege for 5 seconds.
-    - On enemy death there is a 10% change to spawn a turret that wil attack the
-      closest enemy for 50% damege for 5 seconds
-    - On enemy death there is a 10% change to spawn a turret that wil attack the
-      closest enemy for 50% damege for 8 seconds
-    - On enemy death there is a 10% change to spawn a turret that wil attack the
-      closest enemy for 75% damege for 8 seconds
-    - On enemy death there is a 10% change to spawn a turret that wil attack the
-      closest enemy for 75% damege for 10 seconds
-    Level: 0
-    Active: 0
+    - now deals 50% damage
+    - Now lasts for 8 seconds
+    - now deals 75% damage
+    - Now lasts for 10 seconds
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -154,18 +158,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Minigun Turret
+  - Icon: {fileID: 1716008568, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Minigun Turret
     Description:
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
       the closest enemy with a burst of bullets for 10% damage each for 10 seconds.
-    - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 20% damage each for 10 seconds
-    - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 20% damage each for 12 seconds
-    - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 30% damage each for 12 seconds
-    - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 30% damage each for 15 seconds
+    - now deals 20% damage
+    - Now lasts for 12 seconds
+    - now deals 30% damage
+    - Now lasts for 15 seconds
     Level: 0
     Active: 0
     Unlocked: 1
@@ -186,15 +187,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Artillery Strike
+  - Icon: {fileID: 491985112, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Artillery Strike
     Description:
-    - launch 1 Strike that deals 75% damage to a random area
-    - launch 2 Strike that deals 75% damage to a random area
-    - launch 3 Strike that deals 100% damage to a random area
-    - launch 4 Strike that deals 100% damage to a random area
-    - launch 5 Strike that deals 150% damage to a random area
-    Level: 0
-    Active: 0
+    - launch 1 Strike that deals <color="yellow"> 75% damage </color> to a random
+      area
+    - now launches 2 Strikes
+    - now launches 3 Strikes and deals <color="yellow"> 100% damage </color>
+    - now launches 4 Strikes
+    - now launches 5 Strikes and deals <color="yellow"> 150% damage </color>
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 3
     Ability:
@@ -213,13 +216,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Landmines
+  - Icon: {fileID: 760736144, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Landmines
     Description:
-    - Every 10 seconds plant 3 landminse around you that deal 50% damage
-    - Every 10 seconds plant 4 landminse around you that deal 50% damage
-    - Every 10 seconds plant 5 landminse around you that deal 75% damage
-    - Every 10 seconds plant 6 landminse around you that deal 75% damage
-    - Every 10 seconds plant 7 landminse around you that deal 100% damage
+    - Every 10 seconds plant 3 landminse around you that deal <color="green"> 50%
+      damage </color>
+    - now plants 4 mines
+    - now plants 5 mines and deals <color="green"> 75% damage </color>
+    - now plants 6 mines
+    - now plants 7 mines and deals <color="green"> 100% damage </color>
     Level: 0
     Active: 0
     Unlocked: 1
@@ -240,14 +245,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Name: Bullet Strom
+  - Icon: {fileID: -37691683, guid: 642f0962e213968418ab114df30148ae, type: 3}
+    Name: Bullet Strom
     Description:
-    - Every 5 seconds storm of 20 bullets that deal 50% damage
-    - Every 5 seconds storm of 30 bullets that deal 50% damage
-    - Every 5 seconds storm of 40 bullets that deal 50% damage
-    - Every 5 seconds storm of 50 bullets that deal 50% damage
-    - Every 5 seconds storm of 60 bullets that deal 50% damage
-    Level: 5
+    - Every 5 seconds storm of 20 bullets that deal <color="yellow"> 50% damage </color>
+    - now fires 30 bullets
+    - now fires 40 bullets
+    - now fires 50 bullets
+    - now fires 60 bullets
+    Level: 2
     Active: 1
     Unlocked: 1
     abilityType: 3

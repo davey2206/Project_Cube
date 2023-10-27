@@ -7,23 +7,29 @@ using UnityEngine.UI;
 
 public class Leveling : MonoBehaviour
 {
+    [Header("Level")]
     [SerializeField] int Level;
     [SerializeField] int xp;
     [SerializeField] public AnimationCurve xpNeededPerLevel;
     [SerializeField] abilitiesObject abilities;
-    [SerializeField] abilitiesObject extraAbilities;
+    [SerializeField] List<abilitiesObject> extraAbilities;
 
     //UI
+    [Header("UI")]
     [SerializeField] GameObject buttons;
+    [SerializeField] List<TextMeshProUGUI> Levels;
     [SerializeField] List<TextMeshProUGUI> Names;
     [SerializeField] List<TextMeshProUGUI> Descriptions;
+    [SerializeField] List<Image> Icons;
     [SerializeField] Slider xpBar;
 
     float Velocity;
     int excesXP = 0;
     bool IsLeveling;
+    bool gainAbiltiy;
     private void Awake()
     {
+        gainAbiltiy = true;
         foreach (var ability in abilities.abilities)
         {
             ability.Active = false;
@@ -65,24 +71,79 @@ public class Leveling : MonoBehaviour
         }
 
         ability abilityToUse;
+        int abilityLevel = 0;
 
         for (int i = 0; i < 3; i++)
         {
-            if (abilitiesThatCanLevel != null && abilitiesThatCanLevel.Count != 0)
+            if (abilitiesThatCanLevel != null && abilitiesThatCanLevel.Count != 0 && gainAbiltiy)
             {
                 abilityToUse = abilitiesThatCanLevel[Random.Range(0, abilitiesThatCanLevel.Count)];
                 Names[i].text = abilityToUse.Name;
+                abilityLevel = abilityToUse.Level + 1;
+                Levels[i].text = "Lvl " + abilityLevel.ToString();
                 Descriptions[i].text = abilityToUse.Description[abilityToUse.Level];
+                Icons[i].sprite = abilityToUse.Icon;
+                Icons[i].color = Color.white;
                 abilitiesThatCanLevel.Remove(abilityToUse);
             }
             else
             {
-                abilityToUse = extraAbilities.abilities[Random.Range(0, extraAbilities.abilities.Count)];
-                Names[i].text = abilityToUse.Name;
-                Descriptions[i].text = abilityToUse.Description[0];
+                int rng = Random.Range(0, 101);
+                if (rng > 40)
+                {
+                    abilityToUse = extraAbilities[0].abilities[Random.Range(0, extraAbilities[0].abilities.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[0];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    Icons[i].color = Color.white;
+                }
+                else if (rng < 40 && rng > 15)
+                {
+                    abilityToUse = extraAbilities[1].abilities[Random.Range(0, extraAbilities[1].abilities.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[0];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    Icons[i].color = Color.green;
+                }
+                else if (rng < 15 && rng > 6)
+                {
+                    abilityToUse = extraAbilities[2].abilities[Random.Range(0, extraAbilities[2].abilities.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[0];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    Icons[i].color = Color.blue;
+                }
+                else if (rng < 6 && rng > 1)
+                {
+                    abilityToUse = extraAbilities[3].abilities[Random.Range(0, extraAbilities[3].abilities.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[0];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    Icons[i].color = Color.magenta;
+                }
+                else if (rng < 1)
+                {
+                    abilityToUse = extraAbilities[4].abilities[Random.Range(0, extraAbilities[4].abilities.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[0];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    Icons[i].color = Color.yellow;
+                }
+                
             }
-            
         }
+
+        gainAbiltiy = !gainAbiltiy;
     }
 
     IEnumerator TimeStop()

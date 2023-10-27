@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5fb6beb77f36743b6175116050d30e, type: 3}
+  m_Name: ExtraAbilitiesObjectLegendary
+  m_EditorClassIdentifier: 
+  abilities:
+  - Icon: {fileID: 0}
+    Name: Attack Boost
+    Description:
+    - Gain 20% more damage
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6077388474601311517, guid: 630d1e44c9d9f044a9fe2cba53b015b3,
+            type: 3}
+          m_TargetAssemblyTypeName: AttackBoost, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Heal
+    Description:
+    - Heal for 10 health
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4098547880845902967, guid: 630d1e44c9d9f044a9fe2cba53b015b3,
+            type: 3}
+          m_TargetAssemblyTypeName: Heal, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

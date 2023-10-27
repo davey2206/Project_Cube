@@ -68,7 +68,9 @@ public class FormChange : MonoBehaviour
 
     public void White()
     {
-        StartCoroutine(ShakeDelay(0.25f));
+        screenShake.Amplitude = 0.5f;
+        screenShake.SpeedOfDecay = 0.25f;
+        StartCoroutine(ShakeDelay(0.75f));
         DisableAffect();
         playerStats.YellowDamageBonus = 0;
         playerStats.GreenDamageBonus = 0;
@@ -80,6 +82,8 @@ public class FormChange : MonoBehaviour
 
     public void Yellow()
     {
+        screenShake.Amplitude = 0.5f;
+        screenShake.SpeedOfDecay = 0.25f;
         StartCoroutine(ShakeDelay(0.5f));
         DisableAffect();
         playerStats.YellowDamageBonus = 10;
@@ -114,6 +118,8 @@ public class FormChange : MonoBehaviour
 
     public void Green()
     {
+        screenShake.Amplitude = 0.5f;
+        screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
         playerStats.YellowDamageBonus = 0;
         playerStats.GreenDamageBonus = 25;
@@ -129,6 +135,8 @@ public class FormChange : MonoBehaviour
 
     public void Blue()
     {
+        screenShake.Amplitude = 0.5f;
+        screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
         playerStats.YellowDamageBonus = 0;
         playerStats.GreenDamageBonus = 0;

@@ -317,13 +317,22 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
-  extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  extraAbilities:
+  - {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
+  - {fileID: 11400000, guid: 70afee5a59b1750479e150c56e12749b, type: 2}
+  - {fileID: 11400000, guid: 514ea2a9863c35945874dac7e1eb8480, type: 2}
+  - {fileID: 11400000, guid: 40cd89c26e527be4aa39d157e598c64a, type: 2}
+  - {fileID: 11400000, guid: 3e43d179228856e48b49ec53dd3656a1, type: 2}
   buttons: {fileID: 0}
-  Names:
+  Levels:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   Descriptions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Icons:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}

@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [Serializable]
 public class ability
 {
     [Header("Description")]
+    public Sprite Icon;
     public string Name;
     [TextArea]
     public List<string> Description;
@@ -36,4 +38,13 @@ public enum AbilityTypes
     Click,
     PlayerHit,
     Timed
+}
+
+public enum RarityTypes
+{
+    Common,
+    Uncommon,
+    Rare,
+    Epic,
+    Legendary
 }
