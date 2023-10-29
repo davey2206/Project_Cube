@@ -7,10 +7,12 @@ public class Wave : MonoBehaviour
 {
     float attack;
     float stunTime;
+    [SerializeField] ScreenShakeObject screenShake;
 
     private void Start()
     {
         Destroy(gameObject, 1f);
+        StartCoroutine(shake());
     }
 
     public void SetStats(float stun, float atk)
@@ -35,5 +37,12 @@ public class Wave : MonoBehaviour
         {
             other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack);
         }
+    }
+
+    IEnumerator shake()
+    {
+        yield return new WaitForSeconds(0.75f);
+        screenShake.Amplitude = 1f;
+        screenShake.SpeedOfDecay = 0.25f;
     }
 }

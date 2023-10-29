@@ -70,7 +70,6 @@ public class FormChange : MonoBehaviour
     {
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
-        StartCoroutine(ShakeDelay(0.75f));
         DisableAffect();
         playerStats.YellowDamageBonus = 0;
         playerStats.GreenDamageBonus = 0;

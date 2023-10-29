@@ -21,16 +21,8 @@ public class sceneManager : MonoBehaviour
         MenuScene = SceneUtility.GetScenePathByBuildIndex(2);
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
-        SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
-        SceneManager.LoadSceneAsync(MainScene, LoadSceneMode.Additive);
-
-        yield return new WaitForSeconds(1f);
-        SceneManager.UnloadSceneAsync(MenuScene);
-        SceneManager.UnloadSceneAsync(MainScene);
-
-        yield return new WaitForSeconds(1f);
         Destroy(cam);
         PlayMusic(0);
         SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);

@@ -13,6 +13,7 @@ public class Leveling : MonoBehaviour
     [SerializeField] public AnimationCurve xpNeededPerLevel;
     [SerializeField] abilitiesObject abilities;
     [SerializeField] List<abilitiesObject> extraAbilities;
+    [SerializeField] PlayerStats playerStats;
 
     //UI
     [Header("UI")]
@@ -48,18 +49,17 @@ public class Leveling : MonoBehaviour
     {
         xp = xp + amount;
 
-        if (xp >= (int)xpNeededPerLevel.Evaluate(Level) && !IsLeveling)
+        if (xp >= (int)xpNeededPerLevel.Evaluate(Level) && !IsLeveling && playerStats.alive)
         {
             IsLeveling = true;
             excesXP = 0;
             excesXP = xp - (int)xpNeededPerLevel.Evaluate(Level);
-            LevelUp();
+            StartCoroutine(TimeStop());
         }
     }
 
     public void LevelUp()
     {
-        StartCoroutine(TimeStop());
         List<ability> abilitiesThatCanLevel = new List<ability>();
 
         foreach (var ability in abilities.abilities)
@@ -91,62 +91,31 @@ public class Leveling : MonoBehaviour
                 int rng = Random.Range(0, 101);
                 if (rng > 40)
                 {
-                    Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = RarityTypes.Common;
-                    abilityToUse = extraAbilities[0].abilities[Random.Range(0, extraAbilities[0].abilities.Count)];
-                    Names[i].text = abilityToUse.Name;
-                    Levels[i].text = "Lvl 0";
-                    Descriptions[i].text = abilityToUse.Description[0];
-                    Icons[i].sprite = abilityToUse.Icon;
-                    Icons[i].color = Color.white;
+                    SetButtons(i, RarityTypes.Common, Color.white);
                 }
                 else if (rng < 40 && rng > 15)
                 {
-                    Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = RarityTypes.Uncommon;
-                    abilityToUse = extraAbilities[1].abilities[Random.Range(0, extraAbilities[1].abilities.Count)];
-                    Names[i].text = abilityToUse.Name;
-                    Levels[i].text = "Lvl 0";
-                    Descriptions[i].text = abilityToUse.Description[0];
-                    Icons[i].sprite = abilityToUse.Icon;
-                    Icons[i].color = Color.green;
+                    SetButtons(i, RarityTypes.Uncommon, Color.green);
                 }
                 else if (rng < 15 && rng > 6)
                 {
-                    Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = RarityTypes.Rare;
-                    abilityToUse = extraAbilities[2].abilities[Random.Range(0, extraAbilities[2].abilities.Count)];
-                    Names[i].text = abilityToUse.Name;
-                    Levels[i].text = "Lvl 0";
-                    Descriptions[i].text = abilityToUse.Description[0];
-                    Icons[i].sprite = abilityToUse.Icon;
-                    Icons[i].color = Color.blue;
+                    SetButtons(i, RarityTypes.Rare, Color.blue);
                 }
                 else if (rng < 6 && rng > 1)
                 {
-                    Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = RarityTypes.Epic;
-                    abilityToUse = extraAbilities[3].abilities[Random.Range(0, extraAbilities[3].abilities.Count)];
-                    Names[i].text = abilityToUse.Name;
-                    Levels[i].text = "Lvl 0";
-                    Descriptions[i].text = abilityToUse.Description[0];
-                    Icons[i].sprite = abilityToUse.Icon;
-                    Icons[i].color = Color.magenta;
+                    SetButtons(i, RarityTypes.Epic, Color.magenta);
                 }
                 else if (rng < 1)
                 {
-                    Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = RarityTypes.Legendary;
-                    abilityToUse = extraAbilities[4].abilities[Random.Range(0, extraAbilities[4].abilities.Count)];
-                    Names[i].text = abilityToUse.Name;
-                    Levels[i].text = "Lvl 0";
-                    Descriptions[i].text = abilityToUse.Description[0];
-                    Icons[i].sprite = abilityToUse.Icon;
-                    Icons[i].color = Color.yellow;
+                    SetButtons(i, RarityTypes.Legendary, Color.yellow);
                 }
-
-                Fix(i, abilityToUse);
             }
+
+            Fix(i, abilityToUse);
         }
 
         gainAbiltiy = !gainAbiltiy;
     }
-
     public void Fix(int i, ability abilityToUse)
     {
         if (Names[i].text != abilityToUse.Name || Descriptions[i].text != abilityToUse.Description[0])
@@ -183,10 +152,41 @@ public class Leveling : MonoBehaviour
         }
     }
 
+    public void SetButtons(int i, RarityTypes rarity, Color color)
+    {
+        ability abilityToUse = null;
+        switch (rarity)
+        {
+            case RarityTypes.Common:
+                abilityToUse = extraAbilities[0].abilities[Random.Range(0, extraAbilities[0].abilities.Count)];
+                break;
+            case RarityTypes.Uncommon:
+                abilityToUse = extraAbilities[1].abilities[Random.Range(0, extraAbilities[1].abilities.Count)];
+                break;
+            case RarityTypes.Rare:
+                abilityToUse = extraAbilities[2].abilities[Random.Range(0, extraAbilities[2].abilities.Count)];
+                break;
+            case RarityTypes.Epic:
+                abilityToUse = extraAbilities[3].abilities[Random.Range(0, extraAbilities[3].abilities.Count)];
+                break;
+            case RarityTypes.Legendary:
+                abilityToUse = extraAbilities[4].abilities[Random.Range(0, extraAbilities[4].abilities.Count)];
+                break;
+        }
+
+        Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = rarity;
+        Names[i].text = abilityToUse.Name;
+        Levels[i].text = "";
+        Descriptions[i].text = abilityToUse.Description[0];
+        Icons[i].sprite = abilityToUse.Icon;
+        Icons[i].color = color;
+    }
+
     IEnumerator TimeStop()
     {
         yield return new WaitForSeconds(0.5f);
         buttons.SetActive(true);
+        LevelUp();
         Time.timeScale = 0;
     }
 

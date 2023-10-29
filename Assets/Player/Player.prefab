@@ -263,6 +263,7 @@ MonoBehaviour:
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   gameEnd: {fileID: 0}
   gameStartText: {fileID: 0}
+  screenShake: {fileID: 11400000, guid: 40d0396c30f2ef64eb79e9ba4a5a77f2, type: 2}
 --- !u!114 &-302407786340333470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,11 +324,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 514ea2a9863c35945874dac7e1eb8480, type: 2}
   - {fileID: 11400000, guid: 40cd89c26e527be4aa39d157e598c64a, type: 2}
   - {fileID: 11400000, guid: 3e43d179228856e48b49ec53dd3656a1, type: 2}
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   buttons: {fileID: 0}
   Levels:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Names: []
   Descriptions:
   - {fileID: 0}
   - {fileID: 0}

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     [Header("UI")]
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
+    [SerializeField] ScreenShakeObject screenShake;
 
     Manager audioManager;
     Vector3 Velocity;
@@ -46,11 +47,6 @@ public class Player : MonoBehaviour
         ActivateAbilitiesOnHit();
         if (Health <= 0)
         {
-            playerStats.alive = false;
-            playerStats.AddCoins();
-            Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
-            GetComponent<BoxCollider>().enabled = false;
-            GetComponent<Animator>().SetTrigger("Die");
             StartCoroutine(EndGame());
         }
     }
@@ -84,12 +80,24 @@ public class Player : MonoBehaviour
 
     IEnumerator EndGame()
     {
-        yield return new WaitForSeconds(3.3f);
+        playerStats.alive = false;
+        playerStats.AddCoins();
+        Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
+        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<Animator>().SetTrigger("Die");
+
+        screenShake.Amplitude = 0.5f;
+        screenShake.SpeedOfDecay = 0f;
+        yield return new WaitForSeconds(2.1f);
+        screenShake.Amplitude = 5.0f;
+        screenShake.SpeedOfDecay = 0.5f;
+
+
+        yield return new WaitForSeconds(1.4f);
+
         audioManager.PlaySong(3);
         gameEnd.SetActive(true);
         gameStartText.text = "Game Over";
         Time.timeScale = 0f;
     }
-
-
 }

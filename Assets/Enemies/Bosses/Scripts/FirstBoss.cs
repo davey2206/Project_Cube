@@ -20,6 +20,7 @@ public class FirstBoss : MonoBehaviour
     [Header("VFX")]
     [SerializeField] GameObject StumpEffect;
     [SerializeField] GameObject ShootEffect;
+    [SerializeField] ScreenShakeObject screenShake;
 
     float WaitTime;
 
@@ -71,6 +72,8 @@ public class FirstBoss : MonoBehaviour
     public void Attack3()
     {
         Instantiate(StumpEffect, transform.position, Quaternion.identity);
+        screenShake.Amplitude = 1.0f;
+        screenShake.SpeedOfDecay = 0.25f;
         for (int i = 0; i < 10; i++)
         {
             Instantiate(BossEnemy, new Vector3(spawnersFase3[i].transform.position.x, spawnersFase3[i].transform.position.y, spawnersFase3[i].transform.position.z), Quaternion.Euler(20, 0, 20));
