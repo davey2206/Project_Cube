@@ -86,6 +86,7 @@ public class Player : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Animator>().SetTrigger("Die");
 
+        yield return new WaitForEndOfFrame();
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0f;
         yield return new WaitForSeconds(2.1f);

@@ -91,23 +91,23 @@ public class Leveling : MonoBehaviour
                 int rng = Random.Range(0, 101);
                 if (rng > 40)
                 {
-                    SetButtons(i, RarityTypes.Common, Color.white);
+                    abilityToUse = SetButtons(i, RarityTypes.Common, Color.white);
                 }
                 else if (rng < 40 && rng > 15)
                 {
-                    SetButtons(i, RarityTypes.Uncommon, Color.green);
+                    abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green);
                 }
                 else if (rng < 15 && rng > 6)
                 {
-                    SetButtons(i, RarityTypes.Rare, Color.blue);
+                    abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue);
                 }
                 else if (rng < 6 && rng > 1)
                 {
-                    SetButtons(i, RarityTypes.Epic, Color.magenta);
+                    abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta);
                 }
                 else if (rng < 1)
                 {
-                    SetButtons(i, RarityTypes.Legendary, Color.yellow);
+                    abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow);
                 }
             }
 
@@ -152,7 +152,7 @@ public class Leveling : MonoBehaviour
         }
     }
 
-    public void SetButtons(int i, RarityTypes rarity, Color color)
+    public ability SetButtons(int i, RarityTypes rarity, Color color)
     {
         ability abilityToUse = null;
         switch (rarity)
@@ -180,6 +180,8 @@ public class Leveling : MonoBehaviour
         Descriptions[i].text = abilityToUse.Description[0];
         Icons[i].sprite = abilityToUse.Icon;
         Icons[i].color = color;
+
+        return abilityToUse;
     }
 
     IEnumerator TimeStop()
