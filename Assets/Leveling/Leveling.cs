@@ -88,6 +88,7 @@ public class Leveling : MonoBehaviour
             }
             else
             {
+                abilityLevel = 0;
                 int rng = Random.Range(0, 101);
                 if (rng > 40)
                 {
@@ -111,19 +112,27 @@ public class Leveling : MonoBehaviour
                 }
             }
 
-            Fix(i, abilityToUse);
+            Fix(i, abilityToUse, abilityLevel);
         }
 
         gainAbiltiy = !gainAbiltiy;
     }
-    public void Fix(int i, ability abilityToUse)
+    public void Fix(int i, ability abilityToUse, int level)
     {
         if (Names[i].text != abilityToUse.Name || Descriptions[i].text != abilityToUse.Description[0])
         {
             Debug.Log("Fix?");
             Names[i].text = abilityToUse.Name;
-            Levels[i].text = "Lvl 0";
-            Descriptions[i].text = abilityToUse.Description[0];
+            if (level > 0)
+            {
+                Levels[i].text = "Lvl " + level;
+                Descriptions[i].text = abilityToUse.Description[level];
+            }
+            else
+            {
+                Levels[i].text = "";
+                Descriptions[i].text = abilityToUse.Description[0];
+            }
             Icons[i].sprite = abilityToUse.Icon;
 
             switch (abilityToUse.rarity)
