@@ -15,7 +15,7 @@ public class LevelAbility : MonoBehaviour
     public void LevelAbilityClick()
     {
         Time.timeScale = 1;
-        buttons.SetActive(false);
+        buttons.GetComponent<Animator>().SetTrigger("PopOut");
         leveling.resetXp();
         if (CheckAbility())
         {
