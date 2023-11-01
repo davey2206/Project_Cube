@@ -90,8 +90,6 @@ public class Leveling : MonoBehaviour
             Icons[i].sprite = abilityToUse.Icon;
             abilitiesThatCanLevel.Remove(abilityToUse);
         }
-
-        gainAbiltiy = !gainAbiltiy;
     }
 
     public void LevelUpStats()
@@ -120,8 +118,6 @@ public class Leveling : MonoBehaviour
                 SetButtons(i, RarityTypes.Legendary, Color.yellow);
             }
         }
-
-        gainAbiltiy = !gainAbiltiy;
     }
 
     public ability SetButtons(int i, RarityTypes rarity, Color color)
@@ -163,12 +159,19 @@ public class Leveling : MonoBehaviour
         {
             buttons.SetActive(true);
             LevelUp();
+            yield return new WaitForEndOfFrame();
+            LevelUp();
+            gainAbiltiy = !gainAbiltiy;
         }
         else
         {
             buttonsStats.SetActive(true);
             LevelUpStats();
+            yield return new WaitForEndOfFrame();
+            LevelUpStats();
+            gainAbiltiy = !gainAbiltiy;
         }
+        yield return new WaitForEndOfFrame();
         Time.timeScale = 0;
     }
 
