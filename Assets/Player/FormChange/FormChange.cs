@@ -15,6 +15,9 @@ public class FormChange : MonoBehaviour
     [SerializeField] GameObject strike;
     [SerializeField] Wave ShockWave;
 
+    [Header("Sound Effects")]
+    [SerializeField] GameObject YellowSFX;
+
     [Header("UI")]
     [SerializeField] TextMeshProUGUI cooldown;
     [SerializeField] List<Image> images;
@@ -83,7 +86,7 @@ public class FormChange : MonoBehaviour
     {
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
-        StartCoroutine(ShakeDelay(0.5f));
+        StartCoroutine(YellowShakeDelay(0.5f));
         DisableAffect();
         playerStats.YellowDamageBonus = 10;
         playerStats.GreenDamageBonus = 0;
@@ -216,9 +219,10 @@ public class FormChange : MonoBehaviour
         onCooldown = false;
     }
 
-    IEnumerator ShakeDelay(float delay)
+    IEnumerator YellowShakeDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
+        Instantiate(YellowSFX, transform.position, Quaternion.identity);
         screenShake.Amplitude = 1f;
         screenShake.SpeedOfDecay = 0.25f;
     }

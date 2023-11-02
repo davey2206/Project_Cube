@@ -15,11 +15,11 @@ public class ButtonSFX : MonoBehaviour
 
     public void HoverSoundEffect()
     {
-        audioSource.PlayOneShot(audioClips[0], 0.5f);
+        audioSource.PlayOneShot(audioClips[0], 0.1f);
     }
 
     public void ClickSoundEffect()
     {
-        audioSource.PlayOneShot(audioClips[1], 1f);
+        audioSource.PlayOneShot(audioClips[1], 0.5f);
     }
 }
