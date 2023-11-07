@@ -13,4 +13,10 @@ public class DamageNumbers : MonoBehaviour
 
         damageText.text = Damage.ToString("#.#");
     }
+
+    public void Crit()
+    {
+        damageText.fontSize = damageText.fontSize + 5;
+        damageText.color = new Color(1,0.4f,0,1);
+    }
 }

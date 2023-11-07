@@ -58,4 +58,17 @@ public class MetaProgression : MonoBehaviour
     public static void SaveBlueDamageBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("BlueDamageUnlocks", Unlocks); }
     public static int GetBlueDamageBonus() { return PlayerPrefs.GetInt("BlueDamage"); }
     public static int GetBlueDamageBonusUnlocks() { return PlayerPrefs.GetInt("BlueDamageUnlocks"); }
+
+    //CritRate
+    public static void SaveCritRateBonus(int CritRate) { PlayerPrefs.SetInt("CritRate", CritRate); }
+    public static void SaveCritRateBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("CritRateUnlocks", Unlocks); }
+    public static int GetCritRateBonus() { return PlayerPrefs.GetInt("CritRate"); }
+    public static int GetCritRateBonusUnlocks() { return PlayerPrefs.GetInt("CritRateUnlocks"); }
+
+    //CritDamage
+
+    public static void SaveCritDamageBonus(int CritDamage) { PlayerPrefs.SetInt("CritDamage", CritDamage); }
+    public static void SaveCritDamageBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("CritDamageUnlocks", Unlocks); }
+    public static int GetCritDamageBonus() { return PlayerPrefs.GetInt("CritDamage"); }
+    public static int GetCritDamageBonusUnlocks() { return PlayerPrefs.GetInt("CritDamageUnlocks"); }
 }

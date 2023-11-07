@@ -14,8 +14,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] float Health;
     [SerializeField] Transform HealthBar;
-    [SerializeField] GameObject DieEffect;
     [SerializeField] abilitiesObject abilities;
+
+    [Header("Effects")]
+    [SerializeField] GameObject DieEffect;
+    [SerializeField] GameObject HitSFX;
 
     [Header("Drops")]
     [SerializeField] PlayerStats playerStats;
@@ -74,17 +77,31 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        Health = Health - damage;
-
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
 
-        DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
-        numbers.ShowDamage(damage);
+        if (playerStats.crit())
+        {
+            damage = playerStats.GetCritDamage(damage);
+            Health = Health - damage;
+            DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
+            numbers.ShowDamage(damage);
+            numbers.Crit();
+        }
+        else
+        {
+            Health = Health - damage;
+            DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
+            numbers.ShowDamage(damage);
+        }
 
 
         if (Health <= 0)
         {
             Die();
+        }
+        else
+        {
+            Instantiate(HitSFX, transform.position, Quaternion.identity);
         }
     }
 

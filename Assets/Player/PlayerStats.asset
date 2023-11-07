@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   alive: 0
+  Coins: 113
+  Luck: 2
   maxHealth: 10
+  AttackSpeed: 6
+  critRate: 3
+  critDamage: 70
   BaseAttack: 1
-  BonusAttack: -10
-  AttackSpeed: 4
-  Coins: 0
-  Luck: 0
-  YellowDamage: 0
-  BlueDamage: 0
-  GreenDamage: 0
+  YellowDamage: 10
+  BlueDamage: 10
+  GreenDamage: 10
+  BonusAttack: 42
   YellowDamageBonus: 0
   BlueDamageBonus: 10
   GreenDamageBonus: 0

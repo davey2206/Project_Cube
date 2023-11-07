@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9150226132715836925}
   - component: {fileID: 3718223064894764201}
   - component: {fileID: -3901640030030961197}
+  - component: {fileID: 1459249405928298558}
   m_Layer: 0
   m_Name: SFX
   m_TagString: Untagged
@@ -158,3 +159,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MinPitch: 0
   MaxPitch: 0
+--- !u!114 &1459249405928298558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395311519949171395}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132b586a17a35134ca88234fa5ce52e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips: []

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 22905081646530183}
   - component: {fileID: -3752165463730909448}
   - component: {fileID: -6387671725936572526}
+  - component: {fileID: 4240716964014576185}
+  - component: {fileID: 4792711846273032496}
   m_Layer: 0
   m_Name: CommonExtraAbilities
   m_TagString: Untagged
@@ -46,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  rarity: 0
 --- !u!114 &-6387671725936572526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,3 +61,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c094b9b37e245468e8018e5cc9f748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rarity: 0
+--- !u!114 &4240716964014576185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917464684567858733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4229237434f80ad479e03dbef43a7049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  rarity: 0
+--- !u!114 &4792711846273032496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917464684567858733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac1f03fe954c6d4ea88aa5aa73d6a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  rarity: 0

@@ -63,3 +63,78 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Max Health Gain
+    Description:
+    - Gain 1 Max Health
+    rarity: 2
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: -3588598075300333243, guid: 8cc105483722f2746a958af68cd9a9ca,
+            type: 3}
+          m_TargetAssemblyTypeName: MaxHealth, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Crit Rate
+    Description:
+    - Gain 3% Crit Rate
+    rarity: 2
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6717606983338795733, guid: 8cc105483722f2746a958af68cd9a9ca,
+            type: 3}
+          m_TargetAssemblyTypeName: CritRate, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Crit Damage
+    Description:
+    - Gain 20% Crit Damage
+    rarity: 2
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2693315725601362396, guid: 8cc105483722f2746a958af68cd9a9ca,
+            type: 3}
+          m_TargetAssemblyTypeName: CritDamage, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

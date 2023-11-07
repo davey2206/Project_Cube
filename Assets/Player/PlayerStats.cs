@@ -8,17 +8,26 @@ using UnityEngine.XR;
 public class PlayerStats : ScriptableObject
 {
     public bool alive;
-    public float maxHealth;
-    public float BaseAttack;
-    public float BonusAttack;
-    public float AttackSpeed;
     public int Coins;
+    
+    [Header("Stats")]
     public float Luck;
+    public float maxHealth;
+    public float AttackSpeed;
 
+    [Header("Crit")]
+    public float critRate;
+    public float critDamage;
+
+    [Header("Damage")]
+    public float BaseAttack;
     public float YellowDamage;
     public float BlueDamage;
     public float GreenDamage;
 
+
+    [Header("DamageBonus")]
+    public float BonusAttack;
     public float YellowDamageBonus;
     public float BlueDamageBonus;
     public float GreenDamageBonus;
@@ -71,6 +80,8 @@ public class PlayerStats : ScriptableObject
         YellowDamage = MetaProgression.GetYellowDamageBonus();
         BlueDamage = MetaProgression.GetBlueDamageBonus();
         GreenDamage = MetaProgression.GetGreenDamageBonus();
+        critRate = 1 + MetaProgression.GetCritRateBonus();
+        critDamage = 50 + MetaProgression.GetCritDamageBonus();
         Coins = 0;
     }
 
@@ -82,5 +93,19 @@ public class PlayerStats : ScriptableObject
     public float GetAttackSpeed()
     {
         return 1 / (AttackSpeed);
+    }
+
+    public bool crit()
+    {
+        if (critRate >= Random.Range(0, 101))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public float GetCritDamage(float damage)
+    {
+        return damage + (damage * (critDamage / 100));
     }
 }
