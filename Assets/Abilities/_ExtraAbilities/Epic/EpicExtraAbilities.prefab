@@ -73,6 +73,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: EpicExtraAbilities
       objectReference: {fileID: 0}
+    - target: {fileID: 2161017136227587253, guid: f8134f01afe09b144be239796238d1d3,
+        type: 3}
+      propertyPath: rarity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4240716964014576185, guid: f8134f01afe09b144be239796238d1d3,
+        type: 3}
+      propertyPath: rarity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4792711846273032496, guid: f8134f01afe09b144be239796238d1d3,
+        type: 3}
+      propertyPath: rarity
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
