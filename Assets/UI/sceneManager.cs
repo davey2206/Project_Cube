@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class sceneManager : MonoBehaviour
 {
-    [SerializeField] GameObject cam;
-
     string MainScene;
     string MenuScene;
 
     Manager audioManager;
     MainCubeAnimations cubeAnimator;
+
+    Scene menuScene;
+    Scene mainScene;
 
     private void Awake()
     {
@@ -21,27 +22,18 @@ public class sceneManager : MonoBehaviour
         MenuScene = SceneUtility.GetScenePathByBuildIndex(2);
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
-        Destroy(cam);
         PlayMusic(0);
         SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
-    }
+        menuScene = SceneManager.GetSceneByPath(MenuScene);
 
-    private void Update()
-    {
-        Scene menuScene = SceneManager.GetSceneByPath(MenuScene);
-        if (menuScene != null && menuScene.isLoaded)
+        while (!menuScene.isLoaded)
         {
-            SceneManager.SetActiveScene(menuScene);
+            yield return new WaitForEndOfFrame();
         }
 
-        Scene mainScene = SceneManager.GetSceneByPath(MainScene);
-        if (mainScene != null && mainScene.isLoaded)
-        {
-            SceneManager.SetActiveScene(mainScene);
-        }
-        
+        SceneManager.SetActiveScene(menuScene);
     }
 
     public void MainSceneLoad()
@@ -51,25 +43,55 @@ public class sceneManager : MonoBehaviour
 
     public void MenuSceneLoad()
     {
+        StartCoroutine(MenuSceneTimer());
+    }
+
+    public IEnumerator MenuSceneTimer()
+    {
+        GameObject.Find("EventSystem").SetActive(false);
+        GameObject light = GameObject.Find("Directional Light");
+
         Time.timeScale = 1f;
         MenuScene = SceneUtility.GetScenePathByBuildIndex(2);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
 
         PlayMusic(0);
+
+        menuScene = SceneManager.GetSceneByPath(MenuScene);
+
+        while (!menuScene.isLoaded)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        light.SetActive(false);
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        SceneManager.SetActiveScene(menuScene);
     }
 
     IEnumerator MainSceneTimer()
     {
+        GameObject.Find("EventSystem").SetActive(false);
+        GameObject light = GameObject.Find("Directional Light");
+
         MainScene = SceneUtility.GetScenePathByBuildIndex(3);
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
         SceneManager.LoadSceneAsync(MainScene, LoadSceneMode.Additive);
+
+        mainScene = SceneManager.GetSceneByPath(MainScene);
+
+        while (!mainScene.isLoaded)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+        light.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
         PlayMusic(1);
 
         cubeAnimator = GameObject.Find("MainCube").GetComponent<MainCubeAnimations>();
         cubeAnimator.Main();
+
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+        SceneManager.SetActiveScene(mainScene);
     }
 
     public void PlayMusic(int index)
