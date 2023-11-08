@@ -113,3 +113,28 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Luck
+    Description:
+    - Gain 0.5% luck
+    rarity: 0
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2161017136227587253, guid: f8134f01afe09b144be239796238d1d3,
+            type: 3}
+          m_TargetAssemblyTypeName: Luck, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
