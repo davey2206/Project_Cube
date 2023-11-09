@@ -20,6 +20,7 @@ public class StatsText : MonoBehaviour
             "<color=#00ffffff>Bonus Blue Damage " + playerStats.BlueDamage.ToString() + "%</color>" + Environment.NewLine +
             "Attack Speed " + playerStats.AttackSpeed.ToString() + Environment.NewLine +
             "Crit Rate " + playerStats.critRate.ToString() + "%" + Environment.NewLine +
-            "Crit Damage " + playerStats.critRate.ToString() + "%" + Environment.NewLine;
+            "Crit Damage " + playerStats.critRate.ToString() + "%" + Environment.NewLine +
+            "Luck " + playerStats.Luck.ToString() + "" + Environment.NewLine;
     }
 }

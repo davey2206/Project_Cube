@@ -12,12 +12,15 @@ public class MaxHealth : MonoBehaviour
         {
             case RarityTypes.Rare:
                 playerStats.maxHealth = playerStats.maxHealth + 1;
+                GameObject.Find("Player").GetComponent<Player>().Heal(1);
                 break;
             case RarityTypes.Epic:
                 playerStats.maxHealth = playerStats.maxHealth + 2;
+                GameObject.Find("Player").GetComponent<Player>().Heal(2);
                 break;
             case RarityTypes.Legendary:
                 playerStats.maxHealth = playerStats.maxHealth + 5;
+                GameObject.Find("Player").GetComponent<Player>().Heal(5);
                 break;
         }
     }
