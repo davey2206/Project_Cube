@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExtraAbilitiesObjectEpic
   m_EditorClassIdentifier: 
   abilities:
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Attack Boost
     Description:
     - Gain 10% more damage
@@ -38,7 +38,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Heal
     Description:
     - Heal for 5 health
@@ -63,7 +63,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Max Health Gain
     Description:
     - Gain 5 Max Health
@@ -88,7 +88,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Crit Rate
     Description:
     - Gain 5% Crit Rate
@@ -113,7 +113,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Crit Damage
     Description:
     - Gain 25% Crit Damage
@@ -138,7 +138,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: 'Luck '
     Description:
     - Gain 5% luck
@@ -163,7 +163,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Yellow Damage Boost
     Description:
     - Gain <color=#ffff00ff> 20% more damage </color>
@@ -188,7 +188,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Blue Damage Boost
     Description:
     - Gain <color=#00ffffff> 20% more damage </color>
@@ -213,7 +213,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - Icon: {fileID: 0}
+  - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Green Damage Boost
     Description:
     - Gain <color=#008000ff> 20% more damage </color>

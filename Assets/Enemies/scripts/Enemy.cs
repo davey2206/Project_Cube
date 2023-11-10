@@ -78,6 +78,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
+        bool crit = false;
 
         if (playerStats.crit())
         {
@@ -86,6 +87,7 @@ public class Enemy : MonoBehaviour
             DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
             numbers.ShowDamage(damage);
             numbers.Crit();
+            crit = true;
         }
         else
         {
@@ -94,13 +96,20 @@ public class Enemy : MonoBehaviour
             numbers.ShowDamage(damage);
         }
 
-
         if (Health <= 0)
         {
             Die();
         }
         else
         {
+            if (crit)
+            {
+                GetComponent<Animator>().SetTrigger("Crit");
+            }
+            else
+            {
+                GetComponent<Animator>().SetTrigger("Hit");
+            }
             Instantiate(HitSFX, transform.position, Quaternion.identity);
         }
     }

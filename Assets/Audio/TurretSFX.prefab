@@ -46,7 +46,7 @@ PrefabInstance:
     - target: {fileID: 3718223064894764201, guid: e9deca553acf64241a243a491e76e6fe,
         type: 3}
       propertyPath: Time
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8909913918263313230, guid: e9deca553acf64241a243a491e76e6fe,
         type: 3}
