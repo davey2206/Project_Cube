@@ -14,19 +14,19 @@ public class MiniGunTurretSpawn : MonoBehaviour
         switch (level)
         {
             case 1:
-                SpawnTurret(pos, 10, baseAttack * 0.1f);
+                SpawnTurret(pos, 3, baseAttack * 0.1f);
                 break;
             case 2:
-                SpawnTurret(pos, 10, baseAttack * 0.2f);
+                SpawnTurret(pos, 3, baseAttack * 0.2f);
                 break;
             case 3:
-                SpawnTurret(pos, 12, baseAttack * 0.2f);
+                SpawnTurret(pos, 4, baseAttack * 0.2f);
                 break;
             case 4:
-                SpawnTurret(pos, 12, baseAttack * 0.3f);
+                SpawnTurret(pos, 4, baseAttack * 0.3f);
                 break;
             case 5:
-                SpawnTurret(pos, 15, baseAttack * 0.3f);
+                SpawnTurret(pos, 5, baseAttack * 0.4f);
                 break;
         }
     }

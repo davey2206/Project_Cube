@@ -6,23 +6,26 @@ public class MiniGunTurret : MonoBehaviour
 {
     [SerializeField] Transform Head;
     [SerializeField] BulletMovement bullet;
+    [SerializeField] GameObject SFX;
 
     Transform target;
     float attack;
+    float numberOfAttacks;
 
     private IEnumerator Start()
     {
-        while (true)
+        for (int y = 0; y < numberOfAttacks; y++)
         {
             yield return new WaitForSeconds(2f);
-            int y = 0;
+            int x = 0;
             GetComponent<Animator>().SetTrigger("Fire");
             yield return new WaitForSeconds(0.2f);
+            Instantiate(SFX, transform.position, Quaternion.identity);
             for (int i = 0; i < 15; i++)
             {
                 if (target != null)
                 {
-                    var b = Instantiate(bullet, Head.GetChild(y).transform.position, Quaternion.identity);
+                    var b = Instantiate(bullet, Head.GetChild(x).transform.position, Quaternion.identity);
 
                     float accuracy = (Vector3.Distance(transform.position, target.position) / 5) + 1;
                     Vector3 pos = target.position;
@@ -30,16 +33,17 @@ public class MiniGunTurret : MonoBehaviour
 
                     b.transform.LookAt(pos);
                     b.SetAttack(attack);
-                    yield return new WaitForSeconds(0.1f);
-                    y++;
-                    if (y == 4)
+                    yield return new WaitForSeconds(0.05f);
+                    x++;
+                    if (x == 4)
                     {
-                        y = 0;
+                        x = 0;
                     }
                 }
             }
-            
         }
+
+        StartCoroutine(DeSpawn());
     }
 
     private void Update()
@@ -83,12 +87,11 @@ public class MiniGunTurret : MonoBehaviour
     public void Stats(float LifeSpan, float a)
     {
         attack = a;
-        StartCoroutine(DeSpawn(LifeSpan));
+        numberOfAttacks = LifeSpan;
     }
 
-    IEnumerator DeSpawn(float LifeSpan)
+    IEnumerator DeSpawn()
     {
-        yield return new WaitForSeconds(LifeSpan);
         GetComponent<Animator>().SetTrigger("DeSpawn");
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);

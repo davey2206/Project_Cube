@@ -74,7 +74,7 @@ public class FirstBoss : MonoBehaviour
         Instantiate(StumpEffect, transform.position, Quaternion.identity);
         screenShake.Amplitude = 1.0f;
         screenShake.SpeedOfDecay = 0.25f;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 8; i++)
         {
             Instantiate(BossEnemy, new Vector3(spawnersFase3[i].transform.position.x, spawnersFase3[i].transform.position.y, spawnersFase3[i].transform.position.z), Quaternion.Euler(20, 0, 20));
         }

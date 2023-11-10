@@ -138,3 +138,78 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Yellow Damage Boost
+    Description:
+    - Gain <color=#ffff00ff> 10% more damage </color>
+    rarity: 1
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 9191182016875729565, guid: 0231377ed043b47449e903213591c182,
+            type: 3}
+          m_TargetAssemblyTypeName: YellowDamageBoost, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Blue Damage Boost
+    Description:
+    - Gain <color=#00ffffff> 10% more damage </color>
+    rarity: 1
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8917947047972989399, guid: 0231377ed043b47449e903213591c182,
+            type: 3}
+          m_TargetAssemblyTypeName: BlueDamageBoost, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: 'Green Damage Boost '
+    Description:
+    - Gain <color=#008000ff> 10% more damage </color>
+    rarity: 1
+    Level: 0
+    Active: 0
+    Unlocked: 0
+    abilityType: 0
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7267849149986750415, guid: 0231377ed043b47449e903213591c182,
+            type: 3}
+          m_TargetAssemblyTypeName: GreenDamageBoost, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

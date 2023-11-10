@@ -23,8 +23,9 @@ MonoBehaviour:
       and Fires 2 more bullets
     - change increased to 40% and now deals <color="yellow"> 100% damage </color>
     - change increased to 50% and Fires 2 more bullets
-    Level: 0
-    Active: 0
+    rarity: 0
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -51,6 +52,7 @@ MonoBehaviour:
     - Fires 1 seconds faster and stuns for 1 seconds
     - Fires 1 seconds faster and stuns for 1.25 seconds
     - Fires 1 seconds faster and stuns for 1.5 seconds and now deals 25% damage
+    rarity: 0
     Level: 0
     Active: 0
     Unlocked: 1
@@ -80,8 +82,9 @@ MonoBehaviour:
     - now deals <color="green"> 150% damage </color>
     - now deals <color="green"> 200% damage </color>
     - now deals <color="green"> 250% damage </color>
-    Level: 1
-    Active: 1
+    rarity: 0
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 2
     Ability:
@@ -109,8 +112,9 @@ MonoBehaviour:
     - now deals <color=#00ffffff>50% damage </color>
     - 'now fires a big wave '
     - now deals <color=#00ffffff>75% damage </color>
-    Level: 2
-    Active: 1
+    rarity: 0
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 1
     Ability:
@@ -138,8 +142,9 @@ MonoBehaviour:
     - Now lasts for 8 seconds
     - now deals 75% damage
     - Now lasts for 10 seconds
-    Level: 1
-    Active: 1
+    rarity: 0
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -162,13 +167,14 @@ MonoBehaviour:
     Name: Minigun Turret
     Description:
     - On enemy death there is a 10% change to spawn a minigun turret that wil attack
-      the closest enemy with a burst of bullets for 10% damage each for 10 seconds.
+      the closest enemy with a burst of bullets for 10% damage each 3 times
     - now deals 20% damage
-    - Now lasts for 12 seconds
+    - now fires 4 times
     - now deals 30% damage
-    - Now lasts for 15 seconds
-    Level: 0
-    Active: 0
+    - now fires 5 times and deals 40% damage
+    rarity: 0
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -196,6 +202,7 @@ MonoBehaviour:
     - now launches 3 Strikes and deals <color="yellow"> 100% damage </color>
     - now launches 4 Strikes
     - now launches 5 Strikes and deals <color="yellow"> 150% damage </color>
+    rarity: 0
     Level: 1
     Active: 1
     Unlocked: 1
@@ -225,6 +232,7 @@ MonoBehaviour:
     - now plants 5 mines and deals <color="green"> 75% damage </color>
     - now plants 6 mines
     - now plants 7 mines and deals <color="green"> 100% damage </color>
+    rarity: 0
     Level: 0
     Active: 0
     Unlocked: 1
@@ -253,7 +261,8 @@ MonoBehaviour:
     - now fires 40 bullets
     - now fires 50 bullets
     - now fires 60 bullets
-    Level: 2
+    rarity: 0
+    Level: 1
     Active: 1
     Unlocked: 1
     abilityType: 3

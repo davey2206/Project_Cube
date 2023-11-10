@@ -12,12 +12,15 @@ public class ScreenShake : MonoBehaviour
     {
         cam = GetComponent<CinemachineVirtualCamera>();
         StartCoroutine(ResetShake());
+
+        screenShake.Amplitude = 0;
+        screenShake.Frequency = 1;
+        screenShake.SpeedOfDecay = 1;
     }
     // Update is called once per frame
     void Update()
     {
         SetShake();
-        
     }
 
     public void SetShake()

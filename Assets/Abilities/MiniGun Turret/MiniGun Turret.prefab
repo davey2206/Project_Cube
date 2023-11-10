@@ -490,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head: {fileID: 5177465945428593277}
   bullet: {fileID: 991903540875927492, guid: 7c65bb1d29acb024ab680433631d9f51, type: 3}
+  SFX: {fileID: 7294976589790146365, guid: 9b89f52709d23754c9316dbcc8cd700c, type: 3}
 --- !u!1 &8362912671152311664
 GameObject:
   m_ObjectHideFlags: 0

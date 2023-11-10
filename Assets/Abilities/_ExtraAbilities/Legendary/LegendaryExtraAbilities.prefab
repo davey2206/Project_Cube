@@ -18,6 +18,16 @@ PrefabInstance:
       propertyPath: rarity
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -2290297403797368456, guid: f8134f01afe09b144be239796238d1d3,
+        type: 3}
+      propertyPath: rarity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -331560247411131350, guid: f8134f01afe09b144be239796238d1d3,
+        type: 3}
+      propertyPath: rarity
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 22905081646530183, guid: f8134f01afe09b144be239796238d1d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -84,6 +94,11 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4792711846273032496, guid: f8134f01afe09b144be239796238d1d3,
+        type: 3}
+      propertyPath: rarity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239660005816986162, guid: f8134f01afe09b144be239796238d1d3,
         type: 3}
       propertyPath: rarity
       value: 4
