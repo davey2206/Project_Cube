@@ -43,15 +43,16 @@ public class sceneManager : MonoBehaviour
 
     public void MenuSceneLoad()
     {
+        Time.timeScale = 1f;
         StartCoroutine(MenuSceneTimer());
     }
 
     public IEnumerator MenuSceneTimer()
     {
+        Time.timeScale = 1f;
         GameObject.Find("EventSystem").SetActive(false);
         GameObject light = GameObject.Find("Directional Light");
 
-        Time.timeScale = 1f;
         MenuScene = SceneUtility.GetScenePathByBuildIndex(2);
         SceneManager.LoadSceneAsync(MenuScene, LoadSceneMode.Additive);
 

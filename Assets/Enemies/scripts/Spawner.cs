@@ -44,7 +44,6 @@ public class Spawner : MonoBehaviour
     IEnumerator EndGame()
     {
         yield return new WaitForSeconds(0.5f);
-        Time.timeScale = 0f;
         Done = true;
         playerStats.AddCoins();
         gameEnd.SetActive(true);

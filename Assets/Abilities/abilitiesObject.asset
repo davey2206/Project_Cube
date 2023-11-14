@@ -24,8 +24,8 @@ MonoBehaviour:
     - change increased to 40% and now deals <color="yellow"> 100% damage </color>
     - change increased to 50% and Fires 2 more bullets
     rarity: 0
-    Level: 1
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -113,8 +113,8 @@ MonoBehaviour:
     - 'now fires a big wave '
     - now deals <color=#00ffffff>75% damage </color>
     rarity: 0
-    Level: 0
-    Active: 0
+    Level: 1
+    Active: 1
     Unlocked: 1
     abilityType: 1
     Ability:
@@ -173,8 +173,8 @@ MonoBehaviour:
     - now deals 30% damage
     - now fires 5 times and deals 40% damage
     rarity: 0
-    Level: 1
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 0
     Ability:
@@ -203,8 +203,8 @@ MonoBehaviour:
     - now launches 4 Strikes
     - now launches 5 Strikes and deals <color="yellow"> 150% damage </color>
     rarity: 0
-    Level: 1
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 3
     Ability:
@@ -262,8 +262,8 @@ MonoBehaviour:
     - now fires 50 bullets
     - now fires 60 bullets
     rarity: 0
-    Level: 1
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 3
     Ability:

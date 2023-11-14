@@ -71,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wave: {fileID: 2627993823809698767}
   mine: {fileID: 4887797809772332694}
+  SFX: {fileID: 7793507541768270542, guid: 337de2cfb10e5fb41b079f86c510a4e8, type: 3}
 --- !u!95 &169137802132623077
 Animator:
   serializedVersion: 5
