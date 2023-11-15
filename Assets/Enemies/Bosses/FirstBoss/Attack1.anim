@@ -2118,8 +2118,22 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0.95
+    functionName: PrepereAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.25
     functionName: Attack1
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.3833334
+    functionName: PrepereAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -2132,8 +2146,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 3.8
+    functionName: PrepereAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 4.1
     functionName: Attack1
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5.25
+    functionName: PrepereAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

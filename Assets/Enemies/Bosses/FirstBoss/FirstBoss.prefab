@@ -142,6 +142,8 @@ MonoBehaviour:
   HealthBar: {fileID: 1275884028146609517}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
+  HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}
+  DieVFX: {fileID: 6201523421047463331, guid: 70cca6496584a0d45a42b0f50d302d33, type: 3}
 --- !u!54 &3336560282893870982
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -736,6 +738,12 @@ MonoBehaviour:
   ShootEffect: {fileID: 6201523421047463331, guid: 7ccae89adedde0b4fb8164ecb631f7bb,
     type: 3}
   screenShake: {fileID: 11400000, guid: 40d0396c30f2ef64eb79e9ba4a5a77f2, type: 2}
+  AttackSFX: {fileID: 1641933238505481311, guid: fa48fa0985afb9649bb3906b24751145,
+    type: 3}
+  PrepereSFX: {fileID: 1641933238505481311, guid: 354f80b75204b9b43b2c3b79691675ff,
+    type: 3}
+  StumpSFX: {fileID: 1641933238505481311, guid: 7d2768e2dc982d04fa8732b186920509,
+    type: 3}
 --- !u!1 &6183579125583048132
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1000,8 @@ MonoBehaviour:
   HealthBar: {fileID: 6777927022371196817}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
+  HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}
+  DieVFX: {fileID: 6201523421047463331, guid: 70cca6496584a0d45a42b0f50d302d33, type: 3}
 --- !u!54 &4818218682826880814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1442,6 +1452,8 @@ MonoBehaviour:
   HealthBar: {fileID: 8971553945315021201}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
+  HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}
+  DieVFX: {fileID: 6201523421047463331, guid: 70cca6496584a0d45a42b0f50d302d33, type: 3}
 --- !u!54 &678190658371858644
 Rigidbody:
   m_ObjectHideFlags: 0

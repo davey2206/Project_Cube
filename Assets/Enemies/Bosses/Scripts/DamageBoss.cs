@@ -10,6 +10,10 @@ public class DamageBoss : MonoBehaviour
     [Header("UI")]
     [SerializeField] DamageNumbers damageNumbers;
 
+    [Header("Effects")]
+    [SerializeField] GameObject HitSFX;
+    [SerializeField] GameObject DieVFX;
+
     float maxHealth; 
     Vector3 Velocity;
 
@@ -41,6 +45,11 @@ public class DamageBoss : MonoBehaviour
         if (Health <= 0)
         {
             Die();
+            Instantiate(DieVFX, transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(HitSFX, transform.position, Quaternion.identity);
         }
     }
 

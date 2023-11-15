@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
 
 public class FirstBoss : MonoBehaviour
@@ -22,14 +23,25 @@ public class FirstBoss : MonoBehaviour
     [SerializeField] GameObject ShootEffect;
     [SerializeField] ScreenShakeObject screenShake;
 
+    [Header("SFX")]
+    [SerializeField] GameObject AttackSFX;
+    [SerializeField] GameObject PrepereSFX;
+    [SerializeField] GameObject StumpSFX;
+
     float WaitTime;
+    bool Ready;
 
     private IEnumerator Start()
     {
+        Ready = false;
         animator.Play(animations[3].name);
+        yield return new WaitForEndOfFrame();
+        ArmL.SetActive(true);
+        ArmR.SetActive(true);
+        Body.SetActive(true);
         yield return new WaitForSeconds(2f);
         animator.Play(animations[0].name);
-
+        Ready = true;
         WaitTime = animations[0].length;
         while (true)
         {
@@ -55,9 +67,15 @@ public class FirstBoss : MonoBehaviour
         }
     }
 
+    public void PrepereAttack()
+    {
+        Instantiate(PrepereSFX, transform.position, Quaternion.identity);
+    }
+
     public void Attack1()
     {
         Instantiate(ShootEffect, ArmL.transform.position, Quaternion.identity);
+        Instantiate(AttackSFX, ArmL.transform.position, Quaternion.identity);
         Instantiate(BossEnemy, new Vector3(spawnersFase1[0].transform.position.x, spawnersFase1[0].transform.position.y, spawnersFase1[0].transform.position.z), Quaternion.Euler(20, 0, 20));
         Instantiate(BossEnemy, new Vector3(spawnersFase1[1].transform.position.x, spawnersFase1[1].transform.position.y, spawnersFase1[1].transform.position.z), Quaternion.Euler(20, 0, 20));
     }
@@ -65,6 +83,7 @@ public class FirstBoss : MonoBehaviour
     public void Attack2()
     {
         Instantiate(ShootEffect, ArmR.transform.position, Quaternion.identity);
+        Instantiate(AttackSFX, ArmR.transform.position, Quaternion.identity);
         Instantiate(BossEnemy, new Vector3(spawnersFase2[0].transform.position.x, spawnersFase2[0].transform.position.y, spawnersFase2[0].transform.position.z), Quaternion.Euler(20, 0, 20));
         Instantiate(BossEnemy, new Vector3(spawnersFase2[1].transform.position.x, spawnersFase2[1].transform.position.y, spawnersFase2[1].transform.position.z), Quaternion.Euler(20, 0, 20));
     }
@@ -72,6 +91,7 @@ public class FirstBoss : MonoBehaviour
     public void Attack3()
     {
         Instantiate(StumpEffect, transform.position, Quaternion.identity);
+        Instantiate(StumpSFX, transform.position, Quaternion.identity);
         screenShake.Amplitude = 1.0f;
         screenShake.SpeedOfDecay = 0.25f;
         for (int i = 0; i < 12; i++)
@@ -82,7 +102,7 @@ public class FirstBoss : MonoBehaviour
 
     private void Update()
     {
-        if (!ArmL.activeInHierarchy && !ArmR.activeInHierarchy && !Body.activeInHierarchy)
+        if (!ArmL.activeInHierarchy && !ArmR.activeInHierarchy && !Body.activeInHierarchy && Ready)
         {
             Destroy(gameObject);
         }
