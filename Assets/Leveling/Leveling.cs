@@ -35,6 +35,13 @@ public class Leveling : MonoBehaviour
     int excesXP = 0;
     bool IsLeveling;
     bool gainAbiltiy;
+
+    List<ability> abilitiesThatCanLevelCommon = new List<ability>();
+    List<ability> abilitiesThatCanLevelUncommon = new List<ability>();
+    List<ability> abilitiesThatCanLevelRare = new List<ability>();
+    List<ability> abilitiesThatCanLevelEpic = new List<ability>();
+    List<ability> abilitiesThatCanLevelLegendary = new List<ability>();
+
     private void Awake()
     {
         gainAbiltiy = true;
@@ -94,51 +101,115 @@ public class Leveling : MonoBehaviour
 
     public void LevelUpStats()
     {
+        abilitiesThatCanLevelCommon.Clear();
+        abilitiesThatCanLevelUncommon.Clear();
+        abilitiesThatCanLevelRare.Clear();
+        abilitiesThatCanLevelEpic.Clear();
+        abilitiesThatCanLevelLegendary.Clear();
+
+        foreach (var ability in extraAbilities[0].abilities)
+        {
+            abilitiesThatCanLevelCommon.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[1].abilities)
+        {
+            abilitiesThatCanLevelUncommon.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[2].abilities)
+        {
+            abilitiesThatCanLevelRare.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[3].abilities)
+        {
+            abilitiesThatCanLevelEpic.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[4].abilities)
+        {
+            abilitiesThatCanLevelLegendary.Add(ability);
+        }
+
+
+
         for (int i = 0; i < 3; i++)
         {
             int rng = Random.Range(0, 101);
             if (rng > 40)
             {
-                SetButtons(i, RarityTypes.Common, Color.white);
+                ability abilityToUse = SetButtons(i, RarityTypes.Common, Color.white, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(i, RarityTypes.Common, Color.white, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                }
             }
             else if (rng < 40 && rng > 15)
             {
-                SetButtons(i, RarityTypes.Uncommon, Color.green);
+                ability abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                }
             }
             else if (rng < 15 && rng > 6)
             {
-                SetButtons(i, RarityTypes.Rare, Color.blue);
+                ability abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                }
             }
             else if (rng < 6 && rng > 1)
             {
-                SetButtons(i, RarityTypes.Epic, Color.magenta);
+                ability abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                }
             }
             else if (rng < 1)
             {
-                SetButtons(i, RarityTypes.Legendary, Color.yellow);
+                ability abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                }
             }
         }
     }
 
-    public ability SetButtons(int i, RarityTypes rarity, Color color)
+    public ability SetButtons(int i, RarityTypes rarity, Color color, List<ability> abilitiesThatCanLevelCommon, List<ability> abilitiesThatCanLevelUncommon, List<ability> abilitiesThatCanLevelRare, List<ability> abilitiesThatCanLevelEpic, List<ability> abilitiesThatCanLevelLegendary)
     {
         ability abilityToUse = null;
+
         switch (rarity)
         {
             case RarityTypes.Common:
-                abilityToUse = extraAbilities[0].abilities[Random.Range(0, extraAbilities[0].abilities.Count)];
+                abilityToUse = abilitiesThatCanLevelCommon[Random.Range(0, abilitiesThatCanLevelCommon.Count)];
+                abilitiesThatCanLevelCommon.Remove(abilityToUse);
                 break;
             case RarityTypes.Uncommon:
-                abilityToUse = extraAbilities[1].abilities[Random.Range(0, extraAbilities[1].abilities.Count)];
+                abilityToUse = abilitiesThatCanLevelUncommon[Random.Range(0, abilitiesThatCanLevelUncommon.Count)];
+                abilitiesThatCanLevelUncommon.Remove(abilityToUse);
                 break;
             case RarityTypes.Rare:
-                abilityToUse = extraAbilities[2].abilities[Random.Range(0, extraAbilities[2].abilities.Count)];
+                abilityToUse = abilitiesThatCanLevelRare[Random.Range(0, abilitiesThatCanLevelRare.Count)];
+                abilitiesThatCanLevelRare.Remove(abilityToUse);
                 break;
             case RarityTypes.Epic:
-                abilityToUse = extraAbilities[3].abilities[Random.Range(0, extraAbilities[3].abilities.Count)];
+                abilityToUse = abilitiesThatCanLevelEpic[Random.Range(0, abilitiesThatCanLevelEpic.Count)];
+                abilitiesThatCanLevelEpic.Remove(abilityToUse);
                 break;
             case RarityTypes.Legendary:
-                abilityToUse = extraAbilities[4].abilities[Random.Range(0, extraAbilities[4].abilities.Count)];
+                abilityToUse = abilitiesThatCanLevelLegendary[Random.Range(0, abilitiesThatCanLevelLegendary.Count)];
+                abilitiesThatCanLevelLegendary.Remove(abilityToUse);
                 break;
         }
 

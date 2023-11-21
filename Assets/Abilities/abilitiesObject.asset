@@ -16,13 +16,13 @@ MonoBehaviour:
   - Icon: {fileID: -2122009659, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Explosive Death
     Description:
-    - Enemies have a 25% change to explode into 4 bullets that deal <color="yellow">
+    - Enemies have a 25% chance to explode into 4 bullets that deal <color="yellow">
       25% damage </color>
-    - change increased to 30% and now deals <color="yellow"> 50% damage </color>
-    - change increased to 35% and now deals <color="yellow"> 75% damage </color>
+    - chance increased to 30% and now deals <color="yellow"> 50% damage </color>
+    - chance increased to 35% and now deals <color="yellow"> 75% damage </color>
       and Fires 2 more bullets
-    - change increased to 40% and now deals <color="yellow"> 100% damage </color>
-    - change increased to 50% and Fires 2 more bullets
+    - chance increased to 40% and now deals <color="yellow"> 100% damage </color>
+    - chance increased to 50% and Fires 2 more bullets
     rarity: 0
     Level: 0
     Active: 0
@@ -113,8 +113,8 @@ MonoBehaviour:
     - 'now fires a big wave '
     - now deals <color=#00ffffff>75% damage </color>
     rarity: 0
-    Level: 1
-    Active: 1
+    Level: 0
+    Active: 0
     Unlocked: 1
     abilityType: 1
     Ability:
@@ -136,8 +136,8 @@ MonoBehaviour:
   - Icon: {fileID: -843875499, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Basic Turret
     Description:
-    - On enemy death there is a 10% change to spawn a turret that wil attack the
-      closest enemy for 25% damege for 5 seconds.
+    - On enemy death there is a 10% chance to spawn a turret that wil attack the
+      closest enemy for 25% damage for 5 seconds.
     - now deals 50% damage
     - Now lasts for 8 seconds
     - now deals 75% damage
@@ -166,7 +166,7 @@ MonoBehaviour:
   - Icon: {fileID: 1716008568, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Minigun Turret
     Description:
-    - On enemy death there is a 10% change to spawn a minigun turret that wil attack
+    - On enemy death there is a 10% chance to spawn a minigun turret that wil attack
       the closest enemy with a burst of bullets for 10% damage each 3 times
     - now deals 20% damage
     - now fires 4 times
@@ -196,8 +196,8 @@ MonoBehaviour:
   - Icon: {fileID: 491985112, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Artillery Strike
     Description:
-    - launch 1 Strike that deals <color="yellow"> 75% damage </color> to a random
-      area
+    - every 5 seconds launch 1 Strike that deals <color="yellow"> 75% damage </color>
+      to a random area
     - now launches 2 Strikes
     - now launches 3 Strikes and deals <color="yellow"> 100% damage </color>
     - now launches 4 Strikes

@@ -279,8 +279,7 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   AttackVFX: {fileID: 2186641806915604303, guid: 217915aa625393a45b554b7edab1002a,
     type: 3}
-  AttackSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f,
-    type: 3}
+  cam: {fileID: 0}
 --- !u!114 &5465920128977967381
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -82,12 +82,14 @@ public class PlayerStats : ScriptableObject
         GreenDamage = MetaProgression.GetGreenDamageBonus();
         critRate = 1 + MetaProgression.GetCritRateBonus();
         critDamage = 50 + MetaProgression.GetCritDamageBonus();
+        maxHealth = 10;
         Coins = 0;
     }
 
     public void AddCoins()
     {
-        MetaProgression.SaveCoins(MetaProgression.GetCoins() + Coins);
+        int coins = MetaProgression.GetCoins() + Coins;
+        MetaProgression.SaveCoins(coins);
     }
 
     public float GetAttackSpeed()

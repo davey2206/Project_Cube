@@ -78,6 +78,16 @@ public class Player : MonoBehaviour
         playerStats.ResetStats();
     }
 
+    public bool canHeal()
+    {
+        if (Health == playerStats.maxHealth)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
     IEnumerator EndGame()
     {
         playerStats.alive = false;

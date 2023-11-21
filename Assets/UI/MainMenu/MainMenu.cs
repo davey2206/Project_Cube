@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] GameObject Menu;
+    [SerializeField] GameObject HowToPlay;
 
     MainCubeAnimations cubeAnimator;
     sceneManager sceneManager;
@@ -36,5 +38,21 @@ public class MainMenu : MonoBehaviour
     {
         animator.SetTrigger("MainMenu");
         cubeAnimator.Menu();
+    }
+
+    public void Settings()
+    {
+        animator.SetTrigger("Settings");
+    }
+
+    public void BackToMenu()
+    {
+        animator.SetTrigger("SettingsToMenu");
+    }
+
+    public void Tutorial()
+    {
+        HowToPlay.SetActive(true);
+        Menu.SetActive(false);
     }
 }
