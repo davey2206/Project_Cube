@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreenDamageBoost : MonoBehaviour
+public class AbilityCooldown : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
     [SerializeField] RarityTypes rarity;
@@ -11,19 +11,19 @@ public class GreenDamageBoost : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.GreenDamage = playerStats.GreenDamage + 5;
+                playerStats.AbilityCooldown = playerStats.AbilityCooldown + 1;
                 break;
             case RarityTypes.Uncommon:
-                playerStats.GreenDamage = playerStats.GreenDamage + 10;
+                playerStats.AbilityCooldown = playerStats.AbilityCooldown + 2;
                 break;
             case RarityTypes.Rare:
-                playerStats.GreenDamage = playerStats.GreenDamage + 15;
+                playerStats.AbilityCooldown = playerStats.AbilityCooldown + 5;
                 break;
             case RarityTypes.Epic:
-                playerStats.GreenDamage = playerStats.GreenDamage + 20;
+                playerStats.AbilityCooldown = playerStats.AbilityCooldown + 10;
                 break;
             case RarityTypes.Legendary:
-                playerStats.GreenDamage = playerStats.GreenDamage + 25;
+                playerStats.AbilityCooldown = playerStats.AbilityCooldown + 20;
                 break;
         }
     }

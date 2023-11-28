@@ -139,9 +139,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - Icon: {fileID: -411040579, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
-    Name: Yellow Damage Boost
+    Name: Ability Damage Boost
     Description:
-    - Gain <color=#ffff00ff> 5% more Yellow damage </color>
+    - Gain 1% more Ability damage
     rarity: 0
     Level: 0
     Active: 0
@@ -150,9 +150,9 @@ MonoBehaviour:
     Ability:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: -2290297403797368456, guid: f8134f01afe09b144be239796238d1d3,
+        - m_Target: {fileID: 1294698925705816692, guid: f8134f01afe09b144be239796238d1d3,
             type: 3}
-          m_TargetAssemblyTypeName: YellowDamageBoost, Assembly-CSharp
+          m_TargetAssemblyTypeName: AbilityDamage, Assembly-CSharp
           m_MethodName: Ability
           m_Mode: 0
           m_Arguments:
@@ -164,9 +164,9 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - Icon: {fileID: -411040579, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
-    Name: Blue Damage Boost
+    Name: Ability Cooldown reduction
     Description:
-    - Gain <color=#00ffffff> 5% more Blue damage </color>
+    - Gain 1 Ability Cooldown reduction
     rarity: 0
     Level: 0
     Active: 0
@@ -175,34 +175,9 @@ MonoBehaviour:
     Ability:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7239660005816986162, guid: f8134f01afe09b144be239796238d1d3,
+        - m_Target: {fileID: -6559237504757895420, guid: f8134f01afe09b144be239796238d1d3,
             type: 3}
-          m_TargetAssemblyTypeName: BlueDamageBoost, Assembly-CSharp
-          m_MethodName: Ability
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - Icon: {fileID: -411040579, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
-    Name: Green Damage Boost
-    Description:
-    - Gain <color=#008000ff> 5% more Green damage </color>
-    rarity: 0
-    Level: 0
-    Active: 0
-    Unlocked: 0
-    abilityType: 0
-    Ability:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: -331560247411131350, guid: f8134f01afe09b144be239796238d1d3,
-            type: 3}
-          m_TargetAssemblyTypeName: GreenDamageBoost, Assembly-CSharp
+          m_TargetAssemblyTypeName: AbilityCooldown, Assembly-CSharp
           m_MethodName: Ability
           m_Mode: 0
           m_Arguments:

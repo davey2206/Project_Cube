@@ -31,6 +31,7 @@ public class MainMenu : MonoBehaviour
 
     public void Exit()
     {
+        PlayerPrefs.SetInt("Warning", 0);
         Application.Quit();
     }
 

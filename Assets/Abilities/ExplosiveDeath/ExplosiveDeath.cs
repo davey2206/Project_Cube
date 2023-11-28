@@ -10,28 +10,33 @@ public class ExplosiveDeath : MonoBehaviour
 
     public void Ability(int level, Vector3 pos)
     {
-        float baseAttack = playerStats.GetYellowAttack();
+        float damage = 0;
         switch (level)
         {
             case 1:
                 ChangeToExplode = 25;
-                spawnBullets(4, pos, baseAttack * 0.25f);
+                damage = playerStats.GetAttack() * 0.25f;
+                spawnBullets(4, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 2:
                 ChangeToExplode = 30;
-                spawnBullets(4, pos, baseAttack * 0.5f);
+                damage = playerStats.GetAttack() * 0.5f;
+                spawnBullets(4, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 3:
                 ChangeToExplode = 35;
-                spawnBullets(6, pos, baseAttack * 0.75f);
+                damage = playerStats.GetAttack() * 0.75f;
+                spawnBullets(6, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 4:
                 ChangeToExplode = 40;
-                spawnBullets(6, pos, baseAttack * 1f);
+                damage = playerStats.GetAttack();
+                spawnBullets(6, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 5:
                 ChangeToExplode = 50;
-                spawnBullets(8, pos, baseAttack * 1f);
+                damage = playerStats.GetAttack();
+                spawnBullets(8, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
         }
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class YellowDamageBoost : MonoBehaviour
+public class AbilityDamage : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
     [SerializeField] RarityTypes rarity;
@@ -11,19 +11,19 @@ public class YellowDamageBoost : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.YellowDamage = playerStats.YellowDamage + 5;
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 1;
                 break;
             case RarityTypes.Uncommon:
-                playerStats.YellowDamage = playerStats.YellowDamage + 10;
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 2;
                 break;
             case RarityTypes.Rare:
-                playerStats.YellowDamage = playerStats.YellowDamage + 15;
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 5;
                 break;
             case RarityTypes.Epic:
-                playerStats.YellowDamage = playerStats.YellowDamage + 20;
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 10;
                 break;
             case RarityTypes.Legendary:
-                playerStats.YellowDamage = playerStats.YellowDamage + 25;
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 20;
                 break;
         }
     }

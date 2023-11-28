@@ -13,12 +13,12 @@ public class MineSpawner : MonoBehaviour
         {
             for (int i = 0; i < numberOfMines; i++)
             {
-                float baseAttack = playerStats.GetGreenAttack();
+                float baseAttack = playerStats.GetAttack() * attack;
 
                 Vector3 pos = new Vector3(Random.Range(-5f, 5f), 0, Random.Range(-5f, 5f));
 
                 var wave = Instantiate(Mine, pos, Quaternion.identity);
-                wave.GetComponentInChildren<WaveAttacks>(true).SetStats(baseAttack * attack);
+                wave.GetComponentInChildren<WaveAttacks>(true).SetStats(baseAttack + playerStats.GetAbilityDamage(baseAttack));
                 yield return new WaitForSeconds(0.1f);
             }
 

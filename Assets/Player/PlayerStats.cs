@@ -21,47 +21,15 @@ public class PlayerStats : ScriptableObject
 
     [Header("Damage")]
     public float BaseAttack;
-    public float YellowDamage;
-    public float BlueDamage;
-    public float GreenDamage;
-
-
-    [Header("DamageBonus")]
     public float BonusAttack;
-    public float YellowDamageBonus;
-    public float BlueDamageBonus;
-    public float GreenDamageBonus;
+
+    [Header("Ability")]
+    public float AbilityDamage;
+    public float AbilityCooldown;
 
     public float GetAttack()
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
-
-        return attack;
-    }
-
-    public float GetYellowAttack()
-    {
-        float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
-
-        attack = attack + (attack * ((YellowDamage + YellowDamageBonus) / 100));
-
-        return attack;
-    }
-
-    public float GetBlueAttack()
-    {
-        float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
-
-        attack = attack + (attack * ((BlueDamage + BlueDamageBonus) / 100));
-
-        return attack;
-    }
-
-    public float GetGreenAttack()
-    {
-        float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
-
-        attack = attack + (attack * ((GreenDamage + GreenDamageBonus) / 100));
 
         return attack;
     }
@@ -71,17 +39,23 @@ public class PlayerStats : ScriptableObject
         BonusAttack = BonusAttack + attackBonus;
     }
 
+    public float GetAbilityDamage(float Damage)
+    {
+        float d = Damage * (AbilityDamage / 100);
+
+        return d;
+    }
+
     public void ResetStats()
     {
         alive = true;
-        BonusAttack = MetaProgression.GetAttackBonus();
-        Luck = MetaProgression.GetLuckBonus();
+        BonusAttack = 0 + MetaProgression.GetAttackBonus();
+        Luck = 0 + MetaProgression.GetLuckBonus();
         AttackSpeed = 3 + MetaProgression.GetAttackSpeedBonus();
-        YellowDamage = MetaProgression.GetYellowDamageBonus();
-        BlueDamage = MetaProgression.GetBlueDamageBonus();
-        GreenDamage = MetaProgression.GetGreenDamageBonus();
         critRate = 1 + MetaProgression.GetCritRateBonus();
         critDamage = 50 + MetaProgression.GetCritDamageBonus();
+        AbilityDamage = 0 + MetaProgression.GetAbilityDamageBonus();
+        AbilityCooldown = 0 + MetaProgression.GetAbilityCooldownBonus();
         maxHealth = 10;
         Coins = 0;
     }

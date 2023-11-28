@@ -26,12 +26,6 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveAttackSpeedBonus(0);
         MetaProgression.SaveAttackSpeedBonusUnlocks(0);
         MetaProgression.SaveCoins(0);
-        MetaProgression.SaveYellowDamageBonus(0);
-        MetaProgression.SaveYellowDamageBonusUnlocks(0);
-        MetaProgression.SaveGreenDamageBonus(0);
-        MetaProgression.SaveGreenDamageBonusUnlocks(0);
-        MetaProgression.SaveBlueDamageBonus(0);
-        MetaProgression.SaveBlueDamageBonusUnlocks(0);
         SetCoinText();
     }
 

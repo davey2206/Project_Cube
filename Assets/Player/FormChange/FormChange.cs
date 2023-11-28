@@ -74,9 +74,6 @@ public class FormChange : MonoBehaviour
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
-        playerStats.YellowDamageBonus = 0;
-        playerStats.GreenDamageBonus = 0;
-        playerStats.BlueDamageBonus = 0;
 
         Wave wave = Instantiate(ShockWave, Vector3.zero, Quaternion.identity);
         wave.SetStats(3, playerStats.GetAttack() * 0.5f);
@@ -88,9 +85,6 @@ public class FormChange : MonoBehaviour
         screenShake.SpeedOfDecay = 0.25f;
         StartCoroutine(YellowShakeDelay(0.5f));
         DisableAffect();
-        playerStats.YellowDamageBonus = 10;
-        playerStats.GreenDamageBonus = 0;
-        playerStats.BlueDamageBonus = 0;
 
         BonusAttack = true;
         playerStats.BonusAttack += 10;
@@ -113,7 +107,7 @@ public class FormChange : MonoBehaviour
                     attack = Instantiate(strike, new Vector3(0, 0, -5f), Quaternion.identity);
                     break;
             }
-            attack.GetComponentInChildren<WaveAttacks>(true).SetStats(playerStats.GetYellowAttack() * 1.5f);
+            attack.GetComponentInChildren<WaveAttacks>(true).SetStats(playerStats.GetAttack() * 1.5f);
         }
         
     }
@@ -123,9 +117,6 @@ public class FormChange : MonoBehaviour
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
-        playerStats.YellowDamageBonus = 0;
-        playerStats.GreenDamageBonus = 25;
-        playerStats.BlueDamageBonus = 0;
 
         playerStats.BonusAttack -= 5;
         playerStats.AttackSpeed -= 0.5f;
@@ -140,9 +131,6 @@ public class FormChange : MonoBehaviour
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
-        playerStats.YellowDamageBonus = 0;
-        playerStats.GreenDamageBonus = 0;
-        playerStats.BlueDamageBonus = 10;
 
         playerStats.AttackSpeed += 1f;
         playerStats.BonusAttack -= 10;

@@ -9,30 +9,35 @@ public class ExplosiveClick : MonoBehaviour
 
     public void Ability(int level, Vector3 pos)
     {
-        float baseAttack = playerStats.GetBlueAttack();
+        float damage = 0;
         WaveAttacks wave;
 
         switch (level)
         {
             case 1:
                 wave = Instantiate(Wave, pos, Quaternion.identity);
-                wave.SetStats(playerStats.GetAttack() * 0.25f, 3, true);
+                damage = playerStats.GetAttack() * 0.25f;
+                wave.SetStats(damage + playerStats.GetAbilityDamage(damage), 3, true);
                 break;
             case 2:
                 wave = Instantiate(Wave, pos, Quaternion.identity);
-                wave.SetStats(playerStats.GetAttack() * 0.25f, 5, true);
+                damage = playerStats.GetAttack() * 0.25f;
+                wave.SetStats(damage + playerStats.GetAbilityDamage(damage), 5, true);
                 break;
             case 3:
                 wave = Instantiate(Wave, pos, Quaternion.identity);
-                wave.SetStats(playerStats.GetAttack() * 0.50f, 5, true);
+                damage = playerStats.GetAttack() * 0.50f;
+                wave.SetStats(damage + playerStats.GetAbilityDamage(damage), 5, true);
                 break;
             case 4:
                 wave = Instantiate(Wave, pos, Quaternion.identity);
-                wave.SetStats(playerStats.GetAttack() * 0.50f, 8, true);
+                damage = playerStats.GetAttack() * 0.50f;
+                wave.SetStats(damage + playerStats.GetAbilityDamage(damage), 8, true);
                 break;
             case 5:
                 wave = Instantiate(Wave, pos, Quaternion.identity);
-                wave.SetStats(playerStats.GetAttack() * 0.75f, 8, true);
+                damage = playerStats.GetAttack() * 0.75f;
+                wave.SetStats(damage + playerStats.GetAbilityDamage(damage), 8, true);
                 break;
         }
     }

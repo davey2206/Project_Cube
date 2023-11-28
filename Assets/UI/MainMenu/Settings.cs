@@ -17,8 +17,8 @@ public class Settings : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Music"))
         {
-            PlayerPrefs.SetFloat("Music", 2.25f);
-            PlayerPrefs.SetFloat("Sound", 2.25f);
+            PlayerPrefs.SetFloat("Music", 0f);
+            PlayerPrefs.SetFloat("Sound", 0f);
         }
         float Music = PlayerPrefs.GetFloat("Music");
         float Sound = PlayerPrefs.GetFloat("Sound");
@@ -26,19 +26,19 @@ public class Settings : MonoBehaviour
         SliderMusic.value = Music;
         SliderSound.value = Sound;
 
-        audioMixerMusic.SetFloat("MasterVolume", Mathf.Log10(Music) * 30);
-        audioMixerSound.SetFloat("MasterVolume", Mathf.Log10(Sound) * 30);
+        audioMixerMusic.SetFloat("MasterVolume", Music);
+        audioMixerSound.SetFloat("MasterVolume", Sound);
     }
 
     public void SetMusicVolume(float volume)
     {
-        audioMixerMusic.SetFloat("MasterVolume", Mathf.Log10(volume) * 30);
+        audioMixerMusic.SetFloat("MasterVolume", volume);
         PlayerPrefs.SetFloat("Music", volume);
     }
 
     public void SetSoundVolume(float volume)
     {
-        audioMixerSound.SetFloat("MasterVolume", Mathf.Log10(volume) * 30);
+        audioMixerSound.SetFloat("MasterVolume", volume);
         PlayerPrefs.SetFloat("Sound", volume);
     }
 }
