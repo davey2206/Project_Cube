@@ -4,17 +4,25 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] List<WaveList> Waves;
+    [Header("Waves")]
+    [SerializeField] AnimationCurve SpawnPoints;
+    [SerializeField] AnimationCurve Difficulty;
+    [SerializeField] int Waves;
+
+    [Header("Enemies")]
     [SerializeField] List<Enemy> enemies;
-    [SerializeField] PlayerStats playerStats;
     [SerializeField] List<GameObject> Bosses;
 
     [Header("UI")]
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
+
+    [Header("PlayerStats")]
+    [SerializeField] PlayerStats playerStats;
 
     int CurrentBoss;
     int round;
@@ -23,7 +31,8 @@ public class Spawner : MonoBehaviour
     int currentWave = 0;
     int spawnPoints;
     bool lastWaveDone = false;
-    bool Done = false;
+    bool done = false;
+
     private void Start()
     {
         StartCoroutine(SpawnEnemy());
@@ -32,10 +41,11 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (lastWaveDone && !Done)
+        if (lastWaveDone && GameObject.FindGameObjectsWithTag("Enemy").Count() == 0 && GameObject.FindGameObjectsWithTag("Boss").Count() == 0)
         {
-            if (GameObject.FindGameObjectsWithTag("Enemy").Count() == 0 && GameObject.FindGameObjectsWithTag("Boss").Count() == 0)
+            if (!done)
             {
+                done = true;
                 StartCoroutine(EndGame());
             }
         }
@@ -44,24 +54,24 @@ public class Spawner : MonoBehaviour
     IEnumerator EndGame()
     {
         yield return new WaitForSeconds(0.5f);
-        Done = true;
         playerStats.AddCoins();
         gameEnd.SetActive(true);
         gameStartText.text = "Victory";
         audioManager.PlaySong(2);
+        StopAllCoroutines();
     }
 
     IEnumerator SpawnEnemy()
     {
         yield return new WaitForSeconds(1f);
-        while (currentWave < Waves.Count)
+        while (currentWave < Waves)
         {
-            spawnPoints = Waves[currentWave].spawnPoints;
+            spawnPoints = (int)SpawnPoints.Evaluate(currentWave);
             List<Enemy> enemiesThatCanSpawn = new List<Enemy>();
 
             foreach (Enemy enemy in enemies)
             {
-                if ((int)enemy.difficultyRange.x <= Waves[currentWave].difficulty && Waves[currentWave].difficulty <= (int)enemy.difficultyRange.y)
+                if ((int)enemy.difficultyRange.x <= (int)Difficulty.Evaluate(currentWave) && (int)Difficulty.Evaluate(currentWave) <= (int)enemy.difficultyRange.y)
                 {
                     enemiesThatCanSpawn.Add(enemy);
                 }
@@ -100,7 +110,7 @@ public class Spawner : MonoBehaviour
                 Instantiate(enemy, new Vector3(pos.x, 0, pos.z), Quaternion.Euler(20, 0, 20));
             }
 
-            yield return new WaitForSeconds(Waves[currentWave].waveLength);
+            yield return new WaitForSeconds(5);
             currentWave++;
         }
 

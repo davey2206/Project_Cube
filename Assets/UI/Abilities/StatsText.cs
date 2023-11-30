@@ -18,6 +18,8 @@ public class StatsText : MonoBehaviour
             "Attack Speed " + playerStats.AttackSpeed.ToString() + Environment.NewLine +
             "Crit Rate " + playerStats.critRate.ToString() + "%" + Environment.NewLine +
             "Crit Damage " + playerStats.critDamage.ToString() + "%" + Environment.NewLine +
+            "Ability Damage " + playerStats.AbilityDamage.ToString() + "%" + Environment.NewLine +
+            "Ability Cooldown Reduction" + (playerStats.AbilityCooldown * 10).ToString() + Environment.NewLine +
             "Luck " + playerStats.Luck.ToString() + "" + Environment.NewLine;
     }
 }

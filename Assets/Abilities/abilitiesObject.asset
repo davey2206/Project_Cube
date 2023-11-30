@@ -16,13 +16,11 @@ MonoBehaviour:
   - Icon: {fileID: -2122009659, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Explosive Death
     Description:
-    - Enemies have a 25% chance to explode into 4 bullets that deal <color="yellow">
-      25% damage </color>
-    - chance increased to 30% and now deals <color="yellow"> 50% damage </color>
-    - chance increased to 35% and now deals <color="yellow"> 75% damage </color>
-      and Fires 2 more bullets
-    - chance increased to 40% and now deals <color="yellow"> 100% damage </color>
-    - chance increased to 50% and Fires 2 more bullets
+    - Enemies have a small chance to explode into 4 bullets that deal 25% damage
+    - now deals 50% damage
+    - now deals 75% damage and Fires 2 more bullets
+    - now deals 100% damage
+    - Fires 2 more bullets
     rarity: 0
     Level: 0
     Active: 0
@@ -76,12 +74,11 @@ MonoBehaviour:
   - Icon: {fileID: -1922271150, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Barbed Wire
     Description:
-    - When you get hit fire a wave that damages enemies hit for <color="green"> 100%
-      damage </color>
-    - now deals <color="green"> 125% damage </color>
-    - now deals <color="green"> 150% damage </color>
-    - now deals <color="green"> 200% damage </color>
-    - now deals <color="green"> 250% damage </color>
+    - When you get hit fire a wave that damages enemies hit for 100% damage
+    - now deals 125% damage
+    - now deals 150% damage
+    - now deals 200% damage
+    - now deals 250% damage
     rarity: 0
     Level: 0
     Active: 0
@@ -106,10 +103,9 @@ MonoBehaviour:
   - Icon: {fileID: -1626981962, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Explosive Click
     Description:
-    - On enemy hit fire a small wave that deal <color=#00ffffff>25% damage </color>
-      to enemies hit
+    - On enemy hit fire a small wave that deal 25% damage to enemies hit
     - now fires a medium size wave
-    - now deals <color=#00ffffff>50% damage </color>
+    - now deals 50% damage
     - 'now fires a big wave '
     - now deals <color=#00ffffff>75% damage </color>
     rarity: 0
@@ -136,7 +132,7 @@ MonoBehaviour:
   - Icon: {fileID: -843875499, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Basic Turret
     Description:
-    - On enemy death there is a 10% chance to spawn a turret that wil attack the
+    - On enemy death there is a small chance to spawn a turret that wil attack the
       closest enemy for 25% damage for 5 seconds.
     - now deals 50% damage
     - Now lasts for 8 seconds
@@ -166,7 +162,7 @@ MonoBehaviour:
   - Icon: {fileID: 1716008568, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Minigun Turret
     Description:
-    - On enemy death there is a 10% chance to spawn a minigun turret that wil attack
+    - On enemy death there is a small chance to spawn a minigun turret that wil attack
       the closest enemy with a burst of bullets for 10% damage each 3 times
     - now deals 20% damage
     - now fires 4 times
@@ -196,12 +192,11 @@ MonoBehaviour:
   - Icon: {fileID: 491985112, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Artillery Strike
     Description:
-    - every 5 seconds launch 1 Strike that deals <color="yellow"> 75% damage </color>
-      to a random area
+    - every 5 seconds launch 1 Strike that deals 75% damage to a random area
     - now launches 2 Strikes
-    - now launches 3 Strikes and deals <color="yellow"> 100% damage </color>
+    - now launches 3 Strikes and deals 100% damage
     - now launches 4 Strikes
-    - now launches 5 Strikes and deals <color="yellow"> 150% damage </color>
+    - now launches 5 Strikes and deals 150% damage
     rarity: 0
     Level: 0
     Active: 0
@@ -226,12 +221,11 @@ MonoBehaviour:
   - Icon: {fileID: 760736144, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Landmines
     Description:
-    - Every 10 seconds plant 3 landminse around you that deal <color="green"> 50%
-      damage </color>
+    - 'Every 10 seconds plant 3 landminse around you that deal 50% damage '
     - now plants 4 mines
-    - now plants 5 mines and deals <color="green"> 75% damage </color>
+    - now plants 5 mines and deals 75% damage
     - now plants 6 mines
-    - now plants 7 mines and deals <color="green"> 100% damage </color>
+    - now plants 7 mines and deals 100% damage
     rarity: 0
     Level: 0
     Active: 0
@@ -256,7 +250,7 @@ MonoBehaviour:
   - Icon: {fileID: -37691683, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Bullet Strom
     Description:
-    - Every 5 seconds storm of 20 bullets that deal <color="yellow"> 50% damage </color>
+    - Every 5 seconds storm of 20 bullets that deal 50% damage
     - now fires 30 bullets
     - now fires 40 bullets
     - now fires 50 bullets

@@ -11,13 +11,13 @@ public class BulletStormSpawner : MonoBehaviour
     [SerializeField] AudioSource AudioSource;
 
     int Sound = 1;
+    float rot = 0;
 
     public IEnumerator spawnBullet(float attack, int numberOfBullets)
     {
         while (true)
         {
             PlaySound();
-            float rot = 0;
             for (int i = 0; i < numberOfBullets; i++)
             {
                 float baseAttack = playerStats.GetAttack() * attack;
@@ -27,7 +27,7 @@ public class BulletStormSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
 
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(playerStats.GetCooldown(5));
         }
     }
 

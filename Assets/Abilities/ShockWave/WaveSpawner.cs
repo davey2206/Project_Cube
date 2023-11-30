@@ -14,7 +14,7 @@ public class WaveSpawner : MonoBehaviour
             float baseAttack = playerStats.GetAttack();
             var wave = Instantiate(Wave, Vector3.zero, Quaternion.identity);
             wave.SetStats(stunTime, baseAttack * attack);
-            yield return new WaitForSeconds(spawnDelay);
+            yield return new WaitForSeconds(playerStats.GetCooldown(spawnDelay));
         }
     }
 

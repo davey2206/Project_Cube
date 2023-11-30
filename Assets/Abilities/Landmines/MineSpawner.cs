@@ -22,7 +22,7 @@ public class MineSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
             }
 
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(playerStats.GetCooldown(10));
         }
     }
 

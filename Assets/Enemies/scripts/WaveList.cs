@@ -8,6 +8,4 @@ public class WaveList
 {
     public int difficulty;
     public int spawnPoints;
-    [Range(0, 15)]
-    public float waveLength;
 }

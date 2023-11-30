@@ -44,73 +44,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ccbfc26d441c75429ee3a8c8ea83cfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Waves:
-  - difficulty: 1
-    spawnPoints: 5
-    waveLength: 5
-  - difficulty: 2
-    spawnPoints: 10
-    waveLength: 7.5
-  - difficulty: 3
-    spawnPoints: 10
-    waveLength: 5
-  - difficulty: 3
-    spawnPoints: 20
-    waveLength: 10
-  - difficulty: 4
-    spawnPoints: 25
-    waveLength: 5
-  - difficulty: 4
-    spawnPoints: 25
-    waveLength: 10
-  - difficulty: 4
-    spawnPoints: 50
-    waveLength: 15
-  - difficulty: 5
-    spawnPoints: 25
-    waveLength: 5
-  - difficulty: 6
-    spawnPoints: 20
-    waveLength: 5
-  - difficulty: 6
-    spawnPoints: 25
-    waveLength: 10
-  - difficulty: 7
-    spawnPoints: 20
-    waveLength: 5
-  - difficulty: 7
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 7
-    spawnPoints: 50
-    waveLength: 5
-  - difficulty: 7
-    spawnPoints: 100
-    waveLength: 15
-  - difficulty: 8
-    spawnPoints: 25
-    waveLength: 5
-  - difficulty: 8
-    spawnPoints: 30
-    waveLength: 5
-  - difficulty: 8
-    spawnPoints: 40
-    waveLength: 10
-  - difficulty: 8
-    spawnPoints: 100
-    waveLength: 10
-  - difficulty: 8
-    spawnPoints: 100
-    waveLength: 10
-  - difficulty: 9
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 9
-    spawnPoints: 50
-    waveLength: 10
-  - difficulty: 10
-    spawnPoints: 100
-    waveLength: 5
+  SpawnPoints:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 5
+      inSlope: 5
+      outSlope: 5
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 10
+      inSlope: Infinity
+      outSlope: 3.2363324
+      tangentMode: 7
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 20
+      inSlope: Infinity
+      outSlope: 1.081081
+      tangentMode: 71
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 40
+      value: 60
+      inSlope: 1.081081
+      outSlope: 1.081081
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  Difficulty:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: Infinity
+      outSlope: 0.5
+      tangentMode: 71
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 3
+      value: 2
+      inSlope: 0.23076923
+      outSlope: 0.21621622
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 40
+      value: 10
+      inSlope: 0.21621622
+      outSlope: 0.21621622
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 1
+    m_RotationOrder: 4
+  Waves: 40
   enemies:
   - {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d, type: 3}
   - {fileID: 7114713656120535486, guid: 5c18051d991493c4b8070e314c85a952, type: 3}
@@ -120,8 +138,8 @@ MonoBehaviour:
   - {fileID: 8277437486846101053, guid: 88b7a4eca4c41ec4d916377263cf14c9, type: 3}
   - {fileID: 5274900260722448093, guid: 96885fc838428b244b4846d372e51cb9, type: 3}
   - {fileID: 4204673097409270202, guid: 91b34cd0aa641fe4d81372db6c2aca2c, type: 3}
-  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Bosses:
   - {fileID: 4932810366961168561, guid: fe7525578a6e5f74e9ede00f51a41028, type: 3}
   gameEnd: {fileID: 0}
   gameStartText: {fileID: 0}
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}

@@ -24,7 +24,7 @@ public class StrikeSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.1f);
             }
             
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(playerStats.GetCooldown(5));
         }
     }
 

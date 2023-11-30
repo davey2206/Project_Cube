@@ -49,6 +49,7 @@ public class PlayerStats : ScriptableObject
     public void ResetStats()
     {
         alive = true;
+        BaseAttack = 0.5f;
         BonusAttack = 0 + MetaProgression.GetAttackBonus();
         Luck = 0 + MetaProgression.GetLuckBonus();
         AttackSpeed = 3 + MetaProgression.GetAttackSpeedBonus();
@@ -83,5 +84,17 @@ public class PlayerStats : ScriptableObject
     public float GetCritDamage(float damage)
     {
         return damage + (damage * (critDamage / 100));
+    }
+
+    public float GetCooldown(float time)
+    {
+        float cooldown = time;
+
+        if (AbilityCooldown != 0)
+        {
+            cooldown = time * (100 / (100 + AbilityCooldown));
+        }
+
+        return cooldown;
     }
 }

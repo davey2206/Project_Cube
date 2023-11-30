@@ -63,11 +63,12 @@ public class Leveling : MonoBehaviour
     {
         xp = xp + amount;
 
+        excesXP = 0;
+        excesXP = xp - (int)xpNeededPerLevel.Evaluate(Level);
+
         if (xp >= (int)xpNeededPerLevel.Evaluate(Level) && !IsLeveling && playerStats.alive)
         {
             IsLeveling = true;
-            excesXP = 0;
-            excesXP = xp - (int)xpNeededPerLevel.Evaluate(Level);
             StartCoroutine(TimeStop());
         }
     }
@@ -96,6 +97,18 @@ public class Leveling : MonoBehaviour
             Descriptions[i].text = abilityToUse.Description[abilityToUse.Level];
             Icons[i].sprite = abilityToUse.Icon;
             abilitiesThatCanLevel.Remove(abilityToUse);
+        }
+    }
+
+    public void AddBaseDamage()
+    {
+        if (Level < 5)
+        {
+            playerStats.BaseAttack = playerStats.BaseAttack + 0.1f;
+        }
+        else if (Level % 5 == 0)
+        {
+            playerStats.BaseAttack = playerStats.BaseAttack + 0.1f;
         }
     }
 
@@ -226,6 +239,7 @@ public class Leveling : MonoBehaviour
     IEnumerator TimeStop()
     {
         yield return new WaitForSeconds(0.5f);
+        AddBaseDamage();
         if (gainAbiltiy)
         {
             buttons.SetActive(true);

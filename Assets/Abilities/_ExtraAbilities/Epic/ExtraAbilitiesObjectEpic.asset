@@ -16,7 +16,7 @@ MonoBehaviour:
   - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Attack Boost
     Description:
-    - Gain 10% more damage
+    - Gain 100% more damage
     rarity: 3
     Level: 0
     Active: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Ability Damage Boost
     Description:
-    - Gain 10% more Ability damage
+    - Gain 50% more Ability damage
     rarity: 3
     Level: 0
     Active: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   - Icon: {fileID: 1351249755, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Ability Cooldown reduction
     Description:
-    - Gain 10 Ability Cooldown reduction
+    - Gain 100 Ability Cooldown reduction
     rarity: 3
     Level: 0
     Active: 0
