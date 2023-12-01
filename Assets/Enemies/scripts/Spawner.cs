@@ -114,7 +114,7 @@ public class Spawner : MonoBehaviour
             currentWave++;
         }
 
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(10f);
 
         Instantiate(Bosses[0]);
         lastWaveDone = true;

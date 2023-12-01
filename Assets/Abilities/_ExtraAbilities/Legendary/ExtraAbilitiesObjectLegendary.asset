@@ -16,7 +16,7 @@ MonoBehaviour:
   - Icon: {fileID: 1485546916, guid: 015c901f9f6f9b448831941331a5878c, type: 3}
     Name: Attack Boost
     Description:
-    - Gain 200% more damage
+    - Gain 100% more damage
     rarity: 4
     Level: 0
     Active: 0

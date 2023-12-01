@@ -17,13 +17,13 @@ public class AttackBoost : MonoBehaviour
                 playerStats.BonusAttack = playerStats.BonusAttack + 20;
                 break;
             case RarityTypes.Rare:
-                playerStats.BonusAttack = playerStats.BonusAttack + 50;
+                playerStats.BonusAttack = playerStats.BonusAttack + 30;
                 break;
             case RarityTypes.Epic:
-                playerStats.BonusAttack = playerStats.BonusAttack + 100;
+                playerStats.BonusAttack = playerStats.BonusAttack + 50;
                 break;
             case RarityTypes.Legendary:
-                playerStats.BonusAttack = playerStats.BonusAttack + 200;
+                playerStats.BonusAttack = playerStats.BonusAttack + 100;
                 break;
         }
     }

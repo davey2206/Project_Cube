@@ -1,6 +1,8 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirstBoss : MonoBehaviour
@@ -27,6 +29,10 @@ public class FirstBoss : MonoBehaviour
     [SerializeField] GameObject AttackSFX;
     [SerializeField] GameObject PrepereSFX;
     [SerializeField] GameObject StumpSFX;
+    [SerializeField] GameObject SpawnSFX;
+
+    [Header("Cam")]
+    [SerializeField] GameObject vCam;
 
     float WaitTime;
     bool Ready;
@@ -39,7 +45,7 @@ public class FirstBoss : MonoBehaviour
         ArmL.SetActive(true);
         ArmR.SetActive(true);
         Body.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3.5f);
         animator.Play(animations[0].name);
         Ready = true;
         WaitTime = animations[0].length;
@@ -72,6 +78,22 @@ public class FirstBoss : MonoBehaviour
         Instantiate(PrepereSFX, transform.position, Quaternion.identity);
     }
 
+    public void Spawn()
+    {
+        Instantiate(SpawnSFX, transform.position, Quaternion.identity);
+        screenShake.Amplitude = 1.0f;
+        screenShake.SpeedOfDecay = 0.1f;
+
+        StartCoroutine(DisableVCam());
+    }
+
+    IEnumerator DisableVCam()
+    {
+        yield return new WaitForSeconds(1f);
+
+        vCam.SetActive(false);
+    }
+
     public void Attack1()
     {
         Instantiate(ShootEffect, ArmL.transform.position, Quaternion.identity);
@@ -94,7 +116,7 @@ public class FirstBoss : MonoBehaviour
         Instantiate(StumpSFX, transform.position, Quaternion.identity);
         screenShake.Amplitude = 1.0f;
         screenShake.SpeedOfDecay = 0.25f;
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 20; i++)
         {
             Instantiate(BossEnemy, new Vector3(spawnersFase3[i].transform.position.x, spawnersFase3[i].transform.position.y, spawnersFase3[i].transform.position.z), Quaternion.Euler(20, 0, 20));
         }
