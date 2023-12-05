@@ -145,6 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 0
+  isAudio: 1
+  audioManeger: {fileID: 11400000, guid: 3ec96a94adf2b42498cae9978a4395e7, type: 2}
 --- !u!114 &-3901640030030961197
 MonoBehaviour:
   m_ObjectHideFlags: 0

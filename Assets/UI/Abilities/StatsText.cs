@@ -12,14 +12,14 @@ public class StatsText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        statsText.text = "Max Health " + playerStats.maxHealth.ToString() + Environment.NewLine +
-            "Base Damage " + (playerStats.BaseAttack * 10).ToString() + Environment.NewLine +
-            "Bonus Damage " + playerStats.BonusAttack.ToString() + "%" + Environment.NewLine +
-            "Attack Speed " + playerStats.AttackSpeed.ToString() + Environment.NewLine +
-            "Crit Rate " + playerStats.critRate.ToString() + "%" + Environment.NewLine +
-            "Crit Damage " + playerStats.critDamage.ToString() + "%" + Environment.NewLine +
-            "Ability Damage " + playerStats.AbilityDamage.ToString() + "%" + Environment.NewLine +
-            "Ability Cooldown Reduction" + (playerStats.AbilityCooldown * 10).ToString() + Environment.NewLine +
-            "Luck " + playerStats.Luck.ToString() + "" + Environment.NewLine;
+        statsText.text = "Max Health: " + playerStats.maxHealth.ToString() + Environment.NewLine +
+            "Base Damage: " + (playerStats.BaseAttack * 10).ToString() + Environment.NewLine +
+            "Bonus Damage: " + playerStats.BonusAttack.ToString() + "%" + Environment.NewLine +
+            "Attack Speed: " + playerStats.AttackSpeed.ToString() + Environment.NewLine +
+            "Crit Rate: " + playerStats.critRate.ToString() + "%" + Environment.NewLine +
+            "Crit Damage: " + playerStats.critDamage.ToString() + "%" + Environment.NewLine +
+            "Ability Damage: " + playerStats.AbilityDamage.ToString() + "%" + Environment.NewLine +
+            "Cooldown Reduction: " + (playerStats.AbilityCooldown * 10).ToString() + Environment.NewLine +
+            "Luck: " + playerStats.Luck.ToString() + "" + Environment.NewLine;
     }
 }

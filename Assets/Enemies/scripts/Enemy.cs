@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     [Header("Effects")]
     [SerializeField] GameObject DieEffect;
     [SerializeField] GameObject HitSFX;
+    [SerializeField] GameObject DieSFX;
+    [SerializeField] AudioManeger audioManeger;
 
     [Header("Drops")]
     [SerializeField] PlayerStats playerStats;
@@ -110,7 +112,10 @@ public class Enemy : MonoBehaviour
             {
                 GetComponent<Animator>().SetTrigger("Hit");
             }
-            Instantiate(HitSFX, transform.position, Quaternion.identity);
+            if (audioManeger.CanSpawnAudio())
+            {
+                Instantiate(HitSFX, transform.position, Quaternion.identity);
+            }
         }
     }
 
@@ -197,6 +202,10 @@ public class Enemy : MonoBehaviour
         StartCoroutine(CoinDrop());
         isDead = true;
         GetComponent<BoxCollider>().enabled = false;
+        if (audioManeger.CanSpawnAudio())
+        {
+            Instantiate(DieSFX, transform.position, Quaternion.identity);
+        }
         Instantiate(DieEffect, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
         ActivateAbilities();
         Destroy(gameObject, 0.5f);

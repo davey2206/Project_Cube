@@ -7,6 +7,7 @@ public class MiniGunTurret : MonoBehaviour
     [SerializeField] Transform Head;
     [SerializeField] BulletMovement bullet;
     [SerializeField] GameObject SFX;
+    [SerializeField] AudioManeger audioManeger;
 
     Transform target;
     float attack;
@@ -20,7 +21,10 @@ public class MiniGunTurret : MonoBehaviour
             int x = 0;
             GetComponent<Animator>().SetTrigger("Fire");
             yield return new WaitForSeconds(0.2f);
-            Instantiate(SFX, transform.position, Quaternion.identity);
+            if (audioManeger.CanSpawnAudio())
+            {
+                Instantiate(SFX, transform.position, Quaternion.identity);
+            }
             for (int i = 0; i < 15; i++)
             {
                 if (target != null)

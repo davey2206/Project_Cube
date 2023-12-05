@@ -1281,9 +1281,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MainMenu
+  m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e33ee38ee52164041baa136264b3d19c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d567eccd62586943ae2390142232668, type: 2}
   m_sharedMaterial: {fileID: 4080079235711953987, guid: e33ee38ee52164041baa136264b3d19c,
     type: 2}
   m_fontSharedMaterials: []
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 45
+  m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_margin: {x: 20, y: 0, z: 20, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &456257115
@@ -1924,11 +1924,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1515916906}
     m_Modifications:
-    - target: {fileID: 1243577160247031818, guid: b4d4d99fdeb139941a3d8927c7350011,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3220639262095758738, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
       propertyPath: leveling
@@ -2039,25 +2034,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5600444635925891958, guid: b4d4d99fdeb139941a3d8927c7350011,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5953333772508877650, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
       propertyPath: m_Name
       value: LevelUpbuttonsStats
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953333772508877650, guid: b4d4d99fdeb139941a3d8927c7350011,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049375626526495444, guid: b4d4d99fdeb139941a3d8927c7350011,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8629837681002533559, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}
@@ -2248,7 +2228,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e33ee38ee52164041baa136264b3d19c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d567eccd62586943ae2390142232668, type: 2}
   m_sharedMaterial: {fileID: 4080079235711953987, guid: e33ee38ee52164041baa136264b3d19c,
     type: 2}
   m_fontSharedMaterials: []
@@ -2279,7 +2259,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 45
+  m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -2313,7 +2293,7 @@ MonoBehaviour:
   m_margin: {x: 20, y: 0, z: 20, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &879446911
@@ -2387,9 +2367,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MainMenu
+  m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e33ee38ee52164041baa136264b3d19c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d567eccd62586943ae2390142232668, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2419,7 +2399,7 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -3034,7 +3014,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Defeat / Victory
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e33ee38ee52164041baa136264b3d19c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d567eccd62586943ae2390142232668, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3921,11 +3901,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelUpbuttons
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953333772508877650, guid: b4d4d99fdeb139941a3d8927c7350011,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8629837681002533559, guid: b4d4d99fdeb139941a3d8927c7350011,
         type: 3}

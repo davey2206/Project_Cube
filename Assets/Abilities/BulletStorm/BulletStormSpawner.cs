@@ -9,6 +9,7 @@ public class BulletStormSpawner : MonoBehaviour
 
     [SerializeField] List<AudioClip> audioClips;
     [SerializeField] AudioSource AudioSource;
+    [SerializeField] AudioManeger audioManeger;
 
     int Sound = 1;
     float rot = 0;
@@ -33,20 +34,23 @@ public class BulletStormSpawner : MonoBehaviour
 
     public void PlaySound()
     {
-        switch (Sound)
+        if (audioManeger.CanSpawnAudio())
         {
-            case 1:
-                AudioSource.PlayOneShot(audioClips[0]);
-                break;
-            case 2:
-                AudioSource.PlayOneShot(audioClips[1]);
-                break;
-            case 3:
-                AudioSource.PlayOneShot(audioClips[2]);
-                break;
-            case 4:
-                AudioSource.PlayOneShot(audioClips[3]);
-                break;
+            switch (Sound)
+            {
+                case 1:
+                    AudioSource.PlayOneShot(audioClips[0]);
+                    break;
+                case 2:
+                    AudioSource.PlayOneShot(audioClips[1]);
+                    break;
+                case 3:
+                    AudioSource.PlayOneShot(audioClips[2]);
+                    break;
+                case 4:
+                    AudioSource.PlayOneShot(audioClips[3]);
+                    break;
+            }
         }
     }
 

@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] GameObject Menu;
     [SerializeField] GameObject HowToPlay;
+    [SerializeField] AudioManeger audioManeger;
 
     MainCubeAnimations cubeAnimator;
     sceneManager sceneManager;
@@ -21,6 +22,7 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         sceneManager.MainSceneLoad();
+        audioManeger.AudioSources = 0;
     }
 
     public void Upgrade()

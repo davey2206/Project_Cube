@@ -155,6 +155,7 @@ MonoBehaviour:
   Head: {fileID: 8160406674966888231}
   bullet: {fileID: 991903540875927492, guid: 7c65bb1d29acb024ab680433631d9f51, type: 3}
   SFX: {fileID: 7294976589790146365, guid: 24220683deebc0c42b320d7d6bb45947, type: 3}
+  audioManeger: {fileID: 11400000, guid: 3ec96a94adf2b42498cae9978a4395e7, type: 2}
 --- !u!95 &2575325829227895558
 Animator:
   serializedVersion: 5
