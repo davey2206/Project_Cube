@@ -20,7 +20,7 @@ public class StrikeSpawner : MonoBehaviour
 
                 var wave = Instantiate(Strike, pos, Quaternion.identity);
                 StartCoroutine(PlaySFX());
-                wave.GetComponentInChildren<WaveAttacks>(true).SetStats(baseAttack * attack);
+                wave.GetComponentInChildren<WaveAttacks>(true).SetStats((baseAttack * attack) + playerStats.GetAbilityDamage(baseAttack * attack));
                 yield return new WaitForSeconds(0.1f);
             }
             

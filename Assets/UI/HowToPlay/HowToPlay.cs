@@ -8,7 +8,6 @@ public class HowToPlay : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] GameObject Tutorial;
 
-    int counter = 0;
     GameObject cube;
     private void OnEnable()
     {

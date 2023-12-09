@@ -221,7 +221,7 @@ MonoBehaviour:
   - Icon: {fileID: 760736144, guid: 642f0962e213968418ab114df30148ae, type: 3}
     Name: Landmines
     Description:
-    - 'Every 10 seconds plant 3 landminse around you that deal 50% damage '
+    - 'Every 10 seconds plant 3 landmines around you that deal 50% damage '
     - now plants 4 mines
     - now plants 5 mines and deals 75% damage
     - now plants 6 mines
@@ -266,6 +266,35 @@ MonoBehaviour:
         - m_Target: {fileID: 7499869435078318781, guid: 27c868777a45d334dbecd254425e249d,
             type: 3}
           m_TargetAssemblyTypeName: BulletStorm, Assembly-CSharp
+          m_MethodName: Ability
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - Icon: {fileID: 0}
+    Name: Poison Field
+    Description:
+    - <stats>
+    - <stats>
+    - <stats>
+    - <stats>
+    - <stats>
+    rarity: 0
+    Level: 0
+    Active: 0
+    Unlocked: 1
+    abilityType: 3
+    Ability:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2598266088459570158, guid: 27c868777a45d334dbecd254425e249d,
+            type: 3}
+          m_TargetAssemblyTypeName: PoisonField, Assembly-CSharp
           m_MethodName: Ability
           m_Mode: 0
           m_Arguments:

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,6 +53,34 @@ public class Leveling : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        foreach (var ability in extraAbilities[0].abilities)
+        {
+            abilitiesThatCanLevelCommon.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[1].abilities)
+        {
+            abilitiesThatCanLevelUncommon.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[2].abilities)
+        {
+            abilitiesThatCanLevelRare.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[3].abilities)
+        {
+            abilitiesThatCanLevelEpic.Add(ability);
+        }
+
+        foreach (var ability in extraAbilities[4].abilities)
+        {
+            abilitiesThatCanLevelLegendary.Add(ability);
+        }
+    }
+
     private void Update()
     {
         xpBar.maxValue = (int)xpNeededPerLevel.Evaluate(Level);
@@ -87,16 +116,62 @@ public class Leveling : MonoBehaviour
 
         ability abilityToUse = null;
         int abilityLevel = 0;
-
-        for (int i = 0; i < 3; i++)
+        switch (abilitiesThatCanLevel.Count)
         {
-            abilityToUse = abilitiesThatCanLevel[Random.Range(0, abilitiesThatCanLevel.Count)];
-            Names[i].text = abilityToUse.Name;
-            abilityLevel = abilityToUse.Level + 1;
-            Levels[i].text = "Lvl " + abilityLevel.ToString();
-            Descriptions[i].text = abilityToUse.Description[abilityToUse.Level];
-            Icons[i].sprite = abilityToUse.Icon;
-            abilitiesThatCanLevel.Remove(abilityToUse);
+            case 1:
+                abilityToUse = abilitiesThatCanLevel[Random.Range(0, abilitiesThatCanLevel.Count)];
+                Names[0].text = abilityToUse.Name;
+                abilityLevel = abilityToUse.Level + 1;
+                Levels[0].text = "Lvl " + abilityLevel.ToString();
+                Descriptions[0].text = abilityToUse.Description[abilityToUse.Level];
+                Icons[0].sprite = abilityToUse.Icon;
+                abilitiesThatCanLevel.Remove(abilityToUse);
+
+                abilityToUse = SetButtons(1, RarityTypes.Rare, Color.blue, false);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(1, RarityTypes.Rare, Color.blue, false);
+                }
+
+                abilityToUse = SetButtons(2, RarityTypes.Rare, Color.blue, false);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(2, RarityTypes.Rare, Color.blue, false);
+                }
+                break;
+            case 2:
+                for (int i = 0; i < 2; i++)
+                {
+                    abilityToUse = abilitiesThatCanLevel[Random.Range(0, abilitiesThatCanLevel.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[abilityToUse.Level];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    abilitiesThatCanLevel.Remove(abilityToUse);
+                }
+
+                abilityToUse = SetButtons(2, RarityTypes.Rare, Color.blue, false);
+
+                while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
+                {
+                    abilityToUse = SetButtons(2, RarityTypes.Rare, Color.blue, false);
+                }
+                break;
+            default:
+                for (int i = 0; i < 3; i++)
+                {
+                    abilityToUse = abilitiesThatCanLevel[Random.Range(0, abilitiesThatCanLevel.Count)];
+                    Names[i].text = abilityToUse.Name;
+                    abilityLevel = abilityToUse.Level + 1;
+                    Levels[i].text = "Lvl " + abilityLevel.ToString();
+                    Descriptions[i].text = abilityToUse.Description[abilityToUse.Level];
+                    Icons[i].sprite = abilityToUse.Icon;
+                    abilitiesThatCanLevel.Remove(abilityToUse);
+                }
+                break;
         }
     }
 
@@ -145,60 +220,59 @@ public class Leveling : MonoBehaviour
             abilitiesThatCanLevelLegendary.Add(ability);
         }
 
-
-
         for (int i = 0; i < 3; i++)
         {
-            int rng = Random.Range(0, 101);
+            float rng = Random.Range(0, 101);
+            rng = rng - playerStats.Luck;
             if (rng > 40)
             {
-                ability abilityToUse = SetButtons(i, RarityTypes.Common, Color.white, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                ability abilityToUse = SetButtons(i, RarityTypes.Common, Color.white, true);
 
                 while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
                 {
-                    abilityToUse = SetButtons(i, RarityTypes.Common, Color.white, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                    abilityToUse = SetButtons(i, RarityTypes.Common, Color.white, true);
                 }
             }
             else if (rng < 40 && rng > 15)
             {
-                ability abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                ability abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green, true);
 
                 while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
                 {
-                    abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                    abilityToUse = SetButtons(i, RarityTypes.Uncommon, Color.green, true);
                 }
             }
             else if (rng < 15 && rng > 6)
             {
-                ability abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                ability abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue, true);
 
                 while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
                 {
-                    abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                    abilityToUse = SetButtons(i, RarityTypes.Rare, Color.blue, true);
                 }
             }
             else if (rng < 6 && rng > 1)
             {
-                ability abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                ability abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta, true);
 
                 while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
                 {
-                    abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                    abilityToUse = SetButtons(i, RarityTypes.Epic, Color.magenta, true);
                 }
             }
             else if (rng < 1)
             {
-                ability abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                ability abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow, true);
 
                 while (!GetComponent<Player>().canHeal() && abilityToUse.Name == "Heal")
                 {
-                    abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow, abilitiesThatCanLevelCommon, abilitiesThatCanLevelUncommon, abilitiesThatCanLevelRare, abilitiesThatCanLevelEpic, abilitiesThatCanLevelLegendary);
+                    abilityToUse = SetButtons(i, RarityTypes.Legendary, Color.yellow, true);
                 }
             }
         }
     }
 
-    public ability SetButtons(int i, RarityTypes rarity, Color color, List<ability> abilitiesThatCanLevelCommon, List<ability> abilitiesThatCanLevelUncommon, List<ability> abilitiesThatCanLevelRare, List<ability> abilitiesThatCanLevelEpic, List<ability> abilitiesThatCanLevelLegendary)
+    public ability SetButtons(int i, RarityTypes rarity, Color color, bool Stats)
     {
         ability abilityToUse = null;
 
@@ -226,12 +300,24 @@ public class Leveling : MonoBehaviour
                 break;
         }
 
-        DescriptionsStats[i].transform.parent.GetComponent<LevelAbility>().rarity = rarity;
-        NamesStats[i].text = abilityToUse.Name;
-        Levels[i].text = "";
-        DescriptionsStats[i].text = abilityToUse.Description[0];
-        IconsStats[i].sprite = abilityToUse.Icon;
-        IconsStats[i].color = color;
+        if (Stats)
+        {
+            DescriptionsStats[i].transform.parent.GetComponent<LevelAbility>().rarity = rarity;
+            NamesStats[i].text = abilityToUse.Name;
+            Levels[i].text = "";
+            DescriptionsStats[i].text = abilityToUse.Description[0];
+            IconsStats[i].sprite = abilityToUse.Icon;
+            IconsStats[i].color = color;
+        }
+        else
+        {
+            Descriptions[i].transform.parent.GetComponent<LevelAbility>().rarity = rarity;
+            Names[i].text = abilityToUse.Name;
+            Levels[i].text = "";
+            Descriptions[i].text = abilityToUse.Description[0];
+            Icons[i].sprite = abilityToUse.Icon;
+            Icons[i].color = color;
+        }
 
         return abilityToUse;
     }
@@ -243,7 +329,6 @@ public class Leveling : MonoBehaviour
         if (gainAbiltiy)
         {
             buttons.SetActive(true);
-            LevelUp();
             yield return new WaitForEndOfFrame();
             LevelUp();
             gainAbiltiy = !gainAbiltiy;
@@ -251,7 +336,6 @@ public class Leveling : MonoBehaviour
         else
         {
             buttonsStats.SetActive(true);
-            LevelUpStats();
             yield return new WaitForEndOfFrame();
             LevelUpStats();
             gainAbiltiy = !gainAbiltiy;
