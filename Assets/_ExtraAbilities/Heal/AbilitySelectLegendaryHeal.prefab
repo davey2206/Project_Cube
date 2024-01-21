@@ -11,13 +11,19 @@ PrefabInstance:
     - target: {fileID: 1115687564454883426, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_Name
-      value: AbilitySelectLegendaryLuck
+      value: AbilitySelectLegendaryHeal
       objectReference: {fileID: 0}
     - target: {fileID: 5405939886815960676, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_text
       value: Heal for 10 health
       objectReference: {fileID: 0}
+    - target: {fileID: 5823048577073901633, guid: 6757eae458229614c91bc30a0a7fde19,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e907334d7d84bf649a6b0e04b25da344,
+        type: 3}
     - target: {fileID: 7901860675394057637, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_Pivot.x

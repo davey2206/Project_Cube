@@ -18,6 +18,12 @@ PrefabInstance:
       propertyPath: m_text
       value: Increase your luck by 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5823048577073901633, guid: 6757eae458229614c91bc30a0a7fde19,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be2573b3020fa204ab4f420c4219db0d,
+        type: 3}
     - target: {fileID: 7901860675394057637, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_Pivot.x

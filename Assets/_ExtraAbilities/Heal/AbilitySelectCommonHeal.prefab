@@ -131,13 +131,19 @@ PrefabInstance:
     - target: {fileID: 4850226050752011720, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_Name
-      value: AbilitySelectCommonLuck
+      value: AbilitySelectCommonHeal
       objectReference: {fileID: 0}
     - target: {fileID: 5725520753034117811, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_text
       value: Heal for 1 health
       objectReference: {fileID: 0}
+    - target: {fileID: 6246599916653898527, guid: 707ed09714265c647899e41a16ccd501,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e907334d7d84bf649a6b0e04b25da344,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
