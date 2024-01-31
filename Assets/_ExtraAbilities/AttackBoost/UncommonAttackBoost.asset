@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6342a07c434b748ba27689e040e161, type: 3}
   m_Name: UncommonAttackBoost
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
   Name: AttackBoost
-  Card: []
+  Card:
+  - {fileID: 668119536147124049, guid: 3222094184797d64ab08493f060cc84c, type: 3}
   rarity: 2
   Level: 0
   Active: 0

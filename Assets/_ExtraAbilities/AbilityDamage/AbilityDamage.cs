@@ -11,13 +11,13 @@ public class AbilityDamage : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.AbilityDamage = playerStats.AbilityDamage + 5;
-                break;
-            case RarityTypes.Uncommon:
                 playerStats.AbilityDamage = playerStats.AbilityDamage + 10;
                 break;
+            case RarityTypes.Uncommon:
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 20;
+                break;
             case RarityTypes.Rare:
-                playerStats.AbilityDamage = playerStats.AbilityDamage + 25;
+                playerStats.AbilityDamage = playerStats.AbilityDamage + 30;
                 break;
             case RarityTypes.Epic:
                 playerStats.AbilityDamage = playerStats.AbilityDamage + 50;

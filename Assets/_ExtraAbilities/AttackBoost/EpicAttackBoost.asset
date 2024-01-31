@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EpicAttackBoost
   m_EditorClassIdentifier: 
   Name: AttackBoost
-  Card: []
+  Card:
+  - {fileID: 4464232582416062106, guid: 77352888d45b43d42a5b86a674652478, type: 3}
   rarity: 4
   Level: 0
   Active: 0

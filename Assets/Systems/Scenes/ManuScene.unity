@@ -162,11 +162,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3638892817371416592, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1034618483}
     - target: {fileID: 6003949182372286276, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: m_AnchorMax.x

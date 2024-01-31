@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LegendaryAbilityCooldown
   m_EditorClassIdentifier: 
   Name: AbilityCooldown
-  Card: []
+  Card:
+  - {fileID: 3887267543154452254, guid: 48bd375cc645fb94dbc324582f34d9d7, type: 3}
   rarity: 5
   Level: 0
   Active: 0

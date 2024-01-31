@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EpicCritDamage
   m_EditorClassIdentifier: 
   Name: CritDamage
-  Card: []
+  Card:
+  - {fileID: 4464232582416062106, guid: 717f4ccca7022cb41b7fc1c4f5b34a14, type: 3}
   rarity: 4
   Level: 0
   Active: 0

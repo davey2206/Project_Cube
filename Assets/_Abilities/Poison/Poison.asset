@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6342a07c434b748ba27689e040e161, type: 3}
   m_Name: Poison
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
   Name: Poison
-  Card: []
+  Card:
+  - {fileID: 2013761283762160703, guid: 3c1fe977928d33f4995eb6d027e0e3d4, type: 3}
+  - {fileID: 668119536147124049, guid: 410331ccc4050b74596c5d839a43120c, type: 3}
+  - {fileID: 1912820318304364811, guid: d0eac301e380bc4429bc0f43b6b4ce7c, type: 3}
+  - {fileID: 4464232582416062106, guid: 45fdfb84007f3ee4893e2f9cddd2b607, type: 3}
+  - {fileID: 3887267543154452254, guid: b9a3e7b3389c0a644a5ea8ccb093d7b7, type: 3}
   rarity: 0
   Level: 0
   Active: 0
-  Unlocked: 0
+  Unlocked: 1
   abilityType: 3
   Ability:
     m_PersistentCalls:

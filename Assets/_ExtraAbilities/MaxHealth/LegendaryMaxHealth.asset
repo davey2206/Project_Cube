@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LegendaryMaxHealth
   m_EditorClassIdentifier: 
   Name: MaxHealth
-  Card: []
+  Card:
+  - {fileID: 3887267543154452254, guid: a27344669e906b942830a1c548618452, type: 3}
   rarity: 5
   Level: 0
   Active: 0

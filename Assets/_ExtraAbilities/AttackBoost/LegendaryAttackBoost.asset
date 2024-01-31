@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LegendaryAttackBoost
   m_EditorClassIdentifier: 
   Name: AttackBoost
-  Card: []
+  Card:
+  - {fileID: 3887267543154452254, guid: d6f155bade0389848a6ef9e139379a08, type: 3}
   rarity: 5
   Level: 0
   Active: 0

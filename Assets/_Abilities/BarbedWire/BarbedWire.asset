@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6342a07c434b748ba27689e040e161, type: 3}
   m_Name: BarbedWire
   m_EditorClassIdentifier: 
-  Icon: {fileID: -1922271150, guid: 642f0962e213968418ab114df30148ae, type: 3}
   Name: BarbedWire
-  Card: []
+  Card:
+  - {fileID: 2013761283762160703, guid: 4a0bf1c7dfc6f9a4fa6954b4483d0528, type: 3}
+  - {fileID: 668119536147124049, guid: 5a2f9209b249d994aad5b8be815e9b6f, type: 3}
+  - {fileID: 1912820318304364811, guid: f69ffe1d72b81d84796cd479868a90ae, type: 3}
+  - {fileID: 4464232582416062106, guid: 09dba872a3a077845bc90e311c90c073, type: 3}
+  - {fileID: 3887267543154452254, guid: 36e0d96a2a9e2a443945b946a4e69d54, type: 3}
   rarity: 0
   Level: 0
   Active: 0
-  Unlocked: 0
+  Unlocked: 1
   abilityType: 2
   Ability:
     m_PersistentCalls:

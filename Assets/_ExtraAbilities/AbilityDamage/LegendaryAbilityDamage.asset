@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: LegendaryAbilityDamage
   m_EditorClassIdentifier: 
   Name: AbilityDamage
-  Card: []
+  Card:
+  - {fileID: 3887267543154452254, guid: 15ed63e198539c045bcc0f4d7393dc7f, type: 3}
   rarity: 5
   Level: 0
   Active: 0

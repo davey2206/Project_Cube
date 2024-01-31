@@ -21,6 +21,7 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
+        animator.SetTrigger("Play");
         sceneManager.MainSceneLoad();
         audioManeger.AudioSources = 0;
     }

@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6342a07c434b748ba27689e040e161, type: 3}
   m_Name: MiniGunTurret
   m_EditorClassIdentifier: 
-  Icon: {fileID: 1716008568, guid: 642f0962e213968418ab114df30148ae, type: 3}
   Name: MiniGunTurret
-  Card: []
+  Card:
+  - {fileID: 2013761283762160703, guid: 1ba2a3d6d73b3414da4a095a5116d1e7, type: 3}
+  - {fileID: 668119536147124049, guid: 9dbaf77425818294f8f13b6ce0cc819c, type: 3}
+  - {fileID: 1912820318304364811, guid: 61e28f1ddcb75c84eb487667bdb43b1a, type: 3}
+  - {fileID: 4464232582416062106, guid: 6ea668f355b810d4a8b1a5042222b288, type: 3}
+  - {fileID: 3887267543154452254, guid: 05c8085db26739e4794a19612df4db70, type: 3}
   rarity: 0
   Level: 0
   Active: 0
-  Unlocked: 0
+  Unlocked: 1
   abilityType: 0
   Ability:
     m_PersistentCalls:

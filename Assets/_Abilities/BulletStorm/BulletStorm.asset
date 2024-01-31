@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6342a07c434b748ba27689e040e161, type: 3}
   m_Name: BulletStorm
   m_EditorClassIdentifier: 
-  Icon: {fileID: -37691683, guid: 642f0962e213968418ab114df30148ae, type: 3}
   Name: BulletStorm
-  Card: []
+  Card:
+  - {fileID: 2013761283762160703, guid: cc8a37403bf4f1f46b4fa4d914e1b554, type: 3}
+  - {fileID: 668119536147124049, guid: 7a76c53572e63664087067e496d80c53, type: 3}
+  - {fileID: 1912820318304364811, guid: 06e308c9bd60cb340868aa86c2176b09, type: 3}
+  - {fileID: 4464232582416062106, guid: dc493c3e29402544e9838db1d3ab4d4a, type: 3}
+  - {fileID: 3887267543154452254, guid: 6200c72e798df564c8d16a3b9e393184, type: 3}
   rarity: 0
   Level: 0
   Active: 0
-  Unlocked: 0
+  Unlocked: 1
   abilityType: 3
   Ability:
     m_PersistentCalls:

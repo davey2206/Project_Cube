@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EpicAbilityCooldown
   m_EditorClassIdentifier: 
   Name: AbilityCooldown
-  Card: []
+  Card:
+  - {fileID: 4464232582416062106, guid: f84a44258c8075445bd62a13d4090de6, type: 3}
   rarity: 4
   Level: 0
   Active: 0

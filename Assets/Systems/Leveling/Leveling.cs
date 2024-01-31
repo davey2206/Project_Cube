@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Playables;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Leveling : MonoBehaviour
@@ -13,35 +15,29 @@ public class Leveling : MonoBehaviour
     [SerializeField] int xp;
     [SerializeField] public AnimationCurve xpNeededPerLevel;
     [SerializeField] abilitiesObject abilities;
-    [SerializeField] List<abilitiesObject> extraAbilities;
+    [SerializeField] abilitiesObject extraAbilities;
     [SerializeField] PlayerStats playerStats;
 
     //UI
     [SerializeField] Slider xpBar;
 
-    [Header("Abilitie")]
-    [SerializeField] GameObject buttons;
-    [SerializeField] List<TextMeshProUGUI> Levels;
-    [SerializeField] List<TextMeshProUGUI> Names;
-    [SerializeField] List<TextMeshProUGUI> Descriptions;
-    [SerializeField] List<Image> Icons;
+    [Header("AbilitySelect")]
+    [SerializeField] GameObject Spawner;
+    [SerializeField] GameObject SpawnPoint_1;
+    [SerializeField] GameObject SpawnPoint_2;
+    [SerializeField] GameObject SpawnPoint_3;
 
-    [Header("Stats")]
-    [SerializeField] GameObject buttonsStats;
-    [SerializeField] List<TextMeshProUGUI> NamesStats;
-    [SerializeField] List<TextMeshProUGUI> DescriptionsStats;
-    [SerializeField] List<Image> IconsStats;
 
     float Velocity;
     int excesXP = 0;
     bool IsLeveling;
     bool gainAbiltiy;
 
-    List<ability> abilitiesThatCanLevelCommon = new List<ability>();
-    List<ability> abilitiesThatCanLevelUncommon = new List<ability>();
-    List<ability> abilitiesThatCanLevelRare = new List<ability>();
-    List<ability> abilitiesThatCanLevelEpic = new List<ability>();
-    List<ability> abilitiesThatCanLevelLegendary = new List<ability>();
+    List<ability> abilitiesCommon = new List<ability>();
+    List<ability> abilitiesUncommon = new List<ability>();
+    List<ability> abilitiesRare = new List<ability>();
+    List<ability> abilitiesEpic = new List<ability>();
+    List<ability> abilitiesLegendary = new List<ability>();
 
     private void Awake()
     {
@@ -50,34 +46,6 @@ public class Leveling : MonoBehaviour
         {
             ability.Active = false;
             ability.Level = 0;
-        }
-    }
-
-    private void Start()
-    {
-        foreach (var ability in extraAbilities[0].abilities)
-        {
-            abilitiesThatCanLevelCommon.Add(ability);
-        }
-
-        foreach (var ability in extraAbilities[1].abilities)
-        {
-            abilitiesThatCanLevelUncommon.Add(ability);
-        }
-
-        foreach (var ability in extraAbilities[2].abilities)
-        {
-            abilitiesThatCanLevelRare.Add(ability);
-        }
-
-        foreach (var ability in extraAbilities[3].abilities)
-        {
-            abilitiesThatCanLevelEpic.Add(ability);
-        }
-
-        foreach (var ability in extraAbilities[4].abilities)
-        {
-            abilitiesThatCanLevelLegendary.Add(ability);
         }
     }
 
@@ -102,9 +70,151 @@ public class Leveling : MonoBehaviour
         }
     }
 
-    public void LevelUp(bool ability)
+    public void LevelUp(bool IsAbility)
     {
-        
+        if (IsAbility)
+        {
+            List<ability> a = new List<ability>();
+            a = GetAbilities();
+            ability AbilityToUse;
+
+            int rng = Random.Range(0, a.Count);
+            AbilityToUse = a[rng];
+            a.Remove(AbilityToUse);
+
+            GameObject Card1 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_1.transform);
+            Card1.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
+
+            rng = Random.Range(0, a.Count);
+            AbilityToUse = a[rng];
+            a.Remove(AbilityToUse);
+
+            GameObject Card2 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_2.transform);
+            Card2.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
+
+            rng = Random.Range(0, a.Count);
+            AbilityToUse = a[rng];
+            a.Remove(AbilityToUse);
+
+            GameObject Card3 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_3.transform);
+            Card3.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
+
+            Spawner.GetComponent<ResetCards>().AddReset();
+        }
+        else
+        {
+            SortExtraAbilities();
+            ability AbilityToUse;
+
+            AbilityToUse = GetExtraAbilities();
+            GameObject Card1 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_1.transform);
+            Card1.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
+
+            AbilityToUse = GetExtraAbilities();
+            GameObject Card2 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_2.transform);
+            Card2.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
+
+            AbilityToUse = GetExtraAbilities();
+            GameObject Card3 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_3.transform);
+            Card3.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
+
+            Spawner.GetComponent<ResetCards>().AddReset();
+        }
+
+        resetXp();
+    }
+
+    public List<ability> GetAbilities()
+    {
+        List<ability> a = new List<ability>();
+
+        foreach (var Ability in abilities.abilities)
+        {
+            if (Ability.Unlocked && Ability.Level < 5)
+            {
+                a.Add(Ability);
+            }
+        }
+
+        return a;
+    }
+
+    public ability GetExtraAbilities()
+    {
+        ability a = null;
+        float rng = Random.Range(0,100);
+        rng = rng + playerStats.Luck;
+
+        if (rng < 40)
+        {
+            a = abilitiesCommon[Random.Range(0, abilitiesCommon.Count)];
+            abilitiesCommon.Remove(a);
+        }
+        else if (rng >= 40 && rng < 70)
+        {
+            a = abilitiesUncommon[Random.Range(0, abilitiesUncommon.Count)];
+            abilitiesUncommon.Remove(a);
+        }
+        else if (rng >= 70 && rng < 85)
+        {
+            a = abilitiesRare[Random.Range(0, abilitiesRare.Count)];
+            abilitiesRare.Remove(a);
+        }
+        else if (rng >= 85 && rng < 95)
+        {
+            a = abilitiesEpic[Random.Range(0, abilitiesEpic.Count)];
+            abilitiesEpic.Remove(a);
+        }
+        else if (rng >= 95)
+        {
+            a = abilitiesLegendary[Random.Range(0, abilitiesLegendary.Count)];
+            abilitiesLegendary.Remove(a);
+        }
+
+        return a;
+    }
+
+    public void SortExtraAbilities()
+    {
+        foreach (var Ability in extraAbilities.abilities)
+        {
+            if (Ability.rarity == RarityTypes.Common)
+            {
+                abilitiesCommon.Add(Ability);
+            }
+        }
+
+        foreach (var Ability in extraAbilities.abilities)
+        {
+            if (Ability.rarity == RarityTypes.Uncommon)
+            {
+                abilitiesUncommon.Add(Ability);
+            }
+        }
+
+        foreach (var Ability in extraAbilities.abilities)
+        {
+            if (Ability.rarity == RarityTypes.Rare)
+            {
+                abilitiesRare.Add(Ability);
+            }
+        }
+
+        foreach (var Ability in extraAbilities.abilities)
+        {
+            if (Ability.rarity == RarityTypes.Epic)
+            {
+                abilitiesEpic.Add(Ability);
+            }
+        }
+
+        foreach (var Ability in extraAbilities.abilities)
+        {
+            if (Ability.rarity == RarityTypes.Legendary)
+            {
+                abilitiesLegendary.Add(Ability);
+            }
+        }
     }
 
     public void AddBaseDamage()
@@ -125,14 +235,12 @@ public class Leveling : MonoBehaviour
         AddBaseDamage();
         if (gainAbiltiy)
         {
-            buttons.SetActive(true);
             yield return new WaitForEndOfFrame();
             LevelUp(true);
             gainAbiltiy = !gainAbiltiy;
         }
         else
         {
-            buttonsStats.SetActive(true);
             yield return new WaitForEndOfFrame();
             LevelUp(false);
             gainAbiltiy = !gainAbiltiy;

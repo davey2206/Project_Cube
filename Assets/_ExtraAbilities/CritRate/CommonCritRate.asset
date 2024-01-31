@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CommonCritRate
   m_EditorClassIdentifier: 
   Name: CritRate
-  Card: []
+  Card:
+  - {fileID: 2013761283762160703, guid: 0ec3651a252847b469e4398d78b87d96, type: 3}
   rarity: 1
   Level: 0
   Active: 0

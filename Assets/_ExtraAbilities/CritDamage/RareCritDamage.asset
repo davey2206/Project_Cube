@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: RareCritDamage
   m_EditorClassIdentifier: 
   Name: CritDamage
-  Card: []
+  Card:
+  - {fileID: 1912820318304364811, guid: 4bb108851079fe84ab76d90bc83b98af, type: 3}
   rarity: 3
   Level: 0
   Active: 0

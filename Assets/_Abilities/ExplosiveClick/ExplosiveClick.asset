@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6342a07c434b748ba27689e040e161, type: 3}
   m_Name: ExplosiveClick
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
   Name: ExplosiveClick
-  Card: []
+  Card:
+  - {fileID: 2013761283762160703, guid: 88fcb787d6e0ec74eadeca28b8188485, type: 3}
+  - {fileID: 668119536147124049, guid: cc2673813d64db74b865cda32f3c866a, type: 3}
+  - {fileID: 1912820318304364811, guid: 9ebcd3f46a2756d478a6394da976b1e3, type: 3}
+  - {fileID: 4464232582416062106, guid: e290390104a2cad4385db477d6f5b114, type: 3}
+  - {fileID: 3887267543154452254, guid: f2a33b3d0f5e10941afa3eb1874f1f0c, type: 3}
   rarity: 0
   Level: 0
   Active: 0
-  Unlocked: 0
+  Unlocked: 1
   abilityType: 1
   Ability:
     m_PersistentCalls:

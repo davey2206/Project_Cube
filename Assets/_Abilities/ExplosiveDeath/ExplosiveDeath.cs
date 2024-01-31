@@ -24,17 +24,17 @@ public class ExplosiveDeath : MonoBehaviour
                 spawnBullets(4, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 3:
-                ChangeToExplode = 20;
+                ChangeToExplode = 25;
                 damage = playerStats.GetAttack() * 0.75f;
                 spawnBullets(6, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 4:
-                ChangeToExplode = 20;
+                ChangeToExplode = 25;
                 damage = playerStats.GetAttack();
                 spawnBullets(6, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;
             case 5:
-                ChangeToExplode = 15;
+                ChangeToExplode = 20;
                 damage = playerStats.GetAttack();
                 spawnBullets(8, pos, damage + playerStats.GetAbilityDamage(damage));
                 break;

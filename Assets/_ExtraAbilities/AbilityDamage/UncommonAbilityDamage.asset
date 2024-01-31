@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: UncommonAbilityDamage
   m_EditorClassIdentifier: 
   Name: AbilityDamage
-  Card: []
+  Card:
+  - {fileID: 668119536147124049, guid: 4133ee1ed1f2ade49bf643010f616c28, type: 3}
   rarity: 2
   Level: 0
   Active: 0

@@ -5,114 +5,36 @@ using UnityEngine;
 
 public class LevelAbility : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI nameOfAbility;
-    [SerializeField] abilitiesObject abilities;
-    [SerializeField] List<abilitiesObject> extraAbilities;
-    [SerializeField] GameObject buttons;
-    [SerializeField] Leveling leveling;
+    public ability Ability;
 
-    public RarityTypes rarity;
     public void LevelAbilityClick()
     {
         Time.timeScale = 1;
-        buttons.GetComponent<Animator>().SetTrigger("PopOut");
-        leveling.resetXp();
-        if (CheckAbility())
+        if (Ability.rarity == RarityTypes.Ability)
         {
-            foreach (var ability in abilities.abilities)
+            if (Ability.Active == false)
             {
-                if (ability.Name == nameOfAbility.text)
-                {
-                    if (ability.Active == false)
-                    {
-                        ability.Active = true;
-                        ability.LevelUp();
-                        if (ability.abilityType == AbilityTypes.Timed)
-                        {
-                            ability.Ability.Invoke(ability.Level, Vector3.zero);
-                        }
-                    }
-                    else
-                    {
-                        ability.LevelUp();
+                Ability.Active = true;
+            }
+            Ability.LevelUp();
 
-                        if (ability.abilityType == AbilityTypes.Timed)
-                        {
-                            ability.Ability.Invoke(ability.Level, Vector3.zero);
-                        }
-                    }
-                }
+            if (Ability.abilityType == AbilityTypes.Timed)
+            {
+                Ability.Ability.Invoke(Ability.Level, Vector3.zero);
             }
         }
         else
         {
-            switch (rarity)
+            if (Ability.abilityType == AbilityTypes.OneTime)
             {
-                case RarityTypes.Common:
-                    foreach (var ability in extraAbilities[0].abilities)
-                    {
-                        if (ability.Name == nameOfAbility.text)
-                        {
-                            ability.Ability.Invoke(1, Vector3.zero);
-                        }
-                    }
-                    break;
-                case RarityTypes.Uncommon:
-                    foreach (var ability in extraAbilities[1].abilities)
-                    {
-                        if (ability.Name == nameOfAbility.text)
-                        {
-                            ability.Ability.Invoke(1, Vector3.zero);
-                        }
-                    }
-                    break;
-                case RarityTypes.Rare:
-                    foreach (var ability in extraAbilities[2].abilities)
-                    {
-                        if (ability.Name == nameOfAbility.text)
-                        {
-                            ability.Ability.Invoke(1, Vector3.zero);
-                        }
-                    }
-                    break;
-                case RarityTypes.Epic:
-                    foreach (var ability in extraAbilities[3].abilities)
-                    {
-                        if (ability.Name == nameOfAbility.text)
-                        {
-                            ability.Ability.Invoke(1, Vector3.zero);
-                        }
-                    }
-                    break;
-                case RarityTypes.Legendary:
-                    foreach (var ability in extraAbilities[4].abilities)
-                    {
-                        if (ability.Name == nameOfAbility.text)
-                        {
-                            ability.Ability.Invoke(1, Vector3.zero);
-                        }
-                    }
-                    break;
+                Ability.Ability.Invoke(1, Vector3.zero);
             }
         }
+        
     }
 
-    public bool CheckAbility()
+    public void DestroySelf()
     {
-        int counter = 0;
-        foreach (var ability in abilities.abilities)
-        {
-            if (ability.Name == nameOfAbility.text)
-            {
-                counter++;
-            }
-        }
-
-        if (counter == 0)
-        {
-            return false;
-        }
-
-        return true;
+        Destroy(gameObject);
     }
 }
