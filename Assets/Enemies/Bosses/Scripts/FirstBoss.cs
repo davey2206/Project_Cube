@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.Burst.Intrinsics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -55,8 +56,17 @@ public class FirstBoss : MonoBehaviour
 
             if (ArmL.activeInHierarchy)
             {
-                animator.Play(animations[0].name);
-                WaitTime = animations[0].length;
+                int rng = Random.Range(0, 2);
+                if (rng == 0)
+                {
+                    animator.Play(animations[0].name);
+                    WaitTime = animations[0].length;
+                }
+                if (rng == 1)
+                {
+                    animator.Play(animations[4].name);
+                    WaitTime = animations[4].length;
+                }
             }
 
             if (!ArmL.activeInHierarchy && ArmR.activeInHierarchy)
@@ -92,6 +102,15 @@ public class FirstBoss : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         vCam.SetActive(false);
+    }
+    public void Attack1_2()
+    {
+        Instantiate(ShootEffect, ArmL.transform.position, Quaternion.identity);
+        Instantiate(AttackSFX, ArmL.transform.position, Quaternion.identity);
+        Instantiate(BossEnemy, new Vector3(spawnersFase1[2].transform.position.x, spawnersFase1[2].transform.position.y, spawnersFase1[2].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase1[3].transform.position.x, spawnersFase1[3].transform.position.y, spawnersFase1[3].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase1[4].transform.position.x, spawnersFase1[4].transform.position.y, spawnersFase1[4].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase1[5].transform.position.x, spawnersFase1[5].transform.position.y, spawnersFase1[5].transform.position.z), Quaternion.Euler(20, 0, 20));
     }
 
     public void Attack1()

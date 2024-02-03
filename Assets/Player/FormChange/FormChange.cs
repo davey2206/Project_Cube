@@ -19,7 +19,7 @@ public class FormChange : MonoBehaviour
     [SerializeField] GameObject YellowSFX;
 
     [Header("UI")]
-    [SerializeField] TextMeshProUGUI cooldown;
+    [SerializeField] Animator animator;
     [SerializeField] List<Image> images;
     [SerializeField] ScreenShakeObject screenShake;
 
@@ -187,23 +187,19 @@ public class FormChange : MonoBehaviour
     {
         onCooldown = true;
         int y = 15;
-
+        animator.SetTrigger("Used");
         foreach (var image in images)
         {
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
         }
 
-        for (int i = 0; i < 15; i++)
-        {
-            cooldown.text = y.ToString();
-            y--;
-            yield return new WaitForSeconds(1);
-        }
-        cooldown.text = "";
+        yield return new WaitForSeconds(15);
+
         foreach (var image in images)
         {
             image.color = new Color(image.color.r, image.color.g, image.color.b, 1f);
         }
+        animator.SetTrigger("Ready");
         onCooldown = false;
     }
 

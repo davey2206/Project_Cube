@@ -1,11 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
-using UnityEditor.Playables;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Leveling : MonoBehaviour
@@ -169,6 +165,11 @@ public class Leveling : MonoBehaviour
         {
             a = abilitiesLegendary[Random.Range(0, abilitiesLegendary.Count)];
             abilitiesLegendary.Remove(a);
+        }
+
+        if (GetComponent<Player>().canHeal() == false && a.Name == "Heal")
+        {
+            a = GetExtraAbilities();
         }
 
         return a;

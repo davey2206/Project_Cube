@@ -12,25 +12,24 @@ public class ResetCards : MonoBehaviour
 
     public void AddReset()
     {
-        Background.SetActive(true);
         SpawnPoint_1.GetComponentInChildren<Button>().onClick.AddListener(DeleteCards);
         SpawnPoint_2.GetComponentInChildren<Button>().onClick.AddListener(DeleteCards);
         SpawnPoint_3.GetComponentInChildren<Button>().onClick.AddListener(DeleteCards);
+        GetComponent<Animator>().SetTrigger("Spawn");
     }
 
     public void DeleteCards()
     {
-        Background.SetActive(false);
-        SpawnPoint_1.GetComponentInChildren<LevelAbility>().DestroySelf();
-        SpawnPoint_2.GetComponentInChildren<LevelAbility>().DestroySelf();
-        SpawnPoint_3.GetComponentInChildren<LevelAbility>().DestroySelf();
-
+        GetComponent<Animator>().SetTrigger("DeSpawn");
         StartCoroutine(ResetTime());
     }
 
     IEnumerator ResetTime()
     {
         yield return new WaitForSeconds(0.5f);
+        SpawnPoint_1.GetComponentInChildren<LevelAbility>().DestroySelf();
+        SpawnPoint_2.GetComponentInChildren<LevelAbility>().DestroySelf();
+        SpawnPoint_3.GetComponentInChildren<LevelAbility>().DestroySelf();
         Time.timeScale = 1;
     }
 }

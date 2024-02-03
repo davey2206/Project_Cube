@@ -322,6 +322,7 @@ MonoBehaviour:
   extraAbilities: {fileID: 11400000, guid: a85915e46e937454b92390f350d04ae2, type: 2}
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   xpBar: {fileID: 0}
+  Spawner: {fileID: 0}
   SpawnPoint_1: {fileID: 0}
   SpawnPoint_2: {fileID: 0}
   SpawnPoint_3: {fileID: 0}
@@ -346,8 +347,11 @@ MonoBehaviour:
     type: 3}
   YellowSFX: {fileID: 1958193319504074324, guid: 9251a80e8eea13c44b51020419111772,
     type: 3}
-  cooldown: {fileID: 0}
   images:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
