@@ -43,8 +43,16 @@ public class Player : MonoBehaviour
 
     public void TakeDamage()
     {
-        Health--;
         ActivateAbilitiesOnHit();
+        if (playerStats.Shields == 0)
+        {
+            Health--;
+        }
+        else
+        {
+            playerStats.Shields--;
+        }
+
         if (Health <= 0)
         {
             StartCoroutine(EndGame());

@@ -27,6 +27,10 @@ public class PlayerStats : ScriptableObject
     public float AbilityDamage;
     public float AbilityCooldown;
 
+    [Header("Shield")]
+    [Range(0,5)]
+    public int Shields;
+
     public float GetAttack()
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));

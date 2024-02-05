@@ -186,7 +186,6 @@ public class FormChange : MonoBehaviour
     IEnumerator ActiveCooldown()
     {
         onCooldown = true;
-        int y = 15;
         animator.SetTrigger("Used");
         foreach (var image in images)
         {

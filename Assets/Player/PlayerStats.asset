@@ -12,18 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c0f10ca6a22204b8348e01466c82c2, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  alive: 0
-  Coins: 113
-  Luck: 2
+  alive: 1
+  Coins: 0
+  Luck: 1
   maxHealth: 10
-  AttackSpeed: 6
-  critRate: 3
-  critDamage: 70
-  BaseAttack: 1
-  YellowDamage: 10
-  BlueDamage: 10
-  GreenDamage: 10
-  BonusAttack: 42
-  YellowDamageBonus: 0
-  BlueDamageBonus: 10
-  GreenDamageBonus: 0
+  AttackSpeed: 5
+  critRate: 1
+  critDamage: 50
+  BaseAttack: 0.9000001
+  BonusAttack: 70
+  AbilityDamage: 0
+  AbilityCooldown: 0
+  Shields: 3
