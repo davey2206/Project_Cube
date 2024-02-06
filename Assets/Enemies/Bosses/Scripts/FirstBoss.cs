@@ -141,8 +141,10 @@ public class FirstBoss : MonoBehaviour
 
     public void Attack2_2()
     {
-        Instantiate(ShootEffect, ArmL.transform.position, Quaternion.identity);
-        Instantiate(AttackSFX, ArmL.transform.position, Quaternion.identity);
+        Instantiate(ShootEffect, ArmR.transform.position, Quaternion.identity);
+        Instantiate(AttackSFX, ArmR.transform.position, Quaternion.identity);
+        screenShake.Amplitude = 0.60f;
+        screenShake.SpeedOfDecay = 0.20f;
         Instantiate(BossEnemy, new Vector3(spawnersFase3[0].transform.position.x, spawnersFase3[0].transform.position.y, spawnersFase3[0].transform.position.z), Quaternion.Euler(20, 0, 20));
         Instantiate(BossEnemy, new Vector3(spawnersFase3[1].transform.position.x, spawnersFase3[1].transform.position.y, spawnersFase3[1].transform.position.z), Quaternion.Euler(20, 0, 20));
         Instantiate(BossEnemy, new Vector3(spawnersFase3[2].transform.position.x, spawnersFase3[2].transform.position.y, spawnersFase3[2].transform.position.z), Quaternion.Euler(20, 0, 20));
