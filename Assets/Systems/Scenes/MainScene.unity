@@ -1259,6 +1259,11 @@ PrefabInstance:
       objectReference: {fileID: 1094332461}
     - target: {fileID: 5465920128977967381, guid: c422b764a1ff0064099c2424fd8735f0,
         type: 3}
+      propertyPath: levelText
+      value: 
+      objectReference: {fileID: 393503217}
+    - target: {fileID: 5465920128977967381, guid: c422b764a1ff0064099c2424fd8735f0,
+        type: 3}
       propertyPath: SpawnPoint_1
       value: 
       objectReference: {fileID: 2123926224}
@@ -1546,6 +1551,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2261736059826447276}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &393503217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3591152067525865115, guid: 8f5179eef35bdc147a509386855a5520,
+    type: 3}
+  m_PrefabInstance: {fileID: 929982805572950112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

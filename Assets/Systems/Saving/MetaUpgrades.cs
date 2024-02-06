@@ -30,6 +30,11 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveAbilityDamageBonus(0);
         MetaProgression.SaveAbilityDamageBonusUnlocks(0);
         MetaProgression.SaveCoins(0);
+        MetaProgression.SaveCritDamageBonus(0);
+        MetaProgression.SaveCritDamageBonusUnlocks(0);
+        MetaProgression.SaveCritRateBonus(0);
+        MetaProgression.SaveCritRateBonusUnlocks(0);
+
         SetCoinText();
     }
 

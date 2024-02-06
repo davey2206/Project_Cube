@@ -15,7 +15,10 @@ public class Leveling : MonoBehaviour
     [SerializeField] PlayerStats playerStats;
 
     //UI
+    [Header("XP Bar")]
     [SerializeField] Slider xpBar;
+    [SerializeField] TextMeshProUGUI levelText;
+
 
     [Header("AbilitySelect")]
     [SerializeField] GameObject Spawner;
@@ -141,27 +144,27 @@ public class Leveling : MonoBehaviour
         float rng = Random.Range(0,100);
         rng = rng + playerStats.Luck;
 
-        if (rng < 40)
+        if (rng < 44)
         {
             a = abilitiesCommon[Random.Range(0, abilitiesCommon.Count)];
             abilitiesCommon.Remove(a);
         }
-        else if (rng >= 40 && rng < 70)
+        else if (rng >= 40 && rng < 74)
         {
             a = abilitiesUncommon[Random.Range(0, abilitiesUncommon.Count)];
             abilitiesUncommon.Remove(a);
         }
-        else if (rng >= 70 && rng < 85)
+        else if (rng >= 74 && rng < 89)
         {
             a = abilitiesRare[Random.Range(0, abilitiesRare.Count)];
             abilitiesRare.Remove(a);
         }
-        else if (rng >= 85 && rng < 95)
+        else if (rng >= 89 && rng < 99)
         {
             a = abilitiesEpic[Random.Range(0, abilitiesEpic.Count)];
             abilitiesEpic.Remove(a);
         }
-        else if (rng >= 95)
+        else if (rng >= 99)
         {
             a = abilitiesLegendary[Random.Range(0, abilitiesLegendary.Count)];
             abilitiesLegendary.Remove(a);
@@ -253,6 +256,7 @@ public class Leveling : MonoBehaviour
     public void resetXp()
     {
         Level++;
+        levelText.text = Level.ToString();
         xp = 0 + excesXP;
         IsLeveling = false;
     }

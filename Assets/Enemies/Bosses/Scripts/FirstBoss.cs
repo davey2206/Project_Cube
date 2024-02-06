@@ -71,8 +71,17 @@ public class FirstBoss : MonoBehaviour
 
             if (!ArmL.activeInHierarchy && ArmR.activeInHierarchy)
             {
-                animator.Play(animations[1].name);
-                WaitTime = animations[1].length;
+                int rng = Random.Range(0, 2);
+                if (rng == 0)
+                {
+                    animator.Play(animations[1].name);
+                    WaitTime = animations[1].length;
+                }
+                if (rng == 1)
+                {
+                    animator.Play(animations[5].name);
+                    WaitTime = animations[5].length;
+                }
             }
 
             if (!ArmL.activeInHierarchy && !ArmR.activeInHierarchy)
@@ -113,6 +122,7 @@ public class FirstBoss : MonoBehaviour
         Instantiate(BossEnemy, new Vector3(spawnersFase1[5].transform.position.x, spawnersFase1[5].transform.position.y, spawnersFase1[5].transform.position.z), Quaternion.Euler(20, 0, 20));
     }
 
+
     public void Attack1()
     {
         Instantiate(ShootEffect, ArmL.transform.position, Quaternion.identity);
@@ -127,6 +137,20 @@ public class FirstBoss : MonoBehaviour
         Instantiate(AttackSFX, ArmR.transform.position, Quaternion.identity);
         Instantiate(BossEnemy, new Vector3(spawnersFase2[0].transform.position.x, spawnersFase2[0].transform.position.y, spawnersFase2[0].transform.position.z), Quaternion.Euler(20, 0, 20));
         Instantiate(BossEnemy, new Vector3(spawnersFase2[1].transform.position.x, spawnersFase2[1].transform.position.y, spawnersFase2[1].transform.position.z), Quaternion.Euler(20, 0, 20));
+    }
+
+    public void Attack2_2()
+    {
+        Instantiate(ShootEffect, ArmL.transform.position, Quaternion.identity);
+        Instantiate(AttackSFX, ArmL.transform.position, Quaternion.identity);
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[0].transform.position.x, spawnersFase3[0].transform.position.y, spawnersFase3[0].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[1].transform.position.x, spawnersFase3[1].transform.position.y, spawnersFase3[1].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[2].transform.position.x, spawnersFase3[2].transform.position.y, spawnersFase3[2].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[3].transform.position.x, spawnersFase3[3].transform.position.y, spawnersFase3[3].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[4].transform.position.x, spawnersFase3[4].transform.position.y, spawnersFase3[4].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[5].transform.position.x, spawnersFase3[5].transform.position.y, spawnersFase3[5].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[6].transform.position.x, spawnersFase3[6].transform.position.y, spawnersFase3[6].transform.position.z), Quaternion.Euler(20, 0, 20));
+        Instantiate(BossEnemy, new Vector3(spawnersFase3[7].transform.position.x, spawnersFase3[7].transform.position.y, spawnersFase3[7].transform.position.z), Quaternion.Euler(20, 0, 20));
     }
 
     public void Attack3()

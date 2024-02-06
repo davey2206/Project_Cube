@@ -124,7 +124,7 @@ MonoBehaviour:
   rendererBody: {fileID: 5997691547172428619}
   rendererCore: {fileID: 203459875099082271}
   color1: {r: 0.6, g: 0, b: 0, a: 0.19607843}
-  color2: {r: 1, g: 0, b: 0, a: 0.19607843}
+  color2: {r: 1, g: 0.1882353, b: 0, a: 0.19607843}
   ColorTrue: 0
 --- !u!114 &4125844724314489939
 MonoBehaviour:
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 1
   m_FrequencyGain: 1
-  mNoiseOffsets: {x: 0, y: 0, z: 0}
+  mNoiseOffsets: {x: -472.94104, y: 625.1471, z: -619.24817}
 --- !u!1 &2018608634325084097
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +993,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 42be74cd191e88543a93e375396d594e, type: 2}
   - {fileID: 7400000, guid: 93da1d5fc6e47374789555fc219665e1, type: 2}
   - {fileID: 7400000, guid: d54fc333c6c2a2641b9d0366c272df94, type: 2}
+  - {fileID: 7400000, guid: e75d654e3311717449144c85732b96bf, type: 2}
   spawnersFase1:
   - {fileID: 3167582126322379839}
   - {fileID: 2451971095730732805}
@@ -1004,18 +1005,6 @@ MonoBehaviour:
   - {fileID: 3631358158524333428}
   - {fileID: 4094308440991566118}
   spawnersFase3:
-  - {fileID: 8056608643560685979}
-  - {fileID: 1158737813526991804}
-  - {fileID: 2170868852212057337}
-  - {fileID: 8533105733050933064}
-  - {fileID: 7177363084852116846}
-  - {fileID: 31678747525132554}
-  - {fileID: 3163854695202451136}
-  - {fileID: 7040858633681325319}
-  - {fileID: 7707961957765822809}
-  - {fileID: 6114049008315108638}
-  - {fileID: 4929958752445774881}
-  - {fileID: 655119295813319728}
   - {fileID: 3156488528549923132}
   - {fileID: 7499068361683207264}
   - {fileID: 5440445592256408589}
@@ -1024,6 +1013,18 @@ MonoBehaviour:
   - {fileID: 1336587867985041696}
   - {fileID: 4759258659528469697}
   - {fileID: 7852320806946336156}
+  - {fileID: 8056608643560685979}
+  - {fileID: 7707961957765822809}
+  - {fileID: 1158737813526991804}
+  - {fileID: 6114049008315108638}
+  - {fileID: 2170868852212057337}
+  - {fileID: 8533105733050933064}
+  - {fileID: 7177363084852116846}
+  - {fileID: 31678747525132554}
+  - {fileID: 3163854695202451136}
+  - {fileID: 4929958752445774881}
+  - {fileID: 7040858633681325319}
+  - {fileID: 655119295813319728}
   BossEnemy: {fileID: 3352287954256755614, guid: 597e4af92d08d5c4d9841830520aa947,
     type: 3}
   StumpEffect: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85,
@@ -1402,7 +1403,7 @@ MonoBehaviour:
   rendererBody: {fileID: 22240905296407268}
   rendererCore: {fileID: 596446379457961484}
   color1: {r: 0.6, g: 0, b: 0, a: 0.19607843}
-  color2: {r: 1, g: 0, b: 0, a: 0.19607843}
+  color2: {r: 1, g: 0.18762861, b: 0, a: 0.19607843}
   ColorTrue: 0
 --- !u!114 &3682660426356584090
 MonoBehaviour:
@@ -2006,7 +2007,7 @@ MonoBehaviour:
   rendererBody: {fileID: 7729558499062305673}
   rendererCore: {fileID: 5764393936090525897}
   color1: {r: 0.6, g: 0, b: 0, a: 0.19607843}
-  color2: {r: 1, g: 0, b: 0, a: 0.19607843}
+  color2: {r: 1, g: 0.1882353, b: 0, a: 0.19607843}
   ColorTrue: 0
 --- !u!114 &111105123363912320
 MonoBehaviour:
