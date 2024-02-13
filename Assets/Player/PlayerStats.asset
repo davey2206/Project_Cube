@@ -16,11 +16,11 @@ MonoBehaviour:
   Coins: 0
   Luck: 1
   maxHealth: 10
-  AttackSpeed: 5
+  AttackSpeed: 4
   critRate: 1
   critDamage: 50
-  BaseAttack: 0.9000001
-  BonusAttack: 70
+  BaseAttack: 1.0000001
+  BonusAttack: 20
   AbilityDamage: 0
   AbilityCooldown: 0
   Shields: 3

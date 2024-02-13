@@ -34,6 +34,12 @@ public class MetaUpgrades : MonoBehaviour
         MetaProgression.SaveCritDamageBonusUnlocks(0);
         MetaProgression.SaveCritRateBonus(0);
         MetaProgression.SaveCritRateBonusUnlocks(0);
+        MetaProgression.SaveMaxHealthBonus(0);
+        MetaProgression.SaveMaxHealthUnlocks(0);
+        MetaProgression.SavePoison(0);
+        MetaProgression.SavePoisonUnlocks(0);
+        MetaProgression.SaveShields(0);
+        MetaProgression.SaveShieldsUnlocks(0);
 
         SetCoinText();
     }

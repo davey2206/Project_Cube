@@ -238,7 +238,7 @@ MonoBehaviour:
   Cost: 1
   checkOverlap: 1
   Speed: 1
-  Health: 1
+  Health: 1.2
   HealthBar: {fileID: 6092161750793933159}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   DieEffect: {fileID: 6201523421047463331, guid: 70cca6496584a0d45a42b0f50d302d33,

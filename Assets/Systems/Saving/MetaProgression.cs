@@ -61,4 +61,22 @@ public class MetaProgression : MonoBehaviour
     public static void SaveAbilityCooldownBonusUnlocks(int Unlocks) { PlayerPrefs.SetInt("AbilityCooldownUnlocks", Unlocks); }
     public static int GetAbilityCooldownBonus() { return PlayerPrefs.GetInt("AbilityCooldown"); }
     public static int GetAbilityCooldownBonusUnlocks() { return PlayerPrefs.GetInt("AbilityCooldownUnlocks"); }
+
+    //MaxHealth
+    public static void SaveMaxHealthBonus(int MaxHealth) { PlayerPrefs.SetInt("MaxHealth", MaxHealth); }
+    public static void SaveMaxHealthUnlocks(int Unlocks) { PlayerPrefs.SetInt("MaxHealthUnlocks", Unlocks); }
+    public static int GetMaxHealthBonus() { return PlayerPrefs.GetInt("MaxHealth"); }
+    public static int GetMaxHealthUnlocks() { return PlayerPrefs.GetInt("MaxHealthUnlocks"); }
+
+    //MaxHealth
+    public static void SavePoison(int Poison) { PlayerPrefs.SetInt("Poison", Poison); }
+    public static void SavePoisonUnlocks(int Unlocks) { PlayerPrefs.SetInt("PoisonUnlocks", Unlocks); }
+    public static int GetPoison() { return PlayerPrefs.GetInt("Poison"); }
+    public static int GetPoisonUnlocks() { return PlayerPrefs.GetInt("PoisonUnlocks"); }
+
+    //MaxHealth
+    public static void SaveShields(int Shields) { PlayerPrefs.SetInt("Shields", Shields); }
+    public static void SaveShieldsUnlocks(int Unlocks) { PlayerPrefs.SetInt("ShieldsUnlocks", Unlocks); }
+    public static int GetShields() { return PlayerPrefs.GetInt("Shields"); }
+    public static int GetShieldsUnlocks() { return PlayerPrefs.GetInt("ShieldsUnlocks"); }
 }

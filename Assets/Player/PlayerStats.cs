@@ -56,12 +56,12 @@ public class PlayerStats : ScriptableObject
         BaseAttack = 0.5f;
         BonusAttack = 0 + MetaProgression.GetAttackBonus();
         Luck = 0 + MetaProgression.GetLuckBonus();
-        AttackSpeed = 3 + MetaProgression.GetAttackSpeedBonus();
+        AttackSpeed = 4 + MetaProgression.GetAttackSpeedBonus();
         critRate = 1 + MetaProgression.GetCritRateBonus();
         critDamage = 50 + MetaProgression.GetCritDamageBonus();
         AbilityDamage = 0 + MetaProgression.GetAbilityDamageBonus();
         AbilityCooldown = 0 + MetaProgression.GetAbilityCooldownBonus();
-        maxHealth = 10;
+        maxHealth = 10 + MetaProgression.GetMaxHealthBonus();
         Coins = 0;
     }
 
