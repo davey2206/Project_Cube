@@ -125,3 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 0.8
+  isAudio: 0
+  audioManeger: {fileID: 0}
