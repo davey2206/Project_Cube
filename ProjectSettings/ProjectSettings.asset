@@ -14,8 +14,8 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DavopiaGame
   productName: Cube Survivor
-  defaultCursor: {fileID: 2800000, guid: a00d5d2d44cc8d54386a6ad471ecd5c3, type: 3}
-  cursorHotspot: {x: 16, y: 16}
+  defaultCursor: {fileID: 2800000, guid: 9d9a4bcd964b82541875c80e89342fa2, type: 3}
+  cursorHotspot: {x: 256, y: 256}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
@@ -135,7 +135,7 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  bundleVersion: 0.1.4
+  bundleVersion: 0.1.5
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0

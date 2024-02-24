@@ -63,6 +63,7 @@ public class PlayerStats : ScriptableObject
         AbilityCooldown = 0 + MetaProgression.GetAbilityCooldownBonus();
         maxHealth = 10 + MetaProgression.GetMaxHealthBonus();
         Coins = 0;
+        Shields = 0;
     }
 
     public void AddCoins()

@@ -182,6 +182,12 @@ public class Leveling : MonoBehaviour
 
     public void SortExtraAbilities()
     {
+        abilitiesCommon.Clear();
+        abilitiesUncommon.Clear();
+        abilitiesRare.Clear();
+        abilitiesEpic.Clear();
+        abilitiesLegendary.Clear();
+
         foreach (var Ability in extraAbilities.abilities)
         {
             if (Ability.rarity == RarityTypes.Common)

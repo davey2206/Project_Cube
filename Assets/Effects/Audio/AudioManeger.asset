@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdc49d6c2c961f46bc047d80f89bc31, type: 3}
   m_Name: AudioManeger
   m_EditorClassIdentifier: 
-  AudioSources: 28
+  AudioSources: 0
