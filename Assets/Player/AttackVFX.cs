@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class AttackVFX : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
     [SerializeField] abilitiesObject abilities;
+    [SerializeField] ColorEnum color;
+    [SerializeField] WaveVFX wave;
 
     Camera cam;
     bool FirstEnemyHit;
@@ -21,6 +22,27 @@ public class AttackVFX : MonoBehaviour
     void Update()
     {
         transform.localScale = Vector3.SmoothDamp(transform.localScale, new Vector3(0.5f, 0.5f, 0.5f), ref Velocity, 10 * Time.deltaTime);
+    }
+
+    public void UpdateColor(ColorEnum colorEnum)
+    {
+        switch (colorEnum)
+        {
+            case ColorEnum.White:
+                wave.SetColor(new Color(1,1,1,0));
+                break;
+            case ColorEnum.Blue:
+                wave.SetColor(new Color(0, 1, 1, 0));
+                break;
+            case ColorEnum.Green:
+                wave.SetColor(new Color(0.169284f, 1f, 0f, 0));
+                break;
+            case ColorEnum.Yellow:
+                wave.SetColor(new Color(1, 1, 0, 0));
+                break;
+        }
+
+        color = colorEnum;
     }
 
     public void ActivateAbilitiesOnClick(Vector3 pos)
@@ -39,7 +61,7 @@ public class AttackVFX : MonoBehaviour
         if (other.transform.CompareTag("Enemy"))
         {
             Enemy enemy = other.transform.GetComponent<Enemy>();
-            enemy.TakeDamage(playerStats.GetAttack());
+            enemy.TakeDamage(playerStats.GetAttack(), color);
 
             if (!FirstEnemyHit)
             {

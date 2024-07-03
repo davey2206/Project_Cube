@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
+  color: 3
 --- !u!54 &-7217397879255959316
 Rigidbody:
   m_ObjectHideFlags: 0

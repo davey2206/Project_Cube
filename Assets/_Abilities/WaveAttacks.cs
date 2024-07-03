@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaveAttacks : MonoBehaviour
 {
     [SerializeField] float Size;
+    [SerializeField] ColorEnum color;
 
     Vector3 Velocity;
     float attack;
@@ -44,8 +45,9 @@ public class WaveAttacks : MonoBehaviour
     {
         if (other.transform.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
-            other.gameObject.GetComponent<Enemy>().Stun(stun);
+            Enemy enemy = other.transform.GetComponent<Enemy>();
+            enemy.TakeDamage(attack, color);
+            enemy.Stun(stun);
         }
 
         if (other.transform.CompareTag("Boss"))

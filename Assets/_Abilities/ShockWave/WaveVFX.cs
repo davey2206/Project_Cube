@@ -22,4 +22,10 @@ public class WaveVFX : MonoBehaviour
         timeElapsed += Time.deltaTime;
         vfx.SetFloat("Size", SizeOfVFX);
     }
+
+    public void SetColor(Color c)
+    {
+        color = c;
+        vfx.SetVector4("Color", color);
+    }
 }

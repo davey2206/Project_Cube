@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.VFX;
 
@@ -8,6 +9,7 @@ public class Wave : MonoBehaviour
     float attack;
     float stunTime;
     [SerializeField] ScreenShakeObject screenShake;
+    [SerializeField] ColorEnum color;
 
     private void Start()
     {
@@ -29,8 +31,9 @@ public class Wave : MonoBehaviour
     {
         if (other.transform.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Enemy>().Stun(stunTime);
-            other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
+            Enemy enemy = other.transform.GetComponent<Enemy>();
+            enemy.TakeDamage(attack, color);
+            enemy.Stun(stunTime);
         }
 
         if (other.transform.CompareTag("Boss"))

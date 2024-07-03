@@ -8,6 +8,7 @@ public class FormChange : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
     [SerializeField] Player player;
+    [SerializeField] AttackVFX attackVFX;
     [SerializeField] Renderer mainMet;
     [SerializeField] Renderer subMet;
 
@@ -32,6 +33,11 @@ public class FormChange : MonoBehaviour
     void Update()
     {
         ChangeForm();
+    }
+
+    private void Start()
+    {
+        attackVFX.UpdateColor(ColorEnum.White);
     }
 
     public void ChangeForm()
@@ -71,6 +77,7 @@ public class FormChange : MonoBehaviour
 
     public void White()
     {
+        attackVFX.UpdateColor(ColorEnum.White);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
@@ -81,6 +88,7 @@ public class FormChange : MonoBehaviour
 
     public void Yellow()
     {
+        attackVFX.UpdateColor(ColorEnum.Yellow);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         StartCoroutine(YellowShakeDelay(0.5f));
@@ -114,6 +122,7 @@ public class FormChange : MonoBehaviour
 
     public void Green()
     {
+        attackVFX.UpdateColor(ColorEnum.Green);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
@@ -128,6 +137,7 @@ public class FormChange : MonoBehaviour
 
     public void Blue()
     {
+        attackVFX.UpdateColor(ColorEnum.Blue);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();

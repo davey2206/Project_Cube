@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 6
+  color: 2
 --- !u!1001 &4416285771527238055
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletMovement : MonoBehaviour
 {
     [SerializeField] float Speed;
+    [SerializeField] ColorEnum color;
     float attack;
     Rigidbody rb;
 
@@ -22,7 +23,7 @@ public class BulletMovement : MonoBehaviour
     {
         if (other.transform.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Enemy>().TakeDamage(attack);
+            other.gameObject.GetComponent<Enemy>().TakeDamage(attack, color);
             Destroy(gameObject);
         }
 

@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 0
+  color: 1
 --- !u!114 &-2539617785475874818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 0.5
+  isAudio: 0
+  audioManeger: {fileID: 0}
 --- !u!1001 &4416285771527238055
 PrefabInstance:
   m_ObjectHideFlags: 0

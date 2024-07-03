@@ -1,12 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 
 public class Enemy : MonoBehaviour
 {
     [Header("Spawner")]
-    [SerializeField] public Vector2 difficultyRange;
     [SerializeField] public int Cost;
     [SerializeField] bool checkOverlap;
 
@@ -14,13 +12,18 @@ public class Enemy : MonoBehaviour
     [SerializeField] float Speed;
     [SerializeField] float Health;
     [SerializeField] Transform HealthBar;
+    [SerializeField] GameObject Shield;
+    [SerializeField] ColorEnum ShieldColor;
     [SerializeField] abilitiesObject abilities;
 
     [Header("Effects")]
     [SerializeField] GameObject DieEffect;
     [SerializeField] GameObject HitSFX;
     [SerializeField] GameObject DieSFX;
+    [SerializeField] GameObject ShieldBrakeVFX;
     [SerializeField] AudioManeger audioManeger;
+    [SerializeField] Animator animator;
+    [SerializeField] Collider BoxCollider;
 
     [Header("Drops")]
     [SerializeField] PlayerStats playerStats;
@@ -77,46 +80,57 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float damage, ColorEnum color)
     {
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
-        bool crit = false;
-
-        if (playerStats.crit())
+        if (Shield.activeInHierarchy)
         {
-            damage = playerStats.GetCritDamage(damage);
-            Health = Health - damage;
-            DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
-            numbers.ShowDamage(damage);
-            numbers.Crit();
-            crit = true;
-        }
-        else
-        {
-            Health = Health - damage;
-            DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
-            numbers.ShowDamage(damage);
-        }
-
-        if (Health <= 0)
-        {
-            Die();
-        }
-        else
-        {
-            if (crit)
+            if (color == ShieldColor)
             {
-                GetComponent<Animator>().SetTrigger("Crit");
+                Shield.SetActive(false);
+                Instantiate(ShieldBrakeVFX, new Vector3(transform.position.x ,transform.position.y + 2f, transform.position.z), Quaternion.identity);
+            }
+        }
+        else
+        {
+            Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
+            bool crit = false;
+
+            if (playerStats.crit())
+            {
+                damage = playerStats.GetCritDamage(damage);
+                Health = Health - damage;
+                DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
+                numbers.ShowDamage(damage);
+                numbers.Crit();
+                crit = true;
             }
             else
             {
-                GetComponent<Animator>().SetTrigger("Hit");
+                Health = Health - damage;
+                DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
+                numbers.ShowDamage(damage);
             }
-            if (audioManeger.CanSpawnAudio())
+
+            if (Health <= 0)
             {
-                Instantiate(HitSFX, transform.position, Quaternion.identity);
+                Die();
             }
-        }
+            else
+            {
+                if (crit)
+                {
+                    animator.SetTrigger("Crit");
+                }
+                else
+                {
+                    animator.SetTrigger("Hit");
+                }
+                if (audioManeger.CanSpawnAudio())
+                {
+                    Instantiate(HitSFX, transform.position, Quaternion.identity);
+                }
+            }
+        }       
     }
 
     public void ActivateAbilities()
@@ -197,11 +211,11 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<Animator>().SetTrigger("Die");
+        animator.SetTrigger("Die");
         StartCoroutine(XpDrop());
         StartCoroutine(CoinDrop());
         isDead = true;
-        GetComponent<BoxCollider>().enabled = false;
+        BoxCollider.enabled = false;
         if (audioManeger.CanSpawnAudio())
         {
             Instantiate(DieSFX, transform.position, Quaternion.identity);

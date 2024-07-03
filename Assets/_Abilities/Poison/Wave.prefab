@@ -86,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Size: 3
+  color: 1
 --- !u!114 &-2539617785475874818
 MonoBehaviour:
   m_ObjectHideFlags: 0

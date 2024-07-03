@@ -4,18 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class Spawner : MonoBehaviour
 {
     [Header("Waves")]
     [SerializeField] AnimationCurve SpawnPoints;
-    [SerializeField] AnimationCurve Difficulty;
-    [SerializeField] int Waves;
 
     [Header("Enemies")]
-    [SerializeField] List<Enemy> enemies;
-    [SerializeField] List<GameObject> Bosses;
+    [SerializeField] List<WaveList> Waves;
+    [SerializeField] GameObject Boss;
 
     [Header("UI")]
     [SerializeField] GameObject gameEnd;
@@ -23,9 +20,6 @@ public class Spawner : MonoBehaviour
 
     [Header("PlayerStats")]
     [SerializeField] PlayerStats playerStats;
-
-    int CurrentBoss;
-    int round;
 
     Manager audioManager;
     int currentWave = 0;
@@ -64,59 +58,57 @@ public class Spawner : MonoBehaviour
     IEnumerator SpawnEnemy()
     {
         yield return new WaitForSeconds(1f);
-        while (currentWave < Waves)
+        while (currentWave < Waves.Count)
         {
-            spawnPoints = (int)SpawnPoints.Evaluate(currentWave);
-            List<Enemy> enemiesThatCanSpawn = new List<Enemy>();
-
-            foreach (Enemy enemy in enemies)
-            {
-                if ((int)enemy.difficultyRange.x <= (int)Difficulty.Evaluate(currentWave) && (int)Difficulty.Evaluate(currentWave) <= (int)enemy.difficultyRange.y)
-                {
-                    enemiesThatCanSpawn.Add(enemy);
-                }
-            }
-
             Vector3 posRightTop = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 0));
             Vector3 pos = new Vector3();
             int y = 0;
+            int cycle = 0;
 
-            while (spawnPoints > 0)
+            while (Waves[currentWave].cycles != cycle)
             {
-                Enemy enemy = enemiesThatCanSpawn[Random.Range(0, enemiesThatCanSpawn.Count)];
+                spawnPoints = (int)SpawnPoints.Evaluate(currentWave);
 
-                y++;
-                switch (y)
+                while (spawnPoints > 0)
                 {
-                    case 1:
-                        pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + 1.5f);
-                        break;
-                    case 2:
-                        pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - 1.5f);
-                        break;
-                    case 3:
-                        pos = new Vector3(posRightTop.x + 1.5f, 0, Random.Range(posRightTop.z, -posRightTop.z));
-                        break;
-                    case 4:
-                        pos = new Vector3(-posRightTop.x - 1.5f, 0, Random.Range(posRightTop.x, -posRightTop.x));
-                        break;
+                    Enemy enemy = Waves[currentWave].enemies[Random.Range(0, Waves[currentWave].enemies.Count)];
+
+                    y++;
+                    switch (y)
+                    {
+                        case 1:
+                            pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + 1.5f);
+                            break;
+                        case 2:
+                            pos = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - 1.5f);
+                            break;
+                        case 3:
+                            pos = new Vector3(posRightTop.x + 1.5f, 0, Random.Range(posRightTop.z, -posRightTop.z));
+                            break;
+                        case 4:
+                            pos = new Vector3(-posRightTop.x - 1.5f, 0, Random.Range(posRightTop.x, -posRightTop.x));
+                            break;
+                    }
+
+                    if (y == 4)
+                    {
+                        y = 0;
+                    }
+
+                    spawnPoints -= enemy.Cost;
+                    Instantiate(enemy, new Vector3(pos.x, 0, pos.z), Quaternion.Euler(20, 0, 20));
                 }
 
-                if (y == 4)
-                {
-                    y = 0;
-                }
-                spawnPoints -= enemy.Cost;
-                Instantiate(enemy, new Vector3(pos.x, 0, pos.z), Quaternion.Euler(20, 0, 20));
+                cycle++;
+                yield return new WaitForSeconds(Waves[currentWave].delay);
             }
-
-            yield return new WaitForSeconds(5);
+           
             currentWave++;
         }
 
         yield return new WaitForSeconds(10f);
 
-        Instantiate(Bosses[0]);
+        Instantiate(Boss);
         lastWaveDone = true;
     }
 }
