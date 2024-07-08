@@ -49,6 +49,7 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         playerStats.AddCoins();
+        GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
         gameEnd.SetActive(true);
         gameStartText.text = "Victory";
         audioManager.PlaySong(2);

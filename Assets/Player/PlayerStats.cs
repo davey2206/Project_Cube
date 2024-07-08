@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-using UnityEngine.XR;
 
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/PlayerStats")]
 public class PlayerStats : ScriptableObject
@@ -31,6 +29,9 @@ public class PlayerStats : ScriptableObject
     [Range(0,5)]
     public int Shields;
 
+    [Header("SaveFile")]
+    [SerializeField] SaveFile saveFile;
+
     public float GetAttack()
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));
@@ -54,22 +55,21 @@ public class PlayerStats : ScriptableObject
     {
         alive = true;
         BaseAttack = 0.5f;
-        BonusAttack = 0 + MetaProgression.GetAttackBonus();
-        Luck = 0 + MetaProgression.GetLuckBonus();
-        AttackSpeed = 4 + MetaProgression.GetAttackSpeedBonus();
-        critRate = 1 + MetaProgression.GetCritRateBonus();
-        critDamage = 50 + MetaProgression.GetCritDamageBonus();
-        AbilityDamage = 0 + MetaProgression.GetAbilityDamageBonus();
-        AbilityCooldown = 0 + MetaProgression.GetAbilityCooldownBonus();
-        maxHealth = 10 + MetaProgression.GetMaxHealthBonus();
+        BonusAttack = 0 + saveFile.BonusAttack;
+        Luck = 0 + saveFile.Luck;
+        AttackSpeed = 4 + saveFile.AttackSpeed;
+        critRate = 1 + saveFile.critRate;
+        critDamage = 50 + saveFile.critDamage;
+        AbilityDamage = 0 + saveFile.AbilityDamage;
+        AbilityCooldown = 0 + saveFile.AbilityCooldown;
+        maxHealth = 10 + saveFile.maxHealth;
         Coins = 0;
         Shields = 0;
     }
 
     public void AddCoins()
     {
-        int coins = MetaProgression.GetCoins() + Coins;
-        MetaProgression.SaveCoins(coins);
+        saveFile.coins += Coins;
     }
 
     public float GetAttackSpeed()

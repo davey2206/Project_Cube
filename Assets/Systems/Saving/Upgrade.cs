@@ -5,45 +5,155 @@ using UnityEngine;
 
 public class Upgrade : MonoBehaviour
 {
-    [SerializeField] int maxUpgrades;
-    [SerializeField] List<int> Cost;
-    [SerializeField] int upgradeAmount;
+    [Header("SaveFile")]
+    [SerializeField] SaveFile saveFile;
 
+    [Header("Upgrade")]
+    [SerializeField] UpgradeStat upgradeStat;
+    [SerializeField] int maxUnlocks = 1;
+    [SerializeField] float unlockAmount;
+    [SerializeField] List<int> costs;
+
+    [Header("Ability")]
+    [SerializeField] ability ability;
+    [SerializeField] bool isAbility;
+
+    [Header("UI")]
+    [SerializeField] TextMeshProUGUI unlockText;
     [SerializeField] TextMeshProUGUI costText;
-    [SerializeField] TextMeshProUGUI UnlockText;
-    [SerializeField] public string UpgradeName;
 
-    public int getMaxUpgrades()
+    private SaveSystem saveSystem;
+    private int unlock = 0;
+
+    private void Start()
     {
-        return maxUpgrades;
+        saveSystem = GameObject.Find("SaveSystem").GetComponent<SaveSystem>();
+        GetUnlockedAmount();
+        UpdateUI();
     }
 
-    public int getCost()
+    public void BuyUpgrade()
     {
-        int cost = 0;
-        if (MetaProgression.GetIntStat(UpgradeName + "Unlocks") < maxUpgrades)
+        if (unlock != maxUnlocks && saveFile.coins >= costs[unlock])
         {
-            cost = Cost[MetaProgression.GetIntStat(UpgradeName + "Unlocks")];
+            saveFile.coins = saveFile.coins - costs[unlock];
+            if (isAbility)
+            {
+                BuyAbility();
+            }
+            else
+            {
+                BuyStat();
+            }
+
+            unlock++;
+
+            UpdateUI();
+
+            saveSystem.SaveGame();
         }
-
-        return cost;
     }
 
-    public int getUpgradeAmount()
+    private void UpdateUI()
     {
-        return upgradeAmount;
-    }
+        unlockText.text = unlock.ToString() + " | " + maxUnlocks;
 
-    private void Update()
-    {
-        if (getCost() == 0)
+        if (unlock == maxUnlocks)
         {
-            costText.text = "---";
+            costText.text = "----";
         }
         else
         {
-            costText.text = getCost().ToString();
+            costText.text = costs[unlock].ToString();
         }
-        UnlockText.text = MetaProgression.GetIntStat(UpgradeName + "Unlocks").ToString() + " | " + maxUpgrades.ToString();
     }
+
+    private void BuyAbility()
+    {
+        ability.Unlocked = true;
+    }
+
+    private void BuyStat()
+    {
+        switch (upgradeStat)
+        {
+            case UpgradeStat.Luck:
+                saveFile.Luck += unlockAmount;
+                break;
+            case UpgradeStat.maxHealth:
+                saveFile.maxHealth += unlockAmount;
+                break;
+            case UpgradeStat.AttackSpeed:
+                saveFile.AttackSpeed += unlockAmount;
+                break;
+            case UpgradeStat.critRate:
+                saveFile.critRate += unlockAmount;
+                break;
+            case UpgradeStat.critDamage:
+                saveFile.critDamage += unlockAmount;
+                break;
+            case UpgradeStat.BonusAttack:
+                saveFile.BonusAttack += unlockAmount;
+                break;
+            case UpgradeStat.AbilityDamage:
+                saveFile.AbilityDamage += unlockAmount;
+                break;
+            case UpgradeStat.AbilityCooldown:
+                saveFile.AbilityCooldown += unlockAmount;
+                break;
+        }
+    }
+
+    public void GetUnlockedAmount()
+    {
+        if (isAbility)
+        {
+            if (ability.Unlocked == true)
+            {
+                unlock = 1;
+            }
+        }
+        else
+        {
+            switch (upgradeStat)
+            {
+                case UpgradeStat.Luck:
+                    unlock = (int)(saveFile.Luck / unlockAmount);
+                    break;
+                case UpgradeStat.maxHealth:
+                    unlock = (int)(saveFile.maxHealth / unlockAmount);
+                    break;
+                case UpgradeStat.AttackSpeed:
+                    unlock = (int)(saveFile.AttackSpeed / unlockAmount);
+                    break;
+                case UpgradeStat.critRate:
+                    unlock = (int)(saveFile.critRate / unlockAmount);
+                    break;
+                case UpgradeStat.critDamage:
+                    unlock = (int)(saveFile.critDamage / unlockAmount);
+                    break;
+                case UpgradeStat.BonusAttack:
+                    unlock = (int)(saveFile.BonusAttack / unlockAmount);
+                    break;
+                case UpgradeStat.AbilityDamage:
+                    unlock = (int)(saveFile.AbilityDamage / unlockAmount);
+                    break;
+                case UpgradeStat.AbilityCooldown:
+                    unlock = (int)(saveFile.AbilityCooldown / unlockAmount);
+                    break;
+            }
+        }
+    }
+}
+
+public enum UpgradeStat
+{
+    Luck,
+    maxHealth,
+    AttackSpeed,
+    critRate,
+    critDamage,
+    BonusAttack,
+    AbilityDamage,
+    AbilityCooldown,
 }

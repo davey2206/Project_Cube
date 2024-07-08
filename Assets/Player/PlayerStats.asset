@@ -24,3 +24,4 @@ MonoBehaviour:
   AbilityDamage: 0
   AbilityCooldown: 0
   Shields: 3
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}

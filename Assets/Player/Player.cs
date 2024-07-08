@@ -100,6 +100,7 @@ public class Player : MonoBehaviour
     {
         playerStats.alive = false;
         playerStats.AddCoins();
+        GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
         Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Animator>().SetTrigger("Die");

@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     MainCubeAnimations cubeAnimator;
     sceneManager sceneManager;
+
     private void Start()
     {
         sceneManager = GameObject.Find("SceneManager").GetComponent<sceneManager>();

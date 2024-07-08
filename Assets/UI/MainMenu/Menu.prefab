@@ -246,6 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6649013930836348594}
+  - component: {fileID: 417709810500790856}
   m_Layer: 5
   m_Name: CritRate
   m_TagString: Untagged
@@ -275,6 +276,27 @@ RectTransform:
   m_AnchoredPosition: {x: 450, y: -300}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &417709810500790856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269553148527334282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 3
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 2835986314121377878}
+  costText: {fileID: 8610470574228475033}
 --- !u!1 &372226947953470844
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6904539485553186514}
+  - component: {fileID: 3968714071433349252}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -313,6 +336,27 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -50}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3968714071433349252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372226947953470844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 5
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 6287668006096185224}
+  costText: {fileID: 9035091668483296538}
 --- !u!1 &436379610219671038
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,13 +586,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 417709810500790856}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 4640311484362930736}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1050,6 +1094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8889706537803726475}
+  - component: {fileID: 8642921845674391196}
   m_Layer: 5
   m_Name: Shields
   m_TagString: Untagged
@@ -1079,6 +1124,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1050, y: -300}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &8642921845674391196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890940660796372778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 0
+  maxUnlocks: 1
+  unlockAmount: 0
+  costs: c8000000
+  ability: {fileID: 11400000, guid: dab420ee6952dd74bacce8b88e4ccea5, type: 2}
+  isAbility: 1
+  unlockText: {fileID: 4918029495389201921}
+  costText: {fileID: 1590072049396321904}
 --- !u!1 &1005181253586384964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8725981080626793971}
+  - component: {fileID: 2084313733560897824}
   m_Layer: 5
   m_Name: Cooldown
   m_TagString: Untagged
@@ -1252,6 +1319,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1350, y: -50}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2084313733560897824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048366753515053079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 7
+  maxUnlocks: 5
+  unlockAmount: 10
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 1202340374087815473}
+  costText: {fileID: 208858515838233139}
 --- !u!1 &1049157459857187833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1263,7 +1351,6 @@ GameObject:
   - component: {fileID: 6744878251772725653}
   - component: {fileID: 5659304670417265502}
   - component: {fileID: 181727234158401872}
-  - component: {fileID: 7463057247725953145}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -1388,24 +1475,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7463057247725953145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049157459857187833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 5
-  Cost: 1900000064000000f4010000e8030000d0070000
-  upgradeAmount: 1
-  costText: {fileID: 2321966874758341907}
-  UnlockText: {fileID: 488988087611892445}
-  UpgradeName: AttackSpeed
 --- !u!1 &1342678201823277375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,13 +1673,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 8642921845674391196}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8176098847306890998}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1838,7 +1907,6 @@ GameObject:
   - component: {fileID: 2543055476772163460}
   - component: {fileID: 8728295568815583093}
   - component: {fileID: 4582887965559564746}
-  - component: {fileID: 2365160498045766233}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -1963,24 +2031,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2365160498045766233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1894978660019336527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 10
-  Cost: 19000000320000006400000096000000c80000002c01000090010000f4010000e8030000d0070000
-  upgradeAmount: 10
-  costText: {fileID: 3254136294038200868}
-  UnlockText: {fileID: 4232744092671668338}
-  UpgradeName: CritDamage
 --- !u!1 &1935530738730040463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2485,7 +2535,6 @@ GameObject:
   - component: {fileID: 3480774354326193803}
   - component: {fileID: 8388698747432377350}
   - component: {fileID: 5757827269619167759}
-  - component: {fileID: 3579870513514100702}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -2610,24 +2659,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &3579870513514100702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2179488568123095931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 10
-  Cost: 19000000320000006400000096000000c80000002c01000090010000f4010000e8030000d0070000
-  upgradeAmount: 10
-  costText: {fileID: 9035091668483296538}
-  UnlockText: {fileID: 6287668006096185224}
-  UpgradeName: Attack
 --- !u!1 &2230834954989650941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3583,6 +3614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8326624428725279543}
+  - component: {fileID: 1693601602971377565}
   m_Layer: 5
   m_Name: Luck
   m_TagString: Untagged
@@ -3612,6 +3644,27 @@ RectTransform:
   m_AnchoredPosition: {x: 450, y: -50.000008}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1693601602971377565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2987483827038118041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 0
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 8871403406686644845}
+  costText: {fileID: 5853798639788687615}
 --- !u!1 &3068595161014993474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,6 +4233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2505067931633265031}
+  - component: {fileID: 7447002459324809849}
   m_Layer: 5
   m_Name: CritDamage
   m_TagString: Untagged
@@ -4209,6 +4263,27 @@ RectTransform:
   m_AnchoredPosition: {x: 750, y: -300}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7447002459324809849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533075609040493328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 4
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 4232744092671668338}
+  costText: {fileID: 3254136294038200868}
 --- !u!1 &3550458085655448653
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,7 +4817,6 @@ GameObject:
   - component: {fileID: 2022669342581967726}
   - component: {fileID: 6356096165958930915}
   - component: {fileID: 7185545692150628330}
-  - component: {fileID: 6487377111116112083}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -4867,24 +4941,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6487377111116112083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3630147141932725918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 10
-  Cost: 3200000064000000c80000002c010000f4010000e8030000dc050000d0070000c4090000b80b0000
-  upgradeAmount: 1
-  costText: {fileID: 5853798639788687615}
-  UnlockText: {fileID: 8871403406686644845}
-  UpgradeName: Luck
 --- !u!1 &3631159640227731280
 GameObject:
   m_ObjectHideFlags: 0
@@ -5376,7 +5432,6 @@ GameObject:
   - component: {fileID: 8551361217870451081}
   - component: {fileID: 3303110113503974280}
   - component: {fileID: 6598937104092992695}
-  - component: {fileID: 6082935180610277317}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -5501,24 +5556,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6082935180610277317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3808951198062375748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 10
-  Cost: 19000000320000006400000096000000c80000002c01000090010000f4010000e8030000d0070000
-  upgradeAmount: 20
-  costText: {fileID: 6357657898695026320}
-  UnlockText: {fileID: 350271282507651932}
-  UpgradeName: AbilityDamage
 --- !u!1 &3821892562433658698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6047,13 +6084,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 1506979517076985212}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1049157459857187833}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6220,13 +6257,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 7447002459324809849}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 1894978660019336527}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6504,13 +6541,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 2084313733560897824}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 7605573840597704866}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6909,6 +6946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1642987167878987254}
+  - component: {fileID: 41849965557498787}
   m_Layer: 5
   m_Name: MaxHealth
   m_TagString: Untagged
@@ -6938,6 +6976,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1050, y: -50}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &41849965557498787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4571174041348628436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 1
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 452310257102709427}
+  costText: {fileID: 6914399380694262748}
 --- !u!1 &4589602316006065448
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,7 +7145,6 @@ GameObject:
   - component: {fileID: 4927989471554142256}
   - component: {fileID: 8774269933150438070}
   - component: {fileID: 8721849324738899153}
-  - component: {fileID: 8922955484758494786}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -7213,24 +7271,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8922955484758494786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4640311484362930736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 10
-  Cost: 19000000320000006400000096000000c80000002c01000090010000f4010000e8030000d0070000
-  upgradeAmount: 1
-  costText: {fileID: 8610470574228475033}
-  UnlockText: {fileID: 2835986314121377878}
-  UpgradeName: CritRate
 --- !u!1 &4678698236412641783
 GameObject:
   m_ObjectHideFlags: 0
@@ -7240,6 +7280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 31022760277521333}
+  - component: {fileID: 1506979517076985212}
   m_Layer: 5
   m_Name: AttackSpeed
   m_TagString: Untagged
@@ -7269,6 +7310,27 @@ RectTransform:
   m_AnchoredPosition: {x: 750, y: -50.000008}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1506979517076985212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678698236412641783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 2
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 488988087611892445}
+  costText: {fileID: 2321966874758341907}
 --- !u!1 &4756885711231521177
 GameObject:
   m_ObjectHideFlags: 0
@@ -7527,7 +7589,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
         m_MethodName: Upgrade
         m_Mode: 2
@@ -7987,13 +8049,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 3968714071433349252}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 2179488568123095931}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8185,6 +8247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7147437650373552395}
+  - component: {fileID: 1329921949726324479}
   m_Layer: 5
   m_Name: Poison
   m_TagString: Untagged
@@ -8214,6 +8277,27 @@ RectTransform:
   m_AnchoredPosition: {x: 1650, y: -50}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1329921949726324479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5414328208851574422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 0
+  maxUnlocks: 1
+  unlockAmount: 0
+  costs: c8000000
+  ability: {fileID: 11400000, guid: a679c4b178d56784a8c6fb91db38be63, type: 2}
+  isAbility: 1
+  unlockText: {fileID: 3871557466685695493}
+  costText: {fileID: 1152600647336363466}
 --- !u!1 &5460308080104756100
 GameObject:
   m_ObjectHideFlags: 0
@@ -8225,7 +8309,6 @@ GameObject:
   - component: {fileID: 3739729721044458456}
   - component: {fileID: 8548710669489911980}
   - component: {fileID: 1472411973524298285}
-  - component: {fileID: 7658290746064121831}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -8350,24 +8433,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7658290746064121831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5460308080104756100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 1
-  Cost: c8000000
-  upgradeAmount: 1
-  costText: {fileID: 1152600647336363466}
-  UnlockText: {fileID: 3871557466685695493}
-  UpgradeName: Poison
 --- !u!1 &5631802452902430009
 GameObject:
   m_ObjectHideFlags: 0
@@ -8525,6 +8590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2438711768511808937}
+  - component: {fileID: 7153206144536585310}
   m_Layer: 5
   m_Name: AbilityDamage
   m_TagString: Untagged
@@ -8554,6 +8620,27 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -300}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7153206144536585310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006420227359152360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  upgradeStat: 6
+  maxUnlocks: 5
+  unlockAmount: 1
+  costs: 3200000064000000c80000009001000020030000
+  ability: {fileID: 0}
+  isAbility: 0
+  unlockText: {fileID: 350271282507651932}
+  costText: {fileID: 6357657898695026320}
 --- !u!1 &6148883813125153706
 GameObject:
   m_ObjectHideFlags: 0
@@ -9786,13 +9873,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 7153206144536585310}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 3808951198062375748}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9981,7 +10068,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6916682408989857653}
   - component: {fileID: 1700473855681383809}
-  - component: {fileID: 2681748165587218716}
   m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
@@ -10030,19 +10116,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2681748165587218716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7114298718169746084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 257137e9b43aab545800407cd77943e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coins: {fileID: 4772109192206101250}
 --- !u!1 &7259958830880256222
 GameObject:
   m_ObjectHideFlags: 0
@@ -10495,7 +10568,6 @@ GameObject:
   - component: {fileID: 1674970204289417735}
   - component: {fileID: 5685428494259784473}
   - component: {fileID: 2766663281669033897}
-  - component: {fileID: 6880002878106436383}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -10620,24 +10692,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &6880002878106436383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7605573840597704866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 10
-  Cost: 3200000064000000c80000002c010000f4010000e8030000dc050000d0070000c4090000b80b0000
-  upgradeAmount: 1
-  costText: {fileID: 208858515838233139}
-  UnlockText: {fileID: 1202340374087815473}
-  UpgradeName: AbilityCooldown
 --- !u!1 &7632007974198504144
 GameObject:
   m_ObjectHideFlags: 0
@@ -10836,13 +10890,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 1693601602971377565}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 3630147141932725918}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11317,13 +11371,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
-        m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
-        m_MethodName: Upgrade
-        m_Mode: 2
+      - m_Target: {fileID: 41849965557498787}
+        m_TargetAssemblyTypeName: Upgrade, Assembly-CSharp
+        m_MethodName: BuyUpgrade
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8081922940441710390}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -11460,7 +11514,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 85
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11513,7 +11567,6 @@ GameObject:
   - component: {fileID: 5848046308017206524}
   - component: {fileID: 3884441034368435582}
   - component: {fileID: 6212825278067588099}
-  - component: {fileID: 1270774093207848369}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -11638,24 +11691,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1270774093207848369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8081922940441710390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 5
-  Cost: 3200000064000000960000002c010000f4010000
-  upgradeAmount: 1
-  costText: {fileID: 6914399380694262748}
-  UnlockText: {fileID: 452310257102709427}
-  UpgradeName: MaxHealth
 --- !u!1 &8113131054421629689
 GameObject:
   m_ObjectHideFlags: 0
@@ -11937,7 +11972,6 @@ GameObject:
   - component: {fileID: 4414562428741970534}
   - component: {fileID: 8141171618020983316}
   - component: {fileID: 5415720347769533359}
-  - component: {fileID: 4754216197052126968}
   m_Layer: 5
   m_Name: Name
   m_TagString: Untagged
@@ -12062,24 +12096,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4754216197052126968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8176098847306890998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1859e484de6afb48aec30a3a907709e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxUpgrades: 1
-  Cost: f4010000
-  upgradeAmount: 1
-  costText: {fileID: 1590072049396321904}
-  UnlockText: {fileID: 4918029495389201921}
-  UpgradeName: Shields
 --- !u!1 &8330816811210723336
 GameObject:
   m_ObjectHideFlags: 0
@@ -12914,7 +12930,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2681748165587218716}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MetaUpgrades, Assembly-CSharp
         m_MethodName: ResetAllStats
         m_Mode: 1

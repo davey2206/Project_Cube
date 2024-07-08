@@ -21,8 +21,8 @@ MonoBehaviour:
   - {fileID: 3887267543154452254, guid: 94d3194b00b6e6141a5f280ff341e245, type: 3}
   rarity: 0
   Level: 1
-  Active: 1
-  Unlocked: 1
+  Active: 0
+  Unlocked: 0
   abilityType: 3
   Ability:
     m_PersistentCalls:

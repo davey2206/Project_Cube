@@ -46,8 +46,6 @@ public class Leveling : MonoBehaviour
             ability.Active = false;
             ability.Level = 0;
         }
-
-        abilities.CheckUnlocks();
     }
 
     private void Update()

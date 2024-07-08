@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DavopiaGame
+  companyName: Davopia Games
   productName: Cube Survivor
   defaultCursor: {fileID: 2800000, guid: 9d9a4bcd964b82541875c80e89342fa2, type: 3}
   cursorHotspot: {x: 256, y: 256}
