@@ -9,7 +9,6 @@ public class LevelAbility : MonoBehaviour
 
     public void LevelAbilityClick()
     {
-        Time.timeScale = 1;
         if (Ability.rarity == RarityTypes.Ability)
         {
             if (Ability.Active == false)
@@ -30,7 +29,8 @@ public class LevelAbility : MonoBehaviour
                 Ability.Ability.Invoke(1, Vector3.zero);
             }
         }
-        
+
+        GameObject.Find("AbilitySelect").GetComponent<ResetCards>().DeleteCards();
     }
 
     public void DestroySelf()

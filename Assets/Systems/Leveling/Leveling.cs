@@ -68,7 +68,7 @@ public class Leveling : MonoBehaviour
         }
     }
 
-    public void LevelUp()
+    public void LevelUp(bool isReroll)
     {
         SortExtraAbilities();
 
@@ -90,7 +90,10 @@ public class Leveling : MonoBehaviour
 
         NumbersUsed.Clear();
 
-        Spawner.GetComponent<ResetCards>().AddReset();
+        if (!isReroll)
+        {
+            Spawner.GetComponent<ResetCards>().Spawn();
+        }
 
         resetXp();
     }
@@ -261,7 +264,7 @@ public class Leveling : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         AddBaseDamage();
-        LevelUp();
+        LevelUp(false);
         yield return new WaitForEndOfFrame();
         Time.timeScale = 0;
     }

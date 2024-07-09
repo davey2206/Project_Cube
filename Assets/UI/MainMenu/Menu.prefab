@@ -292,7 +292,7 @@ MonoBehaviour:
   upgradeStat: 3
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 2835986314121377878}
@@ -352,7 +352,7 @@ MonoBehaviour:
   upgradeStat: 5
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 6287668006096185224}
@@ -1140,7 +1140,7 @@ MonoBehaviour:
   upgradeStat: 0
   maxUnlocks: 1
   unlockAmount: 0
-  costs: c8000000
+  costs: c4090000
   ability: {fileID: 11400000, guid: dab420ee6952dd74bacce8b88e4ccea5, type: 2}
   isAbility: 1
   unlockText: {fileID: 4918029495389201921}
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   upgradeStat: 7
   maxUnlocks: 5
   unlockAmount: 10
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 1202340374087815473}
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   upgradeStat: 0
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 8871403406686644845}
@@ -4279,7 +4279,7 @@ MonoBehaviour:
   upgradeStat: 4
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 4232744092671668338}
@@ -6992,7 +6992,7 @@ MonoBehaviour:
   upgradeStat: 1
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 452310257102709427}
@@ -7326,7 +7326,7 @@ MonoBehaviour:
   upgradeStat: 2
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 488988087611892445}
@@ -8293,7 +8293,7 @@ MonoBehaviour:
   upgradeStat: 0
   maxUnlocks: 1
   unlockAmount: 0
-  costs: c8000000
+  costs: e8030000
   ability: {fileID: 11400000, guid: a679c4b178d56784a8c6fb91db38be63, type: 2}
   isAbility: 1
   unlockText: {fileID: 3871557466685695493}
@@ -8636,7 +8636,7 @@ MonoBehaviour:
   upgradeStat: 6
   maxUnlocks: 5
   unlockAmount: 1
-  costs: 3200000064000000c80000009001000020030000
+  costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
   unlockText: {fileID: 350271282507651932}

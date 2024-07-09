@@ -91,12 +91,12 @@ PrefabInstance:
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: coinDrop
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: dropRate
-      value: 5
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}

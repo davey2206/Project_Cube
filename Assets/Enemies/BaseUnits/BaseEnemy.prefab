@@ -317,18 +317,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225eb2f90a3869c4bb87ea1216383497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultyRange: {x: 1, y: 2}
   Cost: 1
   checkOverlap: 1
-  Speed: 1
+  Speed: 0.8
   Health: 1.2
   HealthBar: {fileID: 6092161750793933159}
   Shield: {fileID: 6050748063785555810}
+  ShieldColor: 0
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   DieEffect: {fileID: 6201523421047463331, guid: 70cca6496584a0d45a42b0f50d302d33,
     type: 3}
   HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}
   DieSFX: {fileID: 391452263635745174, guid: e5b0ed3329cd295478391dca6ad28151, type: 3}
+  ShieldBrakeVFX: {fileID: 0}
   audioManeger: {fileID: 11400000, guid: 3ec96a94adf2b42498cae9978a4395e7, type: 2}
   animator: {fileID: 7357909124084650528}
   BoxCollider: {fileID: 3815412728393736391}
@@ -336,8 +337,8 @@ MonoBehaviour:
   xpDrop: 1
   xpEffect: {fileID: 2962067442543321795, guid: 331df32e4fc02304599684c0ac18d8c7,
     type: 3}
-  coinDrop: 0
-  dropRate: 0
+  coinDrop: 1
+  dropRate: 50
   coinEffect: {fileID: 2962067442543321795, guid: 34855f16e514c0c45bd029033845d7df,
     type: 3}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,

@@ -10,11 +10,8 @@ public class ResetCards : MonoBehaviour
     [SerializeField] GameObject SpawnPoint_3;
     [SerializeField] GameObject Background;
 
-    public void AddReset()
+    public void Spawn()
     {
-        SpawnPoint_1.GetComponentInChildren<Button>().onClick.AddListener(DeleteCards);
-        SpawnPoint_2.GetComponentInChildren<Button>().onClick.AddListener(DeleteCards);
-        SpawnPoint_3.GetComponentInChildren<Button>().onClick.AddListener(DeleteCards);
         GetComponent<Animator>().SetTrigger("Spawn");
     }
 
@@ -24,12 +21,17 @@ public class ResetCards : MonoBehaviour
         StartCoroutine(ResetTime());
     }
 
-    IEnumerator ResetTime()
+    public void ResetAllCards()
     {
-        yield return new WaitForSeconds(0.5f);
         SpawnPoint_1.GetComponentInChildren<LevelAbility>().DestroySelf();
         SpawnPoint_2.GetComponentInChildren<LevelAbility>().DestroySelf();
         SpawnPoint_3.GetComponentInChildren<LevelAbility>().DestroySelf();
+    }
+
+    IEnumerator ResetTime()
+    {
         Time.timeScale = 1;
+        yield return new WaitForSeconds(0.5f);
+        ResetAllCards();
     }
 }

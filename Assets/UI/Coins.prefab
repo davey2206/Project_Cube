@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7318235359151732344}
   - component: {fileID: 3271756169622854420}
   - component: {fileID: 4883201412086571321}
-  - component: {fileID: 8314919757619243491}
+  - component: {fileID: 9153401294803548778}
   m_Layer: 5
   m_Name: Coins
   m_TagString: Untagged
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8314919757619243491
+--- !u!114 &9153401294803548778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,8 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2653675195223962316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9569f5d1038fa0c46a106613047c4ec6, type: 3}
+  m_Script: {fileID: 11500000, guid: 9afd17b768e9b12498e2e381cb8b9b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 4883201412086571321}
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  saveFile: {fileID: 0}
+  IsSaveFile: 0
