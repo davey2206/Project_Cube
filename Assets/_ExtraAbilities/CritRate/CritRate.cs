@@ -11,19 +11,19 @@ public class CritRate : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.critRate = playerStats.critRate + 1;
+                playerStats.critRate = playerStats.critRate + 2.5f;
                 break;
             case RarityTypes.Uncommon:
-                playerStats.critRate = playerStats.critRate + 2;
-                break;
-            case RarityTypes.Rare:
-                playerStats.critRate = playerStats.critRate + 3;
-                break;
-            case RarityTypes.Epic:
                 playerStats.critRate = playerStats.critRate + 5;
                 break;
-            case RarityTypes.Legendary:
+            case RarityTypes.Rare:
+                playerStats.critRate = playerStats.critRate + 7.5f;
+                break;
+            case RarityTypes.Epic:
                 playerStats.critRate = playerStats.critRate + 10;
+                break;
+            case RarityTypes.Legendary:
+                playerStats.critRate = playerStats.critRate + 15;
                 break;
         }
     }

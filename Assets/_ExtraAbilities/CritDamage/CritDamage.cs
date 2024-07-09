@@ -11,19 +11,19 @@ public class CritDamage : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.critDamage = playerStats.critDamage + 10;
-                break;
-            case RarityTypes.Uncommon:
-                playerStats.critDamage = playerStats.critDamage + 15;
-                break;
-            case RarityTypes.Rare:
-                playerStats.critDamage = playerStats.critDamage + 20;
-                break;
-            case RarityTypes.Epic:
                 playerStats.critDamage = playerStats.critDamage + 25;
                 break;
+            case RarityTypes.Uncommon:
+                playerStats.critDamage = playerStats.critDamage + 35;
+                break;
+            case RarityTypes.Rare:
+                playerStats.critDamage = playerStats.critDamage + 45;
+                break;
+            case RarityTypes.Epic:
+                playerStats.critDamage = playerStats.critDamage + 60;
+                break;
             case RarityTypes.Legendary:
-                playerStats.critDamage = playerStats.critDamage + 30;
+                playerStats.critDamage = playerStats.critDamage + 80;
                 break;
         }
     }

@@ -126,7 +126,7 @@ PrefabInstance:
     - target: {fileID: 6152488243385264730, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
       propertyPath: m_text
-      value: Ability Damage = <color="green">+50%</color>
+      value: Ability Damage = <color="green">+80%</color>
       objectReference: {fileID: 0}
     - target: {fileID: 7129256009189912052, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}

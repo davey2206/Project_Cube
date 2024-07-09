@@ -11,19 +11,19 @@ public class AttackBoost : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.BonusAttack = playerStats.BonusAttack + 10;
+                playerStats.BonusAttack = playerStats.BonusAttack + 25;
                 break;
             case RarityTypes.Uncommon:
-                playerStats.BonusAttack = playerStats.BonusAttack + 20;
-                break;
-            case RarityTypes.Rare:
-                playerStats.BonusAttack = playerStats.BonusAttack + 30;
-                break;
-            case RarityTypes.Epic:
                 playerStats.BonusAttack = playerStats.BonusAttack + 50;
                 break;
-            case RarityTypes.Legendary:
+            case RarityTypes.Rare:
+                playerStats.BonusAttack = playerStats.BonusAttack + 75;
+                break;
+            case RarityTypes.Epic:
                 playerStats.BonusAttack = playerStats.BonusAttack + 100;
+                break;
+            case RarityTypes.Legendary:
+                playerStats.BonusAttack = playerStats.BonusAttack + 200;
                 break;
         }
     }

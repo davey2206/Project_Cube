@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 2335959835386160003, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_text
-      value: Health = <color="green">+1</color>
+      value: Health = <color="green">+2</color>
       objectReference: {fileID: 0}
     - target: {fileID: 3874333258534009449, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}

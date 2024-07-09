@@ -37,7 +37,7 @@ PrefabInstance:
     - target: {fileID: 2890920616077205752, guid: ef1b7c8d18222ea459d8274609cc972e,
         type: 3}
       propertyPath: m_text
-      value: Crit Damage = <color="green">+15%</color>
+      value: Crit Damage = <color="green">+35%</color>
       objectReference: {fileID: 0}
     - target: {fileID: 5787803786689822838, guid: ef1b7c8d18222ea459d8274609cc972e,
         type: 3}

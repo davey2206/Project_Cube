@@ -10,19 +10,19 @@ public class Heal : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                GameObject.Find("Player").GetComponent<Player>().Heal(1);
-                break;
-            case RarityTypes.Uncommon:
                 GameObject.Find("Player").GetComponent<Player>().Heal(2);
                 break;
-            case RarityTypes.Rare:
+            case RarityTypes.Uncommon:
                 GameObject.Find("Player").GetComponent<Player>().Heal(3);
                 break;
-            case RarityTypes.Epic:
+            case RarityTypes.Rare:
                 GameObject.Find("Player").GetComponent<Player>().Heal(5);
                 break;
+            case RarityTypes.Epic:
+                GameObject.Find("Player").GetComponent<Player>().Heal(8);
+                break;
             case RarityTypes.Legendary:
-                GameObject.Find("Player").GetComponent<Player>().Heal(10);
+                GameObject.Find("Player").GetComponent<Player>().Heal(15);
                 break;
         }
     }

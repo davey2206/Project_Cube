@@ -30,7 +30,7 @@ public class Leveling : MonoBehaviour
     float Velocity;
     int excesXP = 0;
     bool IsLeveling;
-    bool gainAbiltiy;
+    List<int> NumbersUsed = new List<int>();
 
     List<ability> abilitiesCommon = new List<ability>();
     List<ability> abilitiesUncommon = new List<ability>();
@@ -40,7 +40,6 @@ public class Leveling : MonoBehaviour
 
     private void Awake()
     {
-        gainAbiltiy = true;
         foreach (var ability in abilities.abilities)
         {
             ability.Active = false;
@@ -69,58 +68,77 @@ public class Leveling : MonoBehaviour
         }
     }
 
-    public void LevelUp(bool IsAbility)
+    public void LevelUp()
     {
-        if (IsAbility)
+        SortExtraAbilities();
+
+        for (int i = 0; i < 3; i++)
         {
-            List<ability> a = new List<ability>();
-            a = GetAbilities();
-            ability AbilityToUse;
+            switch (i)
+            {
+                case 0:
+                    SpawnCard(SpawnPoint_1.transform);
+                    break;
+                case 1:
+                    SpawnCard(SpawnPoint_2.transform);
+                    break;
+                case 2:
+                    SpawnCard(SpawnPoint_3.transform);
+                    break;
+            }
+        }
 
-            int rng = Random.Range(0, a.Count);
+        NumbersUsed.Clear();
+
+        Spawner.GetComponent<ResetCards>().AddReset();
+
+        resetXp();
+    }
+
+    private void SpawnCard(Transform location)
+    {
+        ability AbilityToUse;
+        int abilityOrStat = Random.Range(0, 2);
+
+        List<ability> a = new List<ability>();
+        a = GetAbilities();
+
+        if (abilityOrStat == 0 && a.Count != 0)
+        {
+            int rng = GetRandomAbility(a);
             AbilityToUse = a[rng];
-            a.Remove(AbilityToUse);
 
-            GameObject Card1 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_1.transform);
-            Card1.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
-
-            rng = Random.Range(0, a.Count);
-            AbilityToUse = a[rng];
-            a.Remove(AbilityToUse);
-
-            GameObject Card2 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_2.transform);
-            Card2.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
-
-            rng = Random.Range(0, a.Count);
-            AbilityToUse = a[rng];
-            a.Remove(AbilityToUse);
-
-            GameObject Card3 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_3.transform);
-            Card3.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
-
-            Spawner.GetComponent<ResetCards>().AddReset();
+            GameObject Card = Instantiate(AbilityToUse.Card[AbilityToUse.Level], location);
+            Card.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
         }
         else
         {
-            SortExtraAbilities();
-            ability AbilityToUse;
-
             AbilityToUse = GetExtraAbilities();
-            GameObject Card1 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_1.transform);
+            GameObject Card1 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], location);
             Card1.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
-
-            AbilityToUse = GetExtraAbilities();
-            GameObject Card2 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_2.transform);
-            Card2.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
-
-            AbilityToUse = GetExtraAbilities();
-            GameObject Card3 = Instantiate(AbilityToUse.Card[AbilityToUse.Level], SpawnPoint_3.transform);
-            Card3.GetComponentInChildren<LevelAbility>().Ability = AbilityToUse;
-
-            Spawner.GetComponent<ResetCards>().AddReset();
         }
+    }
 
-        resetXp();
+    private int GetRandomAbility(List<ability> a)
+    {
+        int rng = 0;
+        bool canUse = false;
+
+        while (!canUse)
+        {
+            rng = Random.Range(0, a.Count);
+            canUse = true;
+
+            foreach (var usedNumber in NumbersUsed)
+            {
+                if (usedNumber == rng)
+                {
+                    canUse = false;
+                }
+            }
+        }
+        NumbersUsed.Add(rng);
+        return rng;
     }
 
     public List<ability> GetAbilities()
@@ -229,9 +247,9 @@ public class Leveling : MonoBehaviour
 
     public void AddBaseDamage()
     {
-        if (Level < 5)
+        if (Level < 3)
         {
-            playerStats.BaseAttack = playerStats.BaseAttack + 0.1f;
+            playerStats.BaseAttack = playerStats.BaseAttack + 0.2f;
         }
         else if (Level % 5 == 0)
         {
@@ -243,18 +261,7 @@ public class Leveling : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         AddBaseDamage();
-        if (gainAbiltiy)
-        {
-            yield return new WaitForEndOfFrame();
-            LevelUp(true);
-            gainAbiltiy = !gainAbiltiy;
-        }
-        else
-        {
-            yield return new WaitForEndOfFrame();
-            LevelUp(false);
-            gainAbiltiy = !gainAbiltiy;
-        }
+        LevelUp();
         yield return new WaitForEndOfFrame();
         Time.timeScale = 0;
     }

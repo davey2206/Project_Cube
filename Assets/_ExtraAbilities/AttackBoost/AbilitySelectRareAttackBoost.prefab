@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 4126491906379334119, guid: e262953bae514774280e8cc7105c513d,
         type: 3}
       propertyPath: m_text
-      value: Attack Damage = <color="green">+30%</color>
+      value: Attack Damage = <color="green">+75%</color>
       objectReference: {fileID: 0}
     - target: {fileID: 5476053091365174931, guid: e262953bae514774280e8cc7105c513d,
         type: 3}

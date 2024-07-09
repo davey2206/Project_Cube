@@ -11,13 +11,13 @@ public class Luck : MonoBehaviour
         switch (rarity)
         {
             case RarityTypes.Common:
-                playerStats.Luck = playerStats.Luck + 0.5f;
-                break;
-            case RarityTypes.Uncommon:
                 playerStats.Luck = playerStats.Luck + 1f;
                 break;
-            case RarityTypes.Rare:
+            case RarityTypes.Uncommon:
                 playerStats.Luck = playerStats.Luck + 2f;
+                break;
+            case RarityTypes.Rare:
+                playerStats.Luck = playerStats.Luck + 3f;
                 break;
             case RarityTypes.Epic:
                 playerStats.Luck = playerStats.Luck + 5f;
