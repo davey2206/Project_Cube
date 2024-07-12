@@ -74,7 +74,7 @@ public class AttackVFX : MonoBehaviour
         if (other.transform.CompareTag("Boss"))
         {
             DamageBoss enemy = other.transform.GetComponent<DamageBoss>();
-            enemy.TakeDamage(playerStats.GetAttack());
+            enemy.TakeDamage(playerStats.GetAttack(), color);
 
             if (!FirstEnemyHit)
             {

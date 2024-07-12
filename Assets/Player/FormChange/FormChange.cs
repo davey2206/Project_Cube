@@ -15,6 +15,7 @@ public class FormChange : MonoBehaviour
     [Header("Abilties")]
     [SerializeField] GameObject strike;
     [SerializeField] Wave ShockWave;
+    [SerializeField] GameObject Mine;
 
     [Header("Sound Effects")]
     [SerializeField] GameObject YellowSFX;
@@ -27,9 +28,6 @@ public class FormChange : MonoBehaviour
     bool onCooldown;
     bool BonusAttack;
     bool BonusAttackSpeed;
-    bool Healing;
-
-    Coroutine healing;
     void Update()
     {
         ChangeForm();
@@ -126,13 +124,15 @@ public class FormChange : MonoBehaviour
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
         DisableAffect();
+        player.Heal(2f);
 
-        playerStats.BonusAttack -= 5;
-        playerStats.AttackSpeed -= 0.5f;
+        for (int i = 0; i < 15; i++)
+        {
+            Vector3 pos = new Vector3(Random.Range(-15f, 15f), 0, Random.Range(-8f, 8f));
 
-        Healing = true;
-        player.Heal(3f);
-        healing = StartCoroutine(Heal());
+            var wave = Instantiate(Mine, pos, Quaternion.identity);
+            wave.GetComponentInChildren<WaveAttacks>(true).SetStats(playerStats.GetAttack() * 1.5f);
+        }
     }
 
     public void Blue()
@@ -166,15 +166,6 @@ public class FormChange : MonoBehaviour
 
             BonusAttackSpeed = false;
         }
-
-        if (Healing)
-        {
-            playerStats.BonusAttack += 5;
-            playerStats.AttackSpeed += 0.5f;
-            StopCoroutine(healing);
-
-            Healing = false;
-        }
     }
 
     IEnumerator SuperAttackSpeed()
@@ -182,15 +173,6 @@ public class FormChange : MonoBehaviour
         playerStats.AttackSpeed += 10f;
         yield return new WaitForSeconds(3);
         playerStats.AttackSpeed -= 10f;
-    }
-
-    IEnumerator Heal()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-            player.Heal(0.3f);
-        }
     }
 
     IEnumerator ActiveCooldown()

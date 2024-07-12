@@ -52,7 +52,7 @@ public class WaveAttacks : MonoBehaviour
 
         if (other.transform.CompareTag("Boss"))
         {
-            other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack);
+            other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack, color);
         }
     }
 }

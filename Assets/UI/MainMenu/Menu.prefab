@@ -291,7 +291,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 3
   maxUnlocks: 5
-  unlockAmount: 1
+  unlockAmount: 5
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 5
   maxUnlocks: 5
-  unlockAmount: 1
+  unlockAmount: 20
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
@@ -1334,7 +1334,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 7
   maxUnlocks: 5
-  unlockAmount: 10
+  unlockAmount: 5
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
@@ -4278,7 +4278,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 4
   maxUnlocks: 5
-  unlockAmount: 1
+  unlockAmount: 20
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
@@ -8635,7 +8635,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 6
   maxUnlocks: 5
-  unlockAmount: 1
+  unlockAmount: 20
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0

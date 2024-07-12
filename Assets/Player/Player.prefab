@@ -357,6 +357,7 @@ MonoBehaviour:
   strike: {fileID: 6108100398174320582, guid: b2da8d12db02a6a448e4bbc70e902e0d, type: 3}
   ShockWave: {fileID: -4058340172582843007, guid: 684a194905dce00468dd7b144b2c90cb,
     type: 3}
+  Mine: {fileID: 819465354020911178, guid: 89b01c76158fad041a2f822c6bdc807e, type: 3}
   YellowSFX: {fileID: 1958193319504074324, guid: 9251a80e8eea13c44b51020419111772,
     type: 3}
   animator: {fileID: 0}
