@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DamageBoss : MonoBehaviour
 {
-    [SerializeField] float Health;
     [SerializeField] Transform HealthBar;
 
     [Header("UI")]
@@ -24,24 +24,35 @@ public class DamageBoss : MonoBehaviour
     [SerializeField] GameObject ShieldBlue;
     [SerializeField] GameObject ShieldGreen;
 
+    [Header("Evetns")]
+    [SerializeField] UnityEvent ShieldBrakeEvent;
+    [SerializeField] UnityEvent<float> DamageEvent;
+
     private ColorEnum ShieldColor;
 
-    float maxHealth; 
-    Vector3 Velocity;
-
-    private void Start()
+    public void SpawnShield()
     {
-        maxHealth = Health;
-    }
+        int rng = Random.Range(1, 5);
 
-    void Update()
-    {
-        float size = Health / maxHealth;
-        if (size < 0)
+        switch (rng)
         {
-            size = 0;
+            case 1:
+                ShieldWhite.SetActive(true);
+                ShieldColor = ColorEnum.White;
+                break; 
+            case 2:
+                ShieldYellow.SetActive(true);
+                ShieldColor = ColorEnum.Yellow;
+                break;
+            case 3:
+                ShieldBlue.SetActive(true);
+                ShieldColor = ColorEnum.Blue;
+                break;
+            case 4:
+                ShieldGreen.SetActive(true);
+                ShieldColor = ColorEnum.Green;
+                break;
         }
-        HealthBar.localScale = Vector3.SmoothDamp(HealthBar.localScale, new Vector3(size, size, size), ref Velocity, 20 * Time.deltaTime);
     }
 
     public void TakeDamage(float damage, ColorEnum color)
@@ -52,6 +63,7 @@ public class DamageBoss : MonoBehaviour
             {
                 ShieldWhite.SetActive(false);
                 Instantiate(ShieldWhiteBrakeVFX, new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Quaternion.identity);
+                ShieldBrakeEvent.Invoke();
             }
         }
         else if (ShieldYellow.activeInHierarchy)
@@ -60,6 +72,7 @@ public class DamageBoss : MonoBehaviour
             {
                 ShieldYellow.SetActive(false);
                 Instantiate(ShieldYellowBrakeVFX, new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Quaternion.identity);
+                ShieldBrakeEvent.Invoke();
             }
         }
         else if (ShieldBlue.activeInHierarchy)
@@ -68,6 +81,7 @@ public class DamageBoss : MonoBehaviour
             {
                 ShieldBlue.SetActive(false);
                 Instantiate(ShieldBlueBrakeVFX, new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Quaternion.identity);
+                ShieldBrakeEvent.Invoke();
             }
         }
         else if (ShieldGreen.activeInHierarchy)
@@ -76,33 +90,17 @@ public class DamageBoss : MonoBehaviour
             {
                 ShieldGreen.SetActive(false);
                 Instantiate(ShieldGreenBrakeVFX, new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z), Quaternion.identity);
+                ShieldBrakeEvent.Invoke();
             }
         }
         else
         {
-            Health = Health - damage;
-
             Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
 
             DamageNumbers numbers = Instantiate(damageNumbers, pos, Quaternion.identity);
             numbers.ShowDamage(damage);
 
-
-            if (Health <= 0)
-            {
-                Die();
-                Instantiate(DieVFX, transform.position, Quaternion.identity);
-            }
-            else
-            {
-                Instantiate(HitSFX, transform.position, Quaternion.identity);
-            }
+            DamageEvent.Invoke(damage);
         }
-    }
-
-    public void Die()
-    {
-        GetComponent<BoxCollider>().enabled = false;
-        gameObject.SetActive(false);
     }
 }

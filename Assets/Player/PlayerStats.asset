@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alive: 1
   Coins: 0
-  Luck: 1
+  Luck: 0
   maxHealth: 10
   AttackSpeed: 4
   critRate: 1
   critDamage: 50
-  BaseAttack: 1.0000001
-  BonusAttack: 20
+  BaseAttack: 0.5
+  BonusAttack: 0
   AbilityDamage: 0
   AbilityCooldown: 0
-  Shields: 3
+  Shields: 0
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
