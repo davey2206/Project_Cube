@@ -5619,15 +5619,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 1855258916375416598, guid: 608ede9b2ec48364da3213655ccd240b,
+    - target: {fileID: 3164016003492729665, guid: 608ede9b2ec48364da3213655ccd240b,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -98.599976
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078886261952099493, guid: 608ede9b2ec48364da3213655ccd240b,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6078886261952099493, guid: 608ede9b2ec48364da3213655ccd240b,
+        type: 3}
+      propertyPath: m_fontSizeMax
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6532360011162577707, guid: 608ede9b2ec48364da3213655ccd240b,
         type: 3}
       propertyPath: m_Name
       value: AbilitySelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208505051165446091, guid: 608ede9b2ec48364da3213655ccd240b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173283133012732142, guid: 608ede9b2ec48364da3213655ccd240b,
         type: 3}
@@ -5658,16 +5673,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173283133012732142, guid: 608ede9b2ec48364da3213655ccd240b,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1800
-      objectReference: {fileID: 0}
-    - target: {fileID: 9173283133012732142, guid: 608ede9b2ec48364da3213655ccd240b,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 9173283133012732142, guid: 608ede9b2ec48364da3213655ccd240b,
         type: 3}

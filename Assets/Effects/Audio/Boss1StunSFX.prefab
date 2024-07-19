@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 3395311519949171395, guid: e9deca553acf64241a243a491e76e6fe,
         type: 3}
       propertyPath: m_Name
-      value: Boss1StumpSFX
+      value: Boss1StunSFX
       objectReference: {fileID: 0}
     - target: {fileID: 3718223064894764201, guid: e9deca553acf64241a243a491e76e6fe,
         type: 3}
@@ -87,7 +87,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b9ae33f524cfa9a4698cbe910255159e, type: 3}
+      objectReference: {fileID: 8300000, guid: 2462960a3cf4e6143aaa7ee6de974eaa, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

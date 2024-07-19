@@ -51,7 +51,7 @@ public class Spawner : MonoBehaviour
         playerStats.AddCoins();
         GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
         gameEnd.SetActive(true);
-        gameStartText.text = "Victory";
+        gameStartText.text = "Victory (End of demo)";
         audioManager.PlaySong(2);
         StopAllCoroutines();
     }

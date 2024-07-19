@@ -195,6 +195,7 @@ public class Enemy : MonoBehaviour
 
     public void Stun(float stunTime)
     {
+        animator.SetTrigger("Stun");
         StunTime = StunTime + stunTime;
         Stunned = true;
     }
@@ -206,6 +207,8 @@ public class Enemy : MonoBehaviour
         {
             StunTime = 0;
             Stunned = false;
+
+            animator.SetTrigger("EndStun");
         }
     }
 

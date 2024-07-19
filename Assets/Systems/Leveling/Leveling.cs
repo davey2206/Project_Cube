@@ -165,27 +165,27 @@ public class Leveling : MonoBehaviour
         float rng = Random.Range(0,100);
         rng = rng + playerStats.Luck;
 
-        if (rng < 44)
+        if (rng < 50)
         {
             a = abilitiesCommon[Random.Range(0, abilitiesCommon.Count)];
             abilitiesCommon.Remove(a);
         }
-        else if (rng >= 40 && rng < 74)
+        else if (rng >= 50 && rng < 84)
         {
             a = abilitiesUncommon[Random.Range(0, abilitiesUncommon.Count)];
             abilitiesUncommon.Remove(a);
         }
-        else if (rng >= 74 && rng < 89)
+        else if (rng >= 84 && rng < 99)
         {
             a = abilitiesRare[Random.Range(0, abilitiesRare.Count)];
             abilitiesRare.Remove(a);
         }
-        else if (rng >= 89 && rng < 99)
+        else if (rng >= 99 && rng < 120)
         {
             a = abilitiesEpic[Random.Range(0, abilitiesEpic.Count)];
             abilitiesEpic.Remove(a);
         }
-        else if (rng >= 99)
+        else if (rng >= 120)
         {
             a = abilitiesLegendary[Random.Range(0, abilitiesLegendary.Count)];
             abilitiesLegendary.Remove(a);

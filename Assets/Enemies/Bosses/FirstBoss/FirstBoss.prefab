@@ -1020,8 +1020,18 @@ MonoBehaviour:
   BodyCore: {fileID: 6777927022371196817}
   ArmLCore: {fileID: 8971553945315021201}
   ArmRCore: {fileID: 1275884028146609517}
-  Health: 750
+  Health: 1500
+  ScreenShake: {fileID: 11400000, guid: 40d0396c30f2ef64eb79e9ba4a5a77f2, type: 2}
   animator: {fileID: 3254733599386723632}
+  RawrSFX: {fileID: 3794406077692774803, guid: 525ff059e78e4444295c449f074bee83, type: 3}
+  AttackSFX: {fileID: 1641933238505481311, guid: fa48fa0985afb9649bb3906b24751145,
+    type: 3}
+  PrepereAttackSFX: {fileID: 1641933238505481311, guid: 354f80b75204b9b43b2c3b79691675ff,
+    type: 3}
+  StunSFX: {fileID: 1641933238505481311, guid: 7d2768e2dc982d04fa8732b186920509, type: 3}
+  StunRecoverSFX: {fileID: 1641933238505481311, guid: fa69856c846891845b2b68b6bee3001a,
+    type: 3}
+  DeadVFX: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85, type: 3}
   Enemy: {fileID: 3352287954256755614, guid: 597e4af92d08d5c4d9841830520aa947, type: 3}
   Waves: 5
   SpawnAmount: 10
@@ -1564,9 +1574,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8314901572772458263}
+  - component: {fileID: 4299460289091659551}
+  - component: {fileID: 5648755106731296529}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: BossHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1590,6 +1602,54 @@ Transform:
   - {fileID: 1398927399381804929}
   m_Father: {fileID: 6511384629396802244}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &4299460289091659551
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464314789856657989}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &5648755106731296529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6464314789856657989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.5, y: 2, z: 2.5}
+  m_Center: {x: 0, y: 0, z: -1}
 --- !u!1 &6749317528009544463
 GameObject:
   m_ObjectHideFlags: 0

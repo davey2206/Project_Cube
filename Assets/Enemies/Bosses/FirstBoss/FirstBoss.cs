@@ -17,7 +17,14 @@ public class FirstBoss : MonoBehaviour
     [SerializeField] float Health;
 
     [Header("Effect / Animation")]
+    [SerializeField] ScreenShakeObject ScreenShake;
     [SerializeField] Animator animator;
+    [SerializeField] GameObject RawrSFX;
+    [SerializeField] GameObject AttackSFX;
+    [SerializeField] GameObject PrepereAttackSFX;
+    [SerializeField] GameObject StunSFX;
+    [SerializeField] GameObject StunRecoverSFX;
+    [SerializeField] GameObject DeadVFX;
 
     [Header("Spawner")]
     [SerializeField] GameObject Enemy;
@@ -98,6 +105,7 @@ public class FirstBoss : MonoBehaviour
             Scream = true;
             StopAllCoroutines();
             StartCoroutine(ScreamStart());
+            Instantiate(StunSFX);
         }
     }
 
@@ -107,7 +115,8 @@ public class FirstBoss : MonoBehaviour
 
         if (Health <= 0)
         {
-            //die
+            Instantiate(DeadVFX, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 
@@ -122,6 +131,7 @@ public class FirstBoss : MonoBehaviour
         dir = player.position - transform.position;
         charge = true;
         Left = !Left;
+        PlayAttackSound();
 
         yield return new WaitForSeconds(0.5f);
         charge = false;
@@ -165,14 +175,12 @@ public class FirstBoss : MonoBehaviour
 
     public IEnumerator ScreamStart()
     {
-        //stun
+        animator.SetTrigger("Stun");
         charge= false;
 
         yield return new WaitForSeconds(5f);
 
-        MoveToNextStart = true;
         Stunned = false;
-        MovePoint = new Vector3(0, 0, 7.5f);
 
         yield return new WaitForSeconds(2f);
 
@@ -180,8 +188,17 @@ public class FirstBoss : MonoBehaviour
         StartCoroutine(SpawnEnemies());
 
         yield return new WaitForSeconds(2.5f);
-        SetMovePoint();
+        MoveToNextStart = true;
         Scream = false;
+
+        if (transform.position.x < 0)
+        {
+            Left = true;
+        }
+        else
+        {
+            Left = false;
+        }
     }
 
     public IEnumerator SpawnEnemies()
@@ -226,5 +243,28 @@ public class FirstBoss : MonoBehaviour
             SpawnPoints = SpawnAmount;
             yield return new WaitForSeconds(5);
         }
+    }
+
+    public void PlayRawrSound()
+    {
+        Instantiate(RawrSFX);
+        ScreenShake.Amplitude = 1f;
+        ScreenShake.SpeedOfDecay = 0.25f;
+    }
+
+    public void PlayAttackSound()
+    {
+        Instantiate(AttackSFX);
+        ScreenShake.Amplitude = 0.5f;
+        ScreenShake.SpeedOfDecay = 0.25f;
+    }
+
+    public void PlayPrepereAttackSound()
+    {
+        Instantiate(PrepereAttackSFX);
+    }
+    public void PlayStunRecoverSound()
+    {
+        Instantiate(StunRecoverSFX);
     }
 }

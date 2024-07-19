@@ -33,6 +33,11 @@ public class Player : MonoBehaviour
             TakeDamage();
             other.gameObject.transform.parent.GetComponent<Enemy>().HitPlayer();
         }
+
+        if (other.transform.CompareTag("BossHitBox"))
+        {
+            TakeBossDamage();
+        }
     }
 
     private void Update()
@@ -47,6 +52,24 @@ public class Player : MonoBehaviour
         if (playerStats.Shields == 0)
         {
             Health--;
+        }
+        else
+        {
+            playerStats.Shields--;
+        }
+
+        if (Health <= 0)
+        {
+            StartCoroutine(EndGame());
+        }
+    }
+
+    public void TakeBossDamage()
+    {
+        ActivateAbilitiesOnHit();
+        if (playerStats.Shields == 0)
+        {
+            Health -= 0.5f;
         }
         else
         {
