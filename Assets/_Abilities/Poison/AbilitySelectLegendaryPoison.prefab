@@ -145,12 +145,12 @@ PrefabInstance:
     - target: {fileID: 8069931767779428592, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_fontSize
-      value: 44
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8069931767779428592, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_fontSizeMax
-      value: 44
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 9114560981945366103, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
@@ -160,7 +160,7 @@ PrefabInstance:
     - target: {fileID: 9114560981945366103, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

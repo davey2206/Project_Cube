@@ -7,6 +7,11 @@ public class StartLogo : MonoBehaviour
 {
     [SerializeField] GameObject logo;
 
+    private void Awake()
+    {
+        Display.displays[0].Activate();
+    }
+
     private IEnumerator Start()
     {
         Cursor.visible = false;

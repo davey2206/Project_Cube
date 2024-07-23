@@ -9,13 +9,21 @@ public class Player : MonoBehaviour
     [SerializeField] float Health;
     [SerializeField] PlayerStats playerStats;
     [SerializeField] Transform HealthBar;
-    [SerializeField] GameObject PlayerDieEffect;
     [SerializeField] abilitiesObject abilities;
+
+    [Header("Effects")]
+    [SerializeField] GameObject PlayerDieEffect;
+    [SerializeField] GameObject PlayerDieEffect2;
+    [SerializeField] GameObject PlayerDieEffect3;
+    [SerializeField] GameObject PlayerDieEffect4;
+    [SerializeField] HitEffect hitEffect;
+    [SerializeField] ScreenShakeObject screenShake;
 
     [Header("UI")]
     [SerializeField] GameObject gameEnd;
     [SerializeField] TextMeshProUGUI gameStartText;
-    [SerializeField] ScreenShakeObject screenShake;
+
+    public ColorEnum color;
 
     Manager audioManager;
     Vector3 Velocity;
@@ -32,11 +40,17 @@ public class Player : MonoBehaviour
         {
             TakeDamage();
             other.gameObject.transform.parent.GetComponent<Enemy>().HitPlayer();
+            hitEffect.Hit();
+            screenShake.Amplitude = 0.5f;
+            screenShake.SpeedOfDecay = 0.25f;
         }
 
         if (other.transform.CompareTag("BossHitBox"))
         {
             TakeBossDamage();
+            hitEffect.Hit();
+            screenShake.Amplitude = 0.5f;
+            screenShake.SpeedOfDecay = 0.25f;
         }
     }
 
@@ -124,7 +138,21 @@ public class Player : MonoBehaviour
         playerStats.alive = false;
         playerStats.AddCoins();
         GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
-        Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
+        switch (color)
+        {
+            case ColorEnum.White:
+                Instantiate(PlayerDieEffect, new Vector3(0, 5, 0), Quaternion.identity);
+                break;
+            case ColorEnum.Blue:
+                Instantiate(PlayerDieEffect2, new Vector3(0, 5, 0), Quaternion.identity);
+                break;
+            case ColorEnum.Green:
+                Instantiate(PlayerDieEffect3, new Vector3(0, 5, 0), Quaternion.identity);
+                break;
+            case ColorEnum.Yellow:
+                Instantiate(PlayerDieEffect4, new Vector3(0, 5, 0), Quaternion.identity);
+                break;
+        }
         GetComponent<BoxCollider>().enabled = false;
         GetComponent<Animator>().SetTrigger("Die");
 

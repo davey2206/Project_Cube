@@ -75,6 +75,7 @@ public class FormChange : MonoBehaviour
 
     public void White()
     {
+        player.color = ColorEnum.White;
         attackVFX.UpdateColor(ColorEnum.White);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
@@ -86,6 +87,7 @@ public class FormChange : MonoBehaviour
 
     public void Yellow()
     {
+        player.color = ColorEnum.Yellow;
         attackVFX.UpdateColor(ColorEnum.Yellow);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
@@ -120,6 +122,7 @@ public class FormChange : MonoBehaviour
 
     public void Green()
     {
+        player.color = ColorEnum.Green;
         attackVFX.UpdateColor(ColorEnum.Green);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;
@@ -137,6 +140,7 @@ public class FormChange : MonoBehaviour
 
     public void Blue()
     {
+        player.color = ColorEnum.Blue;
         attackVFX.UpdateColor(ColorEnum.Blue);
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0.25f;

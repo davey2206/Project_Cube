@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] GameObject Menu;
-    [SerializeField] GameObject HowToPlay;
     [SerializeField] AudioManeger audioManeger;
 
     MainCubeAnimations cubeAnimator;
@@ -53,11 +52,5 @@ public class MainMenu : MonoBehaviour
     public void BackToMenu()
     {
         animator.SetTrigger("SettingsToMenu");
-    }
-
-    public void Tutorial()
-    {
-        HowToPlay.SetActive(true);
-        Menu.SetActive(false);
     }
 }

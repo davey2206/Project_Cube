@@ -260,10 +260,17 @@ MonoBehaviour:
   HealthBar: {fileID: 3005072207263238598}
   PlayerDieEffect: {fileID: 6201523421047463331, guid: b29b81637d5197649a2968766e7b62c3,
     type: 3}
+  PlayerDieEffect2: {fileID: 6201523421047463331, guid: c5f50eec1cfb83f439520c143359dda3,
+    type: 3}
+  PlayerDieEffect3: {fileID: 6201523421047463331, guid: 4a4f86c147255284a8ff1d31ff29d66d,
+    type: 3}
+  PlayerDieEffect4: {fileID: 6201523421047463331, guid: d4ae7578c2a0c6d478842f0bf45c0972,
+    type: 3}
   abilities: {fileID: 11400000, guid: b12ca156e32aea64eb329122b1d19b08, type: 2}
   gameEnd: {fileID: 0}
   gameStartText: {fileID: 0}
   screenShake: {fileID: 11400000, guid: 40d0396c30f2ef64eb79e9ba4a5a77f2, type: 2}
+  color: 0
 --- !u!114 &-302407786340333470
 MonoBehaviour:
   m_ObjectHideFlags: 0

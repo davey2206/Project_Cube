@@ -111,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 3874333258534009449, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3874333258534009449, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
@@ -126,7 +126,7 @@ PrefabInstance:
     - target: {fileID: 5725520753034117811, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_text
-      value: Increase your Ability Damage by 10%
+      value: Increase your Ability Damage by 20%
       objectReference: {fileID: 0}
     - target: {fileID: 6246599916653898527, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}

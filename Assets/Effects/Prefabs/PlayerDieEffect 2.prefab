@@ -69,8 +69,8 @@ VisualEffect:
       m_Array:
       - m_Value:
           serializedVersion: 2
-          key0: {r: 31.999998, g: 31.999998, b: 31.999998, a: 0}
-          key1: {r: 23.968628, g: 23.968628, b: 23.968628, a: 1}
+          key0: {r: 0.12630528, g: 0.7490197, b: 0, a: 0}
+          key1: {r: 11.057602, g: 64, b: 0, a: 1}
           key2: {r: 0, g: 0, b: 0, a: 0.8}
           key3: {r: 0, g: 0, b: 0, a: 0}
           key4: {r: 0, g: 0, b: 0, a: 0}
@@ -101,8 +101,8 @@ VisualEffect:
         m_Overridden: 1
       - m_Value:
           serializedVersion: 2
-          key0: {r: 2.9960785, g: 2.9960785, b: 2.9960785, a: 1}
-          key1: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 0}
+          key0: {r: 0.5052211, g: 2.9960787, b: 0, a: 1}
+          key1: {r: 0.5052211, g: 2.9960787, b: 0, a: 0}
           key2: {r: 31.999998, g: 31.999998, b: 31.999998, a: 0}
           key3: {r: 0, g: 0, b: 0, a: 0}
           key4: {r: 0, g: 0, b: 0, a: 0}
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 7598192415611729225}
   - component: {fileID: 3940826784410836127}
   m_Layer: 0
-  m_Name: PlayerDieEffect
+  m_Name: PlayerDieEffect 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

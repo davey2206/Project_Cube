@@ -10,6 +10,7 @@ public class BackToMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         sceneManager = GameObject.Find("SceneManager").GetComponent<sceneManager>();
+        GameObject.Find("MainCube").GetComponent<MainCubeAnimations>().BackMenu();
         sceneManager.MenuSceneLoad();
     }
 }

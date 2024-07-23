@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 8841853873214089813, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
       propertyPath: m_text
-      value: Increase your Crit Rate by 5%
+      value: Increase your Crit Rate by 10%
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

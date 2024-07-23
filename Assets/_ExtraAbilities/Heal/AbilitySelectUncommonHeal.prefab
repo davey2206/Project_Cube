@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 1900939171309902926, guid: ef1b7c8d18222ea459d8274609cc972e,
         type: 3}
       propertyPath: m_text
-      value: Heal for 2 health
+      value: Heal for 3 health
       objectReference: {fileID: 0}
     - target: {fileID: 2646800523083280344, guid: ef1b7c8d18222ea459d8274609cc972e,
         type: 3}

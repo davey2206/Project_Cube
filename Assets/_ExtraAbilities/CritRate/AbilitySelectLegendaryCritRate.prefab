@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 5405939886815960676, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_text
-      value: Increase your Crit Rate by 10%
+      value: Increase your Crit Rate by 15%
       objectReference: {fileID: 0}
     - target: {fileID: 5823048577073901633, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
