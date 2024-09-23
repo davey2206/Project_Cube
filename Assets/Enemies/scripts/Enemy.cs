@@ -66,11 +66,7 @@ public class Enemy : MonoBehaviour
         }
         HealthBar.localScale = Vector3.SmoothDamp(HealthBar.localScale, new Vector3(size, size, size), ref Velocity, 20 * Time.deltaTime);
 
-        if (!isDead && !Stunned)
-        {
-            var step = Speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, step);
-        }
+        Move();
 
         CheckIfStunned();
     }
@@ -167,21 +163,7 @@ public class Enemy : MonoBehaviour
 
             if (counter >= 2)
             {
-                switch (Random.Range(1, 5))
-                {
-                    case 1:
-                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + Random.Range(1.5f, maxPost));
-                        break;
-                    case 2:
-                        transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - Random.Range(1.5f, maxPost));
-                        break;
-                    case 3:
-                        transform.position = new Vector3(posRightTop.x + Random.Range(1.5f, maxPost), 0, Random.Range(posRightTop.z, -posRightTop.z));
-                        break;
-                    case 4:
-                        transform.position = new Vector3(-posRightTop.x - Random.Range(1.5f, maxPost), 0, Random.Range(posRightTop.x, -posRightTop.x));
-                        break;
-                }
+                SetPosition(posRightTop, maxPost);
             }
 
             NumberOfTimes++;
@@ -193,9 +175,40 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    public virtual void SetPosition(Vector3 posRightTop, int maxPost)
+    {
+        switch (Random.Range(1, 5))
+        {
+            case 1:
+                transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, posRightTop.z + Random.Range(1.5f, maxPost));
+                break;
+            case 2:
+                transform.position = new Vector3(Random.Range(posRightTop.x, -posRightTop.x), 0, -posRightTop.z - Random.Range(1.5f, maxPost));
+                break;
+            case 3:
+                transform.position = new Vector3(posRightTop.x + Random.Range(1.5f, maxPost), 0, Random.Range(posRightTop.z, -posRightTop.z));
+                break;
+            case 4:
+                transform.position = new Vector3(-posRightTop.x - Random.Range(1.5f, maxPost), 0, Random.Range(posRightTop.x, -posRightTop.x));
+                break;
+        }
+    }
+
+    public virtual void Move()
+    {
+        if (!isDead && !Stunned)
+        {
+            var step = Speed * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, Vector3.zero, step);
+        }
+    }
+
     public void Stun(float stunTime)
     {
-        animator.SetTrigger("Stun");
+        if (stunTime > 0)
+        {
+            animator.SetTrigger("Stun");
+        }
         StunTime = StunTime + stunTime;
         Stunned = true;
     }

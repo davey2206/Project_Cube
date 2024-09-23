@@ -20,9 +20,10 @@ MonoBehaviour:
   - {fileID: 4464232582416062106, guid: dc493c3e29402544e9838db1d3ab4d4a, type: 3}
   - {fileID: 3887267543154452254, guid: 6200c72e798df564c8d16a3b9e393184, type: 3}
   rarity: 0
-  Level: 0
-  Active: 0
+  Level: 3
+  Active: 1
   Unlocked: 1
+  Evolved: 1
   abilityType: 3
   Ability:
     m_PersistentCalls:

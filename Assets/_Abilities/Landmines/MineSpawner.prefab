@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Mine: {fileID: 819465354020911178, guid: 89b01c76158fad041a2f822c6bdc807e, type: 3}
+  ability: {fileID: 11400000, guid: 92e99b6ff1680c54a9b6486b43e68d60, type: 2}

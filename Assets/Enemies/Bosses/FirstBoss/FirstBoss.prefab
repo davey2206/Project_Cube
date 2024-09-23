@@ -1034,7 +1034,7 @@ MonoBehaviour:
   DeadVFX: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85, type: 3}
   Enemy: {fileID: 3352287954256755614, guid: 597e4af92d08d5c4d9841830520aa947, type: 3}
   Waves: 5
-  SpawnAmount: 10
+  SpawnAmount: 20
 --- !u!1 &5186851077184391419
 GameObject:
   m_ObjectHideFlags: 0

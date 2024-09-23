@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74c0f10ca6a22204b8348e01466c82c2, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  alive: 0
-  Coins: 949
+  alive: 1
+  Coins: 0
   Luck: 1
   maxHealth: 11
-  AttackSpeed: 4
-  critRate: 11
-  critDamage: 50
-  BaseAttack: 1.3000001
-  BonusAttack: 80
+  AttackSpeed: 6
+  critRate: 6
+  critDamage: 70
+  BaseAttack: 0.5
+  BonusAttack: 40
   AbilityDamage: 20
   AbilityCooldown: 5
   Shields: 0
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  Body: {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  Health: {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}

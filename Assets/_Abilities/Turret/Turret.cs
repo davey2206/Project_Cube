@@ -9,6 +9,10 @@ public class Turret : MonoBehaviour
     [SerializeField] BulletMovement bullet;
     [SerializeField] GameObject SFX;
     [SerializeField] AudioManeger audioManeger;
+    [SerializeField] Transform Shooter_1;
+    [SerializeField] Transform Shooter_2;
+
+    [SerializeField] bool Evolved = false;
 
     Transform target;
     float attack;
@@ -22,9 +26,15 @@ public class Turret : MonoBehaviour
             {
                 if (audioManeger.CanSpawnAudio())
                 {
-                    Instantiate(SFX, transform.position, Quaternion.identity);
+                    Instantiate(SFX, Shooter_1.position, Quaternion.identity);
                 }
-                var b = Instantiate(bullet, Head.transform.position, Quaternion.identity);
+                var b = Instantiate(bullet, Shooter_1.position, Quaternion.identity);
+                b.transform.LookAt(target);
+                b.SetAttack(attack);
+                if (Evolved)
+                {
+                    b = Instantiate(bullet, Shooter_2.position, Quaternion.identity);
+                }
                 b.transform.LookAt(target);
                 b.SetAttack(attack);
             }

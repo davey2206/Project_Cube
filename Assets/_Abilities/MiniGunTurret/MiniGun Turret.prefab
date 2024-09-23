@@ -492,6 +492,7 @@ MonoBehaviour:
   bullet: {fileID: 991903540875927492, guid: 7c65bb1d29acb024ab680433631d9f51, type: 3}
   SFX: {fileID: 7294976589790146365, guid: 9b89f52709d23754c9316dbcc8cd700c, type: 3}
   audioManeger: {fileID: 11400000, guid: 3ec96a94adf2b42498cae9978a4395e7, type: 2}
+  ability: {fileID: 11400000, guid: 3629b07d11b1dbd4081f19d7e0a2d848, type: 2}
 --- !u!1 &8362912671152311664
 GameObject:
   m_ObjectHideFlags: 0

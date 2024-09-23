@@ -115,7 +115,7 @@ public class FormChange : MonoBehaviour
                     attack = Instantiate(strike, new Vector3(0, 0, -5f), Quaternion.identity);
                     break;
             }
-            attack.GetComponentInChildren<WaveAttacks>(true).SetStats(playerStats.GetAttack() * 1.5f);
+            attack.GetComponentInChildren<WaveAttacks>(true).SetStats(0.01f, playerStats.GetAttack() * 1.5f);
         }
         
     }
@@ -134,7 +134,7 @@ public class FormChange : MonoBehaviour
             Vector3 pos = new Vector3(Random.Range(-15f, 15f), 0, Random.Range(-8f, 8f));
 
             var wave = Instantiate(Mine, pos, Quaternion.identity);
-            wave.GetComponentInChildren<WaveAttacks>(true).SetStats(playerStats.GetAttack() * 1.5f);
+            wave.GetComponentInChildren<WaveAttacks>(true).SetStats(0.01f, playerStats.GetAttack() * 1.5f);
         }
     }
 
@@ -175,7 +175,7 @@ public class FormChange : MonoBehaviour
     IEnumerator SuperAttackSpeed()
     {
         playerStats.AttackSpeed += 10f;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         playerStats.AttackSpeed -= 10f;
     }
 

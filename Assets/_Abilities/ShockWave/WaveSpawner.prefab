@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Wave: {fileID: -4058340172582843007, guid: d64f5a746fc52d2478e9ec5dea908b74, type: 3}
+  ability: {fileID: 11400000, guid: cff4a2b0fde4c8f4f83b6454b813bf09, type: 2}

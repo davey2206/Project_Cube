@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
+    [Header("Spawner")]
+    [SerializeField] bool IsLastSpawner;
+
     [Header("Waves")]
     [SerializeField] AnimationCurve SpawnPoints;
 
@@ -37,10 +41,17 @@ public class Spawner : MonoBehaviour
     {
         if (lastWaveDone && GameObject.FindGameObjectsWithTag("Enemy").Count() == 0 && GameObject.FindGameObjectsWithTag("Boss").Count() == 0)
         {
-            if (!done)
+            if (!done )
             {
                 done = true;
-                StartCoroutine(EndGame());
+                if (IsLastSpawner)
+                {
+                    StartCoroutine(EndGame());
+                }
+                else
+                {
+                    //Spawn Reward
+                }
             }
         }
     }

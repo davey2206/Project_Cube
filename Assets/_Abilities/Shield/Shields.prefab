@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualEffect: {fileID: 2758827175900928854}
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  ability: {fileID: 11400000, guid: dab420ee6952dd74bacce8b88e4ccea5, type: 2}
+  MaxNumberOfShields: 0
+  RegenTime: 0
 --- !u!1001 &822266902496334545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +58,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4216244654995752075}
     m_Modifications:
+    - target: {fileID: 3251622944956090759, guid: ce13f8dc39614e2428105eee34b407be,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Int.m_Array.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251622944956090759, guid: ce13f8dc39614e2428105eee34b407be,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Int.m_Array.Array.data[0].m_Name
+      value: NumberOfShields
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251622944956090759, guid: ce13f8dc39614e2428105eee34b407be,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Int.m_Array.Array.data[0].m_Value
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3251622944956090759, guid: ce13f8dc39614e2428105eee34b407be,
+        type: 3}
+      propertyPath: m_PropertySheet.m_Int.m_Array.Array.data[0].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6912406991997791119, guid: ce13f8dc39614e2428105eee34b407be,
         type: 3}
       propertyPath: m_Name

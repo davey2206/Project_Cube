@@ -10,8 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] PlayerStats playerStats;
     [SerializeField] Transform HealthBar;
     [SerializeField] abilitiesObject abilities;
+    [SerializeField] MeshRenderer rendererBody;
+    [SerializeField] MeshRenderer rendererHealth;
 
     [Header("Effects")]
+    [SerializeField] GameObject PlayerHitSound;
+    [SerializeField] GameObject PlayerDieEffectSound;
+    [SerializeField] GameObject PlayerDieEffectSound2;
     [SerializeField] GameObject PlayerDieEffect;
     [SerializeField] GameObject PlayerDieEffect2;
     [SerializeField] GameObject PlayerDieEffect3;
@@ -30,6 +35,14 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        List<Material> bodyMats= new List<Material>();
+        List<Material> healthMats = new List<Material>();
+
+        bodyMats.Add(playerStats.Body);
+        healthMats.Add(playerStats.Health);
+
+        rendererBody.SetMaterials(bodyMats);
+        rendererHealth.SetMaterials(healthMats);
         ResetPlayer();
         audioManager = GameObject.Find("SimpleAudioManager").GetComponent<Manager>();
     }
@@ -43,6 +56,8 @@ public class Player : MonoBehaviour
             hitEffect.Hit();
             screenShake.Amplitude = 0.5f;
             screenShake.SpeedOfDecay = 0.25f;
+
+            Instantiate(PlayerHitSound, new Vector3(0, 5, 0), Quaternion.identity);
         }
 
         if (other.transform.CompareTag("BossHitBox"))
@@ -51,6 +66,8 @@ public class Player : MonoBehaviour
             hitEffect.Hit();
             screenShake.Amplitude = 0.5f;
             screenShake.SpeedOfDecay = 0.25f;
+
+            Instantiate(PlayerHitSound, new Vector3(0, 5, 0), Quaternion.identity);
         }
     }
 
@@ -138,6 +155,7 @@ public class Player : MonoBehaviour
         playerStats.alive = false;
         playerStats.AddCoins();
         GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
+        Instantiate(PlayerDieEffectSound, new Vector3(0, 5, 0), Quaternion.identity);
         switch (color)
         {
             case ColorEnum.White:
@@ -160,6 +178,7 @@ public class Player : MonoBehaviour
         screenShake.Amplitude = 0.5f;
         screenShake.SpeedOfDecay = 0f;
         yield return new WaitForSeconds(2.1f);
+        Instantiate(PlayerDieEffectSound2, new Vector3(0, 5, 0), Quaternion.identity);
         screenShake.Amplitude = 5.0f;
         screenShake.SpeedOfDecay = 0.5f;
 

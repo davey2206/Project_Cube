@@ -46,4 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Strike: {fileID: 6108100398174320582, guid: 17b8a042f5ca2af4288cbeea7544e80f, type: 3}
+  StrikeMini: {fileID: 6108100398174320582, guid: 20fed5630fc8d3a45a3da6367e14c606,
+    type: 3}
   SFX: {fileID: 6025128775222123752, guid: 6ee72bedcb14383459a9a005b4e9f431, type: 3}
+  ability: {fileID: 11400000, guid: e4c912d11645ffa419ebf7db40b0fb95, type: 2}

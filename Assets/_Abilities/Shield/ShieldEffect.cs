@@ -7,14 +7,18 @@ public class ShieldEffect : MonoBehaviour
 {
     [SerializeField] VisualEffect visualEffect;
     [SerializeField] PlayerStats playerStats;
+    [SerializeField] ability ability;
 
     public int MaxNumberOfShields;
     public float RegenTime;
+    bool evolved = false;
+    int level;
 
-    public void LevelUp(int n, float r)
+    public void LevelUp(int n, float r, int l)
     {
         MaxNumberOfShields = n;
         RegenTime = r;
+        level = l;
 
         playerStats.Shields = MaxNumberOfShields;
 
@@ -24,6 +28,29 @@ public class ShieldEffect : MonoBehaviour
 
     private void Update()
     {
+        if (ability.Evolved && !evolved)
+        {
+            evolved = true;
+            switch (level)
+            {
+                case 1:
+                    MaxNumberOfShields = 4;
+                    break;
+                case 2:
+                    MaxNumberOfShields = 5;
+                    break;
+                case 3:
+                    MaxNumberOfShields = 7;
+                    break;
+                case 4:
+                    MaxNumberOfShields = 8;
+                    break;
+                case 5:
+                    MaxNumberOfShields = 10;
+                    break;
+            }
+        }
+
         if (playerStats.Shields != visualEffect.GetInt("NumberOfShields"))
         {
             visualEffect.SetInt("NumberOfShields", playerStats.Shields);

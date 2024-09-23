@@ -43,6 +43,7 @@ public class Leveling : MonoBehaviour
         foreach (var ability in abilities.abilities)
         {
             ability.Active = false;
+            ability.Evolved = false;
             ability.Level = 0;
         }
     }

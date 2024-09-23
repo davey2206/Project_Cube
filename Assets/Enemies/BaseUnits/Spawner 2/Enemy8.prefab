@@ -60,20 +60,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
-      propertyPath: ShieldColor
-      value: 2
+      propertyPath: Speed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
+      propertyPath: Health
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: ShieldBrakeVFX
       value: 
-      objectReference: {fileID: 7075481740388986141, guid: b1b79189164e28b4894cddcabaf87dce,
+      objectReference: {fileID: 7075481740388986141, guid: eaf848503c8f24b4ebb10a484e0c4dbd,
         type: 3}
-    - target: {fileID: 5266710944945551936, guid: c81872ac7c75c0d468014eda4e5fa23d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e45960d058262684c9caff95bfec3182, type: 2}
     - target: {fileID: 6050748063785555810, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: m_IsActive
@@ -82,7 +82,7 @@ PrefabInstance:
     - target: {fileID: 6850550415252187460, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: m_Name
-      value: Enemy11
+      value: Enemy8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

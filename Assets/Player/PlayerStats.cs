@@ -32,6 +32,10 @@ public class PlayerStats : ScriptableObject
     [Header("SaveFile")]
     [SerializeField] SaveFile saveFile;
 
+    [Header("Skins")]
+    public Material Body;
+    public Material Health;
+
     public float GetAttack()
     {
         float attack = BaseAttack + (BaseAttack * (BonusAttack / 100));

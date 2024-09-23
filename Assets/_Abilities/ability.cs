@@ -18,6 +18,7 @@ public class ability : ScriptableObject
     public int Level;
     public bool Active;
     public bool Unlocked;
+    public bool Evolved;
 
     [Header("Ability")]
     public AbilityTypes abilityType;

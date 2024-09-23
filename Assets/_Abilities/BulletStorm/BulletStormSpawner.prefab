@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Bullet: {fileID: 8607925347587660532, guid: 8a226f7b2886c644eba0c0622bb8aa93, type: 3}
+  ability: {fileID: 11400000, guid: 9a7efba744d666647ab1dac2b416ab69, type: 2}
   audioClips:
   - {fileID: 8300000, guid: 6c52bc0df22a457499ca11374f9684c5, type: 3}
   - {fileID: 8300000, guid: b864e4d3ebf2efd4d9fc64927b6bf175, type: 3}

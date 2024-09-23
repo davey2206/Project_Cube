@@ -6,6 +6,7 @@ public class BulletStormSpawner : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
     [SerializeField] BulletMovement Bullet;
+    [SerializeField] ability ability;
 
     [SerializeField] List<AudioClip> audioClips;
     [SerializeField] AudioSource AudioSource;
@@ -14,7 +15,7 @@ public class BulletStormSpawner : MonoBehaviour
     int Sound = 1;
     float rot = 0;
 
-    public IEnumerator spawnBullet(float attack, int numberOfBullets)
+    public IEnumerator spawnBullet(float attack, int numberOfBullets, int extraBullets)
     {
         while (true)
         {
@@ -28,7 +29,20 @@ public class BulletStormSpawner : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
 
-            yield return new WaitForSeconds(playerStats.GetCooldown(5));
+            yield return new WaitForSeconds(0.5f);
+
+            if (ability.Evolved)
+            {
+                for (int i = 0; i < extraBullets; i++)
+                {
+                    float baseAttack = playerStats.GetAttack() * attack;
+                    var b = Instantiate(Bullet, Vector3.zero, Quaternion.Euler(0, rot, 0));
+                    b.SetAttack(baseAttack + playerStats.GetAbilityDamage(baseAttack));
+                    rot = rot + (360 / extraBullets);
+                }
+            }
+
+            yield return new WaitForSeconds(playerStats.GetCooldown(4.5f));
         }
     }
 
@@ -61,27 +75,27 @@ public class BulletStormSpawner : MonoBehaviour
             case 1:
                 Sound = 1;
                 StopAllCoroutines();
-                StartCoroutine(spawnBullet(0.5f, 20));
+                StartCoroutine(spawnBullet(0.5f, 20, 5));
                 break;
             case 2:
                 Sound = 2;
                 StopAllCoroutines();
-                StartCoroutine(spawnBullet(0.5f, 30));
+                StartCoroutine(spawnBullet(0.5f, 30, 10));
                 break;
             case 3:
                 Sound = 2;
                 StopAllCoroutines();
-                StartCoroutine(spawnBullet(0.5f, 40));
+                StartCoroutine(spawnBullet(0.5f, 40, 15));
                 break;
             case 4:
                 Sound = 3;
                 StopAllCoroutines();
-                StartCoroutine(spawnBullet(0.5f, 50));
+                StartCoroutine(spawnBullet(0.5f, 50, 20));
                 break;
             case 5:
                 Sound = 4;
                 StopAllCoroutines();
-                StartCoroutine(spawnBullet(0.5f, 60));
+                StartCoroutine(spawnBullet(0.5f, 60, 25));
                 break;
         }
     }

@@ -56,6 +56,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   bullet: {fileID: 6802410761381797745, guid: 8a226f7b2886c644eba0c0622bb8aa93, type: 3}
+  Wave: {fileID: 3518012940223051391, guid: 295c20833fe867048a21a2ea32fae90d, type: 3}
+  ability: {fileID: 11400000, guid: 9b6a73fd0ffdca244957cd674e121b35, type: 2}
 --- !u!114 &2970143529961371124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +88,7 @@ MonoBehaviour:
   Wave: {fileID: -2639533794987724408, guid: 609f869c7b1db054d91035615e36dab5, type: 3}
   SFX: {fileID: 7793507541768270542, guid: 28e56f84cf4e8c34aa9f97c025c710d7, type: 3}
   audioManeger: {fileID: 11400000, guid: 3ec96a94adf2b42498cae9978a4395e7, type: 2}
+  ability: {fileID: 11400000, guid: 444bfd200e18d4b478a7083088433d5f, type: 2}
 --- !u!114 &-6544997043375988145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Wave: {fileID: 2482394721765106143, guid: f09dcd865ad562849a100e6452c65c28, type: 3}
+  ability: {fileID: 11400000, guid: 039762ac8d0e6534bb80feeea345bc3b, type: 2}
 --- !u!114 &1979200394482973018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +118,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Turret: {fileID: -4863046571411535261, guid: bd90cde630138834bb472b1db0f58e4a, type: 3}
+  TurretEvolved: {fileID: -4863046571411535261, guid: 762c3c6be2599e54b962bbba3178c4de,
+    type: 3}
+  ability: {fileID: 11400000, guid: 9e0ed4e23e235c347a506a5f6b5de097, type: 2}
 --- !u!114 &-3279743987430769385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,3 +205,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   Shield: {fileID: 1999467848047825698, guid: 92fdf8f90b04f8649a2c01f101285540, type: 3}
+  ability: {fileID: 11400000, guid: dab420ee6952dd74bacce8b88e4ccea5, type: 2}

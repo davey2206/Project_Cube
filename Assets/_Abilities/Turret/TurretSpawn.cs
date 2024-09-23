@@ -6,6 +6,8 @@ public class TurretSpawn : MonoBehaviour
 {
     [SerializeField] PlayerStats playerStats;
     [SerializeField] Turret Turret;
+    [SerializeField] Turret TurretEvolved;
+    [SerializeField] ability ability;
 
     public void Ability(int level, Vector3 pos)
     {
@@ -35,7 +37,15 @@ public class TurretSpawn : MonoBehaviour
     {
         if (Random.Range(0, 101) < 5 + playerStats.Luck)
         {
-            Turret turret = Instantiate(Turret, pos, Quaternion.identity);
+            Turret turret = null;
+            if (ability.Evolved)
+            {
+                turret = Instantiate(TurretEvolved, pos, Quaternion.identity);
+            }
+            else
+            {
+                turret = Instantiate(Turret, pos, Quaternion.identity);
+            }
             turret.Stats(lifespan, attack);
         }
     }
