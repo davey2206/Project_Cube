@@ -106,7 +106,7 @@ PrefabInstance:
     - target: {fileID: 1557049915062884645, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1557049915062884645, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
@@ -129,7 +129,7 @@ PrefabInstance:
     - target: {fileID: 6152488243385264730, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
       propertyPath: m_fontSize
-      value: 40.45
+      value: 22.95
       objectReference: {fileID: 0}
     - target: {fileID: 6152488243385264730, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
@@ -150,7 +150,7 @@ PrefabInstance:
     - target: {fileID: 8841853873214089813, guid: 133e89e73ae4eef46a2054d9d00c03f5,
         type: 3}
       propertyPath: m_text
-      value: Fire a chock wave that stuns all enemies
+      value: Fire a shock wave that stuns all enemies
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -27,4 +27,9 @@ public class SaveFile : ScriptableObject
     [Header("Ability")]
     public float AbilityDamage;
     public float AbilityCooldown;
+
+    [Header("Skins")]
+    public List<bool> Skins;
+    public int ActiveSkin;
+    public int ActiveEnemySkin;
 }

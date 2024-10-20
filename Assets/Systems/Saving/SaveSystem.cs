@@ -14,9 +14,9 @@ public class SaveSystem : MonoBehaviour
 
     public void LoadGame()
     {
-        if (File.Exists(Application.persistentDataPath + "/SaveFile.json"))
+        if (File.Exists(Application.persistentDataPath + "/SaveFile_FullGame.json"))
         {
-            string saveFile = File.ReadAllText(Application.persistentDataPath + "/SaveFile.json");
+            string saveFile = File.ReadAllText(Application.persistentDataPath + "/SaveFile_FullGame.json");
             SaveFile tempSaveFile = ScriptableObject.CreateInstance<SaveFile>();
             JsonUtility.FromJsonOverwrite(saveFile, tempSaveFile);
 
@@ -29,6 +29,7 @@ public class SaveSystem : MonoBehaviour
             SaveFile.maxHealth = tempSaveFile.maxHealth;
             SaveFile.critDamage = tempSaveFile.critDamage;
             SaveFile.critRate = tempSaveFile.critRate;
+            SaveFile.Skins = tempSaveFile.Skins;
 
             for (int i = 0; i < tempSaveFile.abilitiesUnlocks.Count; i++)
             {
@@ -52,6 +53,6 @@ public class SaveSystem : MonoBehaviour
         }
 
         string saveFile = JsonUtility.ToJson(SaveFile);
-        File.WriteAllText(Application.persistentDataPath + "/SaveFile.json", saveFile);
+        File.WriteAllText(Application.persistentDataPath + "/SaveFile_FullGame.json", saveFile);
     }
 }

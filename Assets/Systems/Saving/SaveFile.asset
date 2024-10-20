@@ -45,3 +45,6 @@ MonoBehaviour:
   BonusAttack: 0
   AbilityDamage: 0
   AbilityCooldown: 0
+  Skins: 00000000000000000000000000000000
+  ActiveSkin: 0
+  ActiveEnemySkin: 0

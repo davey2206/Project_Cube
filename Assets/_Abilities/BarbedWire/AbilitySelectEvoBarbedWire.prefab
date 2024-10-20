@@ -245,6 +245,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 48f4dcf5779faf641975be41b602f98b,
         type: 3}
+    - target: {fileID: 7559587524509075821, guid: 6757eae458229614c91bc30a0a7fde19,
+        type: 3}
+      propertyPath: Ability
+      value: 
+      objectReference: {fileID: 11400000, guid: 444bfd200e18d4b478a7083088433d5f,
+        type: 2}
+    - target: {fileID: 7559587524509075821, guid: 6757eae458229614c91bc30a0a7fde19,
+        type: 3}
+      propertyPath: isEvlove
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7901860675394057637, guid: 6757eae458229614c91bc30a0a7fde19,
         type: 3}
       propertyPath: m_Pivot.x

@@ -5,11 +5,17 @@ using UnityEngine;
 
 public class LevelAbility : MonoBehaviour
 {
+    [SerializeField] bool isEvlove = false;
+
     public ability Ability;
 
     public void LevelAbilityClick()
     {
-        if (Ability.rarity == RarityTypes.Ability)
+        if (isEvlove)
+        {
+            Ability.Evolved = true;
+        }
+        else if (Ability.rarity == RarityTypes.Ability)
         {
             if (Ability.Active == false)
             {

@@ -119,7 +119,7 @@ PrefabInstance:
     - target: {fileID: 3874333258534009449, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3874333258534009449, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 5725520753034117811, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}
       propertyPath: m_text
-      value: Fire a chock wave that stuns all enemies
+      value: Fire a shock wave that stuns all enemies
       objectReference: {fileID: 0}
     - target: {fileID: 6246599916653898527, guid: 707ed09714265c647899e41a16ccd501,
         type: 3}

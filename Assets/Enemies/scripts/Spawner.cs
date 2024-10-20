@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
+using static UnityEditor.FilePathAttribute;
 
 public class Spawner : MonoBehaviour
 {
     [Header("Spawner")]
+    [SerializeField] GameObject NextSpawner;
     [SerializeField] bool IsLastSpawner;
 
     [Header("Waves")]
@@ -24,6 +26,13 @@ public class Spawner : MonoBehaviour
 
     [Header("PlayerStats")]
     [SerializeField] PlayerStats playerStats;
+
+    [Header("Evlove")]
+    [SerializeField] List<GameObject> abilityCards;
+    [SerializeField] ResetCards Select;
+    [SerializeField] GameObject SpawnPoint_1;
+    [SerializeField] GameObject SpawnPoint_2;
+    [SerializeField] GameObject SpawnPoint_3;
 
     Manager audioManager;
     int currentWave = 0;
@@ -41,7 +50,7 @@ public class Spawner : MonoBehaviour
     {
         if (lastWaveDone && GameObject.FindGameObjectsWithTag("Enemy").Count() == 0 && GameObject.FindGameObjectsWithTag("Boss").Count() == 0)
         {
-            if (!done )
+            if (!done)
             {
                 done = true;
                 if (IsLastSpawner)
@@ -50,7 +59,48 @@ public class Spawner : MonoBehaviour
                 }
                 else
                 {
-                    //Spawn Reward
+                    for (int i = 0; i < 3; i++)
+                    {
+                        switch (i)
+                        {
+                            case 0:
+                                int card1 = Random.Range(0, abilityCards.Count);
+                                while (abilityCards[card1].GetComponent<LevelAbility>().Ability.Evolved && !abilityCards[card1].GetComponent<LevelAbility>().Ability.Active)
+                                {
+                                    card1 = Random.Range(0, abilityCards.Count);
+                                }
+
+                                Instantiate(abilityCards[card1], SpawnPoint_1.transform);
+                                abilityCards.Remove(abilityCards[card1]);
+                                break;
+                            case 1:
+                                int card2 = Random.Range(0, abilityCards.Count);
+                                while (abilityCards[card2].GetComponent<LevelAbility>().Ability.Evolved && !abilityCards[card2].GetComponent<LevelAbility>().Ability.Active)
+                                {
+                                    card2 = Random.Range(0, abilityCards.Count);
+                                }
+
+                                Instantiate(abilityCards[card2], SpawnPoint_2.transform);
+                                abilityCards.Remove(abilityCards[card2]);
+                                break;
+                            case 2:
+                                int card3 = Random.Range(0, abilityCards.Count);
+                                while (abilityCards[card3].GetComponent<LevelAbility>().Ability.Evolved && !abilityCards[card3].GetComponent<LevelAbility>().Ability.Active)
+                                {
+                                    card3 = Random.Range(0, abilityCards.Count);
+                                }
+
+                                Instantiate(abilityCards[card3], SpawnPoint_3.transform);
+                                abilityCards.Remove(abilityCards[card3]);
+                                break;
+                        }
+                    }
+
+                    Select.Spawn();
+                    Time.timeScale = 0;
+
+                    NextSpawner.SetActive(true);
+                    gameObject.SetActive(false);
                 }
             }
         }

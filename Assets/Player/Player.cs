@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
         List<Material> bodyMats= new List<Material>();
         List<Material> healthMats = new List<Material>();
 
+        Health = playerStats.maxHealth;
+
         bodyMats.Add(playerStats.Body);
         healthMats.Add(playerStats.Health);
 
