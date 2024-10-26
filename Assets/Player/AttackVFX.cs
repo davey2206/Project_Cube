@@ -83,5 +83,18 @@ public class AttackVFX : MonoBehaviour
                 FirstEnemyHit = true;
             }
         }
+
+        if (other.transform.CompareTag("ArmSpawnerHealth"))
+        {
+            ArmSpawnerHealth enemy = other.transform.GetComponent<ArmSpawnerHealth>();
+            enemy.TakeDamage(playerStats.GetAttack(), color);
+
+            if (!FirstEnemyHit)
+            {
+                Vector3 pos = new Vector3(cam.ScreenToWorldPoint(Input.mousePosition).x, 0, cam.ScreenToWorldPoint(Input.mousePosition).z);
+                ActivateAbilitiesOnClick(pos);
+                FirstEnemyHit = true;
+            }
+        }
     }
 }

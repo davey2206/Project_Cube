@@ -31,7 +31,7 @@ MonoBehaviour:
   - unlocked: 1
   - unlocked: 1
   - unlocked: 1
-  - unlocked: 0
+  - unlocked: 1
   - unlocked: 0
   - unlocked: 0
   - unlocked: 1
@@ -45,6 +45,7 @@ MonoBehaviour:
   BonusAttack: 0
   AbilityDamage: 0
   AbilityCooldown: 0
-  Skins: 00000000000000000000000000000000
-  ActiveSkin: 0
-  ActiveEnemySkin: 0
+  Skins: 00000000000000000100000000000001
+  ActiveSkin: 8
+  ActiveEnemySkin: 15
+  Buffs: 

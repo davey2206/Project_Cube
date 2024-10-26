@@ -9,6 +9,7 @@ TagManager:
   - EnemyHitBox
   - Boss
   - BossHitBox
+  - ArmSpawnerHealth
   layers:
   - Default
   - TransparentFX

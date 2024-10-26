@@ -399,7 +399,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f858c0d7f2b5f64e9ef948733cc7119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   SaveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  OneTimeBuff:
+  - {fileID: 11400000, guid: 5df65039779d157408017049ce5bb4b8, type: 2}
+  - {fileID: 11400000, guid: 0fe42982e452dd647931e8d0965806d2, type: 2}
+  - {fileID: 11400000, guid: a75ee1109f9a6f24cad6954ea876d06a, type: 2}
+  - {fileID: 11400000, guid: 784806e07c850aa448fe1fd7a95e3519, type: 2}
+  - {fileID: 11400000, guid: 59dfca4055395a9448772dabbbee6eec, type: 2}
+  - {fileID: 11400000, guid: 3748e9606fad3f84183f879b6309b0d3, type: 2}
+  - {fileID: 11400000, guid: 4ff9f96995e74f7478a5f512296aa715, type: 2}
+  - {fileID: 11400000, guid: fbd5e10e709d27b49979d9de15272efe, type: 2}
 --- !u!4 &1870206702
 Transform:
   m_ObjectHideFlags: 0

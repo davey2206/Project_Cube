@@ -14,16 +14,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alive: 1
   Coins: 0
-  Luck: 1
-  maxHealth: 11
-  AttackSpeed: 6
-  critRate: 6
-  critDamage: 70
+  Luck: 0
+  maxHealth: 10
+  AttackSpeed: 4
+  critRate: 1
+  critDamage: 50
   BaseAttack: 0.5
-  BonusAttack: 40
-  AbilityDamage: 20
-  AbilityCooldown: 5
+  BonusAttack: 0
+  AbilityDamage: 0
+  AbilityCooldown: 0
   Shields: 0
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  materialsBody:
+  - {fileID: 2100000, guid: 227555304205ab848936144dfcbfbb6c, type: 2}
+  - {fileID: 2100000, guid: 04b29fcc341faeb42aa032c3633faaa0, type: 2}
+  - {fileID: 2100000, guid: eae168181e7c361419d2e33a56329256, type: 2}
+  - {fileID: 2100000, guid: e8dfc831f0f55df49977f628f507b007, type: 2}
+  - {fileID: 2100000, guid: aecabaf0766c6ab42ba5cdbff1036b8b, type: 2}
+  - {fileID: 2100000, guid: 7688b0768519eb242aeb1313f2cfbc32, type: 2}
+  - {fileID: 2100000, guid: 74cd423eddac272469a2bb02d032b70f, type: 2}
+  - {fileID: 2100000, guid: f8c574c8784afa140b7dd45f345555a1, type: 2}
+  - {fileID: 2100000, guid: e5178a5cadabc554f90d7538a0f58161, type: 2}
+  - {fileID: 2100000, guid: 652ff589267538046bd9467ca5a230ac, type: 2}
+  - {fileID: 2100000, guid: 3f878dc423fad3844a409b63797480dd, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  materialsHealth:
+  - {fileID: 2100000, guid: c249ce1f6f409934b90be85c98221365, type: 2}
+  - {fileID: 2100000, guid: 53f3131cb3969914984c7ff642df23c1, type: 2}
+  - {fileID: 2100000, guid: b89dea7538d0cf144a7a285b3722b6d2, type: 2}
+  - {fileID: 2100000, guid: 7f238d4fc58295b4c94f5dfa4c83abdf, type: 2}
+  - {fileID: 2100000, guid: 77971b1801507b84ba1ade1b8526a0d4, type: 2}
+  - {fileID: 2100000, guid: 6dcf6ce6a14b58f4ab3d986ec31cb471, type: 2}
+  - {fileID: 2100000, guid: 3bfa97788acde164c8f713f775fa732d, type: 2}
+  - {fileID: 2100000, guid: 478dab5207e8ff9418abda8b33b4e4b8, type: 2}
+  - {fileID: 2100000, guid: b803005ebdd404b40885083293955acb, type: 2}
+  - {fileID: 2100000, guid: 5111d4a73da78e9439c32cb5c777292c, type: 2}
+  - {fileID: 2100000, guid: 816f31ffb9a5f2c4683e95862e22b085, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
   Body: {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
   Health: {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  Buffs: []

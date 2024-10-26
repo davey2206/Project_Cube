@@ -35,17 +35,15 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        ResetPlayer();
         List<Material> bodyMats= new List<Material>();
         List<Material> healthMats = new List<Material>();
-
-        Health = playerStats.maxHealth;
 
         bodyMats.Add(playerStats.Body);
         healthMats.Add(playerStats.Health);
 
         rendererBody.SetMaterials(bodyMats);
         rendererHealth.SetMaterials(healthMats);
-        ResetPlayer();
         audioManager = GameObject.Find("SimpleAudioManager").GetComponent<Manager>();
     }
 
@@ -138,8 +136,8 @@ public class Player : MonoBehaviour
 
     public void ResetPlayer()
     {
-        Health = playerStats.maxHealth;
         playerStats.ResetStats();
+        Health = playerStats.maxHealth;
     }
 
     public bool canHeal()

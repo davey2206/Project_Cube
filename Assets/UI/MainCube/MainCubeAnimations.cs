@@ -7,6 +7,8 @@ public class MainCubeAnimations : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] GameObject cube;
+    [SerializeField] MeshRenderer rendererBody;
+    [SerializeField] PlayerStats playerStats;
 
     public bool MainRot;
     bool started;
@@ -15,6 +17,7 @@ public class MainCubeAnimations : MonoBehaviour
     float currentTime;
     Quaternion targetRotation;
     Quaternion startRotation;
+    List<Material> bodyMats = new List<Material>();
 
     public void Menu()
     {
@@ -36,10 +39,26 @@ public class MainCubeAnimations : MonoBehaviour
         animator.SetTrigger("BackMenu");
     }
 
+    public void ToSkin()
+    {
+        animator.SetTrigger("ToSkin");
+    }
+
+    public void SkinToMenu()
+    {
+        animator.SetTrigger("SkinToMenu");
+    }
+
     private void Start()
     {
         MainRot = false;
         started= false;
+
+        playerStats.UpdateSkin();
+
+        bodyMats.Add(playerStats.Health);
+
+        rendererBody.SetMaterials(bodyMats);
     }
 
     private void Update()
@@ -56,7 +75,13 @@ public class MainCubeAnimations : MonoBehaviour
         {
             started = false;
         }
-        
+
+        playerStats.UpdateSkin();
+
+        bodyMats.Clear();
+        bodyMats.Add(playerStats.Health);
+
+        rendererBody.SetMaterials(bodyMats);
     }
 
     void StartRotation()

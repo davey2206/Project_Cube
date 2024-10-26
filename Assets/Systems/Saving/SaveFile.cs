@@ -32,4 +32,7 @@ public class SaveFile : ScriptableObject
     public List<bool> Skins;
     public int ActiveSkin;
     public int ActiveEnemySkin;
+
+    [Header("OneTimeBuffs")]
+    public List<StatType> Buffs;
 }

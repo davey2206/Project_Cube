@@ -7,7 +7,7 @@ public class PlayerStats : ScriptableObject
 {
     public bool alive;
     public int Coins;
-    
+
     [Header("Stats")]
     public float Luck;
     public float maxHealth;
@@ -26,15 +26,20 @@ public class PlayerStats : ScriptableObject
     public float AbilityCooldown;
 
     [Header("Shield")]
-    [Range(0,5)]
+    [Range(0, 5)]
     public int Shields;
 
     [Header("SaveFile")]
     [SerializeField] SaveFile saveFile;
 
     [Header("Skins")]
+    public List<Material> materialsBody;
+    public List<Material> materialsHealth;
     public Material Body;
     public Material Health;
+
+    [Header("OneTimeBuffs")]
+    public List<OneTimeBuffs> Buffs;
 
     public float GetAttack()
     {
@@ -69,6 +74,32 @@ public class PlayerStats : ScriptableObject
         maxHealth = 10 + saveFile.maxHealth;
         Coins = 0;
         Shields = 0;
+
+        AddOneTimeBuffs();
+    }
+
+    void AddOneTimeBuffs()
+    {
+        foreach (var buff in Buffs)
+        {
+            BonusAttack += buff.GainStat(StatType.BonusAttack);
+            Luck += buff.GainStat(StatType.Luck);
+            AttackSpeed += buff.GainStat(StatType.AttackSpeed);
+            critRate += buff.GainStat(StatType.critRate);
+            critDamage += buff.GainStat(StatType.critDamage);
+            AbilityDamage += buff.GainStat(StatType.AbilityDamage);
+            AbilityCooldown += buff.GainStat(StatType.AbilityCooldown);
+            maxHealth += buff.GainStat(StatType.maxHealth);
+        }
+
+        Buffs.Clear();
+        saveFile.Buffs.Clear();
+    }
+
+    public void UpdateSkin()
+    {
+        Body = materialsBody[saveFile.ActiveSkin];
+        Health = materialsHealth[saveFile.ActiveSkin];
     }
 
     public void AddCoins()

@@ -53,4 +53,16 @@ public class MainMenu : MonoBehaviour
     {
         animator.SetTrigger("SettingsToMenu");
     }
+
+    public void ToSkin()
+    {
+        animator.SetTrigger("ToSkin");
+        cubeAnimator.ToSkin();
+    }
+
+    public void SkinToMenu()
+    {
+        animator.SetTrigger("SkinToMenu");
+        cubeAnimator.SkinToMenu();
+    }
 }
