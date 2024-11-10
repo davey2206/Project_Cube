@@ -9,6 +9,7 @@ public class ArmSpawnerHealth : MonoBehaviour
     [SerializeField] Transform HealthBar;
     [SerializeField] PlayerStats playerStats;
     [SerializeField] SecondBossHealth bossHealth;
+    [SerializeField] bool IsBoss;
 
     [Header("UI")]
     [SerializeField] DamageNumbers damageNumbers;
@@ -18,6 +19,7 @@ public class ArmSpawnerHealth : MonoBehaviour
 
     Vector3 Velocity;
     float maxHealth;
+    bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -57,15 +59,19 @@ public class ArmSpawnerHealth : MonoBehaviour
             numbers.ShowDamage(damage);
         }
 
-        if (Health <= 0)
+        if (Health <= 0 && !dead)
         {
+            dead = true;
             Die();
         }
     }
 
     public void Die()
     {
-        bossHealth.TakeDamage();
+        if (IsBoss)
+        {
+            bossHealth.TakeDamage();
+        }
         Instantiate(DieEffect, new Vector3(transform.position.x, 0, transform.position.z), Quaternion.identity);
         Destroy(gameObject, 0.5f);
     }

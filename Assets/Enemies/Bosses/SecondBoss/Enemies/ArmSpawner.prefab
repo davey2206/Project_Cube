@@ -314,6 +314,7 @@ Transform:
   m_Children:
   - {fileID: 660000272181972858}
   - {fileID: 6684070341512535205}
+  - {fileID: 4897300604062144645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!33 &711007240733507913
@@ -442,6 +443,7 @@ MonoBehaviour:
   HealthBar: {fileID: 660000272181972858}
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   bossHealth: {fileID: 11400000, guid: 2ead450773625874bac9d8d8f6ae3fc0, type: 2}
+  IsBoss: 1
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
   DieEffect: {fileID: 6201523421047463331, guid: 70cca6496584a0d45a42b0f50d302d33,
@@ -530,3 +532,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6684070341512535205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3063722413263203788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 125756240603718953}
+    m_Modifications:
+    - target: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_Name
+      value: BossStumpEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.561
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515837374781591556, guid: 31736ff14780b4548a8f5e68ded48d85,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31736ff14780b4548a8f5e68ded48d85, type: 3}
+--- !u!4 &4897300604062144645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7598192415611729225, guid: 31736ff14780b4548a8f5e68ded48d85,
+    type: 3}
+  m_PrefabInstance: {fileID: 3063722413263203788}
+  m_PrefabAsset: {fileID: 0}

@@ -36,7 +36,7 @@ MonoBehaviour:
   - unlocked: 0
   - unlocked: 1
   - unlocked: 1
-  coins: 0
+  coins: 10
   Luck: 0
   maxHealth: 0
   AttackSpeed: 0
@@ -46,6 +46,6 @@ MonoBehaviour:
   AbilityDamage: 0
   AbilityCooldown: 0
   Skins: 00000000000000000100000000000001
-  ActiveSkin: 8
+  ActiveSkin: 10
   ActiveEnemySkin: 15
   Buffs: 

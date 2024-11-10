@@ -40,6 +40,12 @@ public class Wave : MonoBehaviour
         {
             other.gameObject.GetComponent<DamageBoss>().TakeDamage(attack, color);
         }
+
+        if (other.transform.CompareTag("ArmSpawnerHealth"))
+        {
+            ArmSpawnerHealth enemy = other.transform.GetComponent<ArmSpawnerHealth>();
+            enemy.TakeDamage(attack, color);
+        }
     }
 
     IEnumerator shake()

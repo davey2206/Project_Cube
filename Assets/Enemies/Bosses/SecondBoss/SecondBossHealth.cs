@@ -5,8 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SecondBossHealth", menuName = "ScriptableObjects/Bosses/SecondBossHealth")]
 public class SecondBossHealth : ScriptableObject
 {
-    [SerializeField] int maxHealth = 10;
-    [SerializeField] int health = 10;
+    [SerializeField] float maxHealth = 10;
+    [SerializeField] float health = 10;
 
     public void ResetHealth()
     {
@@ -18,8 +18,13 @@ public class SecondBossHealth : ScriptableObject
         health -= 1;
     }
 
-    public int GetHealth()
+    public float GetHealth()
     {
         return health;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealth;
     }
 }
