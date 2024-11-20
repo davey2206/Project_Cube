@@ -70,6 +70,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
+      propertyPath: coinDrop
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
       propertyPath: ShieldBrakeVFX
       value: 
       objectReference: {fileID: 7075481740388986141, guid: eaf848503c8f24b4ebb10a484e0c4dbd,

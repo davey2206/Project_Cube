@@ -86,12 +86,17 @@ PrefabInstance:
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: Health
-      value: 18
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
+      propertyPath: xpDrop
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
       propertyPath: coinDrop
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
