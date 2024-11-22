@@ -424,6 +424,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: Boss
+      value: 
+      objectReference: {fileID: 4932810366961168561, guid: e84770202b6e77645803b2099c3c5160,
+        type: 3}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Select
       value: 
       objectReference: {fileID: 1094332464}

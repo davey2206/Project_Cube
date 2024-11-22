@@ -10,6 +10,7 @@ TagManager:
   - Boss
   - BossHitBox
   - ArmSpawnerHealth
+  - Charge
   layers:
   - Default
   - TransparentFX
