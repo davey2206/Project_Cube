@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] bool checkOverlap;
 
     [Header("Stats")]
-    [SerializeField] float Speed;
+    [SerializeField] internal float Speed;
     [SerializeField] float Health;
     [SerializeField] Transform HealthBar;
     [SerializeField] GameObject Shield;
@@ -39,12 +39,12 @@ public class Enemy : MonoBehaviour
 
     Leveling leveling;
 
-    bool Stunned;
+    internal bool Stunned;
     float StunTime;
 
     Vector3 Velocity;
     float maxHealth;
-    bool isDead;
+    internal bool isDead;
     private void Start()
     {
         maxHealth = Health;

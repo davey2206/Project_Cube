@@ -166,12 +166,10 @@ public class SecondBoss : MonoBehaviour
             {
                 if (!ArmR.gameObject.activeInHierarchy)
                 {
-                    Debug.Log("ActiveLWithoutR");
                     Ani.SetTrigger("ActiveLWithoutR");
                 }
                 else
                 {
-                    Debug.Log("ActiveL");
                     Ani.SetTrigger("ActiveL");
                 }
             }
@@ -183,12 +181,10 @@ public class SecondBoss : MonoBehaviour
             {
                 if (!ArmL.gameObject.activeInHierarchy)
                 {
-                    Debug.Log("ActiveRWithoutL");
                     Ani.SetTrigger("ActiveRWithoutL");
                 }
                 else
                 {
-                    Debug.Log("ActiveR");
                     Ani.SetTrigger("ActiveR");
                 }
             }

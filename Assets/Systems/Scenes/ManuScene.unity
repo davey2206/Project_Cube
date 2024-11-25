@@ -144,6 +144,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 535889021327979981, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 663173060133704549, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
@@ -156,6 +162,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 675790929037872387, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 1022488734625952928, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
@@ -167,6 +179,12 @@ PrefabInstance:
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 1222661194653221776, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 1404365113358052405, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -185,6 +203,12 @@ PrefabInstance:
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 1543642489027645179, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 1694044294141716742, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -246,11 +270,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 2970023555690399979, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 3209637472841744478, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 3209637472841744478, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 3638892817371416592, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -268,6 +304,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 4403716239615725817, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 4675269551441292463, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
@@ -280,11 +322,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 4925655212868530896, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 5358510284538056153, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 5358510284538056153, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 5653318531620327370, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -308,6 +362,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 6315518347157413998, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 6481802968376990233, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
@@ -325,6 +385,12 @@ PrefabInstance:
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 6676565756488393191, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 6916682408989857653, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -432,6 +498,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 6958704732876953350, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 7114298718169746084, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: m_Name
@@ -443,11 +515,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 7214552118102338147, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 7255819783895360505, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 7255819783895360505, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 7497394474052167762, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
@@ -455,11 +539,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
         type: 2}
+    - target: {fileID: 7497394474052167762, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
+        type: 2}
     - target: {fileID: 7535727699589377178, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: PlayerStats
       value: 
       objectReference: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b,
+        type: 2}
+    - target: {fileID: 7535727699589377178, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: EnemySkinObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241,
         type: 2}
     - target: {fileID: 7788826519768528269, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}

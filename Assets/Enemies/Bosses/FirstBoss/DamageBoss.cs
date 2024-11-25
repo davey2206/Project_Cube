@@ -5,8 +5,6 @@ using UnityEngine.Events;
 
 public class DamageBoss : MonoBehaviour
 {
-    [SerializeField] Transform HealthBar;
-
     [Header("UI")]
     [SerializeField] DamageNumbers damageNumbers;
 

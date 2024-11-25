@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4963906976474809841}
   - component: {fileID: 8254933028711076052}
   - component: {fileID: 7357909124084650528}
+  - component: {fileID: -2487915392033556406}
   m_Layer: 7
   m_Name: BaseEnemy
   m_TagString: Enemy
@@ -391,6 +392,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2487915392033556406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6850550415252187460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafdf674e695f704b851deadc082f3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinObject: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241, type: 2}
+  rendererBody: {fileID: 4575887599917190321}
+  rendererHealth: {fileID: 7687972227488521818}
 --- !u!1 &7072571314842870737
 GameObject:
   m_ObjectHideFlags: 0

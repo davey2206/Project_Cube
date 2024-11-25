@@ -11,6 +11,7 @@ public class SkinButton : MonoBehaviour
     [Header("Save File")]
     [SerializeField] SaveFile Save;
     [SerializeField] PlayerStats PlayerStats;
+    [SerializeField] EnemySkinObject EnemySkinObject;
 
     [Header("Refs")]
     [SerializeField] GameObject UnlockedSkin;
@@ -70,12 +71,12 @@ public class SkinButton : MonoBehaviour
         if (isPlayer)
         {
             Save.ActiveSkin = skinNumber;
+            PlayerStats.UpdateSkin();
         }
         else
         {
             Save.ActiveEnemySkin = skinNumber;
+            EnemySkinObject.UpdateSkin();
         }
-
-        PlayerStats.UpdateSkin();
     }
 }

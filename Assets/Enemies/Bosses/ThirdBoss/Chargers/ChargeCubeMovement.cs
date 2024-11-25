@@ -6,15 +6,15 @@ public class ChargeCubeMovement : MonoBehaviour
 {
     [SerializeField] float Speed;
 
-    Vector3 Target;
+    Transform Target;
 
     void Update()
     {
         var step = Speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, Target, step);
+        transform.position = Vector3.MoveTowards(transform.position, Target.position, step);
     }
 
-    public void SetTarget(Vector3 target)
+    public void SetTarget(Transform target)
     {
         Target = target;
     }
@@ -23,7 +23,8 @@ public class ChargeCubeMovement : MonoBehaviour
     {
         if (other.CompareTag("Charge"))
         {
-            other.transform.parent.parent.GetComponent<ThirdBoss>().AddCharge();
+            other.transform.parent.GetComponent<ThirdBoss>().AddCharge();
+            Destroy(gameObject);
         }
     }
 }

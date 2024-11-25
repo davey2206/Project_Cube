@@ -52,7 +52,11 @@ public class Player : MonoBehaviour
         if (other.transform.CompareTag("EnemyHitBox"))
         {
             TakeDamage();
-            other.gameObject.transform.parent.GetComponent<Enemy>().HitPlayer();
+            Enemy enemy = other.gameObject.transform.parent.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.HitPlayer();
+            }
             hitEffect.Hit();
             screenShake.Amplitude = 0.5f;
             screenShake.SpeedOfDecay = 0.25f;

@@ -33,6 +33,8 @@ public class SaveSystem : MonoBehaviour
             SaveFile.critRate = tempSaveFile.critRate;
             SaveFile.Skins = tempSaveFile.Skins;
             SaveFile.Buffs = tempSaveFile.Buffs;
+            SaveFile.ActiveSkin = tempSaveFile.ActiveSkin;
+            SaveFile.ActiveEnemySkin = tempSaveFile.ActiveEnemySkin;
 
             for (int i = 0; i < tempSaveFile.abilitiesUnlocks.Count; i++)
             {

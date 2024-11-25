@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18688bc9740667f4996f6b81bf5ad318, type: 3}
+  m_Name: EnemySkinObject
+  m_EditorClassIdentifier: 
+  saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
+  materialsBody:
+  - {fileID: 2100000, guid: 13290e0408242084bbbc4a8e11d76804, type: 2}
+  - {fileID: 2100000, guid: 3c3b5b681ae7dbd42a28d37c39c5c844, type: 2}
+  - {fileID: 2100000, guid: 912986914517bfa4dad71f90a00e7c18, type: 2}
+  - {fileID: 2100000, guid: c5ee95e2ab60ff545b32ce9bb7902c5e, type: 2}
+  - {fileID: 2100000, guid: a0dcc2f26bc3a014687f3d8daa3a9447, type: 2}
+  - {fileID: 2100000, guid: 18d4cf289e962484d9cf495324a63b01, type: 2}
+  - {fileID: 2100000, guid: f9e38fdfbca237c49aca075b4946a55a, type: 2}
+  - {fileID: 2100000, guid: c0ce3bd7df77c4145b4b8641377773d1, type: 2}
+  - {fileID: 2100000, guid: ed61cfdade2d96345b5c07021c3ca22e, type: 2}
+  - {fileID: 2100000, guid: 6af21e093a06d9f4fa934f5f828a5bf0, type: 2}
+  - {fileID: 2100000, guid: e0d8206ec2b38c147a26495b582fed7f, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 37a57c5e4a01fb849ab44c8a52881d8e, type: 2}
+  materialsHealth:
+  - {fileID: 2100000, guid: e3627d2b7fed6a24eb3f7a6de55a4d1d, type: 2}
+  - {fileID: 2100000, guid: 3454ee04bcc59e944a6803fec12b1dbc, type: 2}
+  - {fileID: 2100000, guid: 5c9ce5ea8c536d6479da521c41c378d7, type: 2}
+  - {fileID: 2100000, guid: 7d575bd808c530a40b27326397b49fc1, type: 2}
+  - {fileID: 2100000, guid: 1e4fa0944aa82b94b9e5e53dfaf4b26f, type: 2}
+  - {fileID: 2100000, guid: f8855ec9b9814e047b36ca098e2a76d1, type: 2}
+  - {fileID: 2100000, guid: e59d743e0e03f004893d31651c06f7c7, type: 2}
+  - {fileID: 2100000, guid: 0a84ee7af578ee343959537e73f62117, type: 2}
+  - {fileID: 2100000, guid: afe45126496d0e44e9cea5154cc2b41d, type: 2}
+  - {fileID: 2100000, guid: 47abba7d29d6a494b8308d3e1366c82e, type: 2}
+  - {fileID: 2100000, guid: 9d010e802363ec043ac2a4bf8500242c, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: 1bab20b01c0641f4990132c55558a67a, type: 2}
+  Body: {fileID: 2100000, guid: 37a57c5e4a01fb849ab44c8a52881d8e, type: 2}
+  Health: {fileID: 2100000, guid: 1bab20b01c0641f4990132c55558a67a, type: 2}

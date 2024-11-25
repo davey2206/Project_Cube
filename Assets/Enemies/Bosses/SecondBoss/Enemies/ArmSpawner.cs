@@ -7,8 +7,17 @@ public class ArmSpawner : MonoBehaviour
     [SerializeField] List<Transform> SpawnPoints;
     [SerializeField] GameObject Enemy;
     [SerializeField] float spawnDelay = 1.3f;
+    [SerializeField] bool SpawnOnSpawn;
 
     private void Start()
+    {
+        if (SpawnOnSpawn)
+        {
+            StartCoroutine(SpawnEnemies());
+        }
+    }
+
+    public void StartSpawning()
     {
         StartCoroutine(SpawnEnemies());
     }

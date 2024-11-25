@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: -4539112895511651275}
   - component: {fileID: 3208514532281892527}
   - component: {fileID: -2907069891552057974}
+  - component: {fileID: 2246481735001145476}
   m_Layer: 7
   m_Name: ArmSpawner
   m_TagString: ArmSpawnerHealth
@@ -470,6 +471,22 @@ MonoBehaviour:
   - {fileID: 3214355987888765523}
   Enemy: {fileID: 3352287954256755614, guid: 385a18895b4f0a24e93ad76dab17e0e8, type: 3}
   spawnDelay: 1.3
+  SpawnOnSpawn: 1
+--- !u!114 &2246481735001145476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404773427672543443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafdf674e695f704b851deadc082f3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinObject: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241, type: 2}
+  rendererBody: {fileID: 7292438753243065490}
+  rendererHealth: {fileID: 6689360532750372745}
 --- !u!1 &8503263314733294492
 GameObject:
   m_ObjectHideFlags: 0

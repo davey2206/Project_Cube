@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5997691547172428619}
   - component: {fileID: 4205218089577625182}
   - component: {fileID: 3336560282893870982}
+  - component: {fileID: 6952277724591197402}
   m_Layer: 0
   m_Name: Arm_R
   m_TagString: Untagged
@@ -139,6 +140,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6952277724591197402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6509679645001651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafdf674e695f704b851deadc082f3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinObject: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241, type: 2}
+  rendererBody: {fileID: 5997691547172428619}
+  rendererHealth: {fileID: 203459875099082271}
 --- !u!1 &106287721207809357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1294,7 @@ GameObject:
   - component: {fileID: 22240905296407268}
   - component: {fileID: 6939504483206520973}
   - component: {fileID: 4818218682826880814}
+  - component: {fileID: 3231338709734824514}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -1403,6 +1420,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3231338709734824514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335507066350540126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafdf674e695f704b851deadc082f3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinObject: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241, type: 2}
+  rendererBody: {fileID: 22240905296407268}
+  rendererHealth: {fileID: 596446379457961484}
 --- !u!1 &6464314789856657989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1895,7 @@ GameObject:
   - component: {fileID: 7729558499062305673}
   - component: {fileID: 7715289140709416849}
   - component: {fileID: 678190658371858644}
+  - component: {fileID: 3434282889249529910}
   m_Layer: 0
   m_Name: Arm_L
   m_TagString: Untagged
@@ -1989,6 +2022,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3434282889249529910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402715466728215641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fafdf674e695f704b851deadc082f3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkinObject: {fileID: 11400000, guid: 90b82a3670862e3469b9bae0f9df8241, type: 2}
+  rendererBody: {fileID: 7729558499062305673}
+  rendererHealth: {fileID: 5764393936090525897}
 --- !u!1001 &6161641186221130192
 PrefabInstance:
   m_ObjectHideFlags: 0

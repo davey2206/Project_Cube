@@ -46,8 +46,17 @@ public class WaveAttacks : MonoBehaviour
         if (other.transform.CompareTag("Enemy"))
         {
             Enemy enemy = other.transform.GetComponent<Enemy>();
-            enemy.TakeDamage(attack, color);
-            enemy.Stun(stun);
+
+            if (enemy != null)
+            {
+                enemy.TakeDamage(attack, color);
+                enemy.Stun(stun);
+            }
+            else
+            {
+                Charger charger = other.transform.GetComponent<Charger>();
+                charger.TakeDamage(attack);
+            }
         }
 
         if (other.transform.CompareTag("Boss"))
