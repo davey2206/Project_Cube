@@ -371,7 +371,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3bfa97788acde164c8f713f775fa732d, type: 2}
+      objectReference: {fileID: 2100000, guid: dea7b5357939599409b5f98372570be8, type: 2}
     - target: {fileID: 2763120746391460792, guid: c422b764a1ff0064099c2424fd8735f0,
         type: 3}
       propertyPath: gameEnd
@@ -641,7 +641,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 74cd423eddac272469a2bb02d032b70f, type: 2}
+      objectReference: {fileID: 2100000, guid: aac8e47e3bab46e48b57ef49aa788d9f, type: 2}
     - target: {fileID: 8287059764716141754, guid: c422b764a1ff0064099c2424fd8735f0,
         type: 3}
       propertyPath: player

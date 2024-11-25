@@ -25,10 +25,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: ed61cfdade2d96345b5c07021c3ca22e, type: 2}
   - {fileID: 2100000, guid: 6af21e093a06d9f4fa934f5f828a5bf0, type: 2}
   - {fileID: 2100000, guid: e0d8206ec2b38c147a26495b582fed7f, type: 2}
-  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
-  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
-  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
-  - {fileID: 2100000, guid: 82daa32f83e699348b70c9d25381b8ba, type: 2}
+  - {fileID: 2100000, guid: 8902af82b4d6b69459ab53a9eb5fe5ab, type: 2}
+  - {fileID: 2100000, guid: c7aa35c8eaab0ac4e85bb7402422c825, type: 2}
+  - {fileID: 2100000, guid: e03f4e8c20393c44c8fe2178916edd8d, type: 2}
+  - {fileID: 2100000, guid: 1861d729877c91845ae5aee8bad78f93, type: 2}
   - {fileID: 2100000, guid: 37a57c5e4a01fb849ab44c8a52881d8e, type: 2}
   materialsHealth:
   - {fileID: 2100000, guid: e3627d2b7fed6a24eb3f7a6de55a4d1d, type: 2}
@@ -42,10 +42,10 @@ MonoBehaviour:
   - {fileID: 2100000, guid: afe45126496d0e44e9cea5154cc2b41d, type: 2}
   - {fileID: 2100000, guid: 47abba7d29d6a494b8308d3e1366c82e, type: 2}
   - {fileID: 2100000, guid: 9d010e802363ec043ac2a4bf8500242c, type: 2}
-  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
-  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
-  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
-  - {fileID: 2100000, guid: f8b47a9a8314f36448f135a7c60e5d51, type: 2}
+  - {fileID: 2100000, guid: bfa140bc9e0e94b4e8f512ff05b08fc1, type: 2}
+  - {fileID: 2100000, guid: 0be215c6bd30b6a40888fbe11f5e9435, type: 2}
+  - {fileID: 2100000, guid: a2526060ca1bbc14f82c55602459845e, type: 2}
+  - {fileID: 2100000, guid: 35263fc198fb74147a45592281fce5af, type: 2}
   - {fileID: 2100000, guid: 1bab20b01c0641f4990132c55558a67a, type: 2}
   Body: {fileID: 2100000, guid: 37a57c5e4a01fb849ab44c8a52881d8e, type: 2}
   Health: {fileID: 2100000, guid: 1bab20b01c0641f4990132c55558a67a, type: 2}

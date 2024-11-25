@@ -188,7 +188,7 @@ public class FormChange : MonoBehaviour
             image.color = new Color(image.color.r, image.color.g, image.color.b, 0.5f);
         }
 
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(playerStats.GetCooldown(18));
 
         foreach (var image in images)
         {

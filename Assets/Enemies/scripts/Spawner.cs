@@ -5,7 +5,6 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
 
 public class Spawner : MonoBehaviour
 {
@@ -112,7 +111,7 @@ public class Spawner : MonoBehaviour
         playerStats.AddCoins();
         GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
         gameEnd.SetActive(true);
-        gameStartText.text = "Victory (End of demo)";
+        gameStartText.text = "Victory";
         audioManager.PlaySong(2);
         StopAllCoroutines();
     }
