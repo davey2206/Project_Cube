@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.VFX;
 
 public class SecondBoss : MonoBehaviour
 {
     [Header("Health")]
     [SerializeField] SecondBossHealth Health;
     [SerializeField] Transform Core;
+
+    [Header("Effects")]
     [SerializeField] GameObject DeadVFX;
+    [SerializeField] GameObject ArmSlemSFX;
 
     [Header("Animations")]
     [SerializeField] Animator Ani;
@@ -24,6 +29,11 @@ public class SecondBoss : MonoBehaviour
     [Header("Spawners")]
     [SerializeField] GameObject ArmSpawner;
 
+    [Header("Drops")]
+    [SerializeField] PlayerStats playerStats;
+    [SerializeField] GameObject coinEffect;
+    [SerializeField] int coinDrop;
+
     private bool isLeft;
     private bool canMove;
     private bool canSpawn = false;
@@ -37,8 +47,9 @@ public class SecondBoss : MonoBehaviour
         Health.ResetHealth();
         canMove = false;
 
-        yield return new WaitForSeconds(1);
-
+        yield return new WaitForSeconds(1.25f);
+        Instantiate(ArmSlemSFX, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.5f);
         canMove = true;
         StartCoroutine(GetMovePosition(1));
     }
@@ -94,11 +105,13 @@ public class SecondBoss : MonoBehaviour
         if (Health.GetHealth() <= 0 && dead == false)
         {
             dead = true;
+            Die();
         }
     }
 
     public void SpawnArmL()
     {
+        Instantiate(ArmSlemSFX, ArmL.position, Quaternion.identity);
         Instantiate(ArmSpawner, ArmL.position, Quaternion.identity);
         moveLocation = new Vector3(0, 0, 7);
         StartCoroutine(GetMovePosition(10));
@@ -106,6 +119,7 @@ public class SecondBoss : MonoBehaviour
 
     public void SpawnArmR() 
     {
+        Instantiate(ArmSlemSFX, ArmL.position, Quaternion.identity);
         Instantiate(ArmSpawner, ArmR.position, Quaternion.identity);
         moveLocation = new Vector3(0, 0, 7);
         StartCoroutine(GetMovePosition(10));
@@ -195,7 +209,16 @@ public class SecondBoss : MonoBehaviour
 
     private void Die()
     {
+        StartCoroutine(CoinDrop());
         Instantiate(DeadVFX, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public IEnumerator CoinDrop()
+    {
+        var Effect = Instantiate(coinEffect, transform.position, Quaternion.identity);
+        Effect.GetComponent<VisualEffect>().SetInt("Number", coinDrop);
+        yield return new WaitForSeconds(0.4f);
+        playerStats.Coins += coinDrop;
     }
 }

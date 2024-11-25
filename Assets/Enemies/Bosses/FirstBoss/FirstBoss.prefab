@@ -125,7 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c51f21f94a9cc42a39c0b48f36bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 1275884028146609517}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
   HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}
@@ -1048,9 +1047,14 @@ MonoBehaviour:
   StunRecoverSFX: {fileID: 1641933238505481311, guid: fa69856c846891845b2b68b6bee3001a,
     type: 3}
   DeadVFX: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85, type: 3}
+  HitSFX: {fileID: 1958193319504074324, guid: 7ace4152cbbb8384ea60c0b9607274a6, type: 3}
   Enemy: {fileID: 3352287954256755614, guid: 597e4af92d08d5c4d9841830520aa947, type: 3}
   Waves: 5
   SpawnAmount: 20
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  coinEffect: {fileID: 2962067442543321795, guid: 34855f16e514c0c45bd029033845d7df,
+    type: 3}
+  coinDrop: 100
 --- !u!1 &5186851077184391419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1512,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c51f21f94a9cc42a39c0b48f36bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 6777927022371196817}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
   HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}
@@ -2142,7 +2145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c51f21f94a9cc42a39c0b48f36bd0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 8971553945315021201}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,
     type: 3}
   HitSFX: {fileID: 2392497028777478920, guid: 23c27ac0479af8442948d40a32990a8f, type: 3}

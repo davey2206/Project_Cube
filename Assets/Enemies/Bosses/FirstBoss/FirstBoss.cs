@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class FirstBoss : MonoBehaviour
 {
@@ -25,11 +26,17 @@ public class FirstBoss : MonoBehaviour
     [SerializeField] GameObject StunSFX;
     [SerializeField] GameObject StunRecoverSFX;
     [SerializeField] GameObject DeadVFX;
+    [SerializeField] GameObject HitSFX;
 
     [Header("Spawner")]
     [SerializeField] GameObject Enemy;
     [SerializeField] int Waves;
     [SerializeField] int SpawnAmount;
+
+    [Header("Drops")]
+    [SerializeField] PlayerStats playerStats;
+    [SerializeField] GameObject coinEffect;
+    [SerializeField] int coinDrop;
 
     bool charge = false;
     bool MoveToNextStart = false;
@@ -112,9 +119,11 @@ public class FirstBoss : MonoBehaviour
     public void TakeDamage(float damage)
     {
         Health -= damage;
+        Instantiate(HitSFX, transform.position, Quaternion.identity);
 
         if (Health <= 0)
         {
+            StartCoroutine(CoinDrop());
             Instantiate(DeadVFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
@@ -266,5 +275,13 @@ public class FirstBoss : MonoBehaviour
     public void PlayStunRecoverSound()
     {
         Instantiate(StunRecoverSFX);
+    }
+
+    public IEnumerator CoinDrop()
+    {
+        var Effect = Instantiate(coinEffect, transform.position, Quaternion.identity);
+        Effect.GetComponent<VisualEffect>().SetInt("Number", coinDrop);
+        yield return new WaitForSeconds(0.4f);
+        playerStats.Coins += coinDrop;
     }
 }

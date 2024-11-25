@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class ThirdBoss : MonoBehaviour
 {
@@ -21,6 +23,21 @@ public class ThirdBoss : MonoBehaviour
     [SerializeField] float MaxCharge;
     [SerializeField] float MaxHealth;
 
+    [Header("Drops")]
+    [SerializeField] PlayerStats playerStats;
+    [SerializeField] GameObject coinEffect;
+    [SerializeField] int coinDrop;
+
+    [Header("Effects")]
+    [SerializeField] GameObject DeadVFX;
+    [SerializeField] GameObject ShootVFX;
+    [SerializeField] GameObject ShootSFX;
+    [SerializeField] GameObject SpawnChargerSFX;
+    [SerializeField] GameObject ChargeSFX;
+    [SerializeField] GameObject BeamSFX;
+    [SerializeField] GameObject HitSFX;
+    [SerializeField] GameObject StartSFX;
+
     float Charge;
     float health;
     int count = 0;
@@ -33,8 +50,9 @@ public class ThirdBoss : MonoBehaviour
     private IEnumerator Start()
     {
         health = MaxHealth;
-
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        Instantiate(StartSFX, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1);
         canMove = true;
         StartCoroutine(BossLoop());
         StartCoroutine(MoveDiraction());
@@ -53,10 +71,12 @@ public class ThirdBoss : MonoBehaviour
     public void TakeDamage(float damage)
     {
         health -= damage;
+        Instantiate(HitSFX, transform.position, Quaternion.identity);
 
         if (health <= 0)
         {
-            //Instantiate(DeadVFX, transform.position, Quaternion.identity);
+            Instantiate(DeadVFX, transform.position, Quaternion.identity);
+            StartCoroutine(CoinDrop());
             Destroy(gameObject);
         }
     }
@@ -152,20 +172,28 @@ public class ThirdBoss : MonoBehaviour
                     break;
             }
         }
+
+        Instantiate(SpawnChargerSFX, transform.position, Quaternion.identity);
     }
 
     public void SpawnEnemy()
     {
-        Instantiate(Enemy, SpawnPoint.position, Quaternion.identity);
+        Instantiate(ShootSFX, SpawnPoint.position, Quaternion.identity);
+        Instantiate(ShootVFX, SpawnPoint.position, Quaternion.identity);
+        Instantiate(Enemy, SpawnPoint.position, Quaternion.Euler(20, 0, 20));
     }
 
     IEnumerator StartBeamAttack()
     {
         yield return new WaitForSeconds(1);
         animator.SetTrigger("ShootBeam");
-        yield return new WaitForSeconds(5);
+        Instantiate(ChargeSFX, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(1.5f);
+        Instantiate(BeamSFX, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(3.5f);
         canMove = true;
 
+        StopAllCoroutines();
         StartCoroutine(BossLoop());
         StartCoroutine(MoveDiraction());
     }
@@ -174,15 +202,14 @@ public class ThirdBoss : MonoBehaviour
     {
         while (true)
         {
-            count++;
-            if (count <= 3)
+            if (count < 2)
             {
                 yield return new WaitForSeconds(5);
                 animator.SetTrigger("Shoot");
+                count++;
             }
             else
             {
-                count = 0;
                 if (!(Charger.activeInHierarchy && Charger.activeInHierarchy && Charger.activeInHierarchy && Charger.activeInHierarchy))
                 {
                     yield return new WaitForSeconds(2);
@@ -191,7 +218,8 @@ public class ThirdBoss : MonoBehaviour
                     yield return new WaitForSeconds(2);
                     canMove = true;
                 }
-            }            
+                count = 0;
+            }
         }
     }
 
@@ -203,5 +231,13 @@ public class ThirdBoss : MonoBehaviour
 
             isLeft = !isLeft;
         }
+    }
+
+    public IEnumerator CoinDrop()
+    {
+        var Effect = Instantiate(coinEffect, transform.position, Quaternion.identity);
+        Effect.GetComponent<VisualEffect>().SetInt("Number", coinDrop);
+        yield return new WaitForSeconds(0.4f);
+        playerStats.Coins += coinDrop;
     }
 }

@@ -930,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 4932810366961168561}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1623,6 +1623,8 @@ MonoBehaviour:
   Health: {fileID: 11400000, guid: 2ead450773625874bac9d8d8f6ae3fc0, type: 2}
   Core: {fileID: 6777927022371196817}
   DeadVFX: {fileID: 6201523421047463331, guid: 31736ff14780b4548a8f5e68ded48d85, type: 3}
+  ArmSlemSFX: {fileID: 1641933238505481311, guid: 4f38399fd654c3c48a085edd88e9b2cc,
+    type: 3}
   Ani: {fileID: 4819232244026182619}
   Speed: 15
   ArmL: {fileID: 681465173386249010}
@@ -1630,6 +1632,10 @@ MonoBehaviour:
   Boss: {fileID: 6511384629396802244}
   ArmSpawner: {fileID: 8404773427672543443, guid: 75e26f2f10a057345ab913c2a098fdf8,
     type: 3}
+  playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
+  coinEffect: {fileID: 2962067442543321795, guid: 34855f16e514c0c45bd029033845d7df,
+    type: 3}
+  coinDrop: 250
 --- !u!1 &6914966530493190943
 GameObject:
   m_ObjectHideFlags: 0

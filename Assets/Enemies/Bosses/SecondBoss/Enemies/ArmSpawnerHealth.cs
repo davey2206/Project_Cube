@@ -9,6 +9,7 @@ public class ArmSpawnerHealth : MonoBehaviour
     [SerializeField] Transform HealthBar;
     [SerializeField] PlayerStats playerStats;
     [SerializeField] SecondBossHealth bossHealth;
+    [SerializeField] GameObject HitSFX;
     [SerializeField] bool IsBoss;
 
     [Header("UI")]
@@ -40,6 +41,8 @@ public class ArmSpawnerHealth : MonoBehaviour
 
     public void TakeDamage(float damage, ColorEnum color)
     {
+        Instantiate(HitSFX, transform.position, Quaternion.identity);
+
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + Random.Range(-1f, 1f));
         bool crit = false;
 
