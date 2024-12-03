@@ -430,6 +430,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: Reroll
+      value: 
+      objectReference: {fileID: 2261736059826447278}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Select
       value: 
       objectReference: {fileID: 1094332464}
@@ -443,6 +448,11 @@ PrefabInstance:
       propertyPath: IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: RerollText
+      value: 
+      objectReference: {fileID: 1545231564}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: NextSpawner
@@ -3351,6 +3361,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: Reroll
+      value: 
+      objectReference: {fileID: 2261736059826447278}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Select
       value: 
       objectReference: {fileID: 1094332464}
@@ -3364,6 +3379,11 @@ PrefabInstance:
       propertyPath: IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: RerollText
+      value: 
+      objectReference: {fileID: 1545231564}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: NextSpawner
@@ -5844,6 +5864,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: Reroll
+      value: 
+      objectReference: {fileID: 2261736059826447278}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Select
       value: 
       objectReference: {fileID: 1094332464}
@@ -5857,6 +5882,11 @@ PrefabInstance:
       propertyPath: IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: RerollText
+      value: 
+      objectReference: {fileID: 1545231564}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: NextSpawner
@@ -6494,6 +6524,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524578395}
   m_CullTransparentMesh: 1
+--- !u!1 &1545231564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2671091812734359748, guid: 608ede9b2ec48364da3213655ccd240b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2261736059826447276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1549924731
 GameObject:
   m_ObjectHideFlags: 0
@@ -7369,6 +7405,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -194.79999
       objectReference: {fileID: 0}
+    - target: {fileID: 2438984814155182695, guid: 608ede9b2ec48364da3213655ccd240b,
+        type: 3}
+      propertyPath: Reroll
+      value: 
+      objectReference: {fileID: 2261736059826447278}
+    - target: {fileID: 2438984814155182695, guid: 608ede9b2ec48364da3213655ccd240b,
+        type: 3}
+      propertyPath: RerollText
+      value: 
+      objectReference: {fileID: 1545231564}
     - target: {fileID: 3164016003492729665, guid: 608ede9b2ec48364da3213655ccd240b,
         type: 3}
       propertyPath: m_IsActive

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -27,6 +26,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] PlayerStats playerStats;
 
     [Header("Evlove")]
+    [SerializeField] GameObject RerollText;
+    [SerializeField] GameObject Reroll;
     [SerializeField] List<GameObject> abilityCards;
     [SerializeField] ResetCards Select;
     [SerializeField] GameObject SpawnPoint_1;
@@ -95,6 +96,8 @@ public class Spawner : MonoBehaviour
                         }
                     }
 
+                    RerollText.SetActive(false);
+                    Reroll.SetActive(false);
                     Select.Spawn();
                     Time.timeScale = 0;
 

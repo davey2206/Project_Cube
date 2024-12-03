@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ResetCards : MonoBehaviour
 {
+    [SerializeField] GameObject RerollText;
+    [SerializeField] GameObject Reroll;
     [SerializeField] GameObject SpawnPoint_1;
     [SerializeField] GameObject SpawnPoint_2;
     [SerializeField] GameObject SpawnPoint_3;
@@ -23,6 +25,8 @@ public class ResetCards : MonoBehaviour
 
     public void ResetAllCards()
     {
+        RerollText.SetActive(false);
+        Reroll.SetActive(true);
         SpawnPoint_1.GetComponentInChildren<LevelAbility>().DestroySelf();
         SpawnPoint_2.GetComponentInChildren<LevelAbility>().DestroySelf();
         SpawnPoint_3.GetComponentInChildren<LevelAbility>().DestroySelf();
