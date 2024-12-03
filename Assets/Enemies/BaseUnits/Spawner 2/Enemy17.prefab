@@ -105,6 +105,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
         type: 3}
+      propertyPath: ShieldBrakeVFX
+      value: 
+      objectReference: {fileID: 7075481740388986141, guid: a35e995b7864dcd4b9643055072c4334,
+        type: 3}
+    - target: {fileID: 4963906976474809841, guid: c81872ac7c75c0d468014eda4e5fa23d,
+        type: 3}
       propertyPath: difficultyRange.x
       value: 8
       objectReference: {fileID: 0}

@@ -55,7 +55,7 @@ public class Pull : MonoBehaviour
     {
         List<Material> mats = new List<Material>();
         int rng = Random.Range(1, Buffs.Count);
-        Debug.Log(rng);
+
         switch (rng)
         {
             case 1:

@@ -616,6 +616,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Waves.Array.data[0].enemies.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -666,8 +681,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[0].value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].value
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].value
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Waves.Array.data[10].enemies.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[0].inSlope
+      value: 3.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].inSlope
+      value: 3.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].inSlope
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
@@ -971,6 +1016,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[0].outSlope
+      value: 3.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].outSlope
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].outSlope
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Waves.Array.data[10].enemies.Array.data[0]
       value: 
       objectReference: {fileID: 5274900260722448093, guid: 9612093c1d05a5f4bbf95f3c0cfaeef6,
@@ -999,6 +1059,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5274900260722448093, guid: a6fb9bb3370ad704a9951ac135dfcd35,
         type: 3}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].tangentMode
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 5080162499824948123, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: m_Name
@@ -3512,6 +3587,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].time
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].time
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
       propertyPath: Waves.Array.data[0].enemies.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3558,12 +3648,17 @@ PrefabInstance:
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: SpawnPoints.m_Curve.Array.data[0].value
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: SpawnPoints.m_Curve.Array.data[1].value
-      value: 15
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].value
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
@@ -3588,6 +3683,16 @@ PrefabInstance:
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: SpawnPoints.m_Curve.Array.data[0].inSlope
+      value: 3.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].inSlope
+      value: 3.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].inSlope
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
@@ -3893,6 +3998,16 @@ PrefabInstance:
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: SpawnPoints.m_Curve.Array.data[0].outSlope
+      value: 3.3333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].outSlope
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].outSlope
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
@@ -4015,6 +4130,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5274900260722448093, guid: d386f5ba935ac5b4d963440af8ab2e6f,
         type: 3}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[1].tangentMode
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4951849495950789798, guid: 7537f6eca7e81394c930b99f4a135b5f,
+        type: 3}
+      propertyPath: SpawnPoints.m_Curve.Array.data[2].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 5080162499824948123, guid: 7537f6eca7e81394c930b99f4a135b5f,
         type: 3}
       propertyPath: m_Name
