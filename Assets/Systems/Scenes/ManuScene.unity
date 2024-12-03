@@ -167,6 +167,31 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1034618483}
+    - target: {fileID: 3651668803467492060, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: Materials.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3651668803467492060, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: Materials.Array.data[11]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8035d400bc0ee9c439445ff79dd58cad, type: 2}
+    - target: {fileID: 3651668803467492060, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: Materials.Array.data[12]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d605bcb14b4b9f4489dbd0c5792ac57, type: 2}
+    - target: {fileID: 3651668803467492060, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: Materials.Array.data[13]
+      value: 
+      objectReference: {fileID: 2100000, guid: dea7b5357939599409b5f98372570be8, type: 2}
+    - target: {fileID: 3651668803467492060, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: Materials.Array.data[14]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b45db350c4c0a84a90b1ff8a69589fb, type: 2}
     - target: {fileID: 4156191945501088772, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
         type: 3}
       propertyPath: m_Camera
@@ -296,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605415558638648325, guid: 87ba2ee2ceb09a3489f7996dad86aa5d,
+        type: 3}
+      propertyPath: m_text
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

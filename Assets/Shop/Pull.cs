@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Pull : MonoBehaviour
 {
@@ -10,19 +11,26 @@ public class Pull : MonoBehaviour
     [SerializeField] SaveFile Save;
     [SerializeField] MeshRenderer WinCube;
     [SerializeField] Animator animator;
+    [SerializeField] Button button;
 
     public void Summon()
     {
-        animator.SetTrigger("Open");
-        int rng = Random.Range(0, 25);
+        if (Save.coins >= 250)
+        {
+            Save.coins = Save.coins - 250;
+            animator.SetTrigger("Open");
+            int rng = Random.Range(0, 25);
 
-        if (rng == 1)
-        {
-            WinCube.SetMaterials(Skin());
-        }
-        else
-        {
-            WinCube.SetMaterials(Buff());
+            if (rng == 1 && checkSkins())
+            {
+                WinCube.SetMaterials(Skin());
+            }
+            else
+            {
+                WinCube.SetMaterials(Buff());
+            }
+
+            StartCoroutine(ButtonDelay());
         }
     }
 
@@ -46,8 +54,8 @@ public class Pull : MonoBehaviour
     private List<Material> Buff()
     {
         List<Material> mats = new List<Material>();
-        int rng = Random.Range(0, Buffs.Count);
-
+        int rng = Random.Range(1, Buffs.Count);
+        Debug.Log(rng);
         switch (rng)
         {
             case 1:
@@ -103,14 +111,36 @@ public class Pull : MonoBehaviour
         return mats;
     }
 
+    public bool checkSkins()
+    {
+        bool CanSummon = false;
+        foreach (var skin in Save.Skins)
+        {
+            if (!skin)
+            {
+                CanSummon = true;
+            }
+        }
+        return CanSummon;
+    }
+
     IEnumerator BuffDelay(OneTimeBuffs buff)
     {
         yield return new WaitForSeconds(1.1f);
         Stats.Buffs.Add(buff);
+        GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
     }
     IEnumerator SkinDelay(int skin)
     {
         yield return new WaitForSeconds(1.1f);
         Save.Skins[skin] = true;
+        GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
+    }
+
+    IEnumerator ButtonDelay()
+    {
+        button.enabled = false;
+        yield return new WaitForSeconds(5f);
+        button.enabled = true;
     }
 }
