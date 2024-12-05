@@ -577,7 +577,7 @@ MonoBehaviour:
   Cost: 5
   checkOverlap: 1
   Speed: 0.65
-  Health: 50
+  Health: 75
   HealthBar: {fileID: 8274354491293793576}
   Shield: {fileID: 8477830628105009965}
   ShieldColor: 0

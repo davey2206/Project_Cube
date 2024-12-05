@@ -35,7 +35,7 @@ public class TurretSpawn : MonoBehaviour
 
     public void SpawnTurret(Vector3 pos, float lifespan, float attack)
     {
-        if (Random.Range(0, 101) < 5 + playerStats.Luck)
+        if (Random.Range(0, 101) < 10)
         {
             Turret turret = null;
             if (ability.Evolved)

@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6bf5caa086c71f45a268100c3bc641e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 250
+  Health: 500
   HealthBar: {fileID: 660000272181972858}
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   bossHealth: {fileID: 11400000, guid: 2ead450773625874bac9d8d8f6ae3fc0, type: 2}

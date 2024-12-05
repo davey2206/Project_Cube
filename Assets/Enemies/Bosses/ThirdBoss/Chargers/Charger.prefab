@@ -69,7 +69,7 @@ MonoBehaviour:
   ChargeCube: {fileID: 0}
   Target: {fileID: 0}
   SpawnDelay: 5
-  MaxHealth: 200
+  MaxHealth: 400
   position: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
   damageNumbers: {fileID: 7424439488176512731, guid: 0a179c26267e02049a2faf70b92a61f4,

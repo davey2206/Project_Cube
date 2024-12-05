@@ -211,7 +211,7 @@ public class SecondBoss : MonoBehaviour
     {
         StartCoroutine(CoinDrop());
         Instantiate(DeadVFX, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
     public IEnumerator CoinDrop()

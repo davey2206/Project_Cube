@@ -8108,7 +8108,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 5
   maxUnlocks: 5
-  unlockAmount: 40
+  unlockAmount: 25
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
@@ -10188,7 +10188,7 @@ MonoBehaviour:
   saveFile: {fileID: 11400000, guid: 60707d6f260338641aa571880d300e1f, type: 2}
   upgradeStat: 6
   maxUnlocks: 5
-  unlockAmount: 50
+  unlockAmount: 30
   costs: fa000000e8030000c40900008813000010270000
   ability: {fileID: 0}
   isAbility: 0
@@ -30974,7 +30974,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 500
+  m_text: 250
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d567eccd62586943ae2390142232668, type: 2}
   m_sharedMaterial: {fileID: -6115491719036532874, guid: 3d567eccd62586943ae2390142232668,
@@ -31112,6 +31112,31 @@ PrefabInstance:
       propertyPath: button
       value: 
       objectReference: {fileID: 7640497259997853463}
+    - target: {fileID: 7938507163531133419, guid: 45b57d7db84d5a749a927d54f5e080c4,
+        type: 3}
+      propertyPath: Materials.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7938507163531133419, guid: 45b57d7db84d5a749a927d54f5e080c4,
+        type: 3}
+      propertyPath: Materials.Array.data[11]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8035d400bc0ee9c439445ff79dd58cad, type: 2}
+    - target: {fileID: 7938507163531133419, guid: 45b57d7db84d5a749a927d54f5e080c4,
+        type: 3}
+      propertyPath: Materials.Array.data[12]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5d605bcb14b4b9f4489dbd0c5792ac57, type: 2}
+    - target: {fileID: 7938507163531133419, guid: 45b57d7db84d5a749a927d54f5e080c4,
+        type: 3}
+      propertyPath: Materials.Array.data[13]
+      value: 
+      objectReference: {fileID: 2100000, guid: dea7b5357939599409b5f98372570be8, type: 2}
+    - target: {fileID: 7938507163531133419, guid: 45b57d7db84d5a749a927d54f5e080c4,
+        type: 3}
+      propertyPath: Materials.Array.data[14]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b45db350c4c0a84a90b1ff8a69589fb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

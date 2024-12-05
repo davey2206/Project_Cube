@@ -1719,7 +1719,7 @@ MonoBehaviour:
   Arm_R: {fileID: 1275884028146609517}
   animator: {fileID: 8522624190899739955}
   MaxCharge: 10
-  MaxHealth: 3000
+  MaxHealth: 4000
   playerStats: {fileID: 11400000, guid: 2fe025e99547e2f49b9b5017345c058b, type: 2}
   coinEffect: {fileID: 2962067442543321795, guid: 34855f16e514c0c45bd029033845d7df,
     type: 3}
