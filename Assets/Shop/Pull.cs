@@ -128,6 +128,7 @@ public class Pull : MonoBehaviour
     {
         yield return new WaitForSeconds(1.1f);
         Stats.Buffs.Add(buff);
+        Save.Buffs.Add(buff.GetStatType());
         GameObject.Find("SaveSystem").GetComponent<SaveSystem>().SaveGame();
     }
     IEnumerator SkinDelay(int skin)

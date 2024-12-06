@@ -77,7 +77,7 @@ public class ThirdBoss : MonoBehaviour
         {
             Instantiate(DeadVFX, transform.position, Quaternion.identity);
             StartCoroutine(CoinDrop());
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 

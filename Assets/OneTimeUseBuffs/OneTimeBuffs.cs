@@ -18,6 +18,11 @@ public class OneTimeBuffs : ScriptableObject
 
         return 0;
     }
+
+    public StatType GetStatType()
+    {
+        return Stat;
+    }
 }
 
 public enum StatType

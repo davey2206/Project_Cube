@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c1378b803180c4c81cc1559f6119db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cost: 5
+  Cost: 3
   checkOverlap: 1
   Speed: 0.65
   Health: 75
